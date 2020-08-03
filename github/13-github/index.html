@@ -145,7 +145,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签<span class="badge">2</span></a>
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -155,7 +155,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-guestbook">
@@ -237,7 +237,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -250,7 +250,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -392,7 +392,7 @@
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
       <div class="post-nav-item">
-    <a href="/hexo-next/14-%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%9A%84%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/" rel="next" title="14-hexo+next's Problem_set">
+    <a href="/hexo-next/14-blog's%20problem%20set/" rel="next" title="14-hexo+next's Problem_set">
       14-hexo+next's Problem_set <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -451,12 +451,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">15k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5 分钟</span>
+    <span title="站点阅读时长">13 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -475,6 +475,7 @@
   </div>
 
   
+  <script size="255" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1/dist/ribbon.min.js"></script>
   <script src="/lib/anime.min.js"></script>
 
 <script src="/js/utils.js"></script>
@@ -503,6 +504,19 @@
 
 
 
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
 
 
   
