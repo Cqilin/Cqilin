@@ -2935,9 +2935,6 @@ ul.breadcrumb li + li:last-child {
     margin: 8px 0 0;
   }
 }
-div {
-  text-algin: center;
-}
 .posts-expand .post-body img {
   margin: 0 auto;
 }
@@ -2946,4 +2943,24 @@ body {
 }
 .site-state {
   line-height: 1.7;
+}
+.code_float_left {
+  width: 300px;
+  float: left;
+}
+.code_float_right {
+  width: 300px;
+  float: right;
+}
+/* 清楚浮动 */
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
 }
