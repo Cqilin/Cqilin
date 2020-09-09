@@ -16,29 +16,36 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   
   <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-loading-bar.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"qilinclolik.gitee.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1. 博客图片不显示 1.1 绝对路径的 “&#x2F;”号会被 变成%，无法识别；">
+  <meta name="description" content="0. 博客注意事项 0.1 自定义文件1.如果有修改的文件可以自定义，就尽量在一旁新建一个文件使用；  0.2 有时候hexo s报错1.有时候hexo s 报错  又不知道怎么呢  2.或者你知道，刚才有个操作没保存，现在报错了  确实修改了东西，但这个修改前后，之前都没报错 而现在修改就报错了  3.你用了 hexo g 4.hexo clean 即可 5.具体为什么不知。 6.例如： 配置了">
 <meta property="og:type" content="article">
 <meta property="og:title" content="7-bolg Problem_set">
 <meta property="og:url" content="https://qilinclolik.gitee.io/7-blog's_problem_set/index.html">
 <meta property="og:site_name" content="qilin&#39;s blog">
-<meta property="og:description" content="1. 博客图片不显示 1.1 绝对路径的 “&#x2F;”号会被 变成%，无法识别；">
+<meta property="og:description" content="0. 博客注意事项 0.1 自定义文件1.如果有修改的文件可以自定义，就尽量在一旁新建一个文件使用；  0.2 有时候hexo s报错1.有时候hexo s 报错  又不知道怎么呢  2.或者你知道，刚才有个操作没保存，现在报错了  确实修改了东西，但这个修改前后，之前都没报错 而现在修改就报错了  3.你用了 hexo g 4.hexo clean 即可 5.具体为什么不知。 6.例如： 配置了">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://qilinclolik.gitee.io/img/14/1.png">
-<meta property="og:image" content="https://qilinclolik.gitee.io/img/14/2.png">
-<meta property="og:image" content="https://qilinclolik.gitee.io/img/14/3.png">
-<meta property="og:image" content="https://qilinclolik.gitee.io/img/14/4.png">
+<meta property="og:image" content="http://bucket-c70.test.upcdn.net/7/4.png">
+<meta property="og:image" content="https://qilinclolik.gitee.io/img/7/1.png">
+<meta property="og:image" content="https://i.loli.net/2020/08/07/rC3tXaVGJubNLBo.png">
+<meta property="og:image" content="https://i.loli.net/2020/08/10/EVWGMBmpvRba78S.png">
+<meta property="og:image" content="https://i.loli.net/2020/08/10/oWJSukc9IrihlUT.png">
+<meta property="og:image" content="http://bucket-c70.test.upcdn.net/4/1-7-1.png">
+<meta property="og:image" content="http://bucket-c70.test.upcdn.net/7/2.png">
+<meta property="og:image" content="http://bucket-c70.test.upcdn.net/4/2.png">
+<meta property="og:image" content="http://bucket-c70.test.upcdn.net/7/3.png">
 <meta property="article:published_time" content="2020-07-22T16:05:27.000Z">
-<meta property="article:modified_time" content="2020-09-04T19:42:09.847Z">
+<meta property="article:modified_time" content="2020-09-09T12:23:24.374Z">
 <meta property="article:author" content="qilin">
 <meta property="article:tag" content="problem">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qilinclolik.gitee.io/img/14/1.png">
+<meta name="twitter:image" content="http://bucket-c70.test.upcdn.net/7/4.png">
 
 <link rel="canonical" href="https://qilinclolik.gitee.io/7-blog's_problem_set/">
 
@@ -141,17 +148,17 @@
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">18</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">19</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">12</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -220,7 +227,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA"><span class="nav-text">1. 博客图片不显示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E6%9C%80%E7%BB%88"><span class="nav-text">1.2. 最终</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-%E8%BF%98%E6%98%AF%E7%94%A8%E7%BD%91%E7%BB%9C"><span class="nav-text">1.3. 还是用网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-%E8%AE%A9typore%E5%8F%AF%E4%BB%A5%E9%A2%84%E8%A7%88"><span class="nav-text">1.4 让typore可以预览</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gitee"><span class="nav-text">gitee</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#github"><span class="nav-text">github</span></a></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">0. 博客注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#0-1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%87%E4%BB%B6"><span class="nav-text">0.1 自定义文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#0-2-%E6%9C%89%E6%97%B6%E5%80%99hexo-s%E6%8A%A5%E9%94%99"><span class="nav-text">0.2 有时候hexo s报错</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AF%86%E5%8C%99%E5%B7%B2%E7%BB%8F%E8%A2%AB%E4%BD%BF%E7%94%A8%EF%BC%9B"><span class="nav-text">2. 密匙已经被使用；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%8A%A5%E9%94%99%E2%80%93not-found%EF%BC%9Agit%EF%BC%9B"><span class="nav-text">3. 报错–not found：git；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-hexo-d-%E6%8A%A5%E9%94%99-%E2%80%93%E7%AC%AC%E4%BA%8C%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E2%80%93ssh%E5%86%B2%E7%AA%81%EF%BC%9B"><span class="nav-text">4. hexo d 报错 –第二个github账号–ssh冲突；</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-%E7%99%BE%E5%BA%A6%EF%BC%8C%E5%A4%9A%E4%B8%AAssh%E5%AF%B9%E5%BA%94%E4%B8%8D%E5%90%8C%E7%9A%84github%E8%B4%A6%E5%8F%B7%EF%BC%9B"><span class="nav-text">4.1 百度，多个ssh对应不同的github账号；</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-%E5%9C%A8git-bash%E9%87%8C%E9%9D%A2%E9%AA%8C%E8%AF%81%E8%AF%95%E8%AF%95%EF%BC%9A"><span class="nav-text">4.2 在git bash里面验证试试：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-%E8%A7%A3%E5%86%B3%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89css"><span class="nav-text">4.3 解决博客没有css</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-next%E4%B8%BB%E9%A2%98%E4%BE%A7%E8%BE%B9%E6%A0%8F%E6%B2%A1%E6%9C%89%E7%BB%9F%E8%AE%A1%EF%BC%9B"><span class="nav-text">5. next主题侧边栏没有统计；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E9%98%85%E8%AF%BB%E7%BB%9F%E8%AE%A1%E4%B8%8E%E8%AF%84%E8%AE%BA%E8%A2%AB%E5%88%B7%E6%96%B0%EF%BC%9B"><span class="nav-text">6. 阅读统计与评论被刷新；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%8A%A5%E9%94%99hexo-them-next"><span class="nav-text">7. 报错hexo-them-next</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-url%E4%B9%B1%E7%A0%81-%E8%BF%87%E5%8E%BB%E5%BC%8F"><span class="nav-text">8. url乱码-过去式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%BE%A7%E8%BE%B9%E6%A0%8F%E6%A0%87%E7%AD%BE%E6%9C%AC%E8%BA%AB"><span class="nav-text">9. 如何修改侧边栏标签本身</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E5%8D%9A%E5%AE%A2%E7%9B%AE%E5%BD%95%E4%B9%B1%E7%A0%81"><span class="nav-text">10. 博客目录乱码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%A6%82%E6%9E%9C%E6%9C%89%E4%B8%A4%E4%B8%AA%E6%9C%AC%E5%9C%B0blog"><span class="nav-text">11. 如果有两个本地blog</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -243,13 +250,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -270,6 +277,7 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
 
 <noscript>
   <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -316,7 +324,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-05 03:42:09" itemprop="dateModified" datetime="2020-09-05T03:42:09+08:00">2020-09-05</time>
+                <time title="修改时间：2020-09-09 20:23:24" itemprop="dateModified" datetime="2020-09-09T20:23:24+08:00">2020-09-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -355,14 +363,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>15k</span>
+              <span>18k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>14 分钟</span>
+              <span>17 分钟</span>
             </span>
 
         </div>
@@ -374,103 +382,204 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-博客图片不显示"><a href="#1-博客图片不显示" class="headerlink" title="1. 博客图片不显示"></a>1. 博客图片不显示</h3><p><img src="/img/14/1.png" alt="1.png"></p>
-<p>1.1 绝对路径的 “/”号会被 变成%，无法识别；</p>
-<a id="more"></a>
-
-<p>1.2 相对路径，不知道为什么没有用；</p>
-<p>但比较迷惑性的是，在Typora里面是看的到的；2020-7-22 23:09:37</p>
-<p><img src="../img/14/2.png" alt="1.png"></p>
-<h4 id="1-2-最终"><a href="#1-2-最终" class="headerlink" title="1.2. 最终"></a>1.2. 最终</h4><p>1.无意中发现了这个：</p>
-<p><img src="../img/14/3.png" alt="1.png"></p>
+        <h3 id="0-博客注意事项"><a href="#0-博客注意事项" class="headerlink" title="0. 博客注意事项"></a>0. 博客注意事项</h3><hr>
+<h4 id="0-1-自定义文件"><a href="#0-1-自定义文件" class="headerlink" title="0.1 自定义文件"></a>0.1 自定义文件</h4><p>1.如果有修改的文件可以自定义，就尽量在一旁新建一个文件使用；</p>
+<p><img src="http://bucket-c70.test.upcdn.net/7/4.png" alt="4"></p>
+<h4 id="0-2-有时候hexo-s报错"><a href="#0-2-有时候hexo-s报错" class="headerlink" title="0.2 有时候hexo s报错"></a>0.2 有时候hexo s报错</h4><p>1.有时候hexo s 报错</p>
 <ul>
-<li><p>虽然在typora里面看不到；</p>
-</li>
-<li><p>但是hexo s能看到；</p>
-</li>
-<li><p>组队说了：不能同时的，解析规则不一样；2020-9-5 02:37:00</p>
-</li>
+<li>又不知道怎么呢</li>
 </ul>
-<p><img src="/img/14/4.png" alt="1.png"></p>
-<p>2.之后hexo g -d 试试；</p>
+<p>2.或者你知道，刚才有个操作没保存，现在报错了</p>
 <ul>
-<li>有效；2020-7-23 00:24:50</li>
+<li>确实修改了东西，但这个修改前后，之前都没报错</li>
+<li>而现在修改就报错了</li>
 </ul>
-<h4 id="1-3-还是用网络"><a href="#1-3-还是用网络" class="headerlink" title="1.3. 还是用网络"></a>1.3. 还是用网络</h4><p>空间问题，还是把图片弄到网络上；</p>
-<p>目前用的有道云笔记 ；2020-8-3 02:25:21</p>
-<h4 id="1-4-让typore可以预览"><a href="#1-4-让typore可以预览" class="headerlink" title="1.4 让typore可以预览"></a>1.4 让typore可以预览</h4><p>1.在上面1.2里，说了不能预览</p>
-<p>2.因为，permalink没配置好</p>
+<p>3.你用了 hexo g</p>
+<p>4.hexo clean 即可</p>
+<p>5.具体为什么不知。</p>
+<p>6.例如：</p>
+<p>配置了加密</p>
 <ul>
-<li><p>hexo的_config.yml</p>
-</li>
-<li><pre><code># URL
-## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;
-url: https://qilinclolik.gitee.io #http://yoursite.com
-root: /
-# 永久链接格式：分类/文件名
-permalink: :title/   #:category/:title/ ; :lang/:title/ 
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing &apos;index.html&apos; from permalinks
-  trailing_html: true # Set to false to remove trailing &apos;.html&apos; from permalinks
+<li><pre><code>password: muyiio
+abstract: 这里有东西被加密了，需要输入密码查看哦。
+message: 您好，这里需要密码。
+wrong_pass_message: 抱歉，这个密码看着不太对，请再试试。
+wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容
+&lt;!--hexoPostRenderEscape:&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;如果hexo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;g过，不hexo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;clean，修改其中配置，hexo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;就会报错。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;明明没改博客的config，等其他系统配置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;当时还有点慌，毕竟没改系统方面的配置怎么在报错？&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;### 1. 博客图片不显示&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;![1.png](/img/14/1.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1.1&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;绝对路径的&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;“/”号会被&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;变成%，无法识别；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1.2&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;相对路径，不知道为什么没有用；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;但比较迷惑性的是，在Typora里面是看的到的；2020-7-22&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;:09:37&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;![1.png](../img/14/2.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#### 1.2. 最终&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.无意中发现了这个：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;![1.png](../img/14/3.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;虽然在typora里面看不到；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;但是hexo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;s能看到；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;组队说了：不能同时的，解析规则不一样；2020-9-5&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;:37:00&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;![1.png](/img/14/4.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.之后hexo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;试试；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;有效；2020-7-23&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;:24:50&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#### 1.3. 还是用网络&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;空间问题，还是把图片弄到网络上；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;目前用的有道云笔记&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;；2020-8-3&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;:25:21&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#### 1.4 让typore可以预览&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.在上面1.2里，说了不能预览&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.因为，permalink没配置好&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;hexo的_config.yml&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;```yaml&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;# URL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;## If your site is put in a subdirectory, set url as &amp;#x27;http://yoursite.com/child&amp;#x27; and root as &amp;#x27;/child/&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;url:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;https://qilinclolik.gitee.io&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;#http://yoursite.com&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;root:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;# 永久链接格式：分类/文件名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;permalink:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;:title/&lt;/span&gt;   &lt;span class=&quot;comment&quot;&gt;#:category/:title/ ; :lang/:title/ &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;permalink_defaults:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;pretty_urls:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;trailing_index:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;# Set to false to remove trailing &amp;#x27;index.html&amp;#x27; from permalinks&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;trailing_html:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;# Set to false to remove trailing &amp;#x27;.html&amp;#x27; from permalinks&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;
 
-&lt;!--hexoPostRenderEscape:&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;之前permalink那里是&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;:category/:title/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;让每次url都多了一个category（分类名)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.改成`permalink:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;:title/`就好了&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;为什么呢？&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;你看相对路径：例如：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;### 2. 密匙已经被使用；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.&lt;/span&gt;                                                                                                                                                                         &lt;span class=&quot;string&quot;&gt;也许在github，一个账户正在使用了一个ssh密匙后，那个ssh就会被记录。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;而gitee那边不冲突；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;一个ssh密匙，分别可以在github与gitee都使用；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;但一个密匙应该不能在两个github号上用；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;只有这样假设了。去追求是否正确就不用了。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;第二个github号：qilin-meiyao-luka，用的是3293-ssh密匙&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;唯一的gitee号也是这个密匙；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;大号github，用的7920ssh密匙；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;number&quot;&gt;2020-8&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;-7&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;:35:45&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;### 3. 报错--not found：git；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;![](https://i.loli.net/2020/08/07/rC3tXaVGJubNLBo.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;那手动创建一个试试；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;`npm&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;hexo-deployer-git&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;--save`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;不对，这是个插件，单纯的没安装这个插件。没有这个，应该就不能生成本地静态文件吧；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;### 4. hexo d 报错 --第二个github账号--ssh冲突；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;报错内容：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;
-ERROR: Permission to qilin-meiyao-luka/qilin-meiyao-luka.git denied to Cqilin.
-fatal: Could not read from remote repository.
+
 </code></pre></li>
 </ul>
-<p>Please make sure you have the correct access rights<br>and the repository exists.<br>FATAL {<br>  err: Error: Spawn failed<br>      at ChildProcess.<anonymous> (G:\1-sanciyuan\11-qilin_meiyao_luka\node_modu<br>les\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)<br>      at ChildProcess.emit (events.js:210:5)<br>      at ChildProcess.cp.emit (G:\1-sanciyuan\11-qilin_meiyao_luka\node_modules<br>cross-spawn\lib\enoent.js:34:29)<br>      at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)<br>{<br>    code: 128<br>  }<br>} Something’s wrong. Maybe you can find the solution here: %s <a target="_blank" rel="noopener" href="https://hexo.io/do">https://hexo.io/do</a><br>cs/troubleshooting.html</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;br /&gt;</span><br><span class="line"></span><br><span class="line">貌似是找不到仓库地址；不弄了，累了；<span class="number">2020</span><span class="number">-8</span><span class="number">-7</span> <span class="number">19</span>:<span class="number">18</span>:<span class="number">14</span></span><br><span class="line"></span><br><span class="line">#### <span class="number">3.1</span> 百度，多个ssh对应不同的github账号；</span><br><span class="line"></span><br><span class="line">+ 虽然gitee用的<span class="number">3293</span>-ssh，而不是大号github用的；</span><br><span class="line"></span><br><span class="line">+ 但在config里面有配置。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="gitee"><a href="#gitee" class="headerlink" title="gitee"></a>gitee</h1><p>  Host gitee.com<br>  HostName gitee.com<br>  PreferredAuthentications publickey<br>  IdentityFile ~/.ssh/id_rsa</p>
-<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><p>  Host github.com<br>  HostName github.com<br>  PreferredAuthentications publickey<br>  IdentityFile C:/Users/Administrator/.ssh/id_rsa_gitee<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">根据网上资料所说：</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  <a href="mailto:git@github.com">git@github.com</a>:name/project.git (这是原来直接复制过来的的url)<br>  这时候要改一下:<br>  <a href="mailto:git@github_1.com">git@github_1.com</a>:name/project.git<br>  这个github_1就是之前在config配置文件里修改的host<br>  <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ 因为我配置了config，所以第二个github账号也用到了第一个github账号的ssh，从而第二个号没有权限；</span><br><span class="line"></span><br><span class="line">+ 假如我这么设置试试：</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>    # gitee<br>    Host gitee.com<br>    HostName gitee.com<br>    PreferredAuthentications publickey<br>    IdentityFile ~/.ssh/id_rsa</p>
-<pre><code># github
-Host github.com
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile C:/Users/Administrator/.ssh/id_rsa_gitee
+<ul>
+<li><p>之前permalink那里是 :category/:title/</p>
+</li>
+<li><p>让每次url都多了一个category（分类名)</p>
+</li>
+</ul>
+<p>3.改成<code>permalink: :title/</code>就好了</p>
+<ul>
+<li><p>为什么呢？</p>
+</li>
+<li><p>你看相对路径：例如：</p>
+<ul>
+<li><p>../img/14/2.png；</p>
+</li>
+<li><p>含义是：文字的上一级目录；</p>
+<p><img src="../img/7/1.png" alt="1"></p>
+<p>上一级目录是source，文章在_posts目录里面；</p>
+</li>
+</ul>
+<p>3.3 好，回到source，然后进入img，进入14，获取2.png；</p>
+<p>3.4 这就是相对路径的含义；<br>3.5 而以前的永久链接格式：</p>
+<p>permalink: :category/:title/ ;让url多了一个category(分类名)</p>
+<p>3.6 这样相对路径就找不到img了</p>
+<ul>
+<li>写成<code>../img/category/14/2.png</code>才可以；</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-密匙已经被使用；"><a href="#2-密匙已经被使用；" class="headerlink" title="2. 密匙已经被使用；"></a>2. 密匙已经被使用；</h3><ol>
+<li><p>也许在github，一个账户正在使用了一个ssh密匙后，那个ssh就会被记录。</p>
+<p>而gitee那边不冲突；</p>
+<p>一个ssh密匙，分别可以在github与gitee都使用；</p>
+<a id="more"></a>
 
-# github
-Host github_1.com
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile C:/Users/Administrator/.ssh/id_rsa
-&lt;!--hexoPostRenderEscape:&lt;figure class=&quot;highlight clean&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    虽然第一个gitee与最下面的github用的同一个ssh。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    但万一不冲突呢？先实验试试；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;gt; 如果不行，就创建第三个ssh；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#### &lt;span class=&quot;number&quot;&gt;3.2&lt;/span&gt; 在git bash里面验证试试：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;</code></pre><p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@gitee.com">git@gitee.com</a><br>  Hi Cqilin! You’ve successfully authenticated, but GITEE.COM does not provide shell access.</p>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@github.com">git@github.com</a><br>  Hi Cqilin! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@github_1.com">git@github_1.com</a><br>  Hi qilin-meiyao-luka! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">成功！</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@github_1.com">git@github_1.com</a><br>  Hi qilin-meiyao-luka! You’ve successfully authenticated, but GitHub does not provide shell access.<br>  <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">成功获取到第二个github账号：qilin-meiyao-luka<span class="comment">;</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.3</span>  注意远程仓库的url也要改：</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  deploy:<br>    type: git<br>    #repo: <a target="_blank" rel="noopener" href="https://gitee.com/qilinclolik/qilinclolik.git">https://gitee.com/qilinclolik/qilinclolik.git</a><br>    repo:<br>          github: <a target="_blank" rel="noopener" href="https://github_1.com/qilin-meiyao-luka/qilin-meiyao-luka.git">https://github_1.com/qilin-meiyao-luka/qilin-meiyao-luka.git</a><br>    # example, <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexojs.github.io">https://github.com/hexojs/hexojs.github.io</a><br>    branch: master<br>  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  也要改成github<span class="emphasis">_1 ;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  改了就报错；</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  试试不改能不能行；（改是文章里面说的，但既然报错，只有不改试试）</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  3.3.1 发现问题，没有用仓库的ssh链接，用的html链接；但也不应该报错；</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  + 改成ssh链接，并遵循文章的修改为github_</span>1，先这么试试；</span><br><span class="line"></span><br><span class="line"><span class="code">    `git@github_1.com:qilin-meiyao-luka/qilin-meiyao-luka.git`</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    上传失败；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    改用 git bash；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    上传成功；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    但是没有css；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    .....</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">#### 3.4 解决没有css</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">1. 老问题，仓库名字：</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   qilin-meiyao-luka.github.io</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   它默认的是：qilin-meiyao-luka</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   必须把.github.io填上；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   还有右边的确认；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   ![1](https://i.loli.net/2020/08/10/EVWGMBmpvRba78S.png)</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   over；2020-8-7 20:19:16</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">---</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">### 5. next主题侧边栏没有统计；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">8.0版本；问题：</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">![1](https://i.loli.net/2020/08/10/oWJSukc9IrihlUT.png)</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">解决：https://theme-next.js.org/docs/getting-started/</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">最下面：4.5. Configuring Menu Items</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">y default NexT shows the icons of menu items without badges.</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">- [`icons`](https://theme-next.js.org/docs/getting-started/#menu_settings-1)</span></span><br><span class="line"><span class="code">- [`badges`](https://theme-next.js.org/docs/getting-started/#menu_settings-2)</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">Set the value `badges` to `true` to display the count of Posts / Categories / Tags within menu items in `menu_settings` section in theme config file as following:</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure><br>next/_config.yml<br>menu_settings:<br>  badges: true</p>
-<pre><code>
-2020-8-10 14:53:55
+<p>但一个密匙应该不能在两个github号上用；</p>
+</li>
+<li><p>只有这样假设了。去追求是否正确就不用了。</p>
+</li>
+<li><p>第二个github号：qilin-meiyao-luka，用的是3293-ssh密匙</p>
+<p>唯一的gitee号也是这个密匙；</p>
+<p>大号github，用的7920ssh密匙；</p>
+<p>2020-8-7 18:35:45</p>
+<hr>
+</li>
+</ol>
+<h3 id="3-报错–not-found：git；"><a href="#3-报错–not-found：git；" class="headerlink" title="3. 报错–not found：git；"></a>3. 报错–not found：git；</h3><p><img src="https://i.loli.net/2020/08/07/rC3tXaVGJubNLBo.png" alt=""></p>
+<p>那手动创建一个试试；</p>
+<p><code>npm install hexo-deployer-git --save</code></p>
+<p>不对，这是个插件，单纯的没安装这个插件。没有这个，应该就不能生成本地静态文件吧；</p>
+<hr>
+<h3 id="4-hexo-d-报错-–第二个github账号–ssh冲突；"><a href="#4-hexo-d-报错-–第二个github账号–ssh冲突；" class="headerlink" title="4. hexo d 报错 –第二个github账号–ssh冲突；"></a>4. hexo d 报错 –第二个github账号–ssh冲突；</h3><p>报错内容：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ERROR</span>: Permission to qilin-meiyao-luka/qilin-meiyao-luka.git denied to Cqilin.</span><br><span class="line"><span class="attribute">fatal</span>: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (G:\1-sanciyuan\11-qilin_meiyao_luka\node_modu</span><br><span class="line"><span class="attribute">les\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)</span></span><br><span class="line">      at ChildProcess.emit (events.js:210:5)</span><br><span class="line">      at ChildProcess.cp.emit (G:\1-sanciyuan\11-qilin_meiyao_luka\node_modules\</span><br><span class="line"><span class="attribute">cross-spawn\lib\enoent.js:34:29)</span></span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)</span><br><span class="line">&#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/do</span><br><span class="line"><span class="attribute">cs/troubleshooting.html</span></span><br></pre></td></tr></table></figure>
 
----
+<br />
 
-### 6. 阅读统计与评论被刷新；
+<p>貌似是找不到仓库地址；不弄了，累了；2020-8-7 19:18:14</p>
+<h4 id="4-1-百度，多个ssh对应不同的github账号；"><a href="#4-1-百度，多个ssh对应不同的github账号；" class="headerlink" title="4.1 百度，多个ssh对应不同的github账号；"></a>4.1 百度，多个ssh对应不同的github账号；</h4><ul>
+<li><p>虽然gitee用的3293-ssh，而不是大号github用的；</p>
+</li>
+<li><p>但在config里面有配置。</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># gitee</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">gitee.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">gitee.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">~/.ssh/id_rsa</span></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">C:/Users/Administrator/.ssh/id_rsa_gitee</span></span><br></pre></td></tr></table></figure>
 
-1. 我估计是因为我在另一个博客上面用了同一个leancloud账号的id和key；
+<p>根据网上资料所说：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git<span class="meta">@github</span>.<span class="attr">com:</span>name/project.git (这是原来直接复制过来的的url)</span><br><span class="line">这时候要改一下:</span><br><span class="line">git<span class="meta">@github</span>_1.<span class="attr">com:</span>name/project.git </span><br><span class="line">这个github_1就是之前在config配置文件里修改的host</span><br></pre></td></tr></table></figure>
 
-   未时间，但根据那个时候的事情；
 
-   再上我重复的点击，刷新页面，修改文字title，都没有刷新阅读统计和评论；
 
-   想的就应该是这个了；
+</li>
+</ul>
+<ul>
+<li><p>因为我配置了config，所以第二个github账号也用到了第一个github账号的ssh，从而第二个号没有权限；</p>
+</li>
+<li><p>假如我这么设置试试：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># gitee</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">gitee.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">gitee.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">~/.ssh/id_rsa</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">C:/Users/Administrator/.ssh/id_rsa_gitee</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">github_1.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">C:/Users/Administrator/.ssh/id_rsa</span></span><br></pre></td></tr></table></figure>
 
-2. 2020-8-11 05:30:05
+<p>虽然第一个gitee与最下面的github用的同一个ssh。</p>
+<p>但万一不冲突呢？先实验试试；</p>
+<blockquote>
+<p>如果不行，就创建第三个ssh；</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="4-2-在git-bash里面验证试试："><a href="#4-2-在git-bash里面验证试试：" class="headerlink" title="4.2 在git bash里面验证试试："></a>4.2 在git bash里面验证试试：</h4>  <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Administrator@SKY-<span class="number">20160609</span>AOR MINGW64 ~</span><br><span class="line">$ ssh -T git@gitee.com</span><br><span class="line">Hi Cqilin! Yo<span class="string">u&#x27;ve successfully authenticated, but GITEE.COM does not provide shell access.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Administrator@SKY-20160609AOR MINGW64 ~</span></span><br><span class="line"><span class="string">$ ssh -T git@github.com</span></span><br><span class="line"><span class="string">Hi Cqilin! You&#x27;</span>ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line"></span><br><span class="line">Administrator@SKY-<span class="number">20160609</span>AOR MINGW64 ~</span><br><span class="line">$ ssh -T git@github_1.com</span><br><span class="line">Hi qilin-meiyao-luka! Yo<span class="string">u&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Administrator@SKY-20160609AOR MINGW64 ~</span></span><br><span class="line"><span class="string">$</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
 
----
+<p>  成功！</p>
+  <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Administrator@</span>SKY<span class="number">-20160609</span>AOR MINGW64 ~</span><br><span class="line">$ ssh -T <span class="symbol">git@</span>github_1.com</span><br><span class="line">Hi qilin-meiyao-luka! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
 
-### 7. 报错hexo-them-next
+<p>  成功获取到第二个github账号：qilin-meiyao-luka;</p>
+<p>  3.3  注意远程仓库的url也要改：</p>
+  <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  #<span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//gitee.com/qilinclolik/qilinclolik.git</span></span><br><span class="line">  <span class="attribute">repo</span>:</span><br><span class="line">        <span class="attribute">github</span>: <span class="attribute">https</span>:<span class="comment">//github_1.com/qilin-meiyao-luka/qilin-meiyao-luka.git</span></span><br><span class="line">  # example, <span class="attribute">https</span>:<span class="comment">//github.com/hexojs/hexojs.github.io</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
 
-![1](http://bucket-c70.test.upcdn.net/4/1-7-1.png)
+<p>  也要改成github_1 ;</p>
+<p>  改了就报错；</p>
+<p>  试试不改能不能行；（改是文章里面说的，但既然报错，只有不改试试）</p>
+<p>  3.3.1 发现问题，没有用仓库的ssh链接，用的html链接；但也不应该报错；</p>
+<ul>
+<li><p>改成ssh链接，并遵循文章的修改为github_1，先这么试试；</p>
+<p><code>git@github_1.com:qilin-meiyao-luka/qilin-meiyao-luka.git</code></p>
+<p>上传失败；</p>
+<p>改用 git bash；</p>
+<p>上传成功；</p>
+<p>但是没有css；</p>
+<p>…..</p>
+</li>
+</ul>
+<h4 id="4-3-解决博客没有css"><a href="#4-3-解决博客没有css" class="headerlink" title="4.3 解决博客没有css"></a>4.3 解决博客没有css</h4><ol>
+<li><p>老问题，仓库名字：</p>
+<p>qilin-meiyao-luka.github.io</p>
+<p>它默认的是：qilin-meiyao-luka</p>
+<p>必须把.github.io填上；</p>
+<p>还有右边的确认；</p>
+<p><img src="https://i.loli.net/2020/08/10/EVWGMBmpvRba78S.png" alt="1"></p>
+<p>over；2020-8-7 20:19:16</p>
+</li>
+</ol>
+<hr>
+<h3 id="5-next主题侧边栏没有统计；"><a href="#5-next主题侧边栏没有统计；" class="headerlink" title="5. next主题侧边栏没有统计；"></a>5. next主题侧边栏没有统计；</h3><p>8.0版本；问题：</p>
+<p><img src="https://i.loli.net/2020/08/10/oWJSukc9IrihlUT.png" alt="1"></p>
+<p>解决：<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/">https://theme-next.js.org/docs/getting-started/</a></p>
+<p>最下面：4.5. Configuring Menu Items</p>
+<p>y default NexT shows the icons of menu items without badges.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/#menu_settings-1"><code>icons</code></a></li>
+<li><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/#menu_settings-2"><code>badges</code></a></li>
+</ul>
+<p>Set the value <code>badges</code> to <code>true</code> to display the count of Posts / Categories / Tags within menu items in <code>menu_settings</code> section in theme config file as following:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">next/_config.yml</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-直接在node_modules目录下把这个文件夹删了；
+<p>2020-8-10 14:53:55</p>
+<hr>
+<h3 id="6-阅读统计与评论被刷新；"><a href="#6-阅读统计与评论被刷新；" class="headerlink" title="6. 阅读统计与评论被刷新；"></a>6. 阅读统计与评论被刷新；</h3><ol>
+<li><p>我估计是因为我在另一个博客上面用了同一个leancloud账号的id和key；</p>
+<p>未时间，但根据那个时候的事情；</p>
+<p>再上我重复的点击，刷新页面，修改文字title，都没有刷新阅读统计和评论；</p>
+<p>想的就应该是这个了；</p>
+</li>
+<li><p>2020-8-11 05:30:05</p>
+</li>
+</ol>
+<hr>
+<h3 id="7-报错hexo-them-next"><a href="#7-报错hexo-them-next" class="headerlink" title="7. 报错hexo-them-next"></a>7. 报错hexo-them-next</h3><p><img src="http://bucket-c70.test.upcdn.net/4/1-7-1.png" alt="1"></p>
+<p>直接在node_modules目录下把这个文件夹删了；</p>
+<hr>
+<h3 id="8-url乱码-过去式"><a href="#8-url乱码-过去式" class="headerlink" title="8. url乱码-过去式"></a>8. url乱码-过去式</h3><p>1.</p>
+<hr>
+<h3 id="9-如何修改侧边栏标签本身"><a href="#9-如何修改侧边栏标签本身" class="headerlink" title="9. 如何修改侧边栏标签本身"></a>9. 如何修改侧边栏标签本身</h3><p>1.标签本身</p>
+<ul>
+<li>把关于 改成 关于我</li>
+<li><img src="http://bucket-c70.test.upcdn.net/7/2.png" alt="2" style="zoom:80%;" />
 
----
+</li>
+</ul>
+<p>2.在哪修改？</p>
+<ul>
+<li><code>languages</code>文件夹里面的<code>zh-Hans.yml</code>文件，<code>menu</code>子项中修改；</li>
+<li>我的路径：G:\1-sanciyuan\8-bolg\themes\next2-8.0\languages</li>
+</ul>
+<hr>
+<h3 id="10-博客目录乱码"><a href="#10-博客目录乱码" class="headerlink" title="10. 博客目录乱码"></a>10. 博客目录乱码</h3><p><img src="http://bucket-c70.test.upcdn.net/4/2.png" alt="2"></p>
+<p>可能是因为目录跳级了；</p>
+<p>###，下面 写成 #####了</p>
+<hr>
+<h3 id="11-如果有两个本地blog"><a href="#11-如果有两个本地blog" class="headerlink" title="11. 如果有两个本地blog"></a>11. 如果有两个本地blog</h3><p>1.只另一个本地时，要换一个端口</p>
+<p><code>hexo s -p 5000</code></p>
+<p>2.预览：</p>
+<p><img src="http://bucket-c70.test.upcdn.net/7/3.png" alt="3"></p>
+<br/>
 
-### 8. url乱码-过去式
+<hr>
 
-1.
-</code></pre>
     </div>
 
     
@@ -492,8 +601,8 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
       <i class="fa fa-chevron-left"></i> 6-github's problem_set + gitee
     </a></div>
       <div class="post-nav-item">
-    <a href="/7-blog's%20problem%20set/" rel="next" title="7-bolg Problem_set">
-      7-bolg Problem_set <i class="fa fa-chevron-right"></i>
+    <a href="/1-typescript_introduction/" rel="next" title="1-typescript">
+      1-typescript <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -552,12 +661,12 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">208k</span>
+    <span title="站点总字数">214k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:09</span>
+    <span title="站点阅读时长">3:15</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

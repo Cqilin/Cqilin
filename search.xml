@@ -3,7 +3,7 @@
   <entry>
     <title>0-serial_number</title>
     <url>/0-%E5%BA%8F%E5%8F%B7/</url>
-    <content><![CDATA[<h3 id="1-typescript-introduction"><a href="#1-typescript-introduction" class="headerlink" title="1-typescript_introduction"></a>1-typescript_introduction</h3><p>ts入门</p>
+    <content><![CDATA[<h2 id="1-序号"><a href="#1-序号" class="headerlink" title="1. 序号"></a>1. 序号</h2><h3 id="1-typescript-introduction"><a href="#1-typescript-introduction" class="headerlink" title="1-typescript_introduction"></a>1-typescript_introduction</h3><p>ts入门</p>
 <hr>
 <h3 id="2-ts-first-item"><a href="#2-ts-first-item" class="headerlink" title="2-ts_first_item"></a>2-ts_first_item</h3><p>ts第一个项目</p>
 <a id="more"></a>
@@ -28,6 +28,18 @@
 <h3 id="17-VPN"><a href="#17-VPN" class="headerlink" title="17-VPN"></a>17-VPN</h3><hr>
 <h3 id="18-typora"><a href="#18-typora" class="headerlink" title="18-typora"></a>18-typora</h3><hr>
 <h3 id="19-谷歌扩展"><a href="#19-谷歌扩展" class="headerlink" title="19-谷歌扩展"></a>19-谷歌扩展</h3><hr>
+<h3 id="20-Pixiv"><a href="#20-Pixiv" class="headerlink" title="20-Pixiv"></a>20-Pixiv</h3><hr>
+<h3 id="21-windows；"><a href="#21-windows；" class="headerlink" title="21-windows；"></a>21-windows；</h3><p>2020-9-7 06:04:22</p>
+<hr>
+<h2 id="2-更新日志"><a href="#2-更新日志" class="headerlink" title="2. 更新日志"></a>2. 更新日志</h2><h3 id="2-1-2020-9-7-06-00-31"><a href="#2-1-2020-9-7-06-00-31" class="headerlink" title="2.1 2020-9-7 06:00:31"></a>2.1 2020-9-7 06:00:31</h3><h4 id="2-1-1-文章8"><a href="#2-1-1-文章8" class="headerlink" title="2.1.1 文章8"></a>2.1.1 文章8</h4><p>1.更新了15，16，17；</p>
+<h4 id="2-1-2-文章7"><a href="#2-1-2-文章7" class="headerlink" title="2.1.2 文章7"></a>2.1.2 文章7</h4><p>1.更新了11</p>
+<h4 id="2-1-3-文章6"><a href="#2-1-3-文章6" class="headerlink" title="2.1.3 文章6"></a>2.1.3 文章6</h4><p>1.更新了2，2.2，2.3；2020-9-7 06:02:45</p>
+<hr>
+<h4 id="2-1-4-文章21"><a href="#2-1-4-文章21" class="headerlink" title="2.1.4 文章21"></a>2.1.4 文章21</h4><p>1.新建21，1，1.1，1.2；2020-9-7 06:03:36</p>
+<hr>
+<h3 id="2-2-2020-9-9-18-50-15"><a href="#2-2-2020-9-9-18-50-15" class="headerlink" title="2.2 2020-9-9 18:50:15"></a>2.2 2020-9-9 18:50:15</h3><h4 id="2-2-1-文章8-bfa"><a href="#2-2-1-文章8-bfa" class="headerlink" title="2.2.1 文章8-bfa"></a>2.2.1 文章8-bfa</h4><ol start="18">
+<li>文章加密；2020-9-9 18:51:01</li>
+</ol>
 ]]></content>
       <tags>
         <tag>xuhao</tag>
@@ -2494,6 +2506,8 @@ songs.push(<span class="string">'样'</span>)
     <title>3-ts&#39;problem</title>
     <url>/3-ts_problem/</url>
     <content><![CDATA[<h3 id="7-1-函数调试"><a href="#7-1-函数调试" class="headerlink" title="7.1 函数调试"></a>7.1 函数调试</h3><p>自家电脑vscode调试不起，他要自己运行完，不停下；2020-8-3 21:41:29</p>
+<a id="more"></a>
+
 <p>根据：<a href="https://zhuanlan.zhihu.com/p/103334623">https://zhuanlan.zhihu.com/p/103334623</a></p>
 <p><a href="https://blog.csdn.net/qq_31487797/article/details/82500720">https://blog.csdn.net/qq_31487797/article/details/82500720</a></p>
 <p>等信息使用debugger调试后能成，</p>
@@ -2809,6 +2823,66 @@ songs.push(<span class="string">'样'</span>)
 </li>
 </ul>
 <hr>
+<h3 id="6-4-vertical-align"><a href="#6-4-vertical-align" class="headerlink" title="6.4 vertical-align"></a>6.4 vertical-align</h3><p>0.word</p>
+<ul>
+<li><a href="https://fanyi.baidu.com/?aldtype=16047#en/zh/vertical">vertical</a></li>
+</ul>
+<p>1.概述</p>
+<p>CSS 的 <strong>vertical-align</strong> 属性使用场景： 经常用于设置图片或者表单(行内块元素）和文字垂直对齐。</p>
+<p>官方解释： 用于设置一个元素的<strong>垂直对齐方式</strong>，但是它只针对于行内元素或者行内块元素有效。</p>
+<p>语法：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">vertical-align : baseline | top | middle | bottom </span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">baseline</td>
+<td align="center">默认。元素放置在父元素的基线上</td>
+</tr>
+<tr>
+<td align="center">top</td>
+<td align="center">把元素的顶端与行中最高元素的顶端对齐</td>
+</tr>
+<tr>
+<td align="center">middle</td>
+<td align="center">把此元素放置在父元素的中部</td>
+</tr>
+<tr>
+<td align="center">bottom</td>
+<td align="center">把元素的顶端与行中最低的元素的顶端对齐</td>
+</tr>
+</tbody></table>
+<p><img src="http://bucket-c70.test.upcdn.net/12/69.png" alt="69"></p>
+<br />
+
+<hr>
+<p>2.默认基线</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/70.png" alt="70"></p>
+<p>3.设置成底线</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">vertical-align</span>: bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<p><img src="http://bucket-c70.test.upcdn.net/12/71.png" alt="71"></p>
+<p>3.图片与文字垂直居中：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="2-记住"><a href="#2-记住" class="headerlink" title="2. 记住"></a>2. 记住</h4><p>1.它只针对于行内元素或者行内块元素有效。</p>
+<p>2.如果不是，则要转换</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/72.png" alt="72"></p>
+<ul>
+<li><p>不过，<code>&lt;i&gt;</code>是行内元素，应该不需要转换</p>
+<p>我实验过，在同一行(行内元素)，且高度宽度无效(不是行内块元素)。是行内元素；</p>
+</li>
+</ul>
+<p>3.即使是文本域，也可以让它与文字居中，文本域是行内块元素</p>
+<hr>
 <h2 id="7-符号"><a href="#7-符号" class="headerlink" title="7. 符号"></a>7. 符号</h2><ol>
 <li>左箭头；<code>&amp;lt</code>，&amp;lt</li>
 <li>右箭头；&amp;gt</li>
@@ -2924,7 +2998,7 @@ songs.push(<span class="string">'样'</span>)
   <entry>
     <title>6-github&#39;s problem_set + gitee</title>
     <url>/6-github&amp;&amp;gitee_problem/</url>
-    <content><![CDATA[<h2 id="0-github问题集"><a href="#0-github问题集" class="headerlink" title="0. github问题集"></a>0. github问题集</h2><h3 id="1-github挂的网页没有样式"><a href="#1-github挂的网页没有样式" class="headerlink" title="1. github挂的网页没有样式"></a>1. github挂的网页没有样式</h3><p><img src="/img/13-github/1.png" alt="Image"></p>
+    <content><![CDATA[<h2 id="1-github问题集"><a href="#1-github问题集" class="headerlink" title="1. github问题集"></a>1. github问题集</h2><h3 id="1-github挂的网页没有样式"><a href="#1-github挂的网页没有样式" class="headerlink" title="1. github挂的网页没有样式"></a>1. github挂的网页没有样式</h3><p><img src="/img/13-github/1.png" alt="Image"></p>
 <a id="more"></a>
 
 <div align='center'>
@@ -2941,7 +3015,7 @@ songs.push(<span class="string">'样'</span>)
 <p>2020-7-22 20:54:09</p>
 <p><img src="/img/13-github/3.png" alt="Image"></p>
 <hr>
-<h3 id="2-gitee显示不了博客了；"><a href="#2-gitee显示不了博客了；" class="headerlink" title="2. gitee显示不了博客了；"></a>2. gitee显示不了博客了；</h3><p>没有切到那个模样的图，差不多啥都没有，就只有个背景</p>
+<h2 id="2-gitee；"><a href="#2-gitee；" class="headerlink" title="2. gitee；"></a>2. gitee；</h2><h3 id="2-1-gitee显示不了博客了；"><a href="#2-1-gitee显示不了博客了；" class="headerlink" title="2.1 gitee显示不了博客了；"></a>2.1 gitee显示不了博客了；</h3><p>没有切到那个模样的图，差不多啥都没有，就只有个背景</p>
 <p>报错的图也没截，记录报错的笔记还是不熟练，写不下笔记，只想着怎么去修改错误；</p>
 <ol>
 <li><p>以为是部署，gitee要手动部署（当然网上有自动部署的配置，我不会弄）部署后还是那个样子；</p>
@@ -2954,8 +3028,87 @@ songs.push(<span class="string">'样'</span>)
 <p>让我回想起缓存，于是我F12，在页面左上角刷新按钮，鼠标右键，点击第三个清理缓存；</p>
 <p>成功；</p>
 <p><img src="https://note.youdao.com/yws/public/resource/20880918385295a41922f241b7b5ca5d/xmlnote/73FFCB97B07B489D996CB6E07DD89597/39737" alt="图片_picture"></p>
+<hr>
 </li>
 </ol>
+<hr>
+<h3 id="2-2-第二个号添加公匙"><a href="#2-2-第二个号添加公匙" class="headerlink" title="2.2 第二个号添加公匙"></a>2.2 第二个号添加公匙</h3><h4 id="0-哪个号？第二个号是？"><a href="#0-哪个号？第二个号是？" class="headerlink" title="0. 哪个号？第二个号是？"></a>0. 哪个号？第二个号是？</h4><p>1.<code>3293433914@qq.com</code></p>
+<h4 id="1-步骤"><a href="#1-步骤" class="headerlink" title="1. 步骤"></a>1. 步骤</h4><p>1.在文章：7-blog’s_problem_set.md——4</p>
+<ul>
+<li><p>且在目录：C:\Users\Administrator.ssh下的config里</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># gitee</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">gitee.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">gitee.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">~/.ssh/id_rsa</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">github_1.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">C:/Users/Administrator/.ssh/id_rsa</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">C:/Users/Administrator/.ssh/id_rsa_gitee</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>得出：</p>
+<p>id为：id_rsa_gitee，的密匙gitee还没用过；</p>
+</li>
+</ul>
+<p>2.实验：不在config里面配置，直接用，看能行不</p>
+<ul>
+<li><p>先不部署了，先直接用gitee pages 生成的公匙看行不行；</p>
+<p>不行；报错：</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line"><span class="built_in">warning</span>: LF will be replaced <span class="keyword">by</span> CRLF <span class="keyword">in</span> tags/blog/<span class="keyword">index</span>.html.</span><br><span class="line">The file will have its original <span class="type">line</span> endings <span class="keyword">in</span> your working directory</span><br><span class="line"><span class="built_in">warning</span>: LF will be replaced <span class="keyword">by</span> CRLF <span class="keyword">in</span> tags/<span class="keyword">index</span>.html.</span><br><span class="line">The file will have its original <span class="type">line</span> endings <span class="keyword">in</span> your working directory</span><br><span class="line"><span class="keyword">On</span> branch master</span><br><span class="line"><span class="keyword">nothing</span> <span class="keyword">to</span> <span class="keyword">commit</span>, working tree clean</span><br><span class="line"><span class="keyword">Access</span> deined: You <span class="keyword">do</span> <span class="keyword">not</span> have permission push <span class="keyword">to</span> this repository</span><br><span class="line">fatal: Could <span class="keyword">not</span> <span class="keyword">read</span> <span class="keyword">from</span> remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct <span class="keyword">access</span> rights</span><br><span class="line"><span class="keyword">and</span> the repository <span class="keyword">exists</span>.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>3.继续配置</p>
+<p>3.1 设置config</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># gitee</span></span><br><span class="line">Host gitee_2.com</span><br><span class="line">HostName gitee.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile C:<span class="regexp">/Users/</span>Administrator<span class="regexp">/.ssh/i</span>d_rsa_gitee</span><br></pre></td></tr></table></figure>
+
+<p>3.2 验证：<code>ssh -T git@gitee_2.com</code></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Administrator@</span>SKY<span class="number">-20160609</span>AOR MINGW64 ~/.ssh</span><br><span class="line">$ ssh -T <span class="symbol">git@</span>gitee_2.com</span><br><span class="line"><span class="symbol">git@</span>gitee.com: Permission denied (publickey).</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>git@gitee.com: Permission denied (publickey).</code></p>
+<p>含义：<a href="mailto:git@gitee.com">git@gitee.com</a>：权限被拒绝（公钥）。</p>
+</li>
+</ul>
+<p>3.3 是不是因为gitee那边没有配置的原因？</p>
+<p>3.4 实验：</p>
+<ul>
+<li><p>注意：id_rsa.pub是公匙，id_rsa是私匙；</p>
+</li>
+<li><p>成功：</p>
+<figure class="highlight scala"><table><tr><td class="code"><pre><span class="line"><span class="type">Administrator</span><span class="meta">@SKY</span><span class="number">-20160609</span>AOR <span class="type">MINGW64</span> ~/.ssh</span><br><span class="line">$ ssh -<span class="type">T</span> git<span class="meta">@gitee</span>_2.com</span><br><span class="line">git<span class="meta">@gitee</span>.com: <span class="type">Permission</span> denied (publickey).</span><br><span class="line"></span><br><span class="line"><span class="type">Administrator</span><span class="meta">@SKY</span><span class="number">-20160609</span>AOR <span class="type">MINGW64</span> ~/.ssh</span><br><span class="line">$ ssh -<span class="type">T</span> git<span class="meta">@gitee</span>_2.com</span><br><span class="line"><span class="type">Hi</span> qilin2! <span class="type">You</span><span class="symbol">&#x27;ve</span> successfully authenticated, but <span class="type">GITEE</span>.<span class="type">COM</span> does not provide shell access.</span><br><span class="line"></span><br><span class="line"><span class="type">Administrator</span><span class="meta">@SKY</span><span class="number">-20160609</span>AOR <span class="type">MINGW64</span> ~/.ssh</span><br><span class="line">$</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>4.blog的config.yml配置：</p>
+<ul>
+<li>我的目录：G:\1-sanciyuan\11-qilin_meiyao_luka</li>
+</ul>
+<p>4.1 主要是：<code>gitee: git@gitee_2.com:qilin2/zkdm-2.git</code></p>
+<ul>
+<li><p>而不是：<code>gitee: git@gitee.com:qilin2/zkdm-2.git</code></p>
+</li>
+<li><pre><code>deploy:
+  type: git
+  #repo: https://gitee.com/qilinclolik/qilinclolik.git
+  repo:
+        # github: git@github_1.com:qilin-meiyao-luka/qilin-meiyao-luka.git
+        gitee: git@gitee_2.com:qilin2/zkdm-2.git
+
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: master</code></pre></li>
+<li><p>网址：</p>
+</li>
+</ul>
+<p>5.over;2020-9-7 05:28:06</p>
+<h4 id="2-疑问："><a href="#2-疑问：" class="headerlink" title="2. 疑问："></a>2. 疑问：</h4><p>1.如果先在gitee那边配置的公匙；</p>
+<ul>
+<li>不在先C:\Users\Administrator.ssh下的config里配置</li>
+<li>能不能用？</li>
+</ul>
+<p>2.即使能用，也无法准确的<code>ssh -T git@gitee_2.com</code></p>
+<ul>
+<li>因为没那个host</li>
+</ul>
+<hr>
+<h3 id="2-3-不能加载css"><a href="#2-3-不能加载css" class="headerlink" title="2.3. 不能加载css"></a>2.3. 不能加载css</h3><p>1.听说仓库名与个人名要一样</p>
+<p><img src="http://bucket-c70.test.upcdn.net/6/1.png" alt="1"></p>
+<p>2.试试</p>
+<ul>
+<li>成功</li>
+</ul>
 <hr>
 ]]></content>
       <categories>
@@ -2967,211 +3120,205 @@ songs.push(<span class="string">'样'</span>)
   </entry>
   <entry>
     <title>7-bolg Problem_set</title>
-    <url>/7-blog&#39;s%20problem%20set/</url>
-    <content><![CDATA[<h3 id="1-博客图片不显示"><a href="#1-博客图片不显示" class="headerlink" title="1. 博客图片不显示"></a>1. 博客图片不显示</h3><p><img src="/img/14/1.png" alt="1.png"></p>
-<p>1.1 绝对路径的 “/”号会被 变成%，无法识别；</p>
-<a id="more"></a>
-
-<p>1.2 相对路径，不知道为什么没有用；</p>
-<p>但比较迷惑性的是，在Typora里面是看的到的；2020-7-22 23:09:37</p>
-<p><img src="../img/14/2.png" alt="1.png"></p>
-<h4 id="1-2-最终"><a href="#1-2-最终" class="headerlink" title="1.2. 最终"></a>1.2. 最终</h4><p>1.无意中发现了这个：</p>
-<p><img src="../img/14/3.png" alt="1.png"></p>
-<ul>
-<li><p>虽然在typora里面看不到；</p>
-</li>
-<li><p>但是hexo s能看到；</p>
-</li>
-<li><p>组队说了：不能同时的，解析规则不一样；2020-9-5 02:37:00</p>
-</li>
-</ul>
-<p><img src="../img/14/4.png" alt="1.png"></p>
-<p>2.之后hexo g -d 试试；</p>
-<ul>
-<li>有效；2020-7-23 00:24:50</li>
-</ul>
-<h4 id="1-3-还是用网络"><a href="#1-3-还是用网络" class="headerlink" title="1.3. 还是用网络"></a>1.3. 还是用网络</h4><p>空间问题，还是把图片弄到网络上；</p>
-<p>目前用的有道云笔记 ；2020-8-3 02:25:21</p>
-<h4 id="1-4-让typore可以预览"><a href="#1-4-让typore可以预览" class="headerlink" title="1.4 让typore可以预览"></a>1.4 让typore可以预览</h4><p>1.在上面1.2里，说了不能预览</p>
-<p>2.因为，permalink没配置好</p>
-<ul>
-<li><p>hexo的_config.yml</p>
-</li>
-<li><pre><code># URL
-## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;
-url: https://qilinclolik.gitee.io #http://yoursite.com
-root: /
-# 永久链接格式：分类/文件名
-permalink: :title/   #:category/:title/ ; :lang/:title/ 
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing &apos;index.html&apos; from permalinks
-  trailing_html: true # Set to false to remove trailing &apos;.html&apos; from permalinks
-
-&lt;!--hexoPostRenderEscape:&lt;figure class=&quot;highlight angelscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ 之前permalink那里是 :category/:title/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ 让每次url都多了一个category（分类名)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.&lt;/span&gt;改成`permalink: :title/`就好了&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.1&lt;/span&gt; 为什么呢？&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.2&lt;/span&gt;你看相对路径：例如：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ ../img/&lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;2.&lt;/span&gt;png；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ 含义是：文字的上一级目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ![&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;](../img/&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;1.&lt;/span&gt;png)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  上一级目录是source，文章在_posts目录里面；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.3&lt;/span&gt; 好，回到source，然后进入img，进入&lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;，获取&lt;span class=&quot;number&quot;&gt;2.&lt;/span&gt;png；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.4&lt;/span&gt; 这就是相对路径的含义；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt; 而以前的永久链接格式：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;permalink: :category/:title/ ;让url多了一个category(分类名)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.6&lt;/span&gt; 这样相对路径就找不到img了&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ 写成`../img/category/&lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;2.&lt;/span&gt;png`才可以；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### &lt;span class=&quot;number&quot;&gt;2.&lt;/span&gt; 密匙已经被使用；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1.&lt;/span&gt;                                                                                                                                                                         也许在github，一个账户正在使用了一个ssh密匙后，那个ssh就会被记录。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   而gitee那边不冲突；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   一个ssh密匙，分别可以在github与gitee都使用；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   但一个密匙应该不能在两个github号上用；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2.&lt;/span&gt; 只有这样假设了。去追求是否正确就不用了。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.&lt;/span&gt; 第二个github号：qilin-meiyao-luka，用的是&lt;span class=&quot;number&quot;&gt;3293&lt;/span&gt;-ssh密匙&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   唯一的gitee号也是这个密匙；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   大号github，用的&lt;span class=&quot;number&quot;&gt;7920&lt;/span&gt;ssh密匙；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;number&quot;&gt;2020&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;-8&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;-7&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;35&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;45&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   ---&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### &lt;span class=&quot;number&quot;&gt;3.&lt;/span&gt; 报错--&lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; found：git；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;![](https:&lt;span class=&quot;comment&quot;&gt;//i.loli.net/2020/08/07/rC3tXaVGJubNLBo.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;那手动创建一个试试；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;`npm install hexo-deployer-git --save`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;不对，这是个插件，单纯的没安装这个插件。没有这个，应该就不能生成本地静态文件吧；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### &lt;span class=&quot;number&quot;&gt;4.&lt;/span&gt; hexo d 报错 --第二个github账号--ssh冲突；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;报错内容：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;
-ERROR: Permission to qilin-meiyao-luka/qilin-meiyao-luka.git denied to Cqilin.
-fatal: Could not read from remote repository.
-</code></pre></li>
-</ul>
-<p>Please make sure you have the correct access rights<br>and the repository exists.<br>FATAL {<br>  err: Error: Spawn failed<br>      at ChildProcess.<anonymous> (G:\1-sanciyuan\11-qilin_meiyao_luka\node_modu<br>les\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)<br>      at ChildProcess.emit (events.js:210:5)<br>      at ChildProcess.cp.emit (G:\1-sanciyuan\11-qilin_meiyao_luka\node_modules<br>cross-spawn\lib\enoent.js:34:29)<br>      at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)<br>{<br>    code: 128<br>  }<br>} Something’s wrong. Maybe you can find the solution here: %s <a href="https://hexo.io/do">https://hexo.io/do</a><br>cs/troubleshooting.html</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;br /&gt;</span><br><span class="line"></span><br><span class="line">貌似是找不到仓库地址；不弄了，累了；<span class="number">2020</span><span class="number">-8</span><span class="number">-7</span> <span class="number">19</span>:<span class="number">18</span>:<span class="number">14</span></span><br><span class="line"></span><br><span class="line">#### <span class="number">3.1</span> 百度，多个ssh对应不同的github账号；</span><br><span class="line"></span><br><span class="line">+ 虽然gitee用的<span class="number">3293</span>-ssh，而不是大号github用的；</span><br><span class="line"></span><br><span class="line">+ 但在config里面有配置。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="gitee"><a href="#gitee" class="headerlink" title="gitee"></a>gitee</h1><p>  Host gitee.com<br>  HostName gitee.com<br>  PreferredAuthentications publickey<br>  IdentityFile ~/.ssh/id_rsa</p>
-<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><p>  Host github.com<br>  HostName github.com<br>  PreferredAuthentications publickey<br>  IdentityFile C:/Users/Administrator/.ssh/id_rsa_gitee<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">根据网上资料所说：</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  <a href="mailto:git@github.com">git@github.com</a>:name/project.git (这是原来直接复制过来的的url)<br>  这时候要改一下:<br>  <a href="mailto:git@github_1.com">git@github_1.com</a>:name/project.git<br>  这个github_1就是之前在config配置文件里修改的host<br>  <figure class="highlight http"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ 因为我配置了config，所以第二个github账号也用到了第一个github账号的ssh，从而第二个号没有权限；</span><br><span class="line"></span><br><span class="line">+ 假如我这么设置试试：</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>    # gitee<br>    Host gitee.com<br>    HostName gitee.com<br>    PreferredAuthentications publickey<br>    IdentityFile ~/.ssh/id_rsa</p>
-<pre><code># github
-Host github.com
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile C:/Users/Administrator/.ssh/id_rsa_gitee
-
-# github
-Host github_1.com
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile C:/Users/Administrator/.ssh/id_rsa
-&lt;!--hexoPostRenderEscape:&lt;figure class=&quot;highlight clean&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    虽然第一个gitee与最下面的github用的同一个ssh。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    但万一不冲突呢？先实验试试；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;gt; 如果不行，就创建第三个ssh；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#### &lt;span class=&quot;number&quot;&gt;3.2&lt;/span&gt; 在git bash里面验证试试：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;</code></pre><p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@gitee.com">git@gitee.com</a><br>  Hi Cqilin! You’ve successfully authenticated, but GITEE.COM does not provide shell access.</p>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@github.com">git@github.com</a><br>  Hi Cqilin! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@github_1.com">git@github_1.com</a><br>  Hi qilin-meiyao-luka! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $</p>
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">成功！</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@github_1.com">git@github_1.com</a><br>  Hi qilin-meiyao-luka! You’ve successfully authenticated, but GitHub does not provide shell access.<br>  <figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">成功获取到第二个github账号：qilin-meiyao-luka<span class="comment">;</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.3</span>  注意远程仓库的url也要改：</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  deploy:<br>    type: git<br>    #repo: <a href="https://gitee.com/qilinclolik/qilinclolik.git">https://gitee.com/qilinclolik/qilinclolik.git</a><br>    repo:<br>          github: <a href="https://github_1.com/qilin-meiyao-luka/qilin-meiyao-luka.git">https://github_1.com/qilin-meiyao-luka/qilin-meiyao-luka.git</a><br>    # example, <a href="https://github.com/hexojs/hexojs.github.io">https://github.com/hexojs/hexojs.github.io</a><br>    branch: master<br>  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  也要改成github<span class="emphasis">_1 ;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  改了就报错；</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  试试不改能不能行；（改是文章里面说的，但既然报错，只有不改试试）</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  3.3.1 发现问题，没有用仓库的ssh链接，用的html链接；但也不应该报错；</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  + 改成ssh链接，并遵循文章的修改为github_</span>1，先这么试试；</span><br><span class="line"></span><br><span class="line"><span class="code">    `git@github_1.com:qilin-meiyao-luka/qilin-meiyao-luka.git`</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    上传失败；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    改用 git bash；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    上传成功；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    但是没有css；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    .....</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">#### 3.4 解决没有css</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">1. 老问题，仓库名字：</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   qilin-meiyao-luka.github.io</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   它默认的是：qilin-meiyao-luka</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   必须把.github.io填上；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   还有右边的确认；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   ![1](https://i.loli.net/2020/08/10/EVWGMBmpvRba78S.png)</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   over；2020-8-7 20:19:16</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">---</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">### 5. next主题侧边栏没有统计；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">8.0版本；问题：</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">![1](https://i.loli.net/2020/08/10/oWJSukc9IrihlUT.png)</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">解决：https://theme-next.js.org/docs/getting-started/</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">最下面：4.5. Configuring Menu Items</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">y default NexT shows the icons of menu items without badges.</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">- [`icons`](https://theme-next.js.org/docs/getting-started/#menu_settings-1)</span></span><br><span class="line"><span class="code">- [`badges`](https://theme-next.js.org/docs/getting-started/#menu_settings-2)</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">Set the value `badges` to `true` to display the count of Posts / Categories / Tags within menu items in `menu_settings` section in theme config file as following:</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure><br>next/_config.yml<br>menu_settings:<br>  badges: true</p>
-<pre><code>
-2020-8-10 14:53:55
-
----
-
-### 6. 阅读统计与评论被刷新；
-
-1. 我估计是因为我在另一个博客上面用了同一个leancloud账号的id和key；
-
-   未时间，但根据那个时候的事情；
-
-   再上我重复的点击，刷新页面，修改文字title，都没有刷新阅读统计和评论；
-
-   想的就应该是这个了；
-
-2. 2020-8-11 05:30:05
-
----
-
-### 7. 报错hexo-them-next
-
-![1](http://bucket-c70.test.upcdn.net/4/1-7-1.png)
-
-直接在node_modules目录下把这个文件夹删了；
-
----
-
-### 8. url乱码-过去式
-
-1.
-</code></pre>]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>problem</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>7-bolg Problem_set</title>
     <url>/7-blog&#39;s_problem_set/</url>
-    <content><![CDATA[<h3 id="1-博客图片不显示"><a href="#1-博客图片不显示" class="headerlink" title="1. 博客图片不显示"></a>1. 博客图片不显示</h3><p><img src="/img/14/1.png" alt="1.png"></p>
-<p>1.1 绝对路径的 “/”号会被 变成%，无法识别；</p>
-<a id="more"></a>
-
-<p>1.2 相对路径，不知道为什么没有用；</p>
-<p>但比较迷惑性的是，在Typora里面是看的到的；2020-7-22 23:09:37</p>
-<p><img src="../img/14/2.png" alt="1.png"></p>
-<h4 id="1-2-最终"><a href="#1-2-最终" class="headerlink" title="1.2. 最终"></a>1.2. 最终</h4><p>1.无意中发现了这个：</p>
-<p><img src="../img/14/3.png" alt="1.png"></p>
+    <content><![CDATA[<h3 id="0-博客注意事项"><a href="#0-博客注意事项" class="headerlink" title="0. 博客注意事项"></a>0. 博客注意事项</h3><hr>
+<h4 id="0-1-自定义文件"><a href="#0-1-自定义文件" class="headerlink" title="0.1 自定义文件"></a>0.1 自定义文件</h4><p>1.如果有修改的文件可以自定义，就尽量在一旁新建一个文件使用；</p>
+<p><img src="http://bucket-c70.test.upcdn.net/7/4.png" alt="4"></p>
+<h4 id="0-2-有时候hexo-s报错"><a href="#0-2-有时候hexo-s报错" class="headerlink" title="0.2 有时候hexo s报错"></a>0.2 有时候hexo s报错</h4><p>1.有时候hexo s 报错</p>
 <ul>
-<li><p>虽然在typora里面看不到；</p>
-</li>
-<li><p>但是hexo s能看到；</p>
-</li>
-<li><p>组队说了：不能同时的，解析规则不一样；2020-9-5 02:37:00</p>
-</li>
+<li>又不知道怎么呢</li>
 </ul>
-<p><img src="/img/14/4.png" alt="1.png"></p>
-<p>2.之后hexo g -d 试试；</p>
+<p>2.或者你知道，刚才有个操作没保存，现在报错了</p>
 <ul>
-<li>有效；2020-7-23 00:24:50</li>
+<li>确实修改了东西，但这个修改前后，之前都没报错</li>
+<li>而现在修改就报错了</li>
 </ul>
-<h4 id="1-3-还是用网络"><a href="#1-3-还是用网络" class="headerlink" title="1.3. 还是用网络"></a>1.3. 还是用网络</h4><p>空间问题，还是把图片弄到网络上；</p>
-<p>目前用的有道云笔记 ；2020-8-3 02:25:21</p>
-<h4 id="1-4-让typore可以预览"><a href="#1-4-让typore可以预览" class="headerlink" title="1.4 让typore可以预览"></a>1.4 让typore可以预览</h4><p>1.在上面1.2里，说了不能预览</p>
-<p>2.因为，permalink没配置好</p>
+<p>3.你用了 hexo g</p>
+<p>4.hexo clean 即可</p>
+<p>5.具体为什么不知。</p>
+<p>6.例如：</p>
+<p>配置了加密</p>
 <ul>
-<li><p>hexo的_config.yml</p>
-</li>
-<li><pre><code># URL
-## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;
-url: https://qilinclolik.gitee.io #http://yoursite.com
-root: /
-# 永久链接格式：分类/文件名
-permalink: :title/   #:category/:title/ ; :lang/:title/ 
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing &apos;index.html&apos; from permalinks
-  trailing_html: true # Set to false to remove trailing &apos;.html&apos; from permalinks
+<li><pre><code>password: muyiio
+abstract: 这里有东西被加密了，需要输入密码查看哦。
+message: 您好，这里需要密码。
+wrong_pass_message: 抱歉，这个密码看着不太对，请再试试。
+wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容
+&lt;!--hexoPostRenderEscape:&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;如果hexo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;g过，不hexo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;clean，修改其中配置，hexo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;就会报错。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;明明没改博客的config，等其他系统配置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;当时还有点慌，毕竟没改系统方面的配置怎么在报错？&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;### 1. 博客图片不显示&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;![1.png](/img/14/1.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1.1&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;绝对路径的&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;“/”号会被&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;变成%，无法识别；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1.2&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;相对路径，不知道为什么没有用；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;但比较迷惑性的是，在Typora里面是看的到的；2020-7-22&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;:09:37&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;![1.png](../img/14/2.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#### 1.2. 最终&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.无意中发现了这个：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;![1.png](../img/14/3.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;虽然在typora里面看不到；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;但是hexo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;s能看到；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;组队说了：不能同时的，解析规则不一样；2020-9-5&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;:37:00&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;![1.png](/img/14/4.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.之后hexo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;试试；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;有效；2020-7-23&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;:24:50&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#### 1.3. 还是用网络&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;空间问题，还是把图片弄到网络上；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;目前用的有道云笔记&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;；2020-8-3&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;:25:21&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#### 1.4 让typore可以预览&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.在上面1.2里，说了不能预览&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.因为，permalink没配置好&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;hexo的_config.yml&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;```yaml&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;# URL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;## If your site is put in a subdirectory, set url as &amp;#x27;http://yoursite.com/child&amp;#x27; and root as &amp;#x27;/child/&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;url:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;https://qilinclolik.gitee.io&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;#http://yoursite.com&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;root:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;# 永久链接格式：分类/文件名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;permalink:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;:title/&lt;/span&gt;   &lt;span class=&quot;comment&quot;&gt;#:category/:title/ ; :lang/:title/ &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;permalink_defaults:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;pretty_urls:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;trailing_index:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;# Set to false to remove trailing &amp;#x27;index.html&amp;#x27; from permalinks&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;trailing_html:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;# Set to false to remove trailing &amp;#x27;.html&amp;#x27; from permalinks&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;
 
-&lt;!--hexoPostRenderEscape:&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;之前permalink那里是&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;:category/:title/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;让每次url都多了一个category（分类名)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.改成`permalink:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;:title/`就好了&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;为什么呢？&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;你看相对路径：例如：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;+&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;### 2. 密匙已经被使用；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.&lt;/span&gt;                                                                                                                                                                         &lt;span class=&quot;string&quot;&gt;也许在github，一个账户正在使用了一个ssh密匙后，那个ssh就会被记录。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;而gitee那边不冲突；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;一个ssh密匙，分别可以在github与gitee都使用；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;但一个密匙应该不能在两个github号上用；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;只有这样假设了。去追求是否正确就不用了。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;第二个github号：qilin-meiyao-luka，用的是3293-ssh密匙&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;唯一的gitee号也是这个密匙；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;大号github，用的7920ssh密匙；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;number&quot;&gt;2020-8&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;-7&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;:35:45&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;### 3. 报错--not found：git；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;![](https://i.loli.net/2020/08/07/rC3tXaVGJubNLBo.png)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;那手动创建一个试试；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;`npm&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;hexo-deployer-git&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;--save`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;不对，这是个插件，单纯的没安装这个插件。没有这个，应该就不能生成本地静态文件吧；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;### 4. hexo d 报错 --第二个github账号--ssh冲突；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;报错内容：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;
-ERROR: Permission to qilin-meiyao-luka/qilin-meiyao-luka.git denied to Cqilin.
-fatal: Could not read from remote repository.
+
 </code></pre></li>
 </ul>
-<p>Please make sure you have the correct access rights<br>and the repository exists.<br>FATAL {<br>  err: Error: Spawn failed<br>      at ChildProcess.<anonymous> (G:\1-sanciyuan\11-qilin_meiyao_luka\node_modu<br>les\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)<br>      at ChildProcess.emit (events.js:210:5)<br>      at ChildProcess.cp.emit (G:\1-sanciyuan\11-qilin_meiyao_luka\node_modules<br>cross-spawn\lib\enoent.js:34:29)<br>      at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)<br>{<br>    code: 128<br>  }<br>} Something’s wrong. Maybe you can find the solution here: %s <a href="https://hexo.io/do">https://hexo.io/do</a><br>cs/troubleshooting.html</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;br /&gt;</span><br><span class="line"></span><br><span class="line">貌似是找不到仓库地址；不弄了，累了；<span class="number">2020</span><span class="number">-8</span><span class="number">-7</span> <span class="number">19</span>:<span class="number">18</span>:<span class="number">14</span></span><br><span class="line"></span><br><span class="line">#### <span class="number">3.1</span> 百度，多个ssh对应不同的github账号；</span><br><span class="line"></span><br><span class="line">+ 虽然gitee用的<span class="number">3293</span>-ssh，而不是大号github用的；</span><br><span class="line"></span><br><span class="line">+ 但在config里面有配置。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="gitee"><a href="#gitee" class="headerlink" title="gitee"></a>gitee</h1><p>  Host gitee.com<br>  HostName gitee.com<br>  PreferredAuthentications publickey<br>  IdentityFile ~/.ssh/id_rsa</p>
-<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><p>  Host github.com<br>  HostName github.com<br>  PreferredAuthentications publickey<br>  IdentityFile C:/Users/Administrator/.ssh/id_rsa_gitee<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">根据网上资料所说：</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  <a href="mailto:git@github.com">git@github.com</a>:name/project.git (这是原来直接复制过来的的url)<br>  这时候要改一下:<br>  <a href="mailto:git@github_1.com">git@github_1.com</a>:name/project.git<br>  这个github_1就是之前在config配置文件里修改的host<br>  <figure class="highlight http"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ 因为我配置了config，所以第二个github账号也用到了第一个github账号的ssh，从而第二个号没有权限；</span><br><span class="line"></span><br><span class="line">+ 假如我这么设置试试：</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>    # gitee<br>    Host gitee.com<br>    HostName gitee.com<br>    PreferredAuthentications publickey<br>    IdentityFile ~/.ssh/id_rsa</p>
-<pre><code># github
-Host github.com
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile C:/Users/Administrator/.ssh/id_rsa_gitee
+<ul>
+<li><p>之前permalink那里是 :category/:title/</p>
+</li>
+<li><p>让每次url都多了一个category（分类名)</p>
+</li>
+</ul>
+<p>3.改成<code>permalink: :title/</code>就好了</p>
+<ul>
+<li><p>为什么呢？</p>
+</li>
+<li><p>你看相对路径：例如：</p>
+<ul>
+<li><p>../img/14/2.png；</p>
+</li>
+<li><p>含义是：文字的上一级目录；</p>
+<p><img src="../img/7/1.png" alt="1"></p>
+<p>上一级目录是source，文章在_posts目录里面；</p>
+</li>
+</ul>
+<p>3.3 好，回到source，然后进入img，进入14，获取2.png；</p>
+<p>3.4 这就是相对路径的含义；<br>3.5 而以前的永久链接格式：</p>
+<p>permalink: :category/:title/ ;让url多了一个category(分类名)</p>
+<p>3.6 这样相对路径就找不到img了</p>
+<ul>
+<li>写成<code>../img/category/14/2.png</code>才可以；</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-密匙已经被使用；"><a href="#2-密匙已经被使用；" class="headerlink" title="2. 密匙已经被使用；"></a>2. 密匙已经被使用；</h3><ol>
+<li><p>也许在github，一个账户正在使用了一个ssh密匙后，那个ssh就会被记录。</p>
+<p>而gitee那边不冲突；</p>
+<p>一个ssh密匙，分别可以在github与gitee都使用；</p>
+<a id="more"></a>
 
-# github
-Host github_1.com
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile C:/Users/Administrator/.ssh/id_rsa
-&lt;!--hexoPostRenderEscape:&lt;figure class=&quot;highlight clean&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    虽然第一个gitee与最下面的github用的同一个ssh。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    但万一不冲突呢？先实验试试；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;gt; 如果不行，就创建第三个ssh；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#### &lt;span class=&quot;number&quot;&gt;3.2&lt;/span&gt; 在git bash里面验证试试：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;</code></pre><p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@gitee.com">git@gitee.com</a><br>  Hi Cqilin! You’ve successfully authenticated, but GITEE.COM does not provide shell access.</p>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@github.com">git@github.com</a><br>  Hi Cqilin! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@github_1.com">git@github_1.com</a><br>  Hi qilin-meiyao-luka! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $</p>
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">成功！</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>  Administrator@SKY-20160609AOR MINGW64 ~<br>  $ ssh -T <a href="mailto:git@github_1.com">git@github_1.com</a><br>  Hi qilin-meiyao-luka! You’ve successfully authenticated, but GitHub does not provide shell access.<br>  <figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">成功获取到第二个github账号：qilin-meiyao-luka<span class="comment">;</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.3</span>  注意远程仓库的url也要改：</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>  deploy:<br>    type: git<br>    #repo: <a href="https://gitee.com/qilinclolik/qilinclolik.git">https://gitee.com/qilinclolik/qilinclolik.git</a><br>    repo:<br>          github: <a href="https://github_1.com/qilin-meiyao-luka/qilin-meiyao-luka.git">https://github_1.com/qilin-meiyao-luka/qilin-meiyao-luka.git</a><br>    # example, <a href="https://github.com/hexojs/hexojs.github.io">https://github.com/hexojs/hexojs.github.io</a><br>    branch: master<br>  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  也要改成github<span class="emphasis">_1 ;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  改了就报错；</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  试试不改能不能行；（改是文章里面说的，但既然报错，只有不改试试）</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  3.3.1 发现问题，没有用仓库的ssh链接，用的html链接；但也不应该报错；</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">  + 改成ssh链接，并遵循文章的修改为github_</span>1，先这么试试；</span><br><span class="line"></span><br><span class="line"><span class="code">    `git@github_1.com:qilin-meiyao-luka/qilin-meiyao-luka.git`</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    上传失败；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    改用 git bash；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    上传成功；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    但是没有css；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    .....</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">#### 3.4 解决没有css</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">1. 老问题，仓库名字：</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   qilin-meiyao-luka.github.io</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   它默认的是：qilin-meiyao-luka</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   必须把.github.io填上；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   还有右边的确认；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   ![1](https://i.loli.net/2020/08/10/EVWGMBmpvRba78S.png)</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">   over；2020-8-7 20:19:16</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">---</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">### 5. next主题侧边栏没有统计；</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">8.0版本；问题：</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">![1](https://i.loli.net/2020/08/10/oWJSukc9IrihlUT.png)</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">解决：https://theme-next.js.org/docs/getting-started/</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">最下面：4.5. Configuring Menu Items</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">y default NexT shows the icons of menu items without badges.</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">- [`icons`](https://theme-next.js.org/docs/getting-started/#menu_settings-1)</span></span><br><span class="line"><span class="code">- [`badges`](https://theme-next.js.org/docs/getting-started/#menu_settings-2)</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">Set the value `badges` to `true` to display the count of Posts / Categories / Tags within menu items in `menu_settings` section in theme config file as following:</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure><br>next/_config.yml<br>menu_settings:<br>  badges: true</p>
-<pre><code>
-2020-8-10 14:53:55
+<p>但一个密匙应该不能在两个github号上用；</p>
+</li>
+<li><p>只有这样假设了。去追求是否正确就不用了。</p>
+</li>
+<li><p>第二个github号：qilin-meiyao-luka，用的是3293-ssh密匙</p>
+<p>唯一的gitee号也是这个密匙；</p>
+<p>大号github，用的7920ssh密匙；</p>
+<p>2020-8-7 18:35:45</p>
+<hr>
+</li>
+</ol>
+<h3 id="3-报错–not-found：git；"><a href="#3-报错–not-found：git；" class="headerlink" title="3. 报错–not found：git；"></a>3. 报错–not found：git；</h3><p><img src="https://i.loli.net/2020/08/07/rC3tXaVGJubNLBo.png" alt=""></p>
+<p>那手动创建一个试试；</p>
+<p><code>npm install hexo-deployer-git --save</code></p>
+<p>不对，这是个插件，单纯的没安装这个插件。没有这个，应该就不能生成本地静态文件吧；</p>
+<hr>
+<h3 id="4-hexo-d-报错-–第二个github账号–ssh冲突；"><a href="#4-hexo-d-报错-–第二个github账号–ssh冲突；" class="headerlink" title="4. hexo d 报错 –第二个github账号–ssh冲突；"></a>4. hexo d 报错 –第二个github账号–ssh冲突；</h3><p>报错内容：</p>
+<figure class="highlight http"><table><tr><td class="code"><pre><span class="line"><span class="attribute">ERROR</span>: Permission to qilin-meiyao-luka/qilin-meiyao-luka.git denied to Cqilin.</span><br><span class="line"><span class="attribute">fatal</span>: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (G:\1-sanciyuan\11-qilin_meiyao_luka\node_modu</span><br><span class="line"><span class="attribute">les\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)</span></span><br><span class="line">      at ChildProcess.emit (events.js:210:5)</span><br><span class="line">      at ChildProcess.cp.emit (G:\1-sanciyuan\11-qilin_meiyao_luka\node_modules\</span><br><span class="line"><span class="attribute">cross-spawn\lib\enoent.js:34:29)</span></span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)</span><br><span class="line">&#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/do</span><br><span class="line"><span class="attribute">cs/troubleshooting.html</span></span><br></pre></td></tr></table></figure>
 
----
+<br />
 
-### 6. 阅读统计与评论被刷新；
+<p>貌似是找不到仓库地址；不弄了，累了；2020-8-7 19:18:14</p>
+<h4 id="4-1-百度，多个ssh对应不同的github账号；"><a href="#4-1-百度，多个ssh对应不同的github账号；" class="headerlink" title="4.1 百度，多个ssh对应不同的github账号；"></a>4.1 百度，多个ssh对应不同的github账号；</h4><ul>
+<li><p>虽然gitee用的3293-ssh，而不是大号github用的；</p>
+</li>
+<li><p>但在config里面有配置。</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># gitee</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">gitee.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">gitee.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">~/.ssh/id_rsa</span></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">C:/Users/Administrator/.ssh/id_rsa_gitee</span></span><br></pre></td></tr></table></figure>
 
-1. 我估计是因为我在另一个博客上面用了同一个leancloud账号的id和key；
+<p>根据网上资料所说：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">git<span class="meta">@github</span>.<span class="attr">com:</span>name/project.git (这是原来直接复制过来的的url)</span><br><span class="line">这时候要改一下:</span><br><span class="line">git<span class="meta">@github</span>_1.<span class="attr">com:</span>name/project.git </span><br><span class="line">这个github_1就是之前在config配置文件里修改的host</span><br></pre></td></tr></table></figure>
 
-   未时间，但根据那个时候的事情；
 
-   再上我重复的点击，刷新页面，修改文字title，都没有刷新阅读统计和评论；
 
-   想的就应该是这个了；
+</li>
+</ul>
+<ul>
+<li><p>因为我配置了config，所以第二个github账号也用到了第一个github账号的ssh，从而第二个号没有权限；</p>
+</li>
+<li><p>假如我这么设置试试：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># gitee</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">gitee.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">gitee.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">~/.ssh/id_rsa</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">C:/Users/Administrator/.ssh/id_rsa_gitee</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">github_1.com</span></span><br><span class="line"><span class="attr">HostName</span> <span class="string">github.com</span></span><br><span class="line"><span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="attr">IdentityFile</span> <span class="string">C:/Users/Administrator/.ssh/id_rsa</span></span><br></pre></td></tr></table></figure>
 
-2. 2020-8-11 05:30:05
+<p>虽然第一个gitee与最下面的github用的同一个ssh。</p>
+<p>但万一不冲突呢？先实验试试；</p>
+<blockquote>
+<p>如果不行，就创建第三个ssh；</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="4-2-在git-bash里面验证试试："><a href="#4-2-在git-bash里面验证试试：" class="headerlink" title="4.2 在git bash里面验证试试："></a>4.2 在git bash里面验证试试：</h4>  <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">Administrator@SKY-<span class="number">20160609</span>AOR MINGW64 ~</span><br><span class="line">$ ssh -T git@gitee.com</span><br><span class="line">Hi Cqilin! Yo<span class="string">u&#x27;ve successfully authenticated, but GITEE.COM does not provide shell access.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Administrator@SKY-20160609AOR MINGW64 ~</span></span><br><span class="line"><span class="string">$ ssh -T git@github.com</span></span><br><span class="line"><span class="string">Hi Cqilin! You&#x27;</span>ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line"></span><br><span class="line">Administrator@SKY-<span class="number">20160609</span>AOR MINGW64 ~</span><br><span class="line">$ ssh -T git@github_1.com</span><br><span class="line">Hi qilin-meiyao-luka! Yo<span class="string">u&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Administrator@SKY-20160609AOR MINGW64 ~</span></span><br><span class="line"><span class="string">$</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
 
----
+<p>  成功！</p>
+  <figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Administrator@</span>SKY<span class="number">-20160609</span>AOR MINGW64 ~</span><br><span class="line">$ ssh -T <span class="symbol">git@</span>github_1.com</span><br><span class="line">Hi qilin-meiyao-luka! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
 
-### 7. 报错hexo-them-next
+<p>  成功获取到第二个github账号：qilin-meiyao-luka;</p>
+<p>  3.3  注意远程仓库的url也要改：</p>
+  <figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  #<span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//gitee.com/qilinclolik/qilinclolik.git</span></span><br><span class="line">  <span class="attribute">repo</span>:</span><br><span class="line">        <span class="attribute">github</span>: <span class="attribute">https</span>:<span class="comment">//github_1.com/qilin-meiyao-luka/qilin-meiyao-luka.git</span></span><br><span class="line">  # example, <span class="attribute">https</span>:<span class="comment">//github.com/hexojs/hexojs.github.io</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
 
-![1](http://bucket-c70.test.upcdn.net/4/1-7-1.png)
+<p>  也要改成github_1 ;</p>
+<p>  改了就报错；</p>
+<p>  试试不改能不能行；（改是文章里面说的，但既然报错，只有不改试试）</p>
+<p>  3.3.1 发现问题，没有用仓库的ssh链接，用的html链接；但也不应该报错；</p>
+<ul>
+<li><p>改成ssh链接，并遵循文章的修改为github_1，先这么试试；</p>
+<p><code>git@github_1.com:qilin-meiyao-luka/qilin-meiyao-luka.git</code></p>
+<p>上传失败；</p>
+<p>改用 git bash；</p>
+<p>上传成功；</p>
+<p>但是没有css；</p>
+<p>…..</p>
+</li>
+</ul>
+<h4 id="4-3-解决博客没有css"><a href="#4-3-解决博客没有css" class="headerlink" title="4.3 解决博客没有css"></a>4.3 解决博客没有css</h4><ol>
+<li><p>老问题，仓库名字：</p>
+<p>qilin-meiyao-luka.github.io</p>
+<p>它默认的是：qilin-meiyao-luka</p>
+<p>必须把.github.io填上；</p>
+<p>还有右边的确认；</p>
+<p><img src="https://i.loli.net/2020/08/10/EVWGMBmpvRba78S.png" alt="1"></p>
+<p>over；2020-8-7 20:19:16</p>
+</li>
+</ol>
+<hr>
+<h3 id="5-next主题侧边栏没有统计；"><a href="#5-next主题侧边栏没有统计；" class="headerlink" title="5. next主题侧边栏没有统计；"></a>5. next主题侧边栏没有统计；</h3><p>8.0版本；问题：</p>
+<p><img src="https://i.loli.net/2020/08/10/oWJSukc9IrihlUT.png" alt="1"></p>
+<p>解决：<a href="https://theme-next.js.org/docs/getting-started/">https://theme-next.js.org/docs/getting-started/</a></p>
+<p>最下面：4.5. Configuring Menu Items</p>
+<p>y default NexT shows the icons of menu items without badges.</p>
+<ul>
+<li><a href="https://theme-next.js.org/docs/getting-started/#menu_settings-1"><code>icons</code></a></li>
+<li><a href="https://theme-next.js.org/docs/getting-started/#menu_settings-2"><code>badges</code></a></li>
+</ul>
+<p>Set the value <code>badges</code> to <code>true</code> to display the count of Posts / Categories / Tags within menu items in <code>menu_settings</code> section in theme config file as following:</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">next/_config.yml</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-直接在node_modules目录下把这个文件夹删了；
+<p>2020-8-10 14:53:55</p>
+<hr>
+<h3 id="6-阅读统计与评论被刷新；"><a href="#6-阅读统计与评论被刷新；" class="headerlink" title="6. 阅读统计与评论被刷新；"></a>6. 阅读统计与评论被刷新；</h3><ol>
+<li><p>我估计是因为我在另一个博客上面用了同一个leancloud账号的id和key；</p>
+<p>未时间，但根据那个时候的事情；</p>
+<p>再上我重复的点击，刷新页面，修改文字title，都没有刷新阅读统计和评论；</p>
+<p>想的就应该是这个了；</p>
+</li>
+<li><p>2020-8-11 05:30:05</p>
+</li>
+</ol>
+<hr>
+<h3 id="7-报错hexo-them-next"><a href="#7-报错hexo-them-next" class="headerlink" title="7. 报错hexo-them-next"></a>7. 报错hexo-them-next</h3><p><img src="http://bucket-c70.test.upcdn.net/4/1-7-1.png" alt="1"></p>
+<p>直接在node_modules目录下把这个文件夹删了；</p>
+<hr>
+<h3 id="8-url乱码-过去式"><a href="#8-url乱码-过去式" class="headerlink" title="8. url乱码-过去式"></a>8. url乱码-过去式</h3><p>1.</p>
+<hr>
+<h3 id="9-如何修改侧边栏标签本身"><a href="#9-如何修改侧边栏标签本身" class="headerlink" title="9. 如何修改侧边栏标签本身"></a>9. 如何修改侧边栏标签本身</h3><p>1.标签本身</p>
+<ul>
+<li>把关于 改成 关于我</li>
+<li><img src="http://bucket-c70.test.upcdn.net/7/2.png" alt="2" style="zoom:80%;" />
 
----
+</li>
+</ul>
+<p>2.在哪修改？</p>
+<ul>
+<li><code>languages</code>文件夹里面的<code>zh-Hans.yml</code>文件，<code>menu</code>子项中修改；</li>
+<li>我的路径：G:\1-sanciyuan\8-bolg\themes\next2-8.0\languages</li>
+</ul>
+<hr>
+<h3 id="10-博客目录乱码"><a href="#10-博客目录乱码" class="headerlink" title="10. 博客目录乱码"></a>10. 博客目录乱码</h3><p><img src="http://bucket-c70.test.upcdn.net/4/2.png" alt="2"></p>
+<p>可能是因为目录跳级了；</p>
+<p>###，下面 写成 #####了</p>
+<hr>
+<h3 id="11-如果有两个本地blog"><a href="#11-如果有两个本地blog" class="headerlink" title="11. 如果有两个本地blog"></a>11. 如果有两个本地blog</h3><p>1.只另一个本地时，要换一个端口</p>
+<p><code>hexo s -p 5000</code></p>
+<p>2.预览：</p>
+<p><img src="http://bucket-c70.test.upcdn.net/7/3.png" alt="3"></p>
+<br/>
 
-### 8. url乱码-过去式
-
-1.
-</code></pre>]]></content>
+<hr>
+]]></content>
       <categories>
         <category>blog</category>
       </categories>
@@ -3181,7 +3328,7 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
   </entry>
   <entry>
     <title>8-blog&#39;s function add</title>
-    <url>/8-blog&#39;s%20function%20add/</url>
+    <url>/8-blog&#39;s_function_add/</url>
     <content><![CDATA[<h2 id="1-添加音乐"><a href="#1-添加音乐" class="headerlink" title="1. 添加音乐"></a>1. 添加音乐</h2><p><a href="http://liangzhikai.cn/2020/07/07/hexo-next%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/">http://liangzhikai.cn/2020/07/07/hexo-next%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/</a></p>
 <p>别人写的资料；</p>
 <p>自己还没实验过，所以还没笔记；2020-8-3 06:41:58</p>
@@ -3211,27 +3358,62 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
 </li>
 </ol>
 <hr>
-<h2 id="3-文章访问统计"><a href="#3-文章访问统计" class="headerlink" title="3. 文章访问统计"></a>3. 文章访问统计</h2><p><strong>重要：next主题配置一定要使用相关的，7.8就用7.8，8.0一定要用8.0的config；</strong></p>
-<p><strong>不能因为是next.yml 或者是现在最新版的_config.next就用以前的文件；</strong></p>
-<p>换了主题8.0的config后就有效了；</p>
-<ol start="0">
-<li><p><a href="https://theme-next.js.org/docs/third-party-services/statistics-and-analytics.html#Firebase">https://theme-next.js.org/docs/third-party-services/statistics-and-analytics.html#Firebase</a></p>
-<p>好了使用官方的，都散了吧；2020-8-9 11:52:18</p>
+<h2 id="3-文章访问统计"><a href="#3-文章访问统计" class="headerlink" title="3. 文章访问统计"></a>3. 文章访问统计</h2><h3 id="3-0-用官网的方法"><a href="#3-0-用官网的方法" class="headerlink" title="3.0 用官网的方法"></a>3.0 用官网的方法</h3><p>1.<strong>重要：next主题配置一定要使用相关的，7.8就用7.8，8.0一定要用8.0的config；</strong></p>
+<ul>
+<li><p><strong>不能因为是next.yml 或者是现在最新版的_config.next就用以前的文件；</strong></p>
 </li>
-</ol>
+<li><p>换了主题8.0的config后就有效了；</p>
+</li>
+<li><p><a href="https://theme-next.js.org/docs/third-party-services/statistics-and-analytics.html#Firebase">https://theme-next.js.org/docs/third-party-services/statistics-and-analytics.html#Firebase</a></p>
+</li>
+<li><p>好了使用官方的，都散了吧；2020-8-9 11:52:18</p>
+</li>
+</ul>
+<h4 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2. 步骤:"></a>2. 步骤:</h4><p>1.打开官网</p>
+<p>2.有三种计数:</p>
+<p><img src="../img/8/1.png" alt="1"></p>
+<p>2.1 如果选择LeanCloud，会报错：</p>
+<ul>
+<li><p>err: TypeError: serverURL option is required for apps from CN region；</p>
+<p>错误：类型错误：来自CN区域的应用程序需要serverURL选项</p>
+</li>
+<li><p>它要让你验证服务器</p>
+</li>
+</ul>
+<p>2.2 如果你用Busuanzi，下面评论系统的时候又要使用LeanCloud;</p>
+<ul>
+<li><p>所以这里使用3.1 评论的计数；</p>
+</li>
+<li><p>相关配置去3.1看；</p>
+</li>
+<li><p>over；</p>
+</li>
+</ul>
+<p>3.如果简单点，不需要评论，只要计数，或者想快点</p>
+<ul>
+<li>用Busuanzi；</li>
+<li>可安装官网步骤使用；</li>
+</ul>
+<p>3.1 ok，3是错误的，只是像官网那么配置是无效的</p>
+<ul>
+<li>还是要在某云端申请账号；</li>
+<li>以后都用<code>3.1 用评论的计数</code></li>
+</ul>
+<p>3.2 哦，首页没有，文字里面有计数；2020-9-7 03:59:08</p>
+<p>4.中间的Firebase没用过；</p>
 <hr>
-<p>   1.这是没使用0时候的卡关</p>
-<p>   卡在：</p>
-<p>   err: TypeError: serverURL option is required for apps from CN region；</p>
-<p>   LeanCloud自己给的<strong>REST API 服务器地址</strong>还是报错；看来要自己用域名解析，来配置LeanCloud的API访问域名</p>
+<h3 id="3-05-以前的失败经历"><a href="#3-05-以前的失败经历" class="headerlink" title="3.05 以前的失败经历"></a>3.05 以前的失败经历</h3><p>1.这是没使用0时候的卡关</p>
+<p>卡在：</p>
+<p>err: TypeError: serverURL option is required for apps from CN region；</p>
+<p>LeanCloud自己给的<strong>REST API 服务器地址</strong>还是报错；看来要自己用域名解析，来配置LeanCloud的API访问域名</p>
 <hr>
-<p>   0.1 很好，gitee不能被域名解析，要收费；</p>
-<p>   0.2 只有github速度不行；</p>
-<p>   0.3 必须要有一个国内的；</p>
-<p>   0.4 coding可以去试试；2020-8-9 12:11:17</p>
-<p>   0.5 目前先不去弄了，还有其他事要做；2020-8-9 12:11:37</p>
+<p>0.1 很好，gitee不能被域名解析，要收费；</p>
+<p>0.2 只有github速度不行；</p>
+<p>0.3 必须要有一个国内的；</p>
+<p>0.4 coding可以去试试；2020-8-9 12:11:17</p>
+<p>0.5 目前先不去弄了，还有其他事要做；2020-8-9 12:11:37</p>
 <hr>
-<p>   使用的最下面的 <strong>算盘子计数（中国）</strong>；2020-8-9 12:42:14</p>
+<p>使用的最下面的 <strong>算盘子计数（中国）</strong>；2020-8-9 12:42:14</p>
 <p><a href="https://cloud.tencent.com/developer/article/1482008">https://cloud.tencent.com/developer/article/1482008</a></p>
 <ol start="2">
 <li><p>注意：</p>
@@ -3552,7 +3734,47 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
 <li><p>自己已安装；</p>
 <p><img src="http://bucket-c70.test.upcdn.net/4/2-10-1.png" alt="2"></p>
 </li>
+<li><p>下载预览：</p>
+<p><img src="http://bucket-c70.test.upcdn.net/8/10.png" alt="10"></p>
+<ul>
+<li>cnpm下载东西的格式与npm不一样</li>
+<li>同时 查看cnpm版本时<ul>
+<li>还有显示npm的版本</li>
+<li>node的版本</li>
+<li>npminstall的版本</li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
+<h3 id="10-1-问题"><a href="#10-1-问题" class="headerlink" title="10.1 问题"></a>10.1 问题</h3><p>1.同时目录下，也多一个文件夹：</p>
+<p><img src="http://bucket-c70.test.upcdn.net/8/11.png" alt="11"></p>
+<p>   1.3 先看看下载的东西有没有效果；2020-9-7 04:09:56</p>
+<p>   1.4 没有下载出hexo-theme-next，还不错，免得我去删了；</p>
+<ul>
+<li>用npm切换淘宝镜像下载依赖包，不会有这个问题</li>
+</ul>
+<p>2.同时，还下载了很多其他的东西</p>
+<ul>
+<li><p>在我<code>cnpm install --save hexo-blog-encrypt</code>时，发生的；2020-9-9 17:54:50</p>
+</li>
+<li><img src="http://bucket-c70.test.upcdn.net/8/15.png" alt="15" style="zoom:80%;" />
+
+
+
+</li>
+</ul>
+<ul>
+<li>下面还有，没有截图了，不过全部把这种_开头的删了，hexo s 也不报错；</li>
+</ul>
+<hr>
+<h3 id="10-2-npm切换淘宝镜像下载依赖包"><a href="#10-2-npm切换淘宝镜像下载依赖包" class="headerlink" title="10.2 npm切换淘宝镜像下载依赖包"></a>10.2 npm切换淘宝镜像下载依赖包</h3><p><a href="https://blog.csdn.net/qq_16683689/article/details/89376577">https://blog.csdn.net/qq_16683689/article/details/89376577</a></p>
+<p>1.好像是说cnpm有很多坑，但又没说清楚</p>
+<p>2.上面下载两个文件，也许是其中之一，没有试验；2020-9-9 17:41:37</p>
+<p>3.还有人说：漏掉依赖（目前不懂）</p>
+<ul>
+<li><a href="https://www.cnblogs.com/lxwphp/p/7754812.html">https://www.cnblogs.com/lxwphp/p/7754812.html</a></li>
+</ul>
 <hr>
 <h2 id="11-字体"><a href="#11-字体" class="headerlink" title="11. 字体"></a>11. 字体</h2><p><a href="https://theme-next.js.org/docs/theme-settings/miscellaneous.html#Fonts-Customization">官网链接</a></p>
 <p>预览：</p>
@@ -3626,7 +3848,140 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
 <h3 id="12-3-发现permalink"><a href="#12-3-发现permalink" class="headerlink" title="12.3 发现permalink"></a>12.3 发现permalink</h3><p>1.permalink才是关键之一</p>
 <p>2.它构成了url的路径定位；</p>
 <hr>
-<h2 id="13"><a href="#13" class="headerlink" title="13."></a>13.</h2>]]></content>
+<h2 id="13-进度条"><a href="#13-进度条" class="headerlink" title="13. 进度条"></a>13. 进度条</h2><p>1.上面会有一个条，根据页面的进度</p>
+<img src="http://bucket-c70.test.upcdn.net/8/5.png" alt="5" style="zoom:110%;" />
+
+<p>2.官网</p>
+<p><a href="https://theme-next.js.org/docs/third-party-services/external-libraries.html#Progress-Bar">https://theme-next.js.org/docs/third-party-services/external-libraries.html#Progress-Bar</a></p>
+<p>3.配置：</p>
+<p>next/_config.yml</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="attr">pace:</span>  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="14-滚动百分比"><a href="#14-滚动百分比" class="headerlink" title="14. 滚动百分比"></a>14. 滚动百分比</h2><h3 id="14-1-预览："><a href="#14-1-预览：" class="headerlink" title="14.1 预览："></a>14.1 预览：</h3><img src="http://bucket-c70.test.upcdn.net/8/6.png" alt="8" style="zoom:80%;" />
+
+<p>在左下角</p>
+<h3 id="14-2-配置"><a href="#14-2-配置" class="headerlink" title="14.2 配置"></a>14.2 配置</h3><p>1.在官网上没找到</p>
+<p>2.百度</p>
+<ul>
+<li><p><a href="https://blog.csdn.net/u011236348/article/details/88169113">https://blog.csdn.net/u011236348/article/details/88169113</a></p>
+</li>
+<li><p>打开 <code>themes/next/_config.yml</code> ,搜索关键字 <code>scrollpercent</code> ,把 <code>false</code> 改为 <code>true</code> </p>
+</li>
+<li><p>在next.yml文档里，代码的样子是：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">back2top:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Back to top in sidebar.</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line">  <span class="attr">scrollpercent:</span> <span class="literal">true</span> <span class="comment"># 滚动百分比</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>3.同时，这个箭头（返回最上边）</p>
+<p>也是back2top：enable：true 就有了；</p>
+<hr>
+<h2 id="15-主题添加留言"><a href="#15-主题添加留言" class="headerlink" title="15. 主题添加留言"></a>15. 主题添加留言</h2><h3 id="15-1-预览"><a href="#15-1-预览" class="headerlink" title="15.1 预览"></a>15.1 预览</h3><p><img src="http://bucket-c70.test.upcdn.net/8/7.png" alt="7"></p>
+<h3 id="15-2-步骤："><a href="#15-2-步骤：" class="headerlink" title="15.2 步骤："></a>15.2 步骤：</h3><p>1.首先，next主题的_config.yml里面是没有的；</p>
+<ul>
+<li>自己加:<code>guestbook: /guestbook/ || fa fa-comment #留言</code></li>
+</ul>
+<p>1.1 加在哪？</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">guestbook:</span> <span class="string">/guestbook/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-comment</span> <span class="comment">#留言</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
+
+<br />
+
+<p>2.然后要在<code>languages</code>文件夹里面的<code>zh-Hans.yml</code>文件，<code>menu</code>子项中添加：</p>
+<ul>
+<li><code>guestbook: 留言</code></li>
+<li>不然显示的是 guestbook;</li>
+</ul>
+<p>3.完毕；</p>
+<hr>
+<h2 id="16-刷新页面-实现加载效果"><a href="#16-刷新页面-实现加载效果" class="headerlink" title="16. 刷新页面-实现加载效果"></a>16. 刷新页面-实现加载效果</h2><h3 id="16-1-预览"><a href="#16-1-预览" class="headerlink" title="16.1 预览"></a>16.1 预览</h3><p><img src="http://bucket-c70.test.upcdn.net/8/9.png" alt="9"></p>
+<h3 id="16-2-步骤："><a href="#16-2-步骤：" class="headerlink" title="16.2 步骤："></a>16.2 步骤：</h3><p>1.打开主题配置</p>
+<ul>
+<li>我的主题配置是<code>next.yml</code></li>
+<li>我的路径：G:\1-sanciyuan\8-bolg\source_data</li>
+<li>这是一种设置，这里不讲这个</li>
+<li>正常情况是，主题目录下的_config.yml</li>
+</ul>
+<p>2.找到pace</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">pace:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Themes list:</span></span><br><span class="line">  <span class="comment"># big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple</span></span><br><span class="line">  <span class="comment"># corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">loading-bar</span> <span class="comment"># 默认：minimal</span></span><br></pre></td></tr></table></figure>
+
+<p>把them修改为loading-bar;</p>
+<p>over;2020-9-7 03:57:17</p>
+<hr>
+<h2 id="17-文章界面透明"><a href="#17-文章界面透明" class="headerlink" title="17. 文章界面透明"></a>17. 文章界面透明</h2><h3 id="17-1-预览："><a href="#17-1-预览：" class="headerlink" title="17.1 预览："></a>17.1 预览：</h3><p>1.首页文章页面处，透明，能看到背景动态图像</p>
+<p><img src="http://bucket-c70.test.upcdn.net/8/12.png" alt="12"></p>
+<p>2.点击文章里面，也能看到；</p>
+<p><img src="http://bucket-c70.test.upcdn.net/8/13.png" alt="13"></p>
+<h3 id="17-2-实现步骤"><a href="#17-2-实现步骤" class="headerlink" title="17.2 实现步骤"></a>17.2 实现步骤</h3><p>1.激活主题配置文件里的custom_file_path: style</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="comment">#style: source/_data/styles.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
+
+<p>2.在source/_data/目录下，创建styles.styl</p>
+<ul>
+<li><p>我的目录是：G:\1-sanciyuan\8-bolg\source_data</p>
+<p><img src="http://bucket-c70.test.upcdn.net/8/14.png" alt="14"></p>
+</li>
+</ul>
+<p>3.刚开始里面是空白的，什么都没有</p>
+<ul>
+<li>是这样的</li>
+</ul>
+<p>4.修改.post-block.animated.fadeIn</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.post-block</span><span class="selector-class">.animated</span><span class="selector-class">.fadeIn</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.1 用0.2进行透明</p>
+<p>5.这不是当时找的时候做的笔记；</p>
+<ul>
+<li>所以，为什么修改这个类？</li>
+<li>怎么找打的这个类？</li>
+</ul>
+<p>5.1 具体过程我忘记了</p>
+<ul>
+<li>印象中，肯定是从F12开始</li>
+<li>但总觉得没这么简单</li>
+</ul>
+<p>6.over；2020-9-7 04:36:14</p>
+<hr>
+<h2 id="18-文章加密"><a href="#18-文章加密" class="headerlink" title="18. 文章加密"></a>18. 文章加密</h2><p>资料：<a href="https://zhuanlan.zhihu.com/p/113235573">https://zhuanlan.zhihu.com/p/113235573</a></p>
+<ul>
+<li><a href="https://www.jianshu.com/p/44e211829447">https://www.jianshu.com/p/44e211829447</a></li>
+</ul>
+<h3 id="18-1-按标签加密"><a href="#18-1-按标签加密" class="headerlink" title="18.1 按标签加密"></a>18.1 按标签加密</h3><ul>
+<li><strong>修改文章信息头如下：</strong></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">tags:</span><br><span class="line">- 加密文章tag</span><br><span class="line">date: <span class="number">2020</span>-<span class="number">03</span>-<span class="number">13</span> <span class="number">21</span>:<span class="number">12</span>:<span class="number">21</span></span><br><span class="line">password: muyiio</span><br><span class="line"><span class="keyword">abstract</span>: 这里有东西被加密了，需要输入密码查看哦。</span><br><span class="line">message: 您好，这里需要密码。</span><br><span class="line">wrong_pass_message: 抱歉，这个密码看着不太对，请再试试。</span><br><span class="line">wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>对博客根目录_config添加如下字段：</strong></li>
+</ul>
+<h3 id="18-2-toc加密"><a href="#18-2-toc加密" class="headerlink" title="18.2 toc加密"></a>18.2 toc加密</h3><p>1.什么是toc？</p>
+<ul>
+<li>好像是目录，文章目录。例如：<a href="https://yelog.org/2019/09/24/3-hexo-toc/">https://yelog.org/2019/09/24/3-hexo-toc/</a></li>
+<li>百度：hexo toc，也有相关信息</li>
+</ul>
+<p>2.需要额外配置：</p>
+<p>如果您有一篇文章使用了TOC，您需要修改模板的部分代码。这里以matery主题作为示例：</p>
+<ul>
+<li><strong>在hexo/themes/matery/layout/_partial/article.ejs找到article.ejs。</strong></li>
+<li><strong>然后找到&lt;％post.content％&gt;这段代码，通常在30行左右。</strong></li>
+<li><strong>使用如下的代码来替代它：</strong></li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&lt;% if(post.toc == true)&#123; %&gt;</span><br><span class="line">  &lt;div id=&quot;toc-div&quot; class=&quot;toc-article&quot; &lt;% if (post.encrypt == true) &#123; %&gt;style=&quot;display:none&quot; &lt;% &#125; %&gt;&gt;</span><br><span class="line">    &lt;strong class=&quot;toc-title&quot;&gt;Index&lt;/strong&gt;</span><br><span class="line">      &lt;% if (post.encrypt == true) &#123; %&gt;</span><br><span class="line">        &lt;%- toc(post.origin, &#123;list_number: true&#125;) %&gt;</span><br><span class="line">      &lt;% &#125; else &#123; %&gt;</span><br><span class="line">        &lt;%- toc(post.content, &#123;list_number: true&#125;) %&gt;</span><br><span class="line">      &lt;% &#125; %&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;%- post.content %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>…</p>
+<p>2.1 我在 G:\1-sanciyuan\8-bolg\themes\next2-8.0\layout_partials 目录下没找到啊</p>
+<ul>
+<li>是我版本的问题吧？以前旧版本有？</li>
+<li>是我主题问题吗？我这里是next主题，上面教程是matery主题？</li>
+<li>总之不了了之；</li>
+</ul>
+<p>2.2 找不到，也没法，先hexo s 本地试试如何；2020-9-9 18:28:45</p>
+<h3 id="18-3-问题："><a href="#18-3-问题：" class="headerlink" title="18.3 问题："></a>18.3 问题：</h3><h4 id="18-3-1-没有目录"><a href="#18-3-1-没有目录" class="headerlink" title="18.3.1 没有目录"></a>18.3.1 没有目录</h4><p>1.文章里面的目录没有，就是toc配置</p>
+<p>2.但是没有效果，即使找到next主题的配置</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/be095c5fdeb7">https://www.jianshu.com/p/be095c5fdeb7</a></li>
+</ul>
+<p>3.没有版本，只有放弃这个方法，另寻加密方法；</p>
+<hr>
+]]></content>
       <categories>
         <category>blog</category>
       </categories>
@@ -3805,6 +4160,8 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
     <title>12-html+css-入门-pink</title>
     <url>/12-html+css_introdiction-pink/</url>
     <content><![CDATA[<h2 id="0-建议使用的软件"><a href="#0-建议使用的软件" class="headerlink" title="0. 建议使用的软件"></a>0. 建议使用的软件</h2><h2 id="1-盒子模型"><a href="#1-盒子模型" class="headerlink" title="1. 盒子模型"></a>1. 盒子模型</h2><h3 id="1、网页布局的本质"><a href="#1、网页布局的本质" class="headerlink" title="1、网页布局的本质"></a>1、网页布局的本质</h3><p>网页布局的核心本质： 就是利用 CSS 摆盒子。</p>
+<a id="more"></a>
+
 <p>网页布局过程：</p>
 <ol>
 <li>先准备好相关的网页元素，网页元素基本都是盒子 Box 。</li>
@@ -3932,7 +4289,6 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
 <li><p>必须确定页面的版心（可视区），我们测量可得知。</p>
 </li>
 <li><p>分析页面中的行模块，以及每个行模块中的列模块。其实页面布局第一准则.</p>
-<a id="more"></a>
 </li>
 <li><p>一行中的列模块经常浮动布局, 先确定每个列的大小,之后确定列的位置. 页面布局第二准则</p>
 </li>
@@ -5688,6 +6044,291 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
 <td>禁止</td>
 </tr>
 </tbody></table>
+<br />
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>鼠标样式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        body &#123;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#f1f5f7</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;cursor: default&quot;</span>;&gt;</span>默认样式<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;cursor: pointer&quot;</span>;&gt;</span>小手样式<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;cursor: move&quot;</span>;&gt;</span>移动样式<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;cursor: text&quot;</span>;&gt;</span>文本样式<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;cursor: not-allowed&quot;</span>;&gt;</span>禁止样式<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="8-4-2-轮廓线-outline"><a href="#8-4-2-轮廓线-outline" class="headerlink" title="8.4.2 轮廓线 outline"></a>8.4.2 轮廓线 outline</h4><p>给表单添加 outline: 0;   或者  outline: none; 样式之后，就可以去掉默认的蓝色边框。</p>
+<p>不过去掉后，我反而觉得没那么好看；</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span> &#123;</span><br><span class="line">     <span class="attribute">outline</span>: none; </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<hr>
+<h4 id="8-4-3-防止拖拽文本域-resize"><a href="#8-4-3-防止拖拽文本域-resize" class="headerlink" title="8.4.3 防止拖拽文本域 resize"></a>8.4.3 防止拖拽文本域 resize</h4><ol start="0">
+<li>单词：<a href="https://fanyi.baidu.com/?aldtype=16047#en/zh/resize">resize</a></li>
+</ol>
+<p><img src="http://bucket-c70.test.upcdn.net/12/66.png" alt="66"></p>
+<p>1.文本域<code>&lt;textarea&gt;</code>右下角可以拖大拖小。</p>
+<p>2.resize: none;可以设置不能拖</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">textarea</span>&#123; </span><br><span class="line">     <span class="attribute">resize</span>: none;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.注意</p>
+<ul>
+<li><p>如果<code>&lt;textarea&gt;</code>分行写，生成的页面会有区域</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/67.png" alt="67"></p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;textarea name=&quot;&quot; id=&quot;&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;</span><br><span class="line">&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要没区域，只能写一行；</p>
+</li>
+</ul>
+<hr>
+<h3 id="8-5-vertical-align-属性应用"><a href="#8-5-vertical-align-属性应用" class="headerlink" title="8.5 vertical-align 属性应用"></a>8.5 vertical-align 属性应用</h3><p>0.word</p>
+<ul>
+<li><a href="https://fanyi.baidu.com/?aldtype=16047#en/zh/vertical">vertical</a></li>
+</ul>
+<p>1.概述</p>
+<p>CSS 的 <strong>vertical-align</strong> 属性使用场景： 经常用于设置图片或者表单(行内块元素）和文字垂直对齐。</p>
+<p>官方解释： 用于设置一个元素的<strong>垂直对齐方式</strong>，但是它只针对于行内元素或者行内块元素有效。</p>
+<p>语法：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">vertical-align : baseline | top | middle | bottom </span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">baseline</td>
+<td align="center">默认。元素放置在父元素的基线上</td>
+</tr>
+<tr>
+<td align="center">top</td>
+<td align="center">把元素的顶端与行中最高元素的顶端对齐</td>
+</tr>
+<tr>
+<td align="center">middle</td>
+<td align="center">把此元素放置在父元素的中部</td>
+</tr>
+<tr>
+<td align="center">bottom</td>
+<td align="center">把元素的顶端与行中最低的元素的顶端对齐</td>
+</tr>
+</tbody></table>
+<p><img src="http://bucket-c70.test.upcdn.net/12/69.png" alt="69"></p>
+<br />
+
+<hr>
+<p>2.默认基线</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/70.png" alt="70"></p>
+<p>3.设置成底线</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">vertical-align</span>: bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<p><img src="http://bucket-c70.test.upcdn.net/12/71.png" alt="71"></p>
+<p>3.图片与文字垂直居中：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="2-记住"><a href="#2-记住" class="headerlink" title="2. 记住"></a>2. 记住</h4><p>1.它只针对于行内元素或者行内块元素有效。</p>
+<p>2.如果不是，则要转换</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/72.png" alt="72"></p>
+<ul>
+<li><p>不过，<code>&lt;i&gt;</code>是行内元素，应该不需要转换</p>
+<p>我实验过，在同一行(行内元素)，且高度宽度无效(不是行内块元素)。是行内元素；</p>
+</li>
+</ul>
+<p>3.即使是文本域，也可以让它与文字居中，文本域是行内块元素</p>
+<hr>
+<h4 id="3-解决图片底部默认空白缝隙问题"><a href="#3-解决图片底部默认空白缝隙问题" class="headerlink" title="3. 解决图片底部默认空白缝隙问题"></a>3. 解决图片底部默认空白缝隙问题</h4><p>1.图片底侧会有一个空白缝隙，原因是行内块元素会和文字的基线对齐。</p>
+<p>2.主要解决方法有两种：</p>
+<ul>
+<li><p>1.<strong>给图片</strong>添加 <strong>vertical-align:middle | top| bottom</strong> 等。 （提倡使用的）</p>
+<p>2.把图片转换为块级元素  <strong>display: block</strong>; </p>
+</li>
+</ul>
+<p>2.1. 因为这是<code>vertical-align</code>属性默认问题</p>
+<ul>
+<li>只有行内元素，与行内块元素才有的</li>
+<li>所以<code>display:block</code>有效</li>
+</ul>
+<hr>
+<h3 id="8-6-溢出的文字省略号显示"><a href="#8-6-溢出的文字省略号显示" class="headerlink" title="8.6 溢出的文字省略号显示"></a>8.6 溢出的文字省略号显示</h3><h4 id="8-6-1-单行本溢出显示省略号"><a href="#8-6-1-单行本溢出显示省略号" class="headerlink" title="8.6.1 单行本溢出显示省略号"></a>8.6.1 单行本溢出显示省略号</h4><p>1.例如：</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/73.png" alt="73"></p>
+<p>2.三步：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*1. 先强制一行内显示文本*/</span></span><br><span class="line"> <span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span>;  （ 默认 <span class="selector-tag">normal</span> 自动换行）</span><br><span class="line"> </span><br><span class="line"><span class="comment">/*2. 超出的部分隐藏*/</span></span><br><span class="line"> <span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/*3. 文字用省略号替代超出的部分*/</span></span><br><span class="line"> <span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;</span><br></pre></td></tr></table></figure>
+
+<p>2.1 资料</p>
+<ul>
+<li><a href="https://www.runoob.com/cssref/pr-text-white-space.html">white-space教程</a></li>
+<li><a href="https://www.runoob.com/cssref/css3-pr-text-overflow.html">text-overflow</a></li>
+</ul>
+<p>2.2 word</p>
+<ul>
+<li><a href="https://fanyi.baidu.com/?aldtype=16047#en/zh/hidden">hidden</a></li>
+<li><a href="https://fanyi.baidu.com/?aldtype=16047#en/zh/ellipsis">ellipsis</a></li>
+</ul>
+<p>3.案例：</p>
+<ul>
+<li><p>代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>鼠标样式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        body &#123;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#f1f5f7</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">        div &#123;</span><br><span class="line">            width: 150px;</span><br><span class="line">            height: 80px;</span><br><span class="line">            background-color: pink;</span><br><span class="line">            margin: 100px auto;</span><br><span class="line">            white-space: nowrap;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            text-overflow: ellipsis;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        啥有不说，说啥，玩不玩LOL咕咕。什么时候玩</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<hr>
+<h4 id="8-6-2-多行文本溢出显示省略号"><a href="#8-6-2-多行文本溢出显示省略号" class="headerlink" title="8.6.2 多行文本溢出显示省略号"></a>8.6.2 多行文本溢出显示省略号</h4><p>1.多行文本溢出显示省略号，<strong>有较大兼容性问题</strong>，适合于webKit浏览器或移动端（移动端大部分是webkit内核）</p>
+<p>2.步骤：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*1. 超出的部分隐藏 */</span></span><br><span class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*2. 文字用省略号替代超出的部分 */</span></span><br><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 3. 弹性伸缩盒子模型显示 */</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-box</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 4. 限制在一个块元素显示的文本的行数 */</span></span><br><span class="line"><span class="selector-tag">-webkit-line-clamp</span>: 2;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 5. 设置或检索伸缩盒对象的子元素的排列方式 */</span></span><br><span class="line"><span class="selector-tag">-webkit-box-orient</span>: <span class="selector-tag">vertical</span>;</span><br></pre></td></tr></table></figure>
+
+<p>2.1 资料：</p>
+<ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp">-webkit-line-clamp</a></p>
+<blockquote>
+<p><strong><code>-webkit-line-clamp</code></strong> CSS 属性 可以把 <a href="https://developer.mozilla.org/en-US/docs/Glossary/块容器">块容器</a> 中的内容限制为指定的行数.</p>
+<p>它只有在 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/display"><code>display</code></a> 属性设置成 <code>-webkit-box</code> 或者 <code>-webkit-inline-box</code> 并且 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-box-orient"><code>-webkit-box-orient</code></a> 属性设置成 <code>vertical</code>时才有效果</p>
+<p>在大部分情况下,也需要设置 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow"><code>overflow</code></a> 属性为 <code>hidden</code>, 否则,里面的内容不会被裁减,并且在内容显示为指定行数后还会显示省略号(ellipsis ).</p>
+</blockquote>
+</li>
+<li><p>display: -webkit-box；百度不到</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-orient">box-orient-MDN文档</a>；<a href="https://www.runoob.com/cssref/css3-pr-box-orient.html">菜鸟教程</a></p>
+<ul>
+<li><p><strong>非标准</strong><br>该特性是非标准的，请尽量不要在生产环境中使用它！</p>
+<p>这是原始的css弹性布局草案的一个属性，已经被最新的标准替代。 查看 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> 了解现行标准。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>2.2 word:</p>
+<ul>
+<li><a href="https://fanyi.baidu.com/?aldtype=16047#en/zh/clamp">clamp</a></li>
+<li><a href="https://fanyi.baidu.com/?aldtype=16047#en/zh/orient">orient</a></li>
+<li><a href="https://fanyi.baidu.com/?aldtype=16047#en/zh/vertical">vertical</a></li>
+</ul>
+<p>3.问题</p>
+<p>3.1 如果行数有3行，那么第三行，依旧显示：</p>
+<ul>
+<li><p><img src="http://bucket-c70.test.upcdn.net/12/74.png" alt="74"></p>
+</li>
+<li><p>修改高度，来隐藏第三行，视频里面是这么说的；</p>
+</li>
+<li><p>腾讯网也是这样的；</p>
+</li>
+</ul>
+<p>4.pink老师建议：</p>
+<ul>
+<li><strong>更推荐让后台人员来做这个效果，因为后台人员可以设置显示多少个字，操作更简单。</strong></li>
+<li>严格控制高度</li>
+</ul>
+<hr>
+<h2 id="9-常见布局技巧"><a href="#9-常见布局技巧" class="headerlink" title="9. 常见布局技巧"></a>9. 常见布局技巧</h2><p><strong>巧妙利用一个技术更快更好的布局：</strong></p>
+<ol>
+<li>margin负值的运用</li>
+<li>文字围绕浮动元素</li>
+<li>行内块的巧妙运用</li>
+<li>CSS三角强化</li>
+</ol>
+<h3 id="9-1-mragin负值运用"><a href="#9-1-mragin负值运用" class="headerlink" title="9.1 mragin负值运用"></a>9.1 mragin负值运用</h3><p>1.有边框的盒子，浮动的时候，边框会重叠。</p>
+<p>2.而以前的那种，清除左边的边框麻烦。</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/75.png" alt="75"></p>
+<p>3.让每个盒子margin 往左侧移动 -1px 正好压住相邻盒子边框</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>鼠标样式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        ul li &#123;</span><br><span class="line">            float: left;</span><br><span class="line">            list-style: none;</span><br><span class="line">            width: 150px;</span><br><span class="line">            height: 200px;</span><br><span class="line">            border: 1px solid skyblue;</span><br><span class="line">            margin-left: -1px;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>第三个盒子的左边，没有压住第二个盒子的右边，而其他是好的。有点奇怪</p>
+</li>
+<li><p>换个浏览器试试；2020-9-9 01:08:02</p>
+<p>换个浏览器就没问题了；</p>
+</li>
+</ul>
+<h4 id="9-1-2-鼠标放入后边框变色"><a href="#9-1-2-鼠标放入后边框变色" class="headerlink" title="9.1.2 鼠标放入后边框变色"></a>9.1.2 鼠标放入后边框变色</h4><p>1.直接:hover,是没有效果的</p>
+<ul>
+<li>中间边框的右边，是下一个盒子的左边。</li>
+</ul>
+<p>2.实验：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.如何是好？</p>
+<ul>
+<li><p>加相对定位</p>
+<p>相对定位会压住其他盒子，从而产生效果</p>
+</li>
+<li><p>但是，如果都有相对定位怎么办？</p>
+</li>
+</ul>
+<p>3.1 这个时候，用z-index，提高层级；</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">        <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://www.runoob.com/cssref/pr-pos-z-index.html">z-index文档</a></li>
+<li>默认值也许是0吧，没有准确的说；</li>
+</ul>
+<hr>
+<h3 id="9-2-文字围绕浮动元素"><a href="#9-2-文字围绕浮动元素" class="headerlink" title="9.2 文字围绕浮动元素"></a>9.2 文字围绕浮动元素</h3><p>1.在一个盒子里面，输入文字。</p>
+<p>2.盒子里面加一个img盒子，浮动</p>
+<p>3.完毕</p>
+<p>4.浮动自带文字环绕，所以不会让文字跑到浮动盒子下面</p>
+<p>5.布局示意图：</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/76.png" alt="76"></p>
+<hr>
+<h3 id="9-3-行内块巧妙运用"><a href="#9-3-行内块巧妙运用" class="headerlink" title="9.3 行内块巧妙运用"></a>9.3 行内块巧妙运用</h3><p>1.假如像这样的模块，怎么做？</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/77.png" alt="77"></p>
+<p>1.1 ul&gt;li</p>
+<p>2.</p>
+<p>3.步骤：</p>
+<p>3.1 先建立一个盒子，装8个<code>&lt;a&gt;</code></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>鼠标样式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>6<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>7<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>8<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.2 设置a的css</p>
+<ul>
+<li><p>行内块，高宽36，背景颜色#f7f7f7，border；</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f7f7f7</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内容水平居中，垂直居中，取消下划线，文本颜色改为#333；</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f7f7f7</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>3.3 整个水平居中</p>
+<ul>
+<li><p>给box 设置text-align: center;</p>
+</li>
+<li><pre><code class="css"><span class="selector-class">.box</span> &#123;
+    <span class="attribute">text-align</span>: center;
+&#125;
+&lt;!--hexoPostRenderEscape:&lt;figure class="highlight angelscript"&gt;&lt;table&gt;&lt;tr&gt;&lt;td class="gutter"&gt;&lt;pre&gt;&lt;span class="line"&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;span class="number"&gt;3.4&lt;/span&gt; 建立上一页与，下一页的html&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;```html&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&amp;lt;div &lt;span class="keyword"&gt;class&lt;/span&gt;=&amp;quot;&lt;span class="symbol"&gt;box&lt;/span&gt;&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;        &amp;lt;&lt;span class="symbol"&gt;a&lt;/span&gt; &lt;span class="symbol"&gt;href&lt;/span&gt;=&amp;quot;#&amp;quot;&amp;gt;&amp;amp;&lt;span class="symbol"&gt;lt&lt;/span&gt;&amp;lt;/&lt;span class="symbol"&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;        &amp;lt;&lt;span class="symbol"&gt;a&lt;/span&gt; &lt;span class="symbol"&gt;href&lt;/span&gt;=&amp;quot;#&amp;quot;&amp;gt;&lt;span class="symbol"&gt;1&lt;/span&gt;&amp;lt;/&lt;span class="symbol"&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;        &amp;lt;&lt;span class="symbol"&gt;a&lt;/span&gt; &lt;span class="symbol"&gt;href&lt;/span&gt;=&amp;quot;#&amp;quot;&amp;gt;&lt;span class="symbol"&gt;2&lt;/span&gt;&amp;lt;/&lt;span class="symbol"&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;        &amp;lt;&lt;span class="symbol"&gt;a&lt;/span&gt; &lt;span class="symbol"&gt;href&lt;/span&gt;=&amp;quot;#&amp;quot;&amp;gt;&lt;span class="symbol"&gt;3&lt;/span&gt;&amp;lt;/&lt;span class="symbol"&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;        &amp;lt;&lt;span class="symbol"&gt;a&lt;/span&gt; &lt;span class="symbol"&gt;href&lt;/span&gt;=&amp;quot;#&amp;quot;&amp;gt;&lt;span class="symbol"&gt;4&lt;/span&gt;&amp;lt;/&lt;span class="symbol"&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;        &amp;lt;&lt;span class="symbol"&gt;a&lt;/span&gt; &lt;span class="symbol"&gt;href&lt;/span&gt;=&amp;quot;#&amp;quot;&amp;gt;&lt;span class="symbol"&gt;5&lt;/span&gt;&amp;lt;/&lt;span class="symbol"&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;        &amp;lt;&lt;span class="symbol"&gt;a&lt;/span&gt; &lt;span class="symbol"&gt;href&lt;/span&gt;=&amp;quot;#&amp;quot;&amp;gt;&lt;span class="symbol"&gt;6&lt;/span&gt;&amp;lt;/&lt;span class="symbol"&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;        &amp;lt;&lt;span class="symbol"&gt;a&lt;/span&gt; &lt;span class="symbol"&gt;href&lt;/span&gt;=&amp;quot;#&amp;quot;&amp;gt;&lt;span class="symbol"&gt;7&lt;/span&gt;&amp;lt;/&lt;span class="symbol"&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;        &amp;lt;&lt;span class="symbol"&gt;a&lt;/span&gt; &lt;span class="symbol"&gt;href&lt;/span&gt;=&amp;quot;#&amp;quot;&amp;gt;&lt;span class="symbol"&gt;8&lt;/span&gt;&amp;lt;/&lt;span class="symbol"&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;        &amp;lt;&lt;span class="symbol"&gt;a&lt;/span&gt; &lt;span class="symbol"&gt;href&lt;/span&gt;=&amp;quot;#&amp;quot;&amp;gt;&amp;amp;&lt;span class="symbol"&gt;gt&lt;/span&gt;&amp;lt;/&lt;span class="symbol"&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;    &amp;lt;/&lt;span class="symbol"&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;</code></pre>
+</li>
+<li><p>若里面加上文字，超过了宽度，要另起class设置新的宽度</p>
+<p>设置多了也没事，行内块元素，只有内容大小</p>
+</li>
+</ul>
+<p>3.5 设置被选择的</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;current&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;elp&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>css:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> <span class="selector-class">.current</span>, <span class="selector-class">.box</span> <span class="selector-class">.elp</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以复习一下css选择器；<a href="https://cqilin.gitee.io/4-css_private_note/#5-css选择器；">链接</a></li>
+</ul>
+<p>3.6 写到几页的html</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">到第</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line">页</span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>确定<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个模样：</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/78.png" alt="78"></p>
+<ul>
+<li><p>继续css：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">input</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">55px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">button</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f7f7f7</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>还可以清楚所有的内边距外边距</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>3.7 代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>鼠标样式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box</span> &#123;</span></span><br><span class="line">            text-align: center;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.box</span> <span class="selector-tag">a</span> &#123;</span></span><br><span class="line">            display: inline-block;</span><br><span class="line">            width: 36px;</span><br><span class="line">            height: 36px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#f7f7f7</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ccc</span>;</span></span><br><span class="line">            text-align: center;</span><br><span class="line">            line-height: 36px;</span><br><span class="line">            text-decoration: none;</span><br><span class="line"><span class="css">            <span class="selector-tag">color</span>: <span class="selector-id">#333</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.box</span> <span class="selector-class">.current</span>, <span class="selector-class">.box</span> <span class="selector-class">.elp</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#fff</span>;</span></span><br><span class="line">            border: none;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.box</span> <span class="selector-tag">input</span> &#123;</span></span><br><span class="line">            width: 55px;</span><br><span class="line">            height: 36px;</span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ccc</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.box</span> <span class="selector-tag">button</span> &#123;</span></span><br><span class="line">            width: 60px;</span><br><span class="line">            height: 36px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#f7f7f7</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ccc</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>&amp;lt<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;current&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>6<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>7<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;elp&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>&amp;gt<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        到第</span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line">        页</span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span>&gt;</span>确定<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<br />
+
+<hr>
 ]]></content>
       <categories>
         <category>html_css</category>
@@ -5756,24 +6397,15 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
   <entry>
     <title>13-VPN</title>
     <url>/13-VPN/</url>
-    <content><![CDATA[<h2 id="二、安卓手机上如何使用？（有问题先参考页面最下方Q-amp-A问题汇总）"><a href="#二、安卓手机上如何使用？（有问题先参考页面最下方Q-amp-A问题汇总）" class="headerlink" title="二、安卓手机上如何使用？（有问题先参考页面最下方Q&amp;A问题汇总）"></a>二、安卓手机上如何使用？（有问题先参考页面最下方Q&amp;A问题汇总）</h2><p><strong>0. 58加速云</strong> <a href="https://www.58pan.xyz/">https://www.58pan.xyz/</a></p>
-<p><strong>1. 获取订阅链接</strong>：登录我们官网 <a href="https://58pan.xyz/">https://58pan.xyz</a>，点击【我的服务】,复制订阅链接</p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e641c15ab644175c5004986" alt="img"></p>
-<a id="more"></a>
-
-<p><strong>2. 下载安卓客户端V2rayNG并安装（不是纸飞机）</strong>，下载地址：<a href="https://feigenb.lanzoui.com/b04m8b39i">https://feigenb.lanzoui.com/b04m8b39i</a></p>
-<p><strong>3. 添加订阅</strong>，打开软件，点击左上角三条小横杠，再点击【订阅设置】，然后点击右上角 “+” 加号，将订阅链接粘贴到[地址(url)]处，[备注]可以随便填</p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c56" alt="img"></p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c53" alt="img"></p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c57" alt="img"></p>
-<p><strong>4. 更新订阅</strong> 回到主界面，点击<strong>右上角三个点</strong>，选择【更新订阅】，更新完成后会出现服务器节点</p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c51" alt="img"></p>
-<p><strong>5. 选择服务器连接</strong> 点击你喜欢的服务器，然后点击右下角的 “V” 图标开启代理。</p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c5c" alt="img"></p>
-<p><strong>6. 如果更新订阅失败，则需要手动添加节点</strong></p>
-<p>点击右上角加号，选择扫描二维码</p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c59" alt="img"></p>
-]]></content>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Hey, password is required here.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="beb7ae00fcc1a4eb96ca27ea96ade8caa94f63697d57e7606c3ff2f2c9990986">0f6f7997f0d09cf816456dba4a9a1a47e13eaa1a053fc88603ec14af7b3e1af59c267e1be4d516fe4b415f3f794094b55ded8badb1a90d0ca869a583a97886141ac0df3341865b3b8569603d79f38147a23582710b3a4bbf9618457506ff613678f6c25171300f1a40e4aa3e30e7d010c1c46b6837e0f63bae29e31ad90d0eab1a0620e2ff0fbcdd80bf2f37bdeccfad6c856df713cf801e79a9f88b1a6b7177a1437ad2f3fbf28f257f779b403ddf895a7d51ddb2e72e7f5df121ece3436d8726e47d33f9974141fa8311c3fdd66a4ec29f2eb2322c01cb949e98feb3c5647384c380c4fc373298c2cb6282690a183ea71e7f3a229f3c45d04419f5c72856a22a7585c9430de1379cb161b24702cf081ab6b5fc81eed9973933c359c18330bb3fbae10a0f1956b5b89f5d81b1d4be01882c719c7175405395b2c2bbdb094cf236a39e90c94a190c2a0524a68c598ec2f5b69291243f4166de96849d1bd86c82e95e4d951e327c3d13222c17e45a52f378eece2c64bd18c67f640bb9b4eea186b07c12d335acb207839f0c948e38b4a5b89cab3d5bb53c52f5a980be53987895a266bdb48fcccc8c21126d5c9c4e4578f5da216dbf965186ea734b652170cbc3248020aefd2807249e4c0d554612b5a49c7459f39ac4ee6632b0015e2a6692b44e6ec4ca5814d56561115fec2dc2b6747aca59bd3f5ebbe0b862d4fc4581df567ad93fa8a447a13e4feb2732c8c1e24a96d6e6e6dcc11b1b114721705ee6a1f39f33e12fbb5adf6a811894ab35f0568a8e145c50a0ba07b0c9b12ab78bf9a22a66f964ad7693ddf8ef498a29aee34a953a1c285c68b41a4d6ed18359033b17d64831c9fd6d2d48c5c4e21557e7fe465a51cc62c78dadbc99850071f1527513c0ab89b7fa7a5d3c5a46d7ab90d46095c09182fa6099c2ef18b14563f86cf303689380de9b913be38ea05deba312e78189c4b850e3035a8c7006069b7aea55b2608de04fd052c34ba90ababf347fef87ac8840a6da5edcd6b33ba244ac4053393502ada4bfd81e6b31e0bdb0ec3a5c099206380f9d1991eea2f1097177d0ab400cd0cf18c1faaeeb7a247fafca4ea9f79cec136be62fea11e4e764548b695744664e4de07ef62300bd6f458a22c9320273c6b4f2da66c6e39b405af635b538d17f0bcfcbad62060ff7e51206fd3f3dec0e07ee59560fba45c42c2516c772c173bdce33c9550eab74fd428930f8b21f3ff31972d217cf826b692712be5ebacf4ef1dbdcd69f8b105bd85560fa1af616364283ccbba5cf5aab4381e21524867fa81bc1d70016eef1dc671b6473928ef5bc15a65811fbc0a2c8d663131f0bcc1899d1ef2ae16133e540d1bb72ef0382c97f8d38d31835910995df3ba5ba742910a445cf5e4cb29ba5fdcf944e21c6c8017cfae42363bfdcb66aad620299e8ad2e0f1b929d4bbd831e20f8d649d2abd57d6557391b83833fe81d5a81f2f04ed2641d47fe2d4d09a5e73789193afd1a8a0fffe3005f26d2b82c8cc41b99731789466ef4269dc6e8d3cf255c360f8031e87041b5024324f9f043be13b7ae9a8af766a29192265598b3bab1d213917ba52b9235b98d4e76d0b2902d03059478625a97c17877812c7b305e97fb1c946dc178fa409ca3443b3c1895479b7a63cd32ed4b47065366a4968de8c86216aea03397f1589af166672e2d5a47942fcd58375fa748ac6c1ca9b85d3fc51b0befe7cc22a64ba2477c7abe1dd8c9687819e6e24f0cf44a228639eafc8e93a9197011873069f33e9e3077d6ad08706c298f7d86349cb87aa8f75336909fe688b91d04f511e1d4936adc5edec30da31149535e5496e789c6bdf47df0be8431f7a455fcb0838aebca3faef2e1536f1c0dac63c7e87f73ca6a0f92393af82c414b170301fc89f5cc26eb05a79e180f44377dad02693033db3cf5606a65846133f91a25a6895b12f0e7c73cea2322686e59cb7aca0329931e1406b59ca2e02f900ca21c4e492444bc6cf65b0ef89653e46c8fad8575dce48cbd162310f0ecc7eeef948c2376c10f4677147c18ff6f44d10f1ccc6ab7b8c543c9ede1f8377bcf476f633e82cb095d41ed4baf8db840f2cdb3383200c48ec8d9b61a5984d29cc848eb21deaf20306ff106ccfffe5aa14d3f929f1c53edc256f73900bcc32d5f1b3165821073c4bba05bf42ed4a371ad991fe83b8036ce949f635f9a28c811cad8133cab849647585ad3d10212ef2cfaf6dae010a3826a346ad2d5e8dfaeef3650e7d19eaa47f66bf1d35daf800316b67e82bbea7b7f37bff3153a17674e0d313aa4fd2c66943c86a00203bb2fea84d9bfbb6215f212728b6c99f77c75c5b550c1d1d281868f814aa5ee1f67c788ead0692ea7fbbc7449835936a01225f65c7b85ac754568781efa1e5346fbc778a52463efec353ff8ed26a42deeffe9a77bd5075d13a1e1eb934fce454a51c62c1e8a62a2e948016056bfe315d945f5c7c6069d5b87290924224c64ff70e7ced788ae2f3a103bcb61e3127f47646ced4fc0f8bb391a5c10cf8055b48e3db95cb434e7a71378b3f4bd80943f9d5c9af5b40640809b9af38c587e9c210475e8090356c68e233f5056c5bab01ddf645261e2a6449007d35b342d1994db058b7579181f8923582bbf420b57639f13c4b66cc94d40c1b3e9942877a76fb01398aba55851c792fdde5a90dfc08a39c640f8bcec9a4c98f80f64adfa987c23fbf235615a8dd7ad85842e4f1b26661b712bba57abf0630df1a889de99d0054103b87699a888fdbd5d767ce91142cce83734ab38fe24f6cadbc1c8ee89cfb852280b1111867500914535c9d7f1c9814e13b7f7e0f60cbd9a0146a6cdee1cfbd98b991360c3d76c7f8d1f113e0b4a66f1a2fe737b8bd10f702f1c8491878f0f0f42c1f9f4cedd7b6a5b33b83c51ae011a0b2494845febe70f4e924e336b463253422c2b15ca0c66449a1eb21a3562c4269343f9f16b14074c0d5bf4245a44e75be813924ad54142ac6998847efaafe73df673c2e18af776baa67d5c36e7e5e697f704d2b0bb3a0498dc4c2ef0aa6a67cfe07a57e4cf0def7a6a4600bc626a643e15c7ed3e653a4a39205d8a974f1eb4d08deb21c6c116541662a0922993bfd73908d2b16a6c3b567abe08396d1b090d56e9463237e4087148e19ad12ebd640435207aa53f3f721f78b23c21330766102d778d7f60db8014552017bb13126d6da775a903f54615fed40b220902526403398632e265b2caa8517b8512d7994106388c69a945aa88803345fdc15b8dd0baadb6c0a22cf15657f95cee02fbbdedfa8d2cd8d3282347785dc032fb8b61ecda17e7cfd78c24b2468ee14965515091b5f0481db91ba4a60ede42c16e67dfce9a0c70f6f437884e7249a134ecfdbb371b7f5b0112cb22139898dc1640c65689206d754ea445578217096d10e7eaac129d9360537333c7eaca6257811a3b3906a138ae4bf6bf9173effd84cc744f0f77a7d73a269142fffea3ac54f02a9b931e5b0bad3692bb6192687d6e9a5fc48225a262a5722a463e45893c185722d7308472c663f4fe7094d7e5484f35e02e35e6005ac6d36b4c18199df586b140f1d6a90029eb7e841fdf7d3838920bc12fdcf00634b13e36c1f682448bd83540b6ace18e94b4a1a57f54279b84495a15899b1764a7ebbe</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
         <tag>VPN</tag>
       </tags>
@@ -5783,10 +6415,10 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
     <url>/14-galgame/</url>
     <content><![CDATA[<h2 id="1-我和她的世界末日"><a href="#1-我和她的世界末日" class="headerlink" title="1. 我和她的世界末日"></a>1. 我和她的世界末日</h2><p><a href="https://pan.baidu.com/s/1QnV1k4yvcb_DcBrHW5TItA">https://pan.baidu.com/s/1QnV1k4yvcb_DcBrHW5TItA</a></p>
 <p>eeec</p>
-<p><img src="http://bucket-c70.test.upcdn.net/14-galgame/01.pn" alt="1"></p>
-<p>注意：</p>
 <a id="more"></a>
 
+<p><img src="http://bucket-c70.test.upcdn.net/14-galgame/01.png" alt="1"></p>
+<p>注意：</p>
 <ul>
 <li><p>打开游戏点击：LAUNCHER_x64.exe；</p>
 </li>
@@ -5839,23 +6471,9 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
       </tags>
   </entry>
   <entry>
-    <title>17-VPN</title>
+    <title>17-暂时没有</title>
     <url>/17-VPN/</url>
-    <content><![CDATA[<h2 id="1-v2rayN-V3-5"><a href="#1-v2rayN-V3-5" class="headerlink" title="1. v2rayN - V3.5"></a>1. v2rayN - V3.5</h2><h3 id="1-1-问题"><a href="#1-1-问题" class="headerlink" title="1.1 问题"></a>1.1 问题</h3><ul>
-<li><p>如何配置，能指定软件使用梯子；</p>
-<p>例如：Typora更新；</p>
-<ul>
-<li>Typora更新很慢，20kb/s左右；我猜测被墙；</li>
-<li>果然全局模式后，下载很快；</li>
-<li>于是有这想法；</li>
-</ul>
-</li>
-</ul>
-<hr>
-<a id="more"></a>]]></content>
-      <categories>
-        <category>VPN</category>
-      </categories>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>18-Typora</title>
@@ -5978,6 +6596,24 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
 <br />
 
 <hr>
+<h2 id="3-改变背景颜色"><a href="#3-改变背景颜色" class="headerlink" title="3. 改变背景颜色"></a>3. 改变背景颜色</h2><p>1.去主题文件修改css</p>
+<ul>
+<li><p>主题文件路径：</p>
+<p>C:\Users\Administrator\AppData\Roaming\Typora\themes</p>
+</li>
+<li><p>正确前往方向：</p>
+<p><img src="http://bucket-c70.test.upcdn.net/18/1.png" alt="1"></p>
+</li>
+</ul>
+<p>2.修改css</p>
+<ul>
+<li><p>我是直接在body添加代码</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&quot;Open Sans&quot;</span>,<span class="string">&quot;Clear Sans&quot;</span>, <span class="string">&quot;Helvetica Neue&quot;</span>, Helvetica, Arial, sans-serif;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(<span class="number">51</span>, <span class="number">51</span>, <span class="number">51</span>);</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1.6</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">204</span>, <span class="number">232</span>, <span class="number">207</span>, <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>body在第45行</p>
+</li>
+</ul>
+<hr>
 ]]></content>
       <tags>
         <tag>Typora</tag>
@@ -5986,7 +6622,7 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
   <entry>
     <title>19-chrome</title>
     <url>/19-%E8%B0%B7%E6%AD%8C%E6%89%A9%E5%B1%95/</url>
-    <content><![CDATA[<h2 id="1-扩展"><a href="#1-扩展" class="headerlink" title="1. 扩展"></a>1. 扩展</h2><h3 id="1-1-IDM"><a href="#1-1-IDM" class="headerlink" title="1.1 IDM"></a>1.1 IDM</h3><p>1.</p>
+    <content><![CDATA[<h2 id="1-扩展"><a href="#1-扩展" class="headerlink" title="1. 扩展"></a>1. 扩展</h2><h3 id="1-1-IDM"><a href="#1-1-IDM" class="headerlink" title="1.1 IDM"></a>1.1 IDM</h3><p>1.本地IDM.exe无法下载，没有权限</p>
 <ul>
 <li>IDM之前我一直用的本地；</li>
 <li>后来脚本生成百度云盘的直连无法用IDM下载了；</li>
@@ -6012,7 +6648,6 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
 <li>官方的就是目录下的；</li>
 <li>同时文档里面有使用扩展的一些==配置==</li>
 </ul>
-<p>5.</p>
 <hr>
 ]]></content>
       <tags>
@@ -6025,7 +6660,13 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
     <content><![CDATA[<h2 id="1-下载动图"><a href="#1-下载动图" class="headerlink" title="1. 下载动图"></a>1. 下载动图</h2><p>P站直接鼠标右键是无法下载动图的；</p>
 <a id="more"></a>
 
-<h3 id="1-1-Pixiv工具箱"><a href="#1-1-Pixiv工具箱" class="headerlink" title="1.1 Pixiv工具箱"></a>1.1 Pixiv工具箱</h3><p><img src="http://bucket-c70.test.upcdn.net/20/1.png" alt="1"></p>
+<h3 id="1-1-Pixiv工具箱"><a href="#1-1-Pixiv工具箱" class="headerlink" title="1.1 Pixiv工具箱"></a>1.1 Pixiv工具箱</h3><p>0.下载</p>
+<ul>
+<li>这是谷歌浏览器扩展</li>
+<li>也不是必须谷歌浏览器，基于chromium内核的都能用chrome扩展</li>
+<li>即：极速浏览器</li>
+</ul>
+<p><img src="http://bucket-c70.test.upcdn.net/20/1.png" alt="1"></p>
 <p>1.刚开始无效</p>
 <ul>
 <li><p>就是没效果，不知道哪里下载；</p>
@@ -6040,7 +6681,8 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
 </li>
 <li><p>如何可以配置？</p>
 <p>左上角，鼠标右键，选项；</p>
-<p><img src="http://bucket-c70.test.upcdn.net/20/4.png" alt="4"></p>
+</li>
+<li><p><img src="http://bucket-c70.test.upcdn.net/20/5.png" alt="5"></p>
 </li>
 </ul>
 <p>3.还是无效</p>
@@ -6079,6 +6721,21 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa
 ]]></content>
       <tags>
         <tag>P站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>21-window系统</title>
+    <url>/21-windows/</url>
+    <content><![CDATA[<h2 id="1-window10"><a href="#1-window10" class="headerlink" title="1. window10"></a>1. window10</h2><h3 id="1-1-两种方法，让最新版-Windows-10-的字体更「养眼」"><a href="#1-1-两种方法，让最新版-Windows-10-的字体更「养眼」" class="headerlink" title="1.1 两种方法，让最新版 Windows 10 的字体更「养眼」"></a>1.1 两种方法，让最新版 Windows 10 的字体更「养眼」</h3><p><a href="https://zhuanlan.zhihu.com/p/96114832">https://zhuanlan.zhihu.com/p/96114832</a></p>
+<a id="more"></a>
+
+<h3 id="1-2-什么样的机器-配置该装什么版本的系统？"><a href="#1-2-什么样的机器-配置该装什么版本的系统？" class="headerlink" title="1.2 什么样的机器/配置该装什么版本的系统？"></a>1.2 什么样的机器/配置该装什么版本的系统？</h3><p><a href="https://www.winos.me/archives/481.html">https://www.winos.me/archives/481.html</a></p>
+<hr>
+<h3 id="1-3-win10-字体渲染优化-色彩调整"><a href="#1-3-win10-字体渲染优化-色彩调整" class="headerlink" title="1.3 win10 字体渲染优化 色彩调整"></a>1.3 win10 字体渲染优化 色彩调整</h3><p> <a href="https://www.cnblogs.com/hongdada/p/8432667.html">链接：win10 字体渲染优化 色彩调整</a></p>
+<hr>
+]]></content>
+      <tags>
+        <tag>window</tag>
       </tags>
   </entry>
   <entry>

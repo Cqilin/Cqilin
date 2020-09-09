@@ -16,32 +16,26 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   
   <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-loading-bar.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"qilinclolik.gitee.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml"};
   </script>
 
-  <meta name="description" content="二、安卓手机上如何使用？（有问题先参考页面最下方Q&amp;A问题汇总）0. 58加速云 https:&#x2F;&#x2F;www.58pan.xyz&#x2F; 1. 获取订阅链接：登录我们官网 https:&#x2F;&#x2F;58pan.xyz，点击【我的服务】,复制订阅链接">
+  <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="13-VPN">
 <meta property="og:url" content="https://qilinclolik.gitee.io/13-VPN/index.html">
 <meta property="og:site_name" content="qilin&#39;s blog">
-<meta property="og:description" content="二、安卓手机上如何使用？（有问题先参考页面最下方Q&amp;A问题汇总）0. 58加速云 https:&#x2F;&#x2F;www.58pan.xyz&#x2F; 1. 获取订阅链接：登录我们官网 https:&#x2F;&#x2F;58pan.xyz，点击【我的服务】,复制订阅链接">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=5e641c15ab644175c5004986">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c56">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c53">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c57">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c51">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c5c">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c59">
 <meta property="article:published_time" content="2020-08-18T13:26:06.000Z">
-<meta property="article:modified_time" content="2020-08-25T16:17:33.999Z">
+<meta property="article:modified_time" content="2020-09-09T12:13:49.885Z">
 <meta property="article:author" content="qilin">
 <meta property="article:tag" content="VPN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://leanote.com/api/file/getImage?fileId=5e641c15ab644175c5004986">
 
 <link rel="canonical" href="https://qilinclolik.gitee.io/13-VPN/">
 
@@ -144,17 +138,17 @@
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">18</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">19</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">12</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -211,7 +205,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -223,7 +217,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E4%B8%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%EF%BC%9F%EF%BC%88%E6%9C%89%E9%97%AE%E9%A2%98%E5%85%88%E5%8F%82%E8%80%83%E9%A1%B5%E9%9D%A2%E6%9C%80%E4%B8%8B%E6%96%B9Q-amp-A%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%EF%BC%89"><span class="nav-text">二、安卓手机上如何使用？（有问题先参考页面最下方Q&amp;A问题汇总）</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -246,13 +239,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -273,6 +266,7 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
 
 <noscript>
   <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -319,7 +313,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-26 00:17:33" itemprop="dateModified" datetime="2020-08-26T00:17:33+08:00">2020-08-26</time>
+                <time title="修改时间：2020-09-09 20:13:49" itemprop="dateModified" datetime="2020-09-09T20:13:49+08:00">2020-09-09</time>
               </span>
 
           
@@ -349,7 +343,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>371</span>
+              <span>472</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -368,24 +362,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="二、安卓手机上如何使用？（有问题先参考页面最下方Q-amp-A问题汇总）"><a href="#二、安卓手机上如何使用？（有问题先参考页面最下方Q-amp-A问题汇总）" class="headerlink" title="二、安卓手机上如何使用？（有问题先参考页面最下方Q&amp;A问题汇总）"></a>二、安卓手机上如何使用？（有问题先参考页面最下方Q&amp;A问题汇总）</h2><p><strong>0. 58加速云</strong> <a target="_blank" rel="noopener" href="https://www.58pan.xyz/">https://www.58pan.xyz/</a></p>
-<p><strong>1. 获取订阅链接</strong>：登录我们官网 <a target="_blank" rel="noopener" href="https://58pan.xyz/">https://58pan.xyz</a>，点击【我的服务】,复制订阅链接</p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e641c15ab644175c5004986" alt="img"></p>
-<a id="more"></a>
-
-<p><strong>2. 下载安卓客户端V2rayNG并安装（不是纸飞机）</strong>，下载地址：<a target="_blank" rel="noopener" href="https://feigenb.lanzoui.com/b04m8b39i">https://feigenb.lanzoui.com/b04m8b39i</a></p>
-<p><strong>3. 添加订阅</strong>，打开软件，点击左上角三条小横杠，再点击【订阅设置】，然后点击右上角 “+” 加号，将订阅链接粘贴到[地址(url)]处，[备注]可以随便填</p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c56" alt="img"></p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c53" alt="img"></p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c57" alt="img"></p>
-<p><strong>4. 更新订阅</strong> 回到主界面，点击<strong>右上角三个点</strong>，选择【更新订阅】，更新完成后会出现服务器节点</p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c51" alt="img"></p>
-<p><strong>5. 选择服务器连接</strong> 点击你喜欢的服务器，然后点击右下角的 “V” 图标开启代理。</p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c5c" alt="img"></p>
-<p><strong>6. 如果更新订阅失败，则需要手动添加节点</strong></p>
-<p>点击右上角加号，选择扫描二维码</p>
-<p><img src="https://leanote.com/api/file/getImage?fileId=5e608a27ab644130d0001c59" alt="img"></p>
-
+        <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Hey, password is required here.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="beb7ae00fcc1a4eb96ca27ea96ade8caa94f63697d57e7606c3ff2f2c9990986">0f6f7997f0d09cf816456dba4a9a1a47e13eaa1a053fc88603ec14af7b3e1af59c267e1be4d516fe4b415f3f794094b55ded8badb1a90d0ca869a583a97886141ac0df3341865b3b8569603d79f38147a23582710b3a4bbf9618457506ff613678f6c25171300f1a40e4aa3e30e7d010c1c46b6837e0f63bae29e31ad90d0eab1a0620e2ff0fbcdd80bf2f37bdeccfad6c856df713cf801e79a9f88b1a6b7177a1437ad2f3fbf28f257f779b403ddf895a7d51ddb2e72e7f5df121ece3436d8726e47d33f9974141fa8311c3fdd66a4ec29f2eb2322c01cb949e98feb3c5647384c380c4fc373298c2cb6282690a183ea71e7f3a229f3c45d04419f5c72856a22a7585c9430de1379cb161b24702cf081ab6b5fc81eed9973933c359c18330bb3fbae10a0f1956b5b89f5d81b1d4be01882c719c7175405395b2c2bbdb094cf236a39e90c94a190c2a0524a68c598ec2f5b69291243f4166de96849d1bd86c82e95e4d951e327c3d13222c17e45a52f378eece2c64bd18c67f640bb9b4eea186b07c12d335acb207839f0c948e38b4a5b89cab3d5bb53c52f5a980be53987895a266bdb48fcccc8c21126d5c9c4e4578f5da216dbf965186ea734b652170cbc3248020aefd2807249e4c0d554612b5a49c7459f39ac4ee6632b0015e2a6692b44e6ec4ca5814d56561115fec2dc2b6747aca59bd3f5ebbe0b862d4fc4581df567ad93fa8a447a13e4feb2732c8c1e24a96d6e6e6dcc11b1b114721705ee6a1f39f33e12fbb5adf6a811894ab35f0568a8e145c50a0ba07b0c9b12ab78bf9a22a66f964ad7693ddf8ef498a29aee34a953a1c285c68b41a4d6ed18359033b17d64831c9fd6d2d48c5c4e21557e7fe465a51cc62c78dadbc99850071f1527513c0ab89b7fa7a5d3c5a46d7ab90d46095c09182fa6099c2ef18b14563f86cf303689380de9b913be38ea05deba312e78189c4b850e3035a8c7006069b7aea55b2608de04fd052c34ba90ababf347fef87ac8840a6da5edcd6b33ba244ac4053393502ada4bfd81e6b31e0bdb0ec3a5c099206380f9d1991eea2f1097177d0ab400cd0cf18c1faaeeb7a247fafca4ea9f79cec136be62fea11e4e764548b695744664e4de07ef62300bd6f458a22c9320273c6b4f2da66c6e39b405af635b538d17f0bcfcbad62060ff7e51206fd3f3dec0e07ee59560fba45c42c2516c772c173bdce33c9550eab74fd428930f8b21f3ff31972d217cf826b692712be5ebacf4ef1dbdcd69f8b105bd85560fa1af616364283ccbba5cf5aab4381e21524867fa81bc1d70016eef1dc671b6473928ef5bc15a65811fbc0a2c8d663131f0bcc1899d1ef2ae16133e540d1bb72ef0382c97f8d38d31835910995df3ba5ba742910a445cf5e4cb29ba5fdcf944e21c6c8017cfae42363bfdcb66aad620299e8ad2e0f1b929d4bbd831e20f8d649d2abd57d6557391b83833fe81d5a81f2f04ed2641d47fe2d4d09a5e73789193afd1a8a0fffe3005f26d2b82c8cc41b99731789466ef4269dc6e8d3cf255c360f8031e87041b5024324f9f043be13b7ae9a8af766a29192265598b3bab1d213917ba52b9235b98d4e76d0b2902d03059478625a97c17877812c7b305e97fb1c946dc178fa409ca3443b3c1895479b7a63cd32ed4b47065366a4968de8c86216aea03397f1589af166672e2d5a47942fcd58375fa748ac6c1ca9b85d3fc51b0befe7cc22a64ba2477c7abe1dd8c9687819e6e24f0cf44a228639eafc8e93a9197011873069f33e9e3077d6ad08706c298f7d86349cb87aa8f75336909fe688b91d04f511e1d4936adc5edec30da31149535e5496e789c6bdf47df0be8431f7a455fcb0838aebca3faef2e1536f1c0dac63c7e87f73ca6a0f92393af82c414b170301fc89f5cc26eb05a79e180f44377dad02693033db3cf5606a65846133f91a25a6895b12f0e7c73cea2322686e59cb7aca0329931e1406b59ca2e02f900ca21c4e492444bc6cf65b0ef89653e46c8fad8575dce48cbd162310f0ecc7eeef948c2376c10f4677147c18ff6f44d10f1ccc6ab7b8c543c9ede1f8377bcf476f633e82cb095d41ed4baf8db840f2cdb3383200c48ec8d9b61a5984d29cc848eb21deaf20306ff106ccfffe5aa14d3f929f1c53edc256f73900bcc32d5f1b3165821073c4bba05bf42ed4a371ad991fe83b8036ce949f635f9a28c811cad8133cab849647585ad3d10212ef2cfaf6dae010a3826a346ad2d5e8dfaeef3650e7d19eaa47f66bf1d35daf800316b67e82bbea7b7f37bff3153a17674e0d313aa4fd2c66943c86a00203bb2fea84d9bfbb6215f212728b6c99f77c75c5b550c1d1d281868f814aa5ee1f67c788ead0692ea7fbbc7449835936a01225f65c7b85ac754568781efa1e5346fbc778a52463efec353ff8ed26a42deeffe9a77bd5075d13a1e1eb934fce454a51c62c1e8a62a2e948016056bfe315d945f5c7c6069d5b87290924224c64ff70e7ced788ae2f3a103bcb61e3127f47646ced4fc0f8bb391a5c10cf8055b48e3db95cb434e7a71378b3f4bd80943f9d5c9af5b40640809b9af38c587e9c210475e8090356c68e233f5056c5bab01ddf645261e2a6449007d35b342d1994db058b7579181f8923582bbf420b57639f13c4b66cc94d40c1b3e9942877a76fb01398aba55851c792fdde5a90dfc08a39c640f8bcec9a4c98f80f64adfa987c23fbf235615a8dd7ad85842e4f1b26661b712bba57abf0630df1a889de99d0054103b87699a888fdbd5d767ce91142cce83734ab38fe24f6cadbc1c8ee89cfb852280b1111867500914535c9d7f1c9814e13b7f7e0f60cbd9a0146a6cdee1cfbd98b991360c3d76c7f8d1f113e0b4a66f1a2fe737b8bd10f702f1c8491878f0f0f42c1f9f4cedd7b6a5b33b83c51ae011a0b2494845febe70f4e924e336b463253422c2b15ca0c66449a1eb21a3562c4269343f9f16b14074c0d5bf4245a44e75be813924ad54142ac6998847efaafe73df673c2e18af776baa67d5c36e7e5e697f704d2b0bb3a0498dc4c2ef0aa6a67cfe07a57e4cf0def7a6a4600bc626a643e15c7ed3e653a4a39205d8a974f1eb4d08deb21c6c116541662a0922993bfd73908d2b16a6c3b567abe08396d1b090d56e9463237e4087148e19ad12ebd640435207aa53f3f721f78b23c21330766102d778d7f60db8014552017bb13126d6da775a903f54615fed40b220902526403398632e265b2caa8517b8512d7994106388c69a945aa88803345fdc15b8dd0baadb6c0a22cf15657f95cee02fbbdedfa8d2cd8d3282347785dc032fb8b61ecda17e7cfd78c24b2468ee14965515091b5f0481db91ba4a60ede42c16e67dfce9a0c70f6f437884e7249a134ecfdbb371b7f5b0112cb22139898dc1640c65689206d754ea445578217096d10e7eaac129d9360537333c7eaca6257811a3b3906a138ae4bf6bf9173effd84cc744f0f77a7d73a269142fffea3ac54f02a9b931e5b0bad3692bb6192687d6e9a5fc48225a262a5722a463e45893c185722d7308472c663f4fe7094d7e5484f35e02e35e6005ac6d36b4c18199df586b140f1d6a90029eb7e841fdf7d3838920bc12fdcf00634b13e36c1f682448bd83540b6ace18e94b4a1a57f54279b84495a15899b1764a7ebbe</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -467,12 +452,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">208k</span>
+    <span title="站点总字数">214k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:09</span>
+    <span title="站点阅读时长">3:15</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
