@@ -24,16 +24,20 @@
     var CONFIG = {"hostname":"qilinclolik.gitee.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="qilin&#39;s blog">
-<meta property="og:url" content="https://qilinclolik.gitee.io/archives/2020/page/4/index.html">
+  <meta name="description" content="1.安装hexo与配置1.1 前提安装1.安装hexo之前，要安装有node.js和git； https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;#安装前提">
+<meta property="og:type" content="article">
+<meta property="og:title" content="8.1-blog&#39;s创建">
+<meta property="og:url" content="https://qilinclolik.gitee.io/8.1-blog's_SetUp/index.html">
 <meta property="og:site_name" content="qilin&#39;s blog">
+<meta property="og:description" content="1.安装hexo与配置1.1 前提安装1.安装hexo之前，要安装有node.js和git； https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;#安装前提">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-02T22:32:24.000Z">
+<meta property="article:modified_time" content="2020-09-12T09:59:01.203Z">
 <meta property="article:author" content="qilin">
-<meta property="article:tag" content="web">
+<meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://qilinclolik.gitee.io/archives/2020/page/4/">
+<link rel="canonical" href="https://qilinclolik.gitee.io/8.1-blog's_SetUp/">
 
 
 <script class="page-configurations">
@@ -41,12 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | qilin's blog</title>
+  <title>8.1-blog's创建 | qilin's blog</title>
   
 
 
@@ -139,17 +143,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">19</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">24</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">23</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">29</span></a>
 
   </li>
         <li class="menu-item menu-item-guestbook">
@@ -201,7 +205,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -213,6 +217,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85hexo%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-text">1.安装hexo与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%89%8D%E6%8F%90%E5%AE%89%E8%A3%85"><span class="nav-text">1.1 前提安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85hexo"><span class="nav-text">1.2 全局安装hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E5%88%9D%E5%A7%8B%E5%8C%96hexo"><span class="nav-text">1.3 初始化hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE"><span class="nav-text">2. 配置</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -228,20 +233,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">24</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -272,79 +277,160 @@
       <div class="main-inner">
         
 
-        <div class="content archive">
+        <div class="content post posts-expand">
           
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qilinclolik.gitee.io/8.1-blog's_SetUp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/7.jpg">
+      <meta itemprop="name" content="qilin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="qilin's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          8.1-blog's创建
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-03 06:32:24" itemprop="dateCreated datePublished" datetime="2020-08-03T06:32:24+08:00">2020-08-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-12 17:59:01" itemprop="dateModified" datetime="2020-09-12T17:59:01+08:00">2020-09-12</time>
+              </span>
+
+          
+            <span id="/8.1-blog's_SetUp/" class="post-meta-item leancloud_visitors" data-flag-title="8.1-blog's创建" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 23 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/8.1-blog's_SetUp/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/8.1-blog's_SetUp/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>501</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
+        <h2 id="1-安装hexo与配置"><a href="#1-安装hexo与配置" class="headerlink" title="1.安装hexo与配置"></a>1.安装hexo与配置</h2><h3 id="1-1-前提安装"><a href="#1-1-前提安装" class="headerlink" title="1.1 前提安装"></a>1.1 前提安装</h3><p>1.安装hexo之前，要安装有node.js和git；</p>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#安装前提">https://hexo.io/zh-cn/docs/#安装前提</a></p>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-21T23:50:36+08:00"
-              content="2020-07-21">
-          07-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/6-github&&gitee_problem/" itemprop="url">
-            <span itemprop="name">6-github's problem_set + gitee</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-20T14:27:58+08:00"
-              content="2020-07-20">
-          07-20
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/99-hello-world/" itemprop="url">
-            <span itemprop="name">99-Hello World</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+<h3 id="1-2-全局安装hexo"><a href="#1-2-全局安装hexo" class="headerlink" title="1.2 全局安装hexo"></a>1.2 全局安装hexo</h3><p>1.<code>npm install -g hexo-cli</code></p>
+<ul>
+<li>在cmd，或git bash 都行；我个人喜欢git bash</li>
+<li>但两者不完全相同，有些命令不相同。</li>
+</ul>
+<h3 id="1-3-初始化hexo"><a href="#1-3-初始化hexo" class="headerlink" title="1.3 初始化hexo"></a>1.3 初始化hexo</h3><p>1.初始化，不是格式化，这里应该是新建一个hexo 的意思</p>
+<p><code>hexo init &lt;folder&gt;</code></p>
+<ul>
+<li>我记得，我新建一个文件夹后，直接<code>hexo init</code>没有后面的<code>&lt;folder&gt;</code></li>
+<li>folder<br>英 [ˈfəʊldə(r)]  美 [ˈfoʊldər]<br>n.文件夹;纸夹;(某些计算机系统中的)文件夹</li>
+</ul>
+<p>2.npm install</p>
+<ul>
+<li>按理说，这里没说安装什么，可能是因为前面初始化了hexo，所以这里就是安装hexo</li>
+</ul>
+<hr>
+<h3 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h3><p>1.配置，在_config里面配置，blog目录下；怎么配置，配置什么都是按需求的。</p>
+<p>2.但是，新手，什么都不知道，即连可以有什么需求都不知道（我）</p>
+<p>3.百度；</p>
+<p>4.我也没有记录，我配置了些啥。也说不出；</p>
+<ul>
+<li><p>就算是为了自己，也留个云盘吧。随缘更新</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://wws.lanzous.com/iolVsgk4k2h">配置文件-链接</a>，密码:ay6i</p>
+</li>
+</ul>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/blog/" rel="tag"># blog</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/8-blog's_function_add/" rel="prev" title="8-blog's function add">
+      <i class="fa fa-chevron-left"></i> 8-blog's function add
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/3-ts_problem/" rel="next" title="3-ts'problem">
+      3-ts'problem <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
   
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2020/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/2020/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/3/">3</a><span class="page-number current">4</span>
-  </nav>
+  
+  
 
 
 
         </div>
         
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -389,12 +475,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">214k</span>
+    <span title="站点总字数">244k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:15</span>
+    <span title="站点阅读时长">3:41</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
