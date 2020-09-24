@@ -2798,7 +2798,8 @@ songs.push(<span class="string">'样'</span>)
 </ul>
 </li>
 </ul>
-<h5 id="2-transform-box"><a href="#2-transform-box" class="headerlink" title="2. transform-box"></a>2. <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-box">transform-box</a></h5><p>因为默认值是：border-box</p>
+<h5 id="2-transform-box"><a href="#2-transform-box" class="headerlink" title="2. transform-box"></a>2. transform-box</h5><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-box">transform-box</a></p>
+<p>因为默认值是：border-box</p>
 <p>而：border-box ，目前找到的是<a href="https://www.runoob.com/cssref/css3-pr-box-sizing.html">box-sizing</a>的属性</p>
 <table>
 <thead>
@@ -2951,13 +2952,9 @@ songs.push(<span class="string">'样'</span>)
 <p>3.外部样式表可以在任何文本编辑器中进行编辑。文件不能包含任何的 html 标签。样式表应该以 .css 扩展名进行保存。下面是一个样式表文件的例子：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">hr</span> &#123;<span class="attribute">color</span>:sienna;&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">margin-left</span>:<span class="number">20px</span>;&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">&quot;/images/back40.gif&quot;</span>);&#125;</span><br></pre></td></tr></table></figure>
 
-
-
-<blockquote>
-<p> 不要在属性值与单位之间留有空格（如：”margin-left: 20 px” ），正确的写法是 “margin-left: 20px” 。</p>
-</blockquote>
+<p>不要在属性值与单位之间留有空格（如：”margin-left: 20 px” ），正确的写法是 “margin-left: 20px” 。</p>
 <hr>
-<h3 id="8-2内部样式表"><a href="#8-2内部样式表" class="headerlink" title="8.2内部样式表"></a>8.2内部样式表</h3><p>1.当单个文档需要特殊的样式时，就应该使用内部样式表。你可以使用 <style> 标签在文档头部定义内部样式表，就像这样:</p>
+<h3 id="8-2内部样式表"><a href="#8-2内部样式表" class="headerlink" title="8.2内部样式表"></a>8.2内部样式表</h3><p>1.当单个文档需要特殊的样式时，就应该使用内部样式表。你可以使用 <code>&lt;style&gt;</code> 标签在文档头部定义内部样式表，就像这样:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-tag">hr</span> &#123;<span class="attribute">color</span>:sienna;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">p</span> &#123;<span class="attribute">margin-left</span>:<span class="number">20px</span>;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">body</span> &#123;<span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">&quot;images/back40.gif&quot;</span>);&#125;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <br />
@@ -2972,52 +2969,13 @@ songs.push(<span class="string">'样'</span>)
 <h3 id="8-4-优先级"><a href="#8-4-优先级" class="headerlink" title="8.4 优先级"></a>8.4 优先级</h3><p>样式表允许以多种方式规定样式信息。样式可以规定在单个的 HTML 元素中，在 HTML 页的头元素中，或在一个外部的 CSS 文件中。甚至可以在同一个 HTML 文档内部引用多个外部样式表。</p>
 <p>一般情况下，优先级如下：</p>
 <p><strong>内联样式）Inline style &gt; （内部样式）Internal style sheet &gt;（外部样式）External style sheet &gt; 浏览器默认样式</strong></p>
-<p><strong>注意：*</strong>如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。*</p>
+<p><strong>注意</strong>：如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。</p>
 <ul>
 <li>因为执行html代码是，从前到后的；</li>
 </ul>
 ]]></content>
       <tags>
         <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>5-Markdown_note</title>
-    <url>/5-md%E8%AF%AD%E6%B3%95%E4%B8%8E%E6%8A%80%E5%B7%A7note/</url>
-    <content><![CDATA[<h2 id="1-图片题注；"><a href="#1-图片题注；" class="headerlink" title="1. 图片题注；"></a>1. 图片题注；</h2><ul>
-<li><p><code>&lt;center style=&quot;font-size:14px;color:#C0C0C0;text-decoration:underline&quot;&gt;图1.知乎&lt;/center&gt;</code></p>
-<p>可以不要<code>text-decoration:underline</code> 就没有下划线；</p>
-<p><code>&lt;center style=&quot;font-size:15px;color:#C0C0C0;&quot;&gt;图1&lt;/center&gt;</code></p>
-<a id="more"></a>
-</li>
-<li><p>来源：<a href="https://www.zhihu.com/question/42802592">https://www.zhihu.com/question/42802592</a></p>
-</li>
-<li><p>实例：</p>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline">图1.知乎</center> 
-
-<center style="font-size:14px;color:#C0C0C0;">图1.知乎</center> 
-
-</li>
-</ul>
-<hr>
-<h2 id="2-删除线"><a href="#2-删除线" class="headerlink" title="2.  删除线"></a>2.  删除线</h2><p>用~~把需要显示删除线的字符包裹起来</p>
-<p><code>~~删除~~</code></p>
-<p><del>删除</del> ;效果如左；</p>
-<hr>
-<h2 id="3-链接"><a href="#3-链接" class="headerlink" title="3. 链接"></a>3. 链接</h2><p><a href="https://www.runoob.com/markdown/md-link.html">https://www.runoob.com/markdown/md-link.html</a></p>
-<p>链接使用方法如下：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">链接名称</span>](<span class="link">链接地址</span>)</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">链接地址</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p>例如：</p>
-<p><code>这是一个链接 [菜鸟教程](https://www.runoob.com)</code></p>
-<p>这是一个链接 <a href="https://www.runoob.com">菜鸟教程</a></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Markdown</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -3467,7 +3425,7 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <hr>
 <h2 id="3-文章访问统计"><a href="#3-文章访问统计" class="headerlink" title="3. 文章访问统计"></a>3. 文章访问统计</h2><h3 id="3-0-用官网的方法"><a href="#3-0-用官网的方法" class="headerlink" title="3.0 用官网的方法"></a>3.0 用官网的方法</h3><p>1.<strong>重要：next主题配置一定要使用相关的，7.8就用7.8，8.0一定要用8.0的config；</strong></p>
 <ul>
-<li><p><strong>不能因为是next.yml 或者是现在最新版的_config.next就用以前的文件；</strong></p>
+<li><p><strong>不能因为是next.yml 或者是现在最新版的在博客目录下的_config.next就用以前的文件；</strong></p>
 </li>
 <li><p>换了主题8.0的config后就有效了；</p>
 </li>
@@ -3478,7 +3436,7 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 </ul>
 <h4 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2. 步骤:"></a>2. 步骤:</h4><p>1.打开官网</p>
 <p>2.有三种计数:</p>
-<p><img src="../img/8/1.png" alt="1"></p>
+<p><img src="../../img/8/1.png" alt="1"></p>
 <p>2.1 如果选择LeanCloud，会报错：</p>
 <ul>
 <li><p>err: TypeError: serverURL option is required for apps from CN region；</p>
@@ -3499,14 +3457,14 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <p>3.如果简单点，不需要评论，只要计数，或者想快点</p>
 <ul>
 <li>用Busuanzi；</li>
-<li>可安装官网步骤使用；</li>
+<li>可按照官网步骤使用；</li>
 </ul>
 <p>3.1 ok，3是错误的，只是像官网那么配置是无效的</p>
 <ul>
 <li>还是要在某云端申请账号；</li>
 <li>以后都用<code>3.1 用评论的计数</code></li>
 </ul>
-<p>3.2 哦，首页没有，文字里面有计数；2020-9-7 03:59:08</p>
+<p>3.2 哦，首页没有，文章里面有计数；2020-9-7 03:59:08</p>
 <p>4.中间的Firebase没用过；</p>
 <hr>
 <h3 id="3-05-以前的失败经历"><a href="#3-05-以前的失败经历" class="headerlink" title="3.05 以前的失败经历"></a>3.05 以前的失败经历</h3><p>1.这是没使用0时候的卡关</p>
@@ -3610,7 +3568,7 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <li><p>评论系统那边有计数功能，不需要服务器连接；</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">l9X7oYVrse5t6umGkFbQyhXs-gzGzoHsz</span> <span class="comment"># Your leancloud application appid</span></span><br><span class="line">  <span class="attr">appKey:</span> <span class="string">dcwRazDbDakW6HdC3xERrYHu</span> <span class="comment"># Your leancloud application appkey</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">Just</span> <span class="string">go</span> <span class="string">go</span> <span class="comment"># Comment box placeholder</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">mm</span> <span class="comment"># Gravatar style</span></span><br><span class="line">  <span class="attr">meta:</span> [<span class="string">nick</span>, <span class="string">mail</span>, <span class="string">link</span>] <span class="comment"># Custom comment header</span></span><br><span class="line">  <span class="attr">pageSize:</span> <span class="number">10</span> <span class="comment"># Pagination size</span></span><br><span class="line">  <span class="attr">language:</span> <span class="comment"># Language, available values: en, zh-cn</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span> <span class="comment"># Article reading statistic</span></span><br><span class="line">  <span class="attr">comment_count:</span> <span class="literal">true</span> <span class="comment"># If false, comment count will only be displayed in post page, not in home page</span></span><br><span class="line">  <span class="attr">recordIP:</span> <span class="literal">true</span> <span class="comment"># Whether to record the commenter IP</span></span><br><span class="line">  <span class="attr">serverURLs:</span> <span class="comment"># When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)</span></span><br><span class="line">  <span class="comment">#post_meta_order: 0</span></span><br></pre></td></tr></table></figure>
 
-<p>其中：</p>
+<p>其中第十行：</p>
 <p><code>visitor: true # Article reading statistic</code>就是控制计数的；</p>
 <p>2.2 翻译：</p>
 <p>访客：正确＃文章阅读统计</p>
@@ -3649,10 +3607,21 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <p><strong>不能因为是next.yml 或者是现在最新版的_config.next就用以前的文件；</strong></p>
 <p>换了主题8.0的config后就有效了；</p>
 <p>官方：<a href="https://theme-next.js.org/docs/third-party-services/comments.html#Valine">https://theme-next.js.org/docs/third-party-services/comments.html#Valine</a></p>
+<ul>
+<li>leancloud：<a href="https://leancloud.cn/dashboard/applist.html#/apps">https://leancloud.cn/dashboard/applist.html#/apps</a></li>
+</ul>
 <p>2020-8-9 12:42:42</p>
 <ol start="2">
 <li><p>评论要新建class-Comment；</p>
-<p><img src="https://i.loli.net/2020/08/10/Wv1adeubTLgcyi8.png" alt="1"></p>
+<img src="https://i.loli.net/2020/08/10/Wv1adeubTLgcyi8.png" alt="1" style="zoom:80%;" />
+
+<ul>
+<li>comment，英 [ˈkɒment]   美 [ˈkɑːment]  ；n.议论;评论;解释;批评;指责；v.表达意见</li>
+</ul>
+<p>3.同时，计数也需要新建class，否则无法计数；</p>
+<ul>
+<li>counter：计数；</li>
+</ul>
 <hr>
 </li>
 </ol>
@@ -3767,7 +3736,12 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <li></li>
 </ol>
 <hr>
-<h2 id="6-改变高亮颜色"><a href="#6-改变高亮颜色" class="headerlink" title="6. 改变高亮颜色"></a>6. 改变高亮颜色</h2><p>网上所说：</p>
+<h2 id="6-改变高亮颜色"><a href="#6-改变高亮颜色" class="headerlink" title="6. 改变高亮颜色"></a>6. 改变高亮颜色</h2><p>0.注意：</p>
+<ul>
+<li>如果是中文输入法，====不会马上有效，需要删除一个=号，在给一个=号。</li>
+<li>如果是英文输入法，马上生效.</li>
+</ul>
+<p>网上所说：</p>
 <p><a href="https://blog.csdn.net/tl4832194/article/details/107921933">https://blog.csdn.net/tl4832194/article/details/107921933</a></p>
 <p>1.位置：</p>
 <p>C:\Users\Administrator\AppData\Roaming\Typora\themes</p>
@@ -3836,10 +3810,7 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <ul>
 <li><p>在我<code>cnpm install --save hexo-blog-encrypt</code>时，发生的；2020-9-9 17:54:50</p>
 </li>
-<li><img src="http://bucket-c70.test.upcdn.net/8/15.png" alt="15" style="zoom:80%;" />
-
-
-
+<li><p>&lt;../img src=”<a href="http://bucket-c70.test.upcdn.net/8/15.png&quot;">http://bucket-c70.test.upcdn.net/8/15.png&quot;</a> alt=”15” style=”zoom:80%;” /&gt;</p>
 </li>
 </ul>
 <ul>
@@ -3927,8 +3898,7 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <p>2.它构成了url的路径定位；</p>
 <hr>
 <h2 id="13-进度条"><a href="#13-进度条" class="headerlink" title="13. 进度条"></a>13. 进度条</h2><p>1.上面会有一个条，根据页面的进度</p>
-<img src="http://bucket-c70.test.upcdn.net/8/5.png" alt="5" style="zoom:110%;" />
-
+<p>&lt;../img src=”<a href="http://bucket-c70.test.upcdn.net/8/5.png&quot;">http://bucket-c70.test.upcdn.net/8/5.png&quot;</a> alt=”5” style=”zoom:110%;” /&gt;</p>
 <p>2.官网</p>
 <p><a href="https://theme-next.js.org/docs/third-party-services/external-libraries.html#Progress-Bar">https://theme-next.js.org/docs/third-party-services/external-libraries.html#Progress-Bar</a></p>
 <p>3.配置：</p>
@@ -3936,8 +3906,7 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="attr">pace:</span>  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="14-滚动百分比"><a href="#14-滚动百分比" class="headerlink" title="14. 滚动百分比"></a>14. 滚动百分比</h2><h3 id="14-1-预览："><a href="#14-1-预览：" class="headerlink" title="14.1 预览："></a>14.1 预览：</h3><img src="http://bucket-c70.test.upcdn.net/8/6.png" alt="8" style="zoom:80%;" />
-
+<h2 id="14-滚动百分比"><a href="#14-滚动百分比" class="headerlink" title="14. 滚动百分比"></a>14. 滚动百分比</h2><h3 id="14-1-预览："><a href="#14-1-预览：" class="headerlink" title="14.1 预览："></a>14.1 预览：</h3><p>&lt;../img src=”<a href="http://bucket-c70.test.upcdn.net/8/6.png&quot;">http://bucket-c70.test.upcdn.net/8/6.png&quot;</a> alt=”8” style=”zoom:80%;” /&gt;</p>
 <p>在左下角</p>
 <h3 id="14-2-配置"><a href="#14-2-配置" class="headerlink" title="14.2 配置"></a>14.2 配置</h3><p>1.在官网上没找到</p>
 <p>2.百度</p>
@@ -4194,16 +4163,18 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <hr>
 <h2 id="2-2-VUE后台"><a href="#2-2-VUE后台" class="headerlink" title="2.2 VUE后台"></a>2.2 VUE后台</h2><p><a href="https://github.com/PanJiaChen/vue-admin-template/blob/master/README-zh.md">https://github.com/PanJiaChen/vue-admin-template/blob/master/README-zh.md</a></p>
 <p>这是一个极简的 vue admin 管理后台。它只包含了 Element UI &amp; axios &amp; iconfont &amp; permission control &amp; lint，这些搭建后台必要的东西。</p>
+<p>1.这是灵逗士自己做的；2020-9-23 03:01:35</p>
 <hr>
 <h2 id="2-2-牛客网"><a href="#2-2-牛客网" class="headerlink" title="2.2 牛客网"></a>2.2 牛客网</h2><p><a href="https://www.nowcoder.com/">https://www.nowcoder.com</a></p>
-<p>上面有题可以做；</p>
+<p>上面有题可以做；例如我，可以去上面找web前端的题做；2020-9-23 03:01:59</p>
 <hr>
-<h2 id="3-云盘"><a href="#3-云盘" class="headerlink" title="3. 云盘"></a>3. 云盘</h2><h3 id="3-1-蓝奏云"><a href="#3-1-蓝奏云" class="headerlink" title="3.1 蓝奏云"></a>3.1 蓝奏云</h3><p><a href="https://www.baidu.com/link?url=D1rMAyldiFnTci0fG81_N045SMGguJvE87Rkg_AMe2mANeabYS3yw3RRymasGC12&amp;wd=&amp;eqid=9440a9510014caf8000000065f597f7e">https://www.baidu.com/link?url=D1rMAyldiFnTci0fG81_N045SMGguJvE87Rkg_AMe2mANeabYS3yw3RRymasGC12&amp;wd=&amp;eqid=9440a9510014caf8000000065f597f7e</a></p>
+<h1 id="3-云盘"><a href="#3-云盘" class="headerlink" title="3. 云盘"></a>3. 云盘</h1><h3 id="3-1-蓝奏云"><a href="#3-1-蓝奏云" class="headerlink" title="3.1 蓝奏云"></a>3.1 蓝奏云</h3><p><a href="https://www.baidu.com/link?url=D1rMAyldiFnTci0fG81_N045SMGguJvE87Rkg_AMe2mANeabYS3yw3RRymasGC12&amp;wd=&amp;eqid=9440a9510014caf8000000065f597f7e">https://www.baidu.com/link?url=D1rMAyldiFnTci0fG81_N045SMGguJvE87Rkg_AMe2mANeabYS3yw3RRymasGC12&amp;wd=&amp;eqid=9440a9510014caf8000000065f597f7e</a></p>
 <ul>
 <li>注意：蓝奏云，只能上传100mb以内的文件</li>
 <li>空间无限；</li>
 </ul>
 <hr>
+<h1 id="4-开拓视野"><a href="#4-开拓视野" class="headerlink" title="4. 开拓视野"></a>4. 开拓视野</h1><h2 id="4-1-IETF"><a href="#4-1-IETF" class="headerlink" title="4.1 IETF"></a>4.1 IETF</h2><p>1.<a href="http://www.ruanyifeng.com/blog/2011/03/ietf.html">http://www.ruanyifeng.com/blog/2011/03/ietf.html</a></p>
 ]]></content>
       <categories>
         <category>website_网站</category>
@@ -7181,7 +7152,7 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
   <entry>
     <title>13-VPN</title>
     <url>/1-(0~50)/13-VPN/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="您好, 这里需要密码." /><label>您好, 这里需要密码.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="fff9a19c1563c059de4e9d3c45c06d6e5d86489f0087f32e86aa488a1fca7a47">bb03bb0a8c65c3f7d630bc9a3238119a0b3c3058dc02a84417048fdcde4c2754e919ab28088435f553e521d09b85bef7735f4d1459d6f862925ba2a12ac49b097c3478a6b318841e537fc8a23b8075b5ad2698077dacaee34fc0a2073ba80dfb650017051b1c107ef64b243f3c60ae809cb3bc6c63c43e6f3bd9638190b8deb6964f3af8a19615db09f91ede35c3b1d25b3427245c490ab8babbc34e39f909dd00a07a834168461b86a82114de4c8da8c580c1f7f5c1e3e4154f3fb8082358d8bbc67a7420002026346712a9bb584344483430493cdb9f444ea11052fcaa8b9b75ac64cbc2d45a44d643812c0cb5df0b6fab1b297bb4b9121fa239fb898ab2df85f20ddf0812736e763bc3a3eed3f9c5c7d8cb4a6ffee03111c9811e8cddef4291d4237c74dd8b85e70a7bf34f6f43ea51dd0f8a9e68dc6e6aed94bb51c5631e47a79625274d692f28cc061888e2de4300f256fd04bac0154b64b654994178d0b50dc40566fbf4127f3786b79ddcbf0bc7440724f27f51ab91731ca28a674dc4f20ba9b16a7cd34235ebc7337cb77b490003ad6922745cecb493bdfd3a93b3046f25ce41a539dda05a09b67814194f6f707bf07e0be676cb1e0431cbfb41dd6d1641609028fe0e434d905d439dd03f388c8ff266529205676b00681acdae76de3a659efcf8458d45628b39cbb835ecf14b65eeca8827aa702af5b61bddf03d86497ce3b183c37adef458d3a6613d0b21db32ea6e148c6388391c17911172b559a41df1c9ca343197c6c99f5b3e5a8af838e6da745ee844b08dabc4f4ae505bf2858d9402a4aadc8926dce2e84e19a42348bf50976aed123cf0efed5b86a97c56a91add3c8859ee1108eb96aa129e28e6b6d646d888fbffd07be5870267a79618f3f1a34096f68a34096b01f41d1273a275628fa847db6fb1f2f45f0bf249a71c2f04420af495dca9bb9a078358acd46cd9d7009e5c542dda0e178659f9469d8b0fca82bfec62709c6e2020bb0991b9e8664d65529f78b4de9abace94283316ecae84dba59231afcc830582dae4c2039e0644ca3ce23de010bb22e7a971e4aa7ef6f8e9837ea3e395f705a3d39a2126b521f342ecb7af496183ec11923d51b856f71ce4c2956e00d07e87e973d96183570ecb0db8967e33cb132ead3df5f01540d122296333abbb6149c31360935d058793c2f525be54b882a58439a4fd7a49b685456b5701f62a7db4b6c80d3c6a29a4d874eba33becff47cf6855b3ec1bad219f4290f921320f739a0f9b49257cd61314f7e893eda9da9cf23a7e286417ad2a026f362b5be06dc83037a2aef2d00db27597cae45f81ca47e0ee3d1ed765de0d319503c025b38429129f4d99e5a500a092f77592562fc584274104a02e9e598ac91719101ea4e94336c6f15c59fe5fcc65c0096856245ff5a3a19ac3762d2da6e7a3c1a7fc47dc3a9207a55cc3dbef771c4a146a9ab423954001003ae751ba22f12f48068462ec2db42c17caf60fe1fd1a450a94ef7984f433d63ac29b782e93d7c485fa1426b6b692c6902d67a1c11e7a7efca5e5c536adb6d5214cb5ca91d8efe248b09b3e3b35ece3a3fc661f75843b5857cd672286de24fd8f5a1ee48e5701312e366fdad89038ff8c951bb4f8b37f9dcef2f6678312133dbfca640b805e80e16434d61c6d6d72ff39839d6a75524f2ad2c5722d50da48e12ac9317a6ec29bd1f8b2ad060880b507786410498e330dfd70941b06c6e702b8c07b07c421bca053fc844508046618828f66599649f0ff066268e398eb381f8eab006338ac0457324aab5e958a9bbbe2de7100e01dce5cf42ab918edbc817ec6b90daffac072c37bf9a7a7d849206b5a2bd7e793b28d91af2f495b5164285221398bf2aeb39b89efda4c1dd308fb137b761a38b8a2e4633b9eec130d2a9886bd3348d48caa4af4e46b815c6e1a03d00d8a028587a4f094a448878d70d727874f56c5f185bd105a8f5b145d22fee6431c5905526c7bac2d58ccc978758845f15f3d70e5f8fdb8b42110c0084ec836b7d9481f9ce3a6c54d6194e6b37e41f4296da71460dd573c9f68004b27ea4153d4e05b38b371d5c038b0a976cd78760ae760f7fe1f33bbfbb2f90740b3a1f144fff8a09dd5b8da063befcc4db97e8ed756df2081245671921f112fe55fbcdb6ccb0cab58473d8ce1131b3a35c4c2f7c63fea1d132b673e8948e9fba909302dd1dff583027e2b0d0778158c86687d96f7c301730af4405c21b3323e3a34b02118bf641c73d95a57f426072bd96c5a3e4eb1fee62c8ff7366d3a4a9b14e950e7f25a5354d3326e3138b2fe96f0165d07c4199e03f2129c230ce53423032950ad2bebc9ce28b8d9014960d387e3f82b1128be840931a5199db981340bf93506f53fd8345409cd14879b828537cacb503ee2b91a17f95599616c31418e9073ac0a2ea0e599fb5a6f5c59209a41be44c14477218fa24d31a278f0c9955851f1bc8b23c3e225523162ca897fb740c7a7cc6c674eec059dc326befb92142c889e26d6dfc253e8fecd9dd6ec644a51977078db9f77c5f3fa7c2d62b3bd18f3e2b078ea5ed4dff74bf914ccecad90c0aeb69c4f71141fba67e7e80a389a1137b47b4ad5911095974fbbbcac636fdf141ee74d3e9440017a573956d882477e1e9ae36e61a158ae8b3a927049a58be48d7a54307db96c03e609acea241e8ebe7fb3803ff3661e7fe78104796066088502d4332fbebb5cd3777739f32c557570272677eeb4e365c8fe3866b9dc767b40d05bc9c5aa420782899976f587af8024d106ec76a091876a21dee08390e7bb03a2c09cfbbb26a1214cf2c2e771eccd83d22419bb7e119557a4319b5b730bb762aa4c84d9403bd416c1537ff92adb6afb26fefe3e6eacb7495c2a36c7cceaa6c71f0196697c6a0ecb3bf05b65528fd72ea0cb6edcff666263205e378a18a00e6d07339b6a941bc3f0e2432744f0530c3ab150718339e16a00de0967815a8780797829ea8d23a040051120ab9be4d4b244d9d34dc55015ba7df3bec72ed0d0f70791a2b509c9e710ca12942a2c3b1fdb782cef29d4f9523b1aced070af9baa3464763c8ad324e8eff1c0533b47980da8b55549bc4d5d1b0a11cd78e60c5e8b7fc6ec18a90815bf79cbf3753f2b2279c1ad7bd0b7d5429c7d2510e1c3396cc449cd1ce04c63a5be6fd7cae05994cd92fa2d0db8e8f8fcd956f84abb9f545655137e6c505c4e66d057e768edf50880298d3903fe9e95915138d5b914e8261832fc7788745ba359408922e7dd8c9e6531514623cf6b2dab891e430c221813889d23700b9b047d558306f0454402a1f5b21cd59f9db6b27adfa541ad6be62adc376209c6ea8d7d8858f63823eabf18978165bc18183a45aec6ed2a226d2db33f52d46bab6cda8b86904e4eb181ea6d2910131eff71ccd6e3d72aff734db8fdfc3ff63341fbcc9eea0410da3dc1199aa376f79481977b70f8b274bd54499a85f931c32a539b43a9fab5ed391a52b980993a5cf223bed9013d06578bb079c5de60c61607b5371a9d789657676a5dd49ed659bfa5ea02fbc0d75d2c731429bbc1582282795b94e1fe1cf698f0067890c7da340a9156693873a58ff8d13b9c635f1834c4aba53434ae1fa4d77823cf53e16d83e231043474ff7f15604a7caac889acf75a8243e4dcb8686e1f56f0615cdc95825258f63278e84a8ce47e77c5f6ffc1bd603c93a5b2148d26712b5c5c0e878d74613cc7d04bc88988deac6d1f528c95669edf5fedfaebd30bec7dbddf57636cba6375704b825be30ccd68de38f0b1ccca8712c8d56b6fc47240900368f6c394f047f295048d4f6eb9ef970a9852bcd4e3aece206f30a27f1ecc3110bc4c54d677ee8f7bebad50daa1df3119d932f331b9c493041a7081e5d4979c879e8e16a84f8b366a39b8a07f594fa9ee8156b1fe7be30b3641b0e5de47e05055e6913df32a34d6566de915ab31cc726e2c41481c3d8eeb10dd9644dbeadc681f0bb07bd63dfc4e375d8421d665d2c36b94bd8094707eb2ce466523785c6dfaf2658e9529ab66f9f44b8672be2df7c80deaf2fb97990a2d7266706dcabe2e8defe97fc50321bd2581a5b593494f03fd60d7f1e06636ee81328152a53805624604162098f425d41a104243982f47730ed93fa7765cf944ad80767c385379cbce8a6cc7ec45c8bcf2551634524676daded693e1541330d8adcf1c3c9ca663c074ef812d02317a1c75e8988c1b6263105ac07a55c0e3259155e6edd14a274a22aa6503ed917bdcabd380babbf31de58ad44c6072b75272c28306c980908dd01d7783d481c71d19f99da87d5bfd0766ed99e678bb3b183fcb40f581ab75a078c96a1a78788b6427f02df1c2d23ed340ea7b7de016b63c3cb46403dd3a9d4577c8bbdcd148a38864c98a0bb9524c052f161ab91d1ac9c99320ea6a623dad99afb358c35407e352d9dffa3cc607c7eb1e4da9d3ccaad3d748d90913b9b6e8292d6df524b3319d67a8870f6f3ec84f3a7843552929a6b4068f3ac23aacfb1db9c2dcff0173234990fbcd5e0ce3bcf8a5e5d2b6237b3cb36f001c0c9f889b0b04d15076ec9106f87e746282d311d7760b59a61d0152e07d7676941281c3b5054869e09107622eb1fbd316cb0ab18ce2c9a6064dd36bbc7de0c1a19373bb55367c59baa85f6686f2946c1ecde0212175b532dc5e1d14decd3564235cc078442caa27aaff2b1c33dedaddc8ad5f1b925ed440ae64cdc3cb25029fc165f3bae547789d5217d0dc9cd1e39dafbb313e814d1d327119410395da880a195fbc3b499e5171e14daceb43d4b772727086fcce285b7bbc1ee8788c8a44a2a5c9fbe4b587ecf9603ceafd0199764810fffb73859f24c639b9a407fa2a95347bb3b55025c325b0cf36ebd335d5fb0f355d5bc8ac80b56a79e1863feacced16f42c1dd74861c9401e9c5b92c46d06555e33de69ffacd7ef01b18e6773aeee14b9b555a233508c0e9b55c7297e14ba2580431b58f350d1d2b79b956549edb5a1022f8c7a1905763c671c993fa1e03ae1dfd71b26970c012bdac03e1bcc3f6e92e2226fbe69661902355d15a9670cb2bafae600398ac1131df5b02b054ed1448a358b9e13f5d04e2f4eb6c5c571e997b55bcd279129362324788d9031ada9d847c66d8a0cf43980fc04c3c3dbe8c4b29e829a78880667dffbbbe476f65d03948aeccd9af0f0af080d3c99c8d5cd9d8acaaf2cad51f94c6866f69c421b801d1e82eb81535965dacdc313b9354385effcfdfc7e6c5bae4ba96a6a95a6da511af93d0d837fb53bc75d93078c49280620d2ad3bde639231686203a72e216a4b05e0feb7569d2b89305b7171557159235dab21e537b0e48a0aee35c1bc6198edae22f0053798b5d4f6a0421dd0f573504440b0b87aa9f6ece0d4e3122669c6d46f777822c3d65bfb923fe4724ea6faac507a8585fceee3a33db904895877cbc114aa32f0c18d2548bd25fb8ee096afcad0109ebe51ca99edb4bd18740d018727998f0fef74b5a5b84c57eeabd7f444eacba244019309ea07440c2f7b76b47a5941558f04859a67d63bf1897a70f89bbe0e893a637f5760d75fe3e5a6d8efa7c5a48d0cf270f82a464cf920729026ffcea99ec8575b4bbbb7dec17aff81ad66ae78ba5d7f1dd9b67d6e7edcff92e6419421360134141ad98af0ce417695d8b1fff2084d30e38c61baacbe8b5b7417461b6ac2b562b60319a66ffdfa067925879889fd05fb868465d77fcd29f66890b8b5e75c31d792ba8a68d248a4272cccfd861b7d633c96f808580d73f8ada3c5c9b4ba72657dcd000badcca77f9c72c6ad17b6e2cee4eb9f20796bca806046569f5b9ba8ecc5547da325951270088e81627a0ba8e16c43b1810c1b4ee030170929cf19a555986b709b3d404196626bededd379ef70794f93496fc802a2c2caf00fdec7ab4850774470a8f6be1691ad2cc093090d7311842a5341f36dec58d8cdd639098b24982cb0e6489df8814d2ebb28785a873cab824fb7a7f28949434303fd341f1a7f979998c76e51ab63b52db3c5cbbf45a75b3ddd7ef69ca7726f2e3f54ef82fa596199a7e0a8f7dab8f55c62b2e6a4c3dce240dc03166e12fc0e1d7396ed455292e2befe913bef6fa53adb0dffe9c12c32281cd1ae955618ea39571b6c9645b5fe6b665c756053a139f299efc4af5ef75606a2249cd7294f75fc02619d6f3a11eeca0cd972ef796a4eef0b6307d500c989e2cbf74494e36986a0c4b0df7958fd3e605c368ab402ff46dfd9ee9e9ac59adcbd8db26cba06b760b58c36ab293d55866c22e28a739d4413676d43ac04143fcca2de287c0e967765ff9fb877793150ee03d0b739d8f14905a791ee0b877db99860f1d45cce57d58578a2f4e3a3f19afcd258be3fa5a2facfeca0aff273f9ed0a9cecec19e477492083a0144fde70895cbc492bbf3cde79eae354c7070ed36de019b9ea72dccd07deda9c9d36f8ffd6b90d2a6d015e83bc0b1dfd125eb071a791383748a86e088ad7e9e5a21a2e9f989ae24a87e7ca80373552a17995e2667ac29c5c136c710e19f43000b9a2b78ddc1cd6444921ac2fa732fe9ee1228d58bbe04823941bb6cf4f93ade039801d0b732dba3f0f239592eaa4a3d69b5cff9ad54d2d2fed97d72bf9def891c83269337c69d5200cfa189f0d6dc06687985bd6031a600d6f0a3d9b7ea1d1945b5a2ba873d59193d6fbbabbde177a20f556ef462aedb15c1091ba654e2e30d036bd0a4ab4b548cca4672906024c677f2373f89dac8c05d0bc48ef26151333f7e4eb8d3bbb53c5990536689f54a3a5f9970ae09aba4cc2dfb52d2d01007656e7fda4e4313de9c2cfb16dafa3cde511e6c423194e7feba2df89f07964079681d8c61361c2073be0c1db221aa75084a9979cca58a9cbad9315990323aaf0d49481398aea91773d1fcccacda763db199da43e3264829f9130cf1752ccbd378b4fa4bebb19902f4b9813e04b6569298a0ffa0f07b1f6d1ce3689ced6ee5e875f9714ab88bc50c2bd9ce8a58364c3d17f57f634650786670c83dce492aa9a7b57e7807e10c2cef575c654efdb7267b160316c5e2fa266bafa862d44e2a9f1a0418e8ed0d248f732f8028c565f96e962d8ea4272bd5d7aed0b3d803361b570bf0fcbe0ff72f698774a8f743f0abc52a0be49828e7541440678fa89b4fe96cd8b1dba4c9aa2031b6b1c55b1340a213a9f991f387cb62f94a9d32c6c19675cbef18f8d9881c17284a46e1f6f16bf1a3059a0057a31d17e2ab556feb059feb1010991bdb07dc85b59626f41661251c8122ac5c94af2d792fd215966fc8e9a89bfa91fcd93b3a19c5af7e75c7c2d05b32cc267520b647828e6d345afdf0d41d1468162988163e9b3f4898c46d5cac1d3bfe01ea2883688a5ea735a82d5a795f49492f970aa514466fe07a29f5ed324993b0376d4cc9f575c54f85af2ac7931f3dcc86bbaf039c777279ca27fc56bcbc4191e2c6829ec774aabecdf505427ec8885d62a0d37368de5e4424089c18f2d35f747a0471c45f2a6305a41188a8a9ca1c39bee85da81bb4f2cba2b62cae72b7b9e926407391dce71858018715de801c58bae8f09ac1bab205d387c334cde3b065b4f27d47ce36d72bac2f956c1b01b37bc4b075dfe596600fc7755c3f06f05d2ea7ff29ca4cc96b9b898f6f351af19685caaaac8f85698e07bc0b336d630b3c78cedb3c136555d5258419ed3a948ea6811c68ae089c8a6998d377d68160e6e23d2c6e994906da0a09f9d2cc3fd503fe20972e0586147bb5962a11d0fcc6c2b90663f9595400ed69c2f7d4469389b7523a41babb1e374eaa1d96f51690e674ae2fa0057cbf48b4394701b2729ab5f96ea0758ac89ed54a42833d8a7f0d9829628943bbc417980d7b3339f17de17cb1b394aacb45b01c34f46f041ae2a9c6dd8c6e4187c3ff9a89299107be0718918a2487f6a8a92417a4ac38a696967a1bea232d679e400ea3aeff9dd2408bd138d8b2f697fd689145c0cad19c5f1b9ff9db460f78d1681a6531647821683aa63e2b167291cacd852c2a2340fa62e0c45bb0126a8d91ef29847b861b9d715b706ceae1cae364d098f44313c0b6deac050e560000650683ff4fbc29c6540c7816e14fd19d2558da48db41284fa241e0249645227828bee5d35f9ca01e6a4dc74d4706f766a692731af279a15c343429833a96ca2dd34fcc5b09ea3ce504d36f77aa5147ad172db523bdeef182a03a54231dbf58a7b339e051f967c9bd8bfb1edac0f2ff6e3b505a2f0afe7fc64d2a2304250d02c2ff63f4cdea4722701faa72d1cefa2b5c13370280bd0b8d2f01582a1b77b74f3a3c92019852f0d38b83e9c5aee2b90acdb8e0557716c31e661ef86a96293359cd6ad4784188b3d8ab256372c25b0d02d60dee502848004db30df846d68ee3831dbc9c9232a960789deb97b7658c0f64f38031a3ff9741cb48730ef6a06cf7545889b97a6cacca49651365c96fac2bf7cb89c16affdbd4e2080a25cfb84521835134484ab9baed43e1e0fcafaea3d9ebabef16b9ae5f86b5f7a3f933892084167251d0ddd244322796002ddc4d2a47817b7e4bbe4b57b8d2ee39b2027b120376d29870624dba59568f4bc3083d2a41b44e7acde32d159166ecbe9801a5ac92cbbc0ea8913ec645f1506b4d0d7630308f58d777491950b1e467a4ea38521d7f33bca84f468781e3f8430c5f38154fdd25ba2d34da3883b900900b9fade50c8292017e8d652f161b2f5a91e04bc66c08ccc3acc47c57337446894eebb407353fe3d2d85ec2230ccbe13105b1020778866a18fc1f4e0d518f03ac486822c2a11d1b419cabb2208f9292baeb3f8d499989a2b33bc0095168290149719674b862e7f861765b73a827d4d37b5293c7b534b0cc2680ef6630fede1ccbd374486431981483147500b471a71a34e84373b089e1a387145ac9ed8b3c758821cac29acdad1fe1ecca1c7a0e9f893fc70b27699609e8c34dbe3d02e3e339b3fce2a5e5ad2786e065fd4eea1d619da64a8f57af0916f5703acc4a3d3819a10fbf1e788805014102ecb1a998265f7a59da3350fea937fc901dab54f8920721b4181e44edec63ee15175aeddffbcacd5d34f607b7671a4ad377f813234a4e978646ce0b3bc11ab5cf7fc35f0ca64a8d7f45547d87d9908d86c0748f7e6e1fbd2f5d91947a619865bc953c6c701368f7f682113ba756009c21de248ac3d65b7ac9836313df82c0d05ea867289d2dff216bef44e0290e5fa2a6896ce27e78ab1f1507231990bda88c9e355ae7f4c3e1b52b594c7f78fa9f0a1682123fac3dc0eed9b186e245d18b8938a801f2c8fbeeef9efedcd35467ac2e44f0cd34c0c2921d16fcc9ff06a3d5af204bbcb4becbc606e3e839d51ba8af094947a1676761cc050fc23276df868e0a6f6241fc084b0144c19f04335026da4891c9bd491e916ca2a814f54afe90cbe6d11c1881691444a86d4d1621c50cca600b6956c3b8620046cfc76144229f52c3c4467e451a0b8b097e1561e89aca4b5b10174285e3940458950505c5b6d491c34f6b6ba4eee9c6a26331740dc1f0f82db821dab0d03c03dadab8299c7042b57746235c3319f6b19eb81367a561158764862f390c452d7582a367523cc678d5b7cd66ab3bf3305160376314e82c5e6b2c784085001ce2515c7c390f689c086a5764db24c366b149937f5fcaa54953ce32e930a575f796f671eb5423894aff75d720557f2da25daf95f45f9b9fd80e8b8a17d823e9cbcdcb8ffde6eb5</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="您好, 这里需要密码." /><label>您好, 这里需要密码.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="557f9542b31b0fd9d3602a26425d33dd41d545913d947d20f6d8057f73aed7bb">bb03bb0a8c65c3f7d630bc9a3238119a0b3c3058dc02a84417048fdcde4c2754e919ab28088435f553e521d09b85bef7735f4d1459d6f862925ba2a12ac49b097c3478a6b318841e537fc8a23b8075b5ad2698077dacaee34fc0a2073ba80dfb650017051b1c107ef64b243f3c60ae809cb3bc6c63c43e6f3bd9638190b8deb6964f3af8a19615db09f91ede35c3b1d25b3427245c490ab8babbc34e39f909dd00a07a834168461b86a82114de4c8da8c580c1f7f5c1e3e4154f3fb8082358d8bbc67a7420002026346712a9bb584344483430493cdb9f444ea11052fcaa8b9b75ac64cbc2d45a44d643812c0cb5df0b6fab1b297bb4b9121fa239fb898ab2df85f20ddf0812736e763bc3a3eed3f9c53bd0a85108c431e981b7bf6933c4378968b36dbd5040262ff7321e85e1c7d81fdb9cf162caabc6d249b0b5ccd8d707bb2eebbf16aab3155c0c69d7bc3171d9bf02c28172a04f4cfed98a1d6e459aa85eb7835ae2872c5f4a7abef187822eac32b31ff16ead349738e7fb5db8147ab617d4be905edd49d5a702da9db61d28eb761659d2b897c8aa5b5f51e21a092f4cf4db0fb45e4bdd75d23e7d6297141ac27811c1b2b803c420a551612b10442992d3c4a5ca0b95656bc4a7e8385c32c80ad4155a315bd91776c55c33248b50aa984caa27c53c4019279875d55e589542a80bb3b73f39cb15985f6864c8bfd6e7b4422c376278351eeae0274f33d59ff92fcd5e2fa938813cccf76ed54786022a5064c67151b9d270fc72f0a44be51adcb60e6f5260016bb6eb2c6a8ea5ec92909f6ff57759dedd9d53ce918bae5711b592ff6a6e7c2a9df980f81c26b778860c5bcad0860ab3c9e3da4cb6d87dcb3ee86bd39a433a585f69277761a9e9151fef0501414315694c42f2ff263048c0c0b5bd2c12656ed0f4092f120a8efe02e798cf997e22832f0acf86ac3c126505066921495684d6ca5eace2417c457f3d4e0171c51dcc58c1af9acbe72838d86a95a8bf7366c65aa1df34156e7f0af9259b59c9ede120319607261727a0c3016d425e5ac703831c3f9ca291825a839e98d7eb8e01048351eb9b6903b2e15782d2e08263f0eedc9bfc95d20dc4cb0118372b4bbeca923680e275d95d9dd660c7955f24dbc9f8851f9b40ddb195b58e3aa9e3efc531bcc698647ce90a7ef00563cb7211b981c22cac915c5bf22f07fcc8deafa2516d04572a75bdeb840e3b665fc94ec02b21e5b1b3d753315a31d4175700798f9adcbb170df600a47e0208d1a3129f9fa3d9daf99432a7bd5fa418a6a08d146e55ad4bf4c3baa4c5af3c89d40b0f8cd9dacd4c88dae971e041ce580d914d1e9bbb0d80b325656a533ee6e8656d82772b829025f21ffdbf7e349ce1d7286d997777d29a215815a8ec3d7dbc490b5c4c4d50fff278f1566f1308adbff4717d211bf803467e1854599ac5e99bb65faa91e33b4b49a68ddc073046e3587b66eddbc6490d344113482662f2c70aecadf33e10c92e79862f35807dfcde8cc9f32588bf7cf394ee8e2cb589a5e6ad32f69420af1f10659bccb3080a7af3db70464605915207c71748b470ee0a0d88d5ca55017619fe3463fe243884ddbe477cb1019ebe64c21e42a03c1d98271410bb54e7ab71355930c43a41df9cc48f404496f0384c587a0c45939944e64bc8fc284a0976dade986c9f54712f4176f1276843daa565cb9e4a854150d52d60f84454c708680d969f821ff3f95a174a8ba154b2810af9874af1ea56cedd2eaf9766dbda167166c7e4e6ce18254364b2f042ed0c9f49d8a94ec551e28588305f941ac894d4f1b5e434ff302078d8ade0c32a9326e435434e5de62603cb04dcc8d8eaa8238c32bf0e93af477987c3e8ebc16246074e392d8ad356606e90130914d4ad5b264ffc7e3ae571533f17f9f4e15db5c1c49356f517583364561164cd361ba86ff5cfecc05c0b4552c6a614306c80a8490aafcb68a8213b42cb055678865dd9a595af60c4e4e8470969feec8f2d5dd98a19bce9458d01e3dbf2c1630fe6375c83b23df9e8b73951a3946d272faecee35cbf077079a9686d59fe47f4dd47a94617bc97d21f3968f883533586591c15334404654c516d9d1de0df690cefb47d74260669b85d092fa24fc3aa87a792767fb55aace7ffdebb121b67a565aff98f766f636fd57c428afe1d265afb5761be5376459c746c5ccc9078929916adb3cc5492f511f5d56248406dde5c4b12797fdb46775d61a02813f4c57b96eda86c92e62965b5c2bf16540d85d2cb581d5cb265d4f4d444aad243b3cd8143beabce2e7610a7fdbe3169c2944b84bde85c96eb571b5eae8a5723320c105af0b56564399da49419c8cabbe579102261af1c43e2da0ae819e088d99ce18ec2a0b6f7f7095c570f36938c42e4bccdb588feb2bd590d7493981b0c94173c4cf929b76f26d744b8ed3fa117951dbdb5fec187cc3bab3323c56b1af24fdd41c3067bb73e4b46dbe0cf5020d50dc12725cd6cba4c1ab6ccb2c5ca1f2fdd3f416fe140a58c658cc64c2f599cc45cd7aeac14a666643908a4dc8b572aaa42ad4702396a21e862624f83d519f155017d9e558980745c2711dba950c7ec695391a5c67b599423e6267f80f69a4784a111c58f3b32f88c806e29e01993fbfd169a92463d85a52eab087a22ba841191dfd9d3e95b9d72242b93c679b6f8c79b54cc63f6a2ab4e2a1d18c97f56e96155d1b2f972e1387483c2edb21cb5b57988d3487dfe848cd7b6f2d5a18ea57cc1d180ddf955f0f0b708c4c951efee7a10ac4d447eb487a695870a2c7ea2e1d8eff42d523b2803ddb2505444247c53b9fb2c687d71d09ad4c3dea5c4ea6791868e909eb0c619f49aa2345440ad5e115e0ea413a05c904e6ac1ec4f0c1623cc125d0a433d96305abf889dc7d60079ae80763374f9a4471a48bfc69061516fa57c5bc681daf626423429ee0c45730d152a3ded89d323e42535256d23045572c3674f4265904964e49ca43795249370e1d0f4125b66d8c8056096e0b90517625d06ecafafb2017a5cc9266673fe76e1d704c93976b8909452e35c074f0266279839d88bae44473ca4e23325e3f1af74ad6f68733ea16d896320611bb391cf1d921a6aee8d2771827801af839355f6a6ca28e76f2935aefe2da5978105b1b9bd875077776ce5b4a3a20185aa9b5f5f61703250ee62d4fa21f370bca4e10c31f37194a7cfd44bdfd923b42d389288f5d5a7d867955df41e059024121ddd1fcc01afca5a787ed107c705f802ca941fccd369b0a44e96d68a8b85c2a49d1a56d77d188b644187ae216694de31e7451fa297ee213fe52978a6e5b197364a494e3a95259e433bdb1403ca5f0e75697d7d408143b8d3397545ce2ae2ff287a9e5de06527bbc8165b8d214b52db2a6e6b24c8e71b2de2b762bb32c4031ff910253d28ada20609541e0c548ad402390525978c9441317852b1dc20d287c524969d321246368863522747e1eff7c1f9c19a2e0faed217d993ffe032fabffa4c9eaaec9c6965890d3d562da138f001e0f77ad675dc630249defc5c5d2dcc4578eeddb30fc0a8157f0b6b6f5ccd0e3d2abf43d025e123fade257943d5e205e8a14ead05e1445561e80bf0abcd9933d5147ec02de0d8ee6f396c85a9e786a9691ded64fa6472a30f8f55b11abc27be7033fcfb9cdce5c2bfc071335ca32329c9ff1aaa5485b23915c522db311b6d7487a6a70fc3ca1724b3e098db4acab06703b06c85fa2b4accb4aafe2fd79ae5d9d9ce30180ce471ab7d6b131f5af2631bc8934c38b9a200e3c4bfbd4991d320758ad06fe5245df7df1513591a338c05ad032137354eaa6071348e79d8bd4369ab54527f82c956c24fae63fe9a16f876c078ee69d918698ac4e3977f0cdc7c51bb860e625498100ae9915bdedc8ddccd39a46cf176a5a76cf376b9f8aa9f8853953d4f71fabbd86575dd29741896d18fa7d039d0862cff36c8da9704aabc5a721229f0d2dc5298a267d8f1bd3970be50586e692cd8e227e49ed75f3021b958cca45a3a8f10a725f80a20b977a4f695aa0729ba915ea4f5e4fbcbb238954b85f6eab740b2a5f01f13e1e082a03b73b8e23ac3f38889b215a826a34ed35e27371cd847c8c7a05033f77fa5299a43e2538599bd96f0236f3c1b8d4c07b9e917dd9dfdeabfb59c250ffcb3890a2968ae0486cf19c1fe4fbd7ea586b9aa27b238f55d8c80c0ed56bc45564de84cdc7c68178d17493b6e0f235bc665a4a05ca784ed69c33d45bacea81dfbe0bc92330f874183c42b178eba24afe6578142f376f07951e18777d68d947327096a637e3757c3c84ace1e86cfbe3a9350bb3155ebe5bb92531b621eeb6e827d941bd9c674098d64600f62cbbc9bb688ea96d71b1679a04b157925524efd5578c7cd6b56fcc5db004279481567d712d3d8934275fa7a9b92d1601241475a36ec87caf539a6a56720788bf86009824136643d780d46a4ae0565bd83b447f57c7024b59ef0415db24d464e4e172f3f526e0f52bf38459472ff3b5823661166c1478a3b239a0f8faeb846ccd8f967370eb188fcf2a413f8939f839f6d210d6ea186494365f1d23f52b608955a5099330a267b8c47a6fc890660a6fc160a600cab5c3c25e24f6dcec8e957dd276a8024cfbc860ccd874c104a759d23db7dd2dbc0686dd1bf2b40498bbffc881602dd91fa7d6e24ed6bf5aebb2958b343a1dfebf92c01072a30312f0b8ee2559301878854b4c31126b3eda03d73277284bb54a28832293c095ba2a51e13556c8f378e81f6876924ae93b3a5fec707e32a28e250585c40141c0b6eef2f133a9bdfa5fb4323a53764271b347bdd5444b6006afc121bb67d739a90374de4eb17c91189640ee6c34284ef3086b0c9dbfb742016f61ca2aa77c8cc8849fe9e3b31c6f81cf6c10829120c70b13e210d681ec2c103e69650263753677e5f23a8c678f889fd40be00520789c0caa067fc130e16d8bff92e92db7128de6b7eb0b803005c07c972af0b5388072582a565924c0becb0b99182ad5dd71813e979038e6e7019e85d8cdbe3204216ae8eed8dd2be058748a0ed8b54411de324eed5fcaed1dc0706307520cf7e810e860b14a318c5ce8cd8cc36247ad35c9ddfc0ef206820c6efff863886a7896268485e5e2dbbc80285dd1d8ef44c2c7c83134b3bff08e5346f343013e87b3514c4cd3e25e3b1358ab3274eaf0333fd332fab9b8c25de21d6d3e94f3e1c959a4caa1f7c6e76fef36b1ba5f2946e7cc8eb713b3957d36e147dbc48e2ec529bf44ad5208cab03454a4ffa523598d3d84d8ba6d96ae80938cd8851706c13a2e4a7824fe2eb23562c37600ff43929fdb29c42445b7c3b6da00b7f0dc9072e5c96d1883c41a677e71cddc41b197e52005973ae894ea2aced2e84b334b65d9261a24553405f72c4de59ed2118e9ee088faefbf9678ce0bebee94466313613c79c9f8f27727846bf49e321684ffcf14bd681d4817b32558df53eb2c209ccfb4ae25aedc25a3bba4c61282d9456a8f4c6436966f5d755a3f64aff5ee1014b685a7ca2e5e6725f0738051226fff1bbf5220ece853581689b1e53f756d92f508e9af2675c74893585bbd0cfcc2396cc83d6642573afb19f0bb7e7f5e30a1c1334c37d8de2dff99517e8122bdb51ee9c4f54ed0f46acda1e393adff7e5618b0dc08363369d60cf53fc03504514f0550bb8c7d1869d99c12c6631deea13199f97d1f042f38c939363efbf81a6076bb10fc9f6ff7c9e198a58cd20c609ad434f9c093071019296287b80238217e3c7fa6e541f63750c4f810564daeccc278abe6b1bfa41935f3e5f584f3c5a4c91e6032184f3ae85af5fc39687653866ce858f3a05cc364b3b68bfe2ce2342982e04a41b2a67b72fa85ec03159655c986d5b8c695793e9f40536cb316b8aa7f1c2fc70625da561757d77c464a00eda3851f7ab92ecd346a41a37f33a255f2d902bf252d3d1c967906910e20990b77f9839057d2fc53b77d9d4fd1a8956fe4f1aea6446d8d430732be65cdbd7d66a6e734a926dd8decd903719acf0ac4735730085fb7d751919fc9caeafcdc69bd17f294ead0620ae7386e1bea98c18272946d43d897789f1ff734556d8ea1ee3d33b36fb18aa1e34a55c8d7b89fc9267d6d3f9e255a19c8ce809aba6c7fb9a27eea8ff18ad467917094e58551403fd860489ddcfb7a71dd523259a63baa2b3f2cc6ebbfd937fdbd147cd434701fb1842511bd8292d08afbe4a947f66350b3614ea2ecdb5fb9d6dca84f40214fc801dc3fd3a09ba6ed3d0765af2d70d61cbb10319b348a779fa1146d258a090f4ee9c19bfa9cae193117cc4563ccba05fa642b98f39b81b5f94c17f4f933922eadd7ff8d84bfad9b0ea7156d03790489bef5a2ab8a27a55c54bd87d69cf28da66f61584e051322aace399b087e47c5faf09dd40dfe7bb9629694a469163700332257ae418f9b97f48fe1083920b8fb4c048d409dee3ea3e385f13976667d366c22d3a07d517bdb6b12d16ac6ff6e0ff4d1ee1ee9137f1649405643ac7f3e3983e0e08f821c93bd1d246b5c261b52c01a591551b293d1c308c5f4841fa6bb82057994add5fedc126406ee0e8c9f1d5944e396b047f3fcf604ded17faeefd563c1b461b5f84a0ec839dada9a68cfc98b5ac819ff422b92fd8a1bdb40fd55846826775eed792969c9b35a342fa16c5b9ea2cd710e7248f02af301a3840c55c841326aefe54f8d14e5e68e888e920841dabd0e53918bda83f38ca2d31460e8eeda0f6e0b93fcf7fbfe1a05c4de58f778a1ad4464216b61727c7a5e0b0ea7c36f6463691fb4cbfb52e9cf03552ed1f98a50749d316a27c29131abb0ea350ca606bafd30f0b0f4e816eb58762bba9682ae538d9dcf3b0734db6260216fdc6a39939a4a5b2db13b7a01d1634b618a5e681dafa08e3099001ba0527ce8087c7a6beadc63cc7c29dd695d40090bf164dedf5e528401f9b34ca498407bd4002b2c79095e587b3cedb899608410ae301393b18404e75adc6204a073bd45af03eca4ac3f35d2d60aab3b4401cb254d4076995939c1ce53385fe7d0930512fffe1dc1d124e13a6f00cebedea5d556e02214935c57eec34b62f4a211d7407aea9632dbb2f0f8f47d1563ed8383b56a6f5782f65b16325804648bfbd2e023646ad1e65b54306c5faf96b36171ae420522edecd079444c70d3583abc3798dfae2084f974901793609d30c251cc8bf89ffc90246e98b24d3f3158cbf2a39a1b8efa8398bd8fc5e2f4e675b3d57cfcc4145c1dbf5762e2f0e3e00c603be46fcef047bfde4bf91879be99c009bd8f35cfd52dd612d1276293f7ea2a90341dced67e5ca9944f855f98a1a8d3a49ff1c3a63f5a59cd0fc5a3bae05ed9a3ea0628627faa7e2e061f3254ff8f23ada565faf2c41417247c26fe427cc87e5acba4bb3c4a9d8b3508ed5f4b4a552ea9033f6128dc22d99c258e9feabaf666d955e5b7be044e2a973347d5faeaef843a525d600b029785a9aaf632c75f27f3e84264f7e72d55f63ec1da929a120f69bb91def86e525260e53b80be6dff19e6e9afe387e47f6131f4b4187810b02598ffad74cb56c9176943df3c2f8396de6b715b5688aac0371d82665a40762cd842d760ec38bfee2698c0a404e5d311e7b52b0963cf5903c7846b6c7bd80e657130e8cdb8d01f171a6928d4d3c1227e68a65ecfc14a84e224afcd1e646742c6e7c3bf7210ad7c8c3496f7a84d24b7baed149d306538598698a42e531fa39df367cdc79d36570b86e16424f7255815c59d81b48d6be7664b84934e5578581241f0da989f8d86a1ef0d417b95481c311bab7dc510cc274f45d19e907649a63862d8e74b1f645221c1168660bd930dd07926ecdaf7d79cbbde4896cc600eb03d9eaeb772d0a20eabd845c7108bd8b16ee1c2d31aae3cc5820e039803a559bf5acdcfae2db2902b8d498e25e06e7f61fcb9924f554e8f410d34841fffe1b759ec0bfbd5cfc3fb16760a746772041c3a8c5025d225eb74a7a4c8883b5c4aebacf96612efd74e92116bd3af41b06e0b564f4ecb8396fdf3b2d2053e52c5b537f3b2fb490f9aef711979890825f45c6c73aa91a8d686cf1ac5c752e98d583304ad7ff8111ac3970ad2a955eaf6c668498b0fb1acd0a4b94f8af527c1a26940f83000db6d75dd970710e0cb29bfdfd5729f53f077b0ee728e671279813a9f56820e96e06a028cec151a1a133de95c3cd365419da51b42423751b5344cee52ec81c9ba49c267ffc30399cdded9472d12cb6cbab335a2fc1a257f332a389c842d49cacdab467426e78214946afdba96963a18ada2eb2dc56ced53512a699b25df8d923779c30e1b7acb14dbb0fa16aa1b7436698a8e824a1a72ad676ab794a90a4673da42f187731f6afd8fd5693288fa2b0fe1b2d8343ada2fd89b3ad9d54b743c7ed8fbbb30af7998a2099fecddab3532efb90c251531ebd25c0ee1ecf686a232aa9ce2d4ccdaef0fa5bee31f731d7e4a925bd5a36a3e7e84935d029be0b531bb9f00768144180c3eee76588c587781f16417b75f5e414ff819bc3ffc37be95bafc8a2b554e3186e7ff04157f47f391a901b0da12e85a7b75e0fdb8c1d495f07be148f03d3adcb251d6afa21bc9c6653f203448c60e2e79ef18ab49dfadd4141ecfd0fe61b175dcb1b7c801f6f5144436aa2471c955d170e25b41591f44c43bdda3bf566c76037a33d9332c343590fbac5137df3fcdf8377810145e5614b2fded9f51a5e9be6dd12ee291371d3bca041f6574f0eae5220c2eeb8ecb14a661ea63aee8ba92416cf63f128a3006f6fdce8f5c4a8cd628b56b9481b5886e937ebe2c0ef1df0a5b7a6f72245c7028b6c459f847a1b85d02fa49b898bd1d42185382b0a5e88c9f9f9132320d5f6e7a7c5c109b571f5cfc99449c36e87cd32fd14d77c6fde4905321a66cd9e2d6407cfe35b7907bf1cd2f88a2d71c6e33af333bbb98494a221c1c58f864a14be56ed99fe95d0238975699dd69f7bfba0ae94a30d51267463283a31d7440c0ef7dfa1343ad19bf96ed525cb46343ab0071dc77685b3aa795b69186e977cf528e417ccbadfea39d3cc6f13aa4072e1c2fccfbc2ea3486ee0215816a08d1029d4d96e705180ea745404866008f7cd10c9978dea068d5ba7cabe665f1d7ef9f6de58b53a72edea0d361ac37eeb979cba36e06fec9582429265013d2a70e48f2296f32da9c1d29893acb20780b47152295a8ae784b00f084eeef8befce16051b6d94a1c0b2f7abb6bbd645ac86342b23168fb52f561021efff6cd91c33ca01f3730c468f2e3285feec6bb0cc919064118826b31f41c4ba53e13f18cbef9ace46f6c08306fa1af6179a1c3b4b75e7bf9ccc7f6c18ee810fa958dd55584841e8c1adb98ac093e54cddac32c205017644cd2006d80537971481cef7dc3b804980e8f8189ff3d77e17e71e174610b01c2f741cbee8cfe394d6fe0dd237365db5eb12e90bd0cab8366cd5ef652fdcfadbf6a36eace03b6cbfc3a245c6273ebc9146c6f2b95c679efb1383848a9c35e28586f450cd23a5ca5dcdb73d6198049bf3aef23a0ee489f457a027c37eed4e5dd9e9f7585d044536c38fd78f3f185751f0ea0f1993f695d69ec4eaf64184cbc56987e596146189b4337201b2c1b8b164a800672dfed718ffbcb2bd293a9493f4fc8e9b3da765d016fbdeea2a023a43c1bea60201ba218d53d89327163222d0e055e267d263eaa60a37f43e1f996c94ba3b42742ce849b82301943052c211a4f6992f30a36a45b0c74a49fd36a57cb68e79db5d06c823f96d632dbabe8c572be57f88bf22cdaeb33a6b8433c23b1844b6f1ed074d1ea1f13b1da21b3414778fff5e533d929c40b21df072a5c13ba01d86477ff797e13d405323662aa7f1ae56df67e8fd112b17c6a8a0773352d3e3745aa227e31453ed6150da1cf7aadfe7d70a2243c4fde795786b883d2e959bda6fc8ed6fac1c00b28b78ff7ac1c453c1b929603a7bf9464d210e2d6f406161f2e232b1b644192acd5e2f8f92454f474d2b6987b9add0acbfcb0d7a80b1446d93882779ae77020370c5dc6bc4eb1fb9cd79bd5220befb38c6da2d9a6fc23fd6d62747ed3bd9c6de15be9f7e1cdeb6e681c197866dc2a68b6c2d06895c5170244ca6987f8a48e2a3863bce1637aec23302a3422ecd5c54856429d3c826130a27187fcecf844efbe5d59042fc1673008286211a10134ed26863f4569f1d7f2d513e3023947eb836af097a3f8e2450d2c281780c6c69d3c2833c0705831dbbdf2cf53b0fcf7f15fbb30fcb2994e548a1d57c5eab33f4b4b9cff2d30ad2a0249bf2cb93d563d8f6351e3451ef1df4e8a4a22064b1ac50b6f817d17c81df3b0f1af649f88853772f9a76cee94595ba739067317cd3690e6fdeaf96daf75e6d441046b2c0322dee600231f79fda1c06cfe22d31c889f503edecf42327ed49edabbc6da9fa2464c98d4f87c1dedb2ea264e2854ee2b0e1206971f2a8dd1f2bd3c2a0953d96d08a5e768384e2032b734776abead7d110d037526af167cc0d725bb3ce79ca67e83cf8cd84cd83a33a6d3198a9d1ebf8a6e5eb37d4b2a34526828a7c58520b5fff985f71ede3c089c01e36a17603268c3300f624f97334a9f61799173516048e8a0c824b72b40e5704120f58a71376dabd75ec9d1ee62c10a785eca7300d13b661c1f7c0abcd7e224cf021ee9c9a911829df52b6f4e1f29a8742a26f6b1cfef1b6ac7284906</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
         <tag>VPN</tag>
       </tags>
@@ -7247,9 +7218,52 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
       </tags>
   </entry>
   <entry>
-    <title>17-暂时没有</title>
-    <url>/1-(0~50)/17-VPN/</url>
-    <content><![CDATA[]]></content>
+    <title>17-DNS</title>
+    <url>/1-(0~50)/17-DNS/</url>
+    <content><![CDATA[<h2 id="1-DNS-1-1-1-1"><a href="#1-DNS-1-1-1-1" class="headerlink" title="1. DNS - 1.1.1.1"></a>1. DNS - 1.1.1.1</h2><p>1.<a href="https://1.1.1.1/dns/">https://1.1.1.1/dns/</a></p>
+<p>DNS：Internet目录</p>
+<a id="more"></a>
+
+<p>Internet上几乎所有内容都以DNS请求开头。DNS是Internet的目录。单击链接，打开一个应用程序，发送电子邮件，然后您的设备首先询问目录：<strong>在哪里可以找到它？</strong></p>
+<p>不幸的是，默认情况下，DNS通常缓慢且不安全。您的ISP和任何其他在Internet上侦听的人都可以看到您访问的每个站点以及您使用的每个应用程序，即使它们的内容是加密的。令人毛骨悚然的是，一些DNS提供商会出售有关您的Internet活动的数据，或将其用于广告定位。</p>
+<p>我们认为这很严重。如果您也这样做，现在可以选择：<strong>1.1.1.1</strong></p>
+<h3 id="1-2-配置"><a href="#1-2-配置" class="headerlink" title="1.2 配置"></a>1.2 配置</h3><h1 id="在电脑上安装"><a href="#在电脑上安装" class="headerlink" title="在电脑上安装"></a>在电脑上安装</h1><p>设置<strong>1.1.1.1</strong>需要两分钟，并且不需要任何技术技能或特殊软件。即使您是计算机的新手，也请在下面选择您的设备，以获取易于遵循的设置指南。</p>
+<p>苹果手机安卓系统苹果系统视窗的Linux路由器</p>
+<ol>
+<li>单击开始菜单，然后单击<strong>控制面板</strong>。</li>
+<li>单击<strong>网络和Internet</strong>。</li>
+<li>单击<strong>更改适配器设置</strong>。</li>
+<li>右键点击您所连接的Wi-Fi网络，然后点击<strong>属性</strong>。</li>
+<li>选择“ <strong>Internet协议版本4”</strong>（如果需要，则选择<strong>“版本</strong> 6”）。</li>
+<li>单击<strong>属性</strong>。</li>
+<li>记下任何现有的DNS服务器条目，以备将来参考。</li>
+<li>单击“ <strong>使用以下DNS服务器地址”</strong>。</li>
+<li>将这些地址替换为1.1.1.1 DNS地址：<ul>
+<li>对于IPv4：<strong>1.1.1.1</strong>和<strong>1.0.0.1</strong></li>
+<li>对于IPv6：<strong>2606：4700：4700 :: 1111</strong>和<strong>2606：4700：4700 :: 1001</strong></li>
+</ul>
+</li>
+<li>单击<strong>确定</strong>，然后单击<strong>关闭</strong>。</li>
+<li>重新启动浏览器。</li>
+<li>你们都准备好了！您的设备现在具有更快，更多的私有DNS服务器✌️✌️</li>
+</ol>
+<hr>
+<h2 id="2-公共DNS网址"><a href="#2-公共DNS网址" class="headerlink" title="2. 公共DNS网址"></a>2. 公共DNS网址</h2><p>1.<a href="https://dns.iui.im/">https://dns.iui.im</a></p>
+<hr>
+<h2 id="3-Dns-Jumper"><a href="#3-Dns-Jumper" class="headerlink" title="3. Dns Jumper"></a>3. Dns Jumper</h2><h3 id="3-1-概述"><a href="#3-1-概述" class="headerlink" title="3.1 概述"></a>3.1 概述</h3><p>Dns Jumper是一款一款快速切换DNS的工具。现爱绿软为大家带来的DNS切换工具 Dns Jumper 绿色便携优化版已经更新到<strong>v2.2</strong></p>
+<p>Dns Jumper可以一键帮您更换你本地Windows系统的默认DNS服务器。在某些情况下，您可以使用第三方公共DNS可以提高浏览速度和安全性。@爱绿软</p>
+<h3 id="3-2-应用说明"><a href="#3-2-应用说明" class="headerlink" title="3.2 应用说明"></a>3.2 应用说明</h3><p>DNS切换工具 Dns Jumper</p>
+<p>1.它可以帮助访问被阻止的网站<br>2.通过更改为更安全的DNS服务器可以提高安全性<br>3.通过选择一个不适当的网站（例如成人材料），可以帮助保护孩子的安全家庭安全DNS服务器。<br>4.可以通过移动到更快的DNS服务器来加快浏览速度<br>5.可以手动更改DNS服务器，但是DNS Jumper大大简化了该过程</p>
+<h3 id="3-3-下载"><a href="#3-3-下载" class="headerlink" title="3.3 下载"></a>3.3 下载</h3><p>1.下载地址：<a href="http://dl.greensofts.xyz/dir/884953-38370394-b9d822">http://dl.greensofts.xyz/dir/884953-38370394-b9d822</a></p>
+<p>2.信息来源网址：<a href="https://ilvruan.com/28063.html">https://ilvruan.com/28063.html</a></p>
+<ul>
+<li>网址来源：灵逗士QQ聊天，语句序号1330左右</li>
+</ul>
+<hr>
+]]></content>
+      <tags>
+        <tag>DNS</tag>
+      </tags>
   </entry>
   <entry>
     <title>18-Typora</title>
@@ -7258,10 +7272,14 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <hr>
 <a id="more"></a>
 
-<h3 id="1-1-符号输入"><a href="#1-1-符号输入" class="headerlink" title="1.1 符号输入"></a>1.1 符号输入</h3><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="tag">\<span class="name">\</span></span>   反斜线</span><br><span class="line"><span class="tag">\<span class="name">`</span></span>   反引号</span><br><span class="line"><span class="tag">\<span class="name">*</span></span>   星号</span><br><span class="line"><span class="tag">\<span class="name">_</span></span>   底线</span><br><span class="line"><span class="tag">\<span class="name">&#123;</span></span> <span class="tag">\<span class="name">&#125;</span></span>  花括号</span><br><span class="line"><span class="tag">\<span class="name">[</span></span> <span class="tag">\<span class="name">]</span></span>  方括号</span><br><span class="line"><span class="tag">\<span class="name">(</span></span> <span class="tag">\<span class="name">)</span></span>  括弧</span><br><span class="line"><span class="tag">\<span class="name">#</span></span>   井字号</span><br><span class="line"><span class="tag">\<span class="name">+</span></span>   加号</span><br><span class="line"><span class="tag">\<span class="name">-</span></span>   减号</span><br><span class="line"><span class="tag">\<span class="name">.</span></span>   英文句点</span><br><span class="line"><span class="tag">\<span class="name">!</span></span>   惊叹号</span><br></pre></td></tr></table></figure>
+<h3 id="1-1-符号输入"><a href="#1-1-符号输入" class="headerlink" title="1.1 符号输入"></a>1.1 符号输入</h3><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="tag">\<span class="name">\</span></span>   反斜线</span><br><span class="line"><span class="tag">\<span class="name">`</span></span>   反引号</span><br><span class="line"><span class="tag">\<span class="name">*</span></span>   星号</span><br><span class="line"><span class="tag">\<span class="name">_</span></span>   底线</span><br><span class="line"><span class="tag">\<span class="name">&#123;</span></span> <span class="tag">\<span class="name">&#125;</span></span>  花括号</span><br><span class="line"><span class="tag">\<span class="name">[</span></span> <span class="tag">\<span class="name">]</span></span>  方括号</span><br><span class="line"><span class="tag">\<span class="name">(</span></span> <span class="tag">\<span class="name">)</span></span>  括弧</span><br><span class="line"><span class="tag">\<span class="name">#</span></span>   井字号</span><br><span class="line"><span class="tag">\<span class="name">+</span></span>   加号</span><br><span class="line"><span class="tag">\<span class="name">-</span></span>   减号</span><br><span class="line"><span class="tag">\<span class="name">.</span></span>   英文句点</span><br><span class="line"><span class="tag">\<span class="name">!</span></span>   惊叹号</span><br><span class="line"><span class="tag">\<span class="name">&gt;</span>= </span>//单独一行写&gt;=,写不出，会变成引用</span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
 <p>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{ }  花括号<br>[ ]  方括号<br>( )  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</p>
+<p>&gt;= 大于等于</p>
+<ul>
+<li>很多不想使用快捷键，使用符号本身而变成快捷键的效果时，都可以用”\“，这应该是语法(代码逻辑了)了</li>
+</ul>
 <hr>
 <h3 id="1-2-特殊字符"><a href="#1-2-特殊字符" class="headerlink" title="1.2 特殊字符"></a>1.2 特殊字符</h3><figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="meta">&amp;copy;      版权      </span></span><br><span class="line"><span class="meta">&amp;reg;       注册商标</span></span><br><span class="line"><span class="meta">&amp;trade;     商标</span></span><br><span class="line"><span class="meta">&amp;nbsp;      空格</span></span><br><span class="line"><span class="meta">&amp;amp;       和号</span></span><br><span class="line"><span class="meta">&amp;quot;      引号</span></span><br><span class="line"><span class="meta">&amp;apos;      撇号</span></span><br><span class="line"><span class="meta">&amp;lt;        小于号</span></span><br><span class="line"><span class="meta">&amp;gt;        大于号</span></span><br><span class="line"><span class="meta">&amp;ne;        不等号</span></span><br><span class="line"><span class="meta">&amp;le;        小于等于</span></span><br><span class="line"><span class="meta">&amp;ge;        大于等于</span></span><br><span class="line"><span class="meta">&amp;cent;      分</span></span><br><span class="line"><span class="meta">&amp;pound;     磅</span></span><br><span class="line"><span class="meta">&amp;euro;      欧元</span></span><br><span class="line"><span class="meta">&amp;yen;       元</span></span><br><span class="line"><span class="meta">&amp;sect;      节</span></span><br><span class="line"><span class="meta">&amp;times;     乘号</span></span><br><span class="line"><span class="meta">&amp;divide;    除号</span></span><br><span class="line"><span class="meta">&amp;plusmn;    正负号</span></span><br></pre></td></tr></table></figure>
 
@@ -7649,649 +7667,6 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
   </entry>
   <entry>
     <title>25-JavaScript</title>
-    <url>/25-JavaScript_%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h2 id="1-计算机编程基础"><a href="#1-计算机编程基础" class="headerlink" title="1. 计算机编程基础"></a>1. 计算机编程基础</h2><h3 id="1-1-编程语言"><a href="#1-1-编程语言" class="headerlink" title="1.1 编程语言"></a>1.1 编程语言</h3><h4 id="1-1-1-编程"><a href="#1-1-1-编程" class="headerlink" title="1.1.1 编程"></a>1.1.1 编程</h4><p>1.==编程==：就是让计算机为解决某个问题而使用某种程序设计语言编写程序代码，并最终得到结果的过程。</p>
-<a id="more"></a>
-
-<p>2.==计算机程序==：就是计算机所执行的一系列的==指令集合==，而程序全部都是用我们所掌握的语言来编写的，所以人们要控制计算机一定要通过计算机语言向计算机发出命令。</p>
-<p>3.从事编程的人员，就是==程序员==。  但是一般程序员都比较幽默，为了形容自己的辛苦工作，也成为“码农”， 或者  “程序猿”/ “程序媛”</p>
-<p>4.注意：上面所定义的计算机指的是<strong>任何能够执行代码的设备</strong>，可能是智能手机、ATM机、黑莓PI、服务器等等。</p>
-<hr>
-<h4 id="1-1-2-计算机语言"><a href="#1-1-2-计算机语言" class="headerlink" title="1.1.2 计算机语言"></a>1.1.2 计算机语言</h4><p>1.==计算机语言==指用于==人与计算机之间通讯的语言==，它是人与计算机之间传递信息的==媒介==。</p>
-<p>计算机语言的种类非常的多，总的来说可以分成机器语言，汇编语言和高级语言三大类。</p>
-<p>实际上计算机最终所执行的都是 机器语言，它是由“0”和“1”组成的二进制数，二进制是计算机语言的基础。</p>
-<ul>
-<li>计算机只认识机器语言。</li>
-</ul>
-<blockquote>
-<p>0=00000000 1=00000001 2=00000010 3=00000011 4=00000100<br>5=00000101 6=00000110 7=00000111 8=00001000 9=00001001<br>10=00001010</p>
-</blockquote>
-<hr>
-<h4 id="1-1-3-编程语言"><a href="#1-1-3-编程语言" class="headerlink" title="1.1.3 编程语言"></a>1.1.3 编程语言</h4><p>可以通过类似于人类语言的 ”语言”来控制计算机，让计算机为我们做事情，这样的语言就叫做编程语言（Programming Language）。</p>
-<p>编程语言是用来控制计算机的一系列指令，它有固定的格式和词汇（不同编程语言的格式和词汇不一样），必须遵守。</p>
-<p>如今通用的编程语言有两种形式：汇编语言和高级语言。</p>
-<ul>
-<li><p>汇编语言和机器语言实质是相同的，都是直接对硬件操作，只不过指令采用了英文缩写的标识符，容易识别和记忆。</p>
-</li>
-<li><p>高级语言主要是相对于低级语言而言，它并不是特指某一种具体的语言，而是包括了很多编程语言，常用的有C语言、C++、Java、C#、Python、PHP、JavaScript、Go语言、Objective-C、Swift等。</p>
-</li>
-</ul>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">C语言：puts(<span class="string">&quot;你好&quot;</span>)<span class="comment">;</span></span><br><span class="line">PHP：echo <span class="string">&quot;你好&quot;</span><span class="comment">;</span></span><br><span class="line">Java：System.out.println(<span class="string">&quot;你好&quot;</span>)<span class="comment">;</span></span><br><span class="line">JavaScript： alert(<span class="string">&quot;你好&quot;</span>）<span class="comment">;</span></span><br></pre></td></tr></table></figure>
-
-<br />
-
-<hr>
-<h4 id="1-1-4-翻译器"><a href="#1-1-4-翻译器" class="headerlink" title="1.1.4 翻译器"></a>1.1.4 翻译器</h4><p>高级语言所编制的程序不能直接被计算机识别，必须经过转换才能被执行，为此，我们需要一个翻译器。</p>
-<p>翻译器可以将我们所编写的源代码转换为机器语言，这也被称为二进制化。 记住1和 0。</p>
-<p><img src="../img/25/1.png" alt="1"></p>
-<h4 id="1-1-5-编程语言与标记语言区别"><a href="#1-1-5-编程语言与标记语言区别" class="headerlink" title="1.1.5 编程语言与标记语言区别"></a>1.1.5 编程语言与标记语言区别</h4><p>1.编程语言有很强的逻辑和行为能力。在编程语言里, 你会看到很多 if else 、for 、while等具有逻辑性和行为能力的指令，这是主动的。</p>
-<p>2.标记语言（html）不用于向计算机发出指令，常用于格式化和链接。标记语言的存在是用来被读取的, 他是被动的。</p>
-<h5 id="1-1-6-总结"><a href="#1-1-6-总结" class="headerlink" title="1.1.6 总结"></a>1.1.6 总结</h5><p>1.计算机可以帮助人类解决某些问题<br>2.程序员利用编程语言编写程序发出指令控制计算机来实现这些任务<br>3.编程语言有机器语言、汇编语言、高级语言<br>4.高级语言需要一个翻译器转换为计算机识别的机器语言<br>5.编程语言是主动的有很强的逻辑性</p>
-<hr>
-<h3 id="1-2-计算机基础"><a href="#1-2-计算机基础" class="headerlink" title="1.2 计算机基础"></a>1.2 计算机基础</h3><h4 id="1-2-1-计算机组成"><a href="#1-2-1-计算机组成" class="headerlink" title="1.2.1 计算机组成"></a>1.2.1 计算机组成</h4><p><img src="../img/25/2.png" alt="2"></p>
-<br />
-
-<hr>
-<h4 id="1-2-2-数据存储"><a href="#1-2-2-数据存储" class="headerlink" title="1.2.2 数据存储"></a>1.2.2 数据存储</h4><p>1.计算机内部使用二进制 0 和 1来表示数据。</p>
-<p>2.所有数据，包括文件、图片等最终都是以二进制数据（0 和 1）的形式存放在硬盘中的。</p>
-<p>3.所有程序，包括操作系统，本质都是各种数据，也以二进制数据的形式存放在硬盘中。平时我们所说的安装软件，其实就是把程序文件复制到硬盘中。</p>
-<p>4.硬盘、内存都是保存的二进制数据。</p>
-<h4 id="1-2-3-存储单位"><a href="#1-2-3-存储单位" class="headerlink" title="1.2.3 存储单位"></a>1.2.3 存储单位</h4><p>bit &lt; byte &lt; kb &lt; GB &lt; TB&lt;…..</p>
-<ul>
-<li>位(bit)：   1bit 可以保存一个 0 或者 1 （最小的存储单位）</li>
-<li>字节(Byte)：1B = 8b</li>
-<li>千字节(KB)：1KB = 1024B</li>
-<li>兆字节(MB)：1MB = 1024KB</li>
-<li>吉字节(GB):  1GB = 1024MB</li>
-<li>太字节(TB):  1TB = 1024GB</li>
-<li>……</li>
-</ul>
-<h4 id="1-2-4-程序运行"><a href="#1-2-4-程序运行" class="headerlink" title="1.2.4 程序运行"></a>1.2.4 程序运行</h4><p><img src="../img/25/3.png" alt="3"></p>
-<p>1.打开某个程序时，先从硬盘中把程序的代码加载到内存中<br>2.CPU执行内存中的代码</p>
-<p>==注意==：之所以要内存的一个重要原因，是因为 cpu 运行太快了，如果只从硬盘中读数据，会浪费cpu性能，所以，才使用存取速度更快的内存来保存运行时的数据。（内存是电，硬盘是机械）</p>
-<hr>
-<h2 id="2-初识JavaScript"><a href="#2-初识JavaScript" class="headerlink" title="2. 初识JavaScript"></a>2. 初识JavaScript</h2><p>1.目标：</p>
-<p> 能够说出 JavaScript 是什么<br> 能够知道 JavaScript 的发展历史<br> 能够说出浏览器执行 JavaScript 的原理<br> 能够说出 JavaScript 由哪三部分组成<br> 能够写出 JavaScript 三个输入输出语句</p>
-<hr>
-<h3 id="2-1-初识js"><a href="#2-1-初识js" class="headerlink" title="2.1 初识js"></a>2.1 初识js</h3><h4 id="2-1-1-JavaScript-历史"><a href="#2-1-1-JavaScript-历史" class="headerlink" title="2.1.1 JavaScript 历史"></a>2.1.1 JavaScript 历史</h4><ul>
-<li>布兰登·艾奇（Brendan Eich，1961年～）。</li>
-<li>神奇的大哥用10天完成 JavaScript 设计。</li>
-<li>最初命名为 LiveScript，后来在与 Sun 合作之后将其改名为 JavaScript。</li>
-</ul>
-<hr>
-<h4 id="2-1-2-JavaScript-是什么"><a href="#2-1-2-JavaScript-是什么" class="headerlink" title="2.1.2 JavaScript 是什么"></a>2.1.2 JavaScript 是什么</h4><ul>
-<li>JavaScript 是世界上最流行的语言之一，是一种运行在客户端的脚本语言 （Script 是脚本的意思）<ul>
-<li>自己的电脑，客户端；远程接收请求的是服务器；</li>
-</ul>
-</li>
-<li>脚本语言：不需要编译，运行过程中由 js 解释器( js 引擎）逐行来进行解释并执行</li>
-<li>现在也可以基于 Node.js 技术进行服务器端编程<ul>
-<li>既可以做前端，也可以做后端；</li>
-</ul>
-</li>
-</ul>
-<p><img src="../img/25/4.png" alt="4"></p>
-<hr>
-<h4 id="2-1-3-JS的作用"><a href="#2-1-3-JS的作用" class="headerlink" title="2.1.3 JS的作用"></a>2.1.3 JS的作用</h4><ul>
-<li>表单动态校验（密码强度检测）  （ JS 产生最初的目的 ）<ul>
-<li>以前，输入不合格的数据，例如：要求数字结构，输入字母；</li>
-<li>也要送往后台，后台验证后，把不合格打回</li>
-<li>增加了后端的压力；</li>
-</ul>
-</li>
-<li>网页特效</li>
-<li>服务端开发(Node.js)</li>
-<li>桌面程序(Electron)</li>
-<li>App(Cordova) </li>
-<li>控制硬件-物联网(Ruff)</li>
-<li>游戏开发(cocos2d-js)</li>
-</ul>
-<hr>
-<h4 id="2-1-4-HTML-CSS-JS-的关系"><a href="#2-1-4-HTML-CSS-JS-的关系" class="headerlink" title="2.1.4 HTML/CSS/JS 的关系"></a>2.1.4 HTML/CSS/JS 的关系</h4><p>1.HTML/CSS 标记语言–描述类语言</p>
-<ul>
-<li>HTML 决定网页结构和内容( 决定看到什么 )，相当于人的身体</li>
-<li>CSS 决定网页呈现给用户的模样( 决定好不好看 )，相当于给人穿衣服、化妆</li>
-</ul>
-<p>2.JS 脚本语言–编程类语言 </p>
-<ul>
-<li>实现业务逻辑和页面控制( 决定功能 )，相当于人的各种动作 </li>
-</ul>
-<hr>
-<h4 id="2-1-5-浏览器执行js简介"><a href="#2-1-5-浏览器执行js简介" class="headerlink" title="2.1.5 浏览器执行js简介"></a>2.1.5 浏览器执行js简介</h4><p>浏览器分成两部分：渲染引擎和 JS 引擎</p>
-<ul>
-<li>渲染引擎：用来解析HTML与CSS，俗称内核，比如 chrome 浏览器的 blink ，老版本的 webkit</li>
-<li>JS 引擎：也称为 JS 解释器。 用来读取网页中的JavaScript代码，对其处理后运行，比如 chrome 浏览器的 V8</li>
-</ul>
-<p>浏览器本身并不会执行JS代码，而是通过内置 JavaScript 引擎(解释器) 来执行 JS 代码 。JS 引擎执行代码时逐行解释每一句源码（转换为机器语言），然后由计算机去执行，</p>
-<p>所以 JavaScript 语言归为脚本语言，会逐行解释执行。</p>
-<p><img src="../img/25/5.png" alt="5"></p>
-<hr>
-<h4 id="2-1-6-JS的组成"><a href="#2-1-6-JS的组成" class="headerlink" title="2.1.6 JS的组成"></a>2.1.6 JS的组成</h4><p><img src="../img/25/6.png" alt="6"></p>
-<p>1.JS基础，学习的是ECMAScript，js语法</p>
-<p>2.JS-API，学习的是dom与bom；</p>
-<hr>
-<h5 id="1-ECMA"><a href="#1-ECMA" class="headerlink" title="1. ECMA"></a>1. ECMA</h5><p>1.什么是ECMA？</p>
-<ul>
-<li>ECMAScript 是由ECMA 国际（ 原欧洲计算机制造商协会）进行标准化的一门编程语言，这种语言在万维网上应用广泛，它往往被称为 JavaScript 或 JScript，但实际上后两者是 ECMAScript 语言的实现和扩展。</li>
-</ul>
-<p><img src="../img/25/7.png" alt="7"></p>
-<ul>
-<li>ECMAScript：ECMAScript 规定了JS的编程语法和基础核心知识，是所有浏览器厂商共同遵守的一套JS语法工业标准。</li>
-<li>更多参看MDN:  <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview</a></li>
-</ul>
-<hr>
-<h5 id="2-DOM"><a href="#2-DOM" class="headerlink" title="2. DOM"></a>2. DOM</h5><p>1.DOM ——文档对象模型</p>
-<p>2.文档对象模型（Document Object Model，简称DOM），是==W3C==组织推荐的处理可扩展标记语言的==标准编程接口==。通过 DOM 提供的接口可以对页面上的各种元素进行操作（大小、位置、颜色等）。</p>
-<hr>
-<h5 id="3-BOM"><a href="#3-BOM" class="headerlink" title="3. BOM"></a>3. BOM</h5><ul>
-<li>BOM ——浏览器对象模型</li>
-<li>BOM (Browser Object Model，简称BOM) 是指浏览器对象模型，它提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。通过BOM可以操作浏览器窗口，比如弹出框、控制浏览器跳转、获取分辨率等。<ul>
-<li>例如，滑动右侧滚动条，到一定的地方（或者说滑到一定的高度）弹出一个窗口</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h4 id="2-1-7-JS初体验"><a href="#2-1-7-JS初体验" class="headerlink" title="2.1.7 JS初体验"></a>2.1.7 JS初体验</h4><p>JS 有3种书写位置，分别为行内、内嵌和外部。 </p>
-<h5 id="1-行内式-JS"><a href="#1-行内式-JS" class="headerlink" title="1. 行内式 JS"></a>1. 行内式 JS</h5><p><code>&lt;input type=&quot;button&quot; value=&quot;点我试试&quot; onclick=&quot;alert(&#39;Hello World&#39;)&quot; /&gt;</code></p>
-<ul>
-<li>可以将单行或少量 JS 代码写在HTML标签的事件属性中（以 on 开头的属性），如：onclick</li>
-<li>注意单双引号的使用：在HTML中我们推荐使用双引号, JS 中我们推荐使用单引号</li>
-<li>可读性差， 在html中编写JS大量代码时，不方便阅读；</li>
-<li>引号易错，引号多层嵌套匹配时，非常容易弄混；</li>
-<li>特殊情况下使用</li>
-</ul>
-<h5 id="2-内嵌-JS"><a href="#2-内嵌-JS" class="headerlink" title="2. 内嵌 JS"></a>2. 内嵌 JS</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">   alert(<span class="string">&#x27;Hello  World~!&#x27;</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>可以将多行JS代码写到 <code>&lt;script&gt;</code> 标签中</li>
-<li>内嵌 JS 是学习时常用的方式</li>
-</ul>
-<h5 id="3-外部-JS文件"><a href="#3-外部-JS文件" class="headerlink" title="3. 外部 JS文件"></a>3. 外部 JS文件</h5><p><code>&lt;script src=&quot;my.js&quot;&gt;&lt;/script&gt;</code></p>
-<ul>
-<li>利于HTML页面代码结构化，把大段 JS代码独立到 HTML 页面之外，既美观，也方便文级别的复用</li>
-<li>引用外部 JS文件的 script 标签中间不可以写代码<ul>
-<li><code>&lt;script src=&quot;my.js&quot;&gt;1123&lt;/script&gt;</code>不能在这个地方写1123，当然其他的也不能写</li>
-</ul>
-</li>
-<li>适合于JS 代码量比较大的情况</li>
-</ul>
-<hr>
-<h3 id="2-2-JS注释"><a href="#2-2-JS注释" class="headerlink" title="2.2 JS注释"></a>2.2 JS注释</h3><h4 id="2-2-1-单行注释"><a href="#2-2-1-单行注释" class="headerlink" title="2.2.1 单行注释"></a>2.2.1 单行注释</h4><p>为了提高代码的可读性，JS与CSS一样，也提供了注释功能。JS中的注释主要有两种，分别是单行注释和多行注释。</p>
-<p>单行注释的注释方式如下：</p>
-<p><code>// 我是一行文字，不想被 JS引擎 执行，所以 注释起来</code></p>
-<p>//  用来注释单行文字（  快捷键   ctrl  +  /   ）</p>
-<hr>
-<h4 id="2-2-2-多行注释"><a href="#2-2-2-多行注释" class="headerlink" title="2.2.2 多行注释"></a>2.2.2 多行注释</h4><p>多行注释的注释方式如下：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  获取用户年龄和姓名</span></span><br><span class="line"><span class="comment">  并通过提示框显示出来</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<p>/* */  用来注释多行文字（ 默认快捷键  alt +  shift  + a ） </p>
-<p>快捷键修改为：   ctrl + shift  +  /  </p>
-<p>vscode → 首选项按钮  →  键盘快捷方式 →  查找 原来的快捷键  → 修改为新的快捷键 → 回车确认</p>
-<hr>
-<h3 id="2-3-JavaScript-输入输出语句"><a href="#2-3-JavaScript-输入输出语句" class="headerlink" title="2.3 JavaScript 输入输出语句"></a>2.3 JavaScript 输入输出语句</h3><p>为了方便信息的输入输出，JS中提供了一些输入输出语句，其常用的语句如下：</p>
-<table>
-<thead>
-<tr>
-<th><strong>方法</strong></th>
-<th><strong>说明</strong></th>
-<th><strong>归属</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>alert(msg)</td>
-<td>浏览器弹出警示框</td>
-<td>浏览器</td>
-</tr>
-<tr>
-<td>console.log(msg)</td>
-<td>浏览器控制台打印输出信息</td>
-<td>浏览器</td>
-</tr>
-<tr>
-<td>prompt(info)</td>
-<td>浏览器弹出输入框，用户可以输入</td>
-<td>浏览器</td>
-</tr>
-</tbody></table>
-<p>注意：alert() 主要用来显示消息给用户，console.log() 用来给程序员自己看运行时的消息。</p>
-<hr>
-<h2 id="3-变量"><a href="#3-变量" class="headerlink" title="3. 变量"></a>3. 变量</h2><p>目标：</p>
-<p> 能够说出变量的主要作用<br> 能够写出变量的初始化<br> 能够说出变量的命名规范<br> 能够画出变量是如何在内存中存储的<br> 能够写出交换变量案例</p>
-<hr>
-<h3 id="3-1-变量的概述"><a href="#3-1-变量的概述" class="headerlink" title="3.1 变量的概述"></a>3.1 变量的概述</h3><h4 id="3-1-1-什么是变量"><a href="#3-1-1-什么是变量" class="headerlink" title="3.1.1 什么是变量"></a>3.1.1 什么是变量</h4><p>白话：变量就是一个装东西的盒子。<br>通俗：变量是用于存放数据的==容器==。 我们通过 ==变量名== 获取数据，甚至数据可以修改。</p>
-<hr>
-<h4 id="3-1-2-变量在内存中的存储"><a href="#3-1-2-变量在内存中的存储" class="headerlink" title="3.1.2 变量在内存中的存储"></a>3.1.2 变量在内存中的存储</h4><p>本质：变量是程序在<strong>内存</strong>中申请的一块用来存放数据的<strong>空间</strong>。</p>
-<p>类似我们酒店的房间，一个房间就可以看做是一个变量。  </p>
-<img src="../img/25/8.png" alt="8" style="zoom:80%;" />
-
-<ul>
-<li>变量由：num2（变量名）+ 6（向内存申请的空间）组成的；</li>
-</ul>
-<hr>
-<h3 id="3-2-变量的使用"><a href="#3-2-变量的使用" class="headerlink" title="3.2 变量的使用"></a>3.2 变量的使用</h3><p>变量在使用时分为两步： 1. 声明变量   2. 赋值 </p>
-<h4 id="3-2-1-声明变量"><a href="#3-2-1-声明变量" class="headerlink" title="3.2.1 声明变量"></a>3.2.1 声明变量</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//  声明变量  </span></span><br><span class="line"><span class="keyword">var</span> age; <span class="comment">//  声明一个 名称为age 的变量     </span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>==var== 是一个 JS关键字，用来声明变量( <a href="https://fanyi.baidu.com/translate?aldtype=16047&query=ECMA&keyfrom=baidu&smartresult=dict&lang=auto2zh#en/zh/variable">variable</a> 变量的意思 )。使用该关键字声明变量后，计算机会自动为变量分配内存空间，不需要程序员管</li>
-<li>age 是程序员定义的变量名，我们要通过变量名来访问内存中分配的空间</li>
-</ul>
-<h4 id="3-2-2-赋值"><a href="#3-2-2-赋值" class="headerlink" title="3.2.2 赋值"></a>3.2.2 赋值</h4><p><code>age = 10; // 给 age  这个变量赋值为 10</code></p>
-<ul>
-<li>= 用来把右边的值赋给左边的变量空间中，此处代表赋值的意思</li>
-<li>变量值是程序员保存到变量空间里的值</li>
-</ul>
-<h4 id="3-2-3-变量的初始化"><a href="#3-2-3-变量的初始化" class="headerlink" title="3.2.3 变量的初始化"></a>3.2.3 变量的初始化</h4><p><code>var age  = 18;  // 声明变量同时赋值为 18</code></p>
-<p>声明一个变量并赋值， 我们称之为==变量的初始化==。</p>
-<hr>
-<h4 id="3-2-4-案例"><a href="#3-2-4-案例" class="headerlink" title="3.2.4 案例"></a>3.2.4 案例</h4><p>1.弹出一个输入框，提示用户输入姓名。<br>2.弹出一个对话框，输出用户刚才输入的姓名。</p>
-<p>3.代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> myname = prompt (<span class="string">&#x27;请输入姓名&#x27;</span>);</span></span><br><span class="line"><span class="javascript">        alert(<span class="string">&#x27;欢迎&#x27;</span> + myname);</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<br />
-
-<hr>
-<h3 id="3-3-变量语法扩展"><a href="#3-3-变量语法扩展" class="headerlink" title="3.3 变量语法扩展"></a>3.3 变量语法扩展</h3><h4 id="3-3-1-更新变量"><a href="#3-3-1-更新变量" class="headerlink" title="3.3.1 更新变量"></a>3.3.1 更新变量</h4><p>一个变量被重新复赋值后，它原有的值就会被覆盖，变量值将以最后一次赋的值为准。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</span><br><span class="line">age = <span class="number">81</span>;   <span class="comment">// 最后的结果就是81因为18 被覆盖掉了          </span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>声明过的变量不需要再次声明。</p>
-<p>原理：内存空间已经开辟与分配，并取名为age，所以再次使用这片空间，直接用变量名 age 即可；</p>
-</li>
-</ul>
-<br />
-
-<h4 id="3-3-2-同时声明多个变量"><a href="#3-3-2-同时声明多个变量" class="headerlink" title="3.3.2 同时声明多个变量"></a>3.3.2 同时声明多个变量</h4><p>同时声明多个变量时，只需要写一个 var， 多个变量名之间使用英文逗号隔开。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">/* var age = 18;</span></span><br><span class="line"><span class="comment">    var address = &#x27;或影城&#x27;;</span></span><br><span class="line"><span class="comment">    var gz = 2000; */</span></span><br><span class="line">    <span class="keyword">var</span> age = <span class="number">18</span>,</span><br><span class="line">        address = <span class="string">&#x27;火隐村&#x27;</span>,</span><br><span class="line">        gz = <span class="number">2000</span>;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>逗号隔开</li>
-</ul>
-<p>也可以一排：</p>
-<p><code>var age = 10,  name = &#39;zs&#39;, sex = 2;</code></p>
-<hr>
-<h4 id="3-3-3-声明变量的特殊情况"><a href="#3-3-3-声明变量的特殊情况" class="headerlink" title="3.3.3 声明变量的特殊情况"></a>3.3.3 声明变量的特殊情况</h4><table>
-<thead>
-<tr>
-<th><strong>情况</strong></th>
-<th><strong>说明</strong></th>
-<th><strong>结果</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>var age ; console.log (age);</td>
-<td>只声明 不赋值</td>
-<td>undefined</td>
-</tr>
-<tr>
-<td>console.log(age)</td>
-<td>不声明 不赋值 直接使用</td>
-<td>报错</td>
-</tr>
-<tr>
-<td>age  = 10; console.log (age);</td>
-<td>不声明 只赋值</td>
-<td>10</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>只声明 不赋值，程序也不知道是什么 = 未定义(undefined)</p>
-</li>
-<li><p>不声明 不赋值 直接使用 , vscode里不会保存，F12里能看到会报错</p>
-<figure class="highlight xquery"><table><tr><td class="code"><pre><span class="line">Uncaught ReferenceError: tset <span class="literal">is</span><span class="built_in"> not</span> defined</span><br><span class="line">    <span class="keyword">at</span> index3.html:<span class="number">13</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不声明 只赋值，可以使用，默认为全局变量；</p>
-</li>
-</ul>
-<hr>
-<h3 id="3-4-变量命名规范"><a href="#3-4-变量命名规范" class="headerlink" title="3.4 变量命名规范"></a>3.4 变量命名规范</h3><ol>
-<li><p>由字母(A-Za-z)、数字(0-9)、下划线(_)、美元符号( $ )组成，如：usrAge, num01, _name</p>
-</li>
-<li><p>严格区分大小写。var app; 和 var App; 是两个变量</p>
-</li>
-<li><p>不能 以数字开头。  18age   是错误的</p>
-</li>
-<li><p>不能 是关键字、保留字。例如：var、for、while</p>
-</li>
-</ol>
-<ul>
-<li>它们本身已经有了特殊的意义，能被申明就会破坏语言逻辑；</li>
-</ul>
-<ol start="5">
-<li>变量名必须有意义： nl(nianling)   →     age  </li>
-</ol>
-<ul>
-<li>如果要写中文，就得拼全:  xb = xiaBan;</li>
-</ul>
-<ol start="6">
-<li><p>遵守驼峰命名法。首字母小写，后面单词的首字母需要大写。 myFirstName</p>
-</li>
-<li><p>不要用name作为变量名。</p>
-<ul>
-<li><p>虽然不是关键字 或 保留字，但本身不是未定义；</p>
-</li>
-<li><p>验证：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">console</span>.log(tel);</span><br><span class="line"><span class="built_in">console</span>.log(name);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>只有console.log(tel)报错：<code>Uncaught ReferenceError: tset is not defined</code></p>
-</li>
-</ul>
-</li>
-</ol>
-<p>7.1 而且百度一下，有很多 使用 name 作为 变量名，出错的情况；</p>
-<ul>
-<li><a href="https://blog.csdn.net/line233/article/details/82838686">做表单验证时</a></li>
-<li><a href="https://blog.csdn.net/Shore_W/article/details/19004831?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param">数组名时</a></li>
-</ul>
-<hr>
-<h4 id="3-4-2-案例"><a href="#3-4-2-案例" class="headerlink" title="3.4.2 案例"></a>3.4.2 案例</h4><p>一下哪些是合法的变量名？</p>
-<p><img src="../img/25/9.png" alt="9"></p>
-<p>1-2. 不能数字开头</p>
-<p>1-4. 不能数字开头</p>
-<p>2-4. 没有安排&amp;符号，估计不是开头也不行</p>
-<p>3-2. 中间不能空格</p>
-<p>3-4. 关键字了</p>
-<table>
-<thead>
-<tr>
-<th>第一组</th>
-<th>第二组</th>
-<th>第三组</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>var a</td>
-<td>var userName</td>
-<td>var thwWorld</td>
-</tr>
-<tr>
-<td>var 1==×==</td>
-<td>var $name</td>
-<td>var the world==×==</td>
-</tr>
-<tr>
-<td>var age18</td>
-<td>var _sex</td>
-<td>var the_world</td>
-</tr>
-<tr>
-<td>var 18age==×==</td>
-<td>var &amp;sex==×==</td>
-<td>var for==×==</td>
-</tr>
-</tbody></table>
-<br />
-
-<hr>
-<h3 id="3-5-案例"><a href="#3-5-案例" class="headerlink" title="3.5 案例"></a>3.5 案例</h3><p>要求：交换两个变量的值 ( 实现思路：使用一个 临时变量 用来做中间存储 )</p>
-<p>1.自写：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> age = <span class="number">18</span>,</span></span><br><span class="line">            gz = 2000,</span><br><span class="line">            zhongjian;</span><br><span class="line">        zhongjian = age;</span><br><span class="line">        age = gz;</span><br><span class="line">        gz = zhongjian;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&#x27;age:&#x27;</span>+ age, <span class="string">&#x27;zhongjian:&#x27;</span> + zhongjian, <span class="string">&#x27;gz:&#x27;</span> + gz);</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>2.资料：</p>
-<img src="../img/25/10.png" alt="10" style="zoom:90%;" />
-
-<br />
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">// js 是编程语言有很强的逻辑性在里面： 实现这个要求的思路 先怎么做后怎么做 </span></span><br><span class="line">    <span class="comment">// 1. 我们需要一个临时变量帮我们</span></span><br><span class="line">    <span class="comment">// 2. 把apple1 给我们的临时变量 temp </span></span><br><span class="line">    <span class="comment">// 3. 把apple2 里面的苹果给 apple1 </span></span><br><span class="line">    <span class="comment">// 4. 把临时变量里面的值 给 apple2 </span></span><br><span class="line">    <span class="keyword">var</span> temp; <span class="comment">// 声明了一个临时变量为空</span></span><br><span class="line">    <span class="keyword">var</span> apple1 = <span class="string">&#x27;青苹果&#x27;</span>;</span><br><span class="line">    <span class="keyword">var</span> apple2 = <span class="string">&#x27;红苹果&#x27;</span>;</span><br><span class="line">    temp = apple1; <span class="comment">// 把右边给左边</span></span><br><span class="line">    apple1 = apple2;</span><br><span class="line">    apple2 = temp;</span><br><span class="line">    <span class="built_in">console</span>.log(apple1);</span><br><span class="line">    <span class="built_in">console</span>.log(apple2);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<br />
-
-<hr>
-<h3 id="3-6-小结"><a href="#3-6-小结" class="headerlink" title="3.6 小结"></a>3.6 小结</h3><table>
-<thead>
-<tr>
-<th>为什么需要变量？</th>
-<th>因为我们一些数据需要保存，所以需要变量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>变量是什么？</td>
-<td>变量就是一个容器，用来存放数据的。方便我们以后使用里面的数据</td>
-</tr>
-<tr>
-<td>变量的本质是什么?</td>
-<td>变量是内存里的一块空间，用来存储数据。</td>
-</tr>
-<tr>
-<td>变量怎么使用的？</td>
-<td>1.我们使用变量的时候，一定要声明变量，然后赋值<br />2.声明变量本质是去内存申请空间。</td>
-</tr>
-<tr>
-<td>什么是变量的初始化？</td>
-<td>声明变量并赋值我们称之为变量的初始化</td>
-</tr>
-<tr>
-<td>变量命名规范有哪些？</td>
-<td>这个多了，详见上面3.4 变量命名规范</td>
-</tr>
-<tr>
-<td>交换2个变量值的思路？</td>
-<td>1. 我们需要一个临时变量帮我们<br/>2. 把 a 给我们的临时变量 c <br/>3. 把 b 里面的苹果给 a <br/>4. 把 c 里面的值 给 b</td>
-</tr>
-</tbody></table>
-<br />
-
-<hr>
-<h3 id="3-x-参考资料"><a href="#3-x-参考资料" class="headerlink" title="3.x 参考资料"></a>3.x 参考资料</h3><ul>
-<li>PPT 与 PDF：<a href="https://wws.lanzous.com/itsU2gol10h">https://wws.lanzous.com/itsU2gol10h</a></li>
-</ul>
-<hr>
-<h2 id="4-数据类型"><a href="#4-数据类型" class="headerlink" title="4. 数据类型"></a>4. 数据类型</h2><h3 id="4-1-目标"><a href="#4-1-目标" class="headerlink" title="4.1 目标"></a>4.1 目标</h3><p> 能够说出5种简单数据类型<br> 能够使用 typeof 获取变量的类型<br> 能够说出1<del>2种转换为数值型的方法<br> 能够说出1</del>2种转换为字符型的方法<br> 能够说出什么是隐式转换</p>
-<hr>
-<h3 id="4-2-数据类型简介"><a href="#4-2-数据类型简介" class="headerlink" title="4.2 数据类型简介"></a>4.2 数据类型简介</h3><h4 id="4-2-1-为何需要数据类型"><a href="#4-2-1-为何需要数据类型" class="headerlink" title="4.2.1 为何需要数据类型"></a>4.2.1 为何需要数据类型</h4><p>1.在计算机中，不同的数据所需占用的存储空间是不同的，为了便于把数据分成所需内存大小不，同的数据，充分利用存储空间，于是定义了不同的数据类型。</p>
-<p>2.简单来说，数据类型就是数据的类别型号。比如姓名“张三”，年龄18，这些数据的类型是不一样的。</p>
-<hr>
-<h4 id="4-2-2-变量的数据类型"><a href="#4-2-2-变量的数据类型" class="headerlink" title="4.2.2 变量的数据类型"></a>4.2.2 变量的数据类型</h4><p>1.变量是用来存储值的所在处，它们有名字和数据类型。变量的数据类型决定了如何将代表这些值的位存储到计算机的内存中。==JavaScript 是一种弱类型或者说动态语言==。这意味着不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">10</span>;        <span class="comment">// 这是一个数字型</span></span><br><span class="line"><span class="keyword">var</span> areYouOk = <span class="string">&#x27;是的&#x27;</span>;   <span class="comment">// 这是一个字符串     </span></span><br></pre></td></tr></table></figure>
-
-<p>2.在代码运行时，变量的数据类型是由 JS引擎 <strong>根据 = 右边变量值的数据类型来判断</strong> 的，运行完毕之后， 变量就确定了数据类型。</p>
-<p>3.JavaScript 拥有动态类型，同时也意味着相同的变量可用作不同的类型：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">6</span>;           <span class="comment">// x 为数字</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="string">&quot;Bill&quot;</span>;      <span class="comment">// x 为字符串   </span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>即使刚才给了6（数字），也能马上换一个”bill”（字符串）</li>
-</ul>
-<p>4.无法提前确认变量是什么类型，如果没有值。不像java，申明时就确定了类型：</p>
-<p><code>int num = 10; java</code></p>
-<br />
-
-<hr>
-<h4 id="4-2-3-分类"><a href="#4-2-3-分类" class="headerlink" title="4.2.3 分类"></a>4.2.3 分类</h4><p>1.JS 把数据类型分为两类：</p>
-<ul>
-<li>简单数据类型 （Number,String,Boolean,Undefined,Null）</li>
-<li>复杂数据类型 （object)</li>
-</ul>
-<hr>
-<h3 id="4-3-简单数据类型"><a href="#4-3-简单数据类型" class="headerlink" title="4.3 简单数据类型"></a>4.3 简单数据类型</h3><h4 id="4-3-1-基本数据类型"><a href="#4-3-1-基本数据类型" class="headerlink" title="4.3.1 基本数据类型"></a>4.3.1 基本数据类型</h4><p>1.简单数据类型也可以称为基本数据类型</p>
-<p>2.JavaScript 中的简单数据类型及其说明如下：</p>
-<table>
-<thead>
-<tr>
-<th>简单数据类型</th>
-<th>说明</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Number</td>
-<td>数字型，包含 整型值 和 浮点型值，如21、0.21</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Boolean</td>
-<td>布尔值类型，只有true、false，等价于1和0</td>
-<td>false</td>
-</tr>
-<tr>
-<td>String</td>
-<td>字符串类型，如“张三” 。注意js里面，字符串都带引号</td>
-<td>“”</td>
-</tr>
-<tr>
-<td>Undefined</td>
-<td>var a; 声明变量a但没有给值，此时 a = undefined</td>
-<td>undefined</td>
-</tr>
-<tr>
-<td>Null</td>
-<td>var a = null; 声明了变量a 为空值</td>
-<td>null</td>
-</tr>
-</tbody></table>
-<br />
-
-<hr>
-<h4 id="4-3-2-数字型-Number"><a href="#4-3-2-数字型-Number" class="headerlink" title="4.3.2 数字型 Number"></a>4.3.2 数字型 Number</h4><p>JavaScript 数字类型既可以用来保存整数值，也可以保存小数(浮点数）。  </p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">21</span>;       <span class="comment">// 整数</span></span><br><span class="line"><span class="keyword">var</span> Age = <span class="number">21.3747</span>;  <span class="comment">// 小数     </span></span><br></pre></td></tr></table></figure>
-
-<br  />
-
-<h5 id="1-进制"><a href="#1-进制" class="headerlink" title="1. 进制"></a>1. 进制</h5><p>最常见的进制有二进制、八进制、十进制、十六进制。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> <span class="comment">// 1.八进制数字序列范围：0~7</span></span><br><span class="line"><span class="keyword">var</span> num1 = <span class="number">07</span>;   <span class="comment">// 对应十进制的7</span></span><br><span class="line"><span class="keyword">var</span> num11 = <span class="number">010</span>; <span class="comment">// 十进制的8</span></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">012</span>; <span class="comment">// 十进制的10</span></span><br><span class="line"> <span class="comment">// 2.十六进制数字序列范围：0~9以及A~F</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">0xA</span>; <span class="comment">// 十进制的10   </span></span><br></pre></td></tr></table></figure>
-
-<p>现阶段我们只需要记住，在JS中八进制前面加0，十六进制前面加 0x  </p>
-<ul>
-<li>好像A~F，也可以小写。没有强求吧？</li>
-</ul>
-<h5 id="2-数字型范围"><a href="#2-数字型范围" class="headerlink" title="2. 数字型范围"></a>2. 数字型范围</h5><p>1.JavaScript中数值的最大和最小值</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">alert(<span class="built_in">Number</span>.MAX_VALUE); <span class="comment">// 1.7976931348623157e+308</span></span><br><span class="line">alert(<span class="built_in">Number</span>.MIN_VALUE); <span class="comment">// 5e-324</span></span><br></pre></td></tr></table></figure>
-
-<p>最大值：Number.MAX_VALUE，这个值为： 1.7976931348623157e+308</p>
-<ul>
-<li>E数是在科学计数上的一种数量控制,能够将数据计数并表示，使计数更加的规律性和代表性，即7×10^4=7E4。用指数表示法显示数字，以 E+n 替换部分数字，其中 E（代表指数）表示将前面的数字乘以 10 的 n 次幂。</li>
-</ul>
-<p>最小值：Number.MIN_VALUE，这个值为：5e-32</p>
-<h5 id="3-三个特殊值"><a href="#3-三个特殊值" class="headerlink" title="3. 三个特殊值"></a>3. 三个特殊值</h5><p>1.数字型的三个特殊值</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">alert(<span class="literal">Infinity</span>);  <span class="comment">// Infinity</span></span><br><span class="line">alert(-<span class="literal">Infinity</span>); <span class="comment">// -Infinity</span></span><br><span class="line">alert(<span class="literal">NaN</span>);       <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
-
-<p><a href="https://fanyi.baidu.com/translate?aldtype=16047&query=alert&keyfrom=baidu&smartresult=dict&lang=auto2zh#en/zh/infinity">Infinity</a> ，代表无穷大，大于任何数值<br>-Infinity ，代表无穷小，小于任何数值<br>NaN ，Not a number，代表一个非数值</p>
-<h5 id="4-isNaN"><a href="#4-isNaN" class="headerlink" title="4. isNaN()"></a>4. isNaN()</h5><p>用来判断一个变量是否为非数字的类型，返回 true 或者 false</p>
-<p><img src="../img/25/11.png" alt="11"></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> usrAge = <span class="number">21</span>;</span><br><span class="line"><span class="keyword">var</span> isOk = <span class="built_in">isNaN</span>(userAge);</span><br><span class="line"><span class="built_in">console</span>.log(isOk);            <span class="comment">// false ，21 不是一个非数字</span></span><br><span class="line"><span class="keyword">var</span> usrName = <span class="string">&quot;andy&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isNaN</span>(userName));  <span class="comment">// true ，&quot;andy&quot;是一个非数字</span></span><br></pre></td></tr></table></figure>
-
-<br />
-
-<h4 id="4-3-3-字符串型-String"><a href="#4-3-3-字符串型-String" class="headerlink" title="4.3.3 字符串型 String"></a>4.3.3 字符串型 String</h4><p>0.别叫成字符型了；</p>
-<p>字符串型可以是引号中的任意文本，其语法为 双引号 “” 和 单引号’’</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> strMsg = <span class="string">&quot;我爱北京天安门~&quot;</span>;  <span class="comment">// 使用双引号表示字符串</span></span><br><span class="line"><span class="keyword">var</span> strMsg2 = <span class="string">&#x27;我爱吃猪蹄~&#x27;</span>;    <span class="comment">// 使用单引号表示字符串</span></span><br><span class="line"><span class="comment">// 常见错误</span></span><br><span class="line"><span class="keyword">var</span> strMsg3 = 我爱大肘子;       <span class="comment">// 报错，没使用引号，会被认为是js代码，但js没有这些语法</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>用了字符串，不加引号是不行的，代码语法里面没有分类这些数据，会被以为是代码</li>
-<li>简称，无效代码；</li>
-</ul>
-<p>因为 HTML 标签里面的属性使用的是双引号，JS 这里我们更推荐使用单引号。</p>
-<p>1.即使是’12’，’true’。</p>
-<ul>
-<li>原本是其他类型的数据，加了单引号或双引号，也是字符串类型；</li>
-</ul>
-<hr>
-<h5 id="1-嵌套"><a href="#1-嵌套" class="headerlink" title="1. 嵌套"></a>1. 嵌套</h5><p>1.字符串引号嵌套</p>
-<p>2.JS 可以用单引号嵌套双引号 ，或者用双引号嵌套单引号 (外双内单，外单内双)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> strMsg = <span class="string">&#x27;我是&quot;高帅富&quot;程序猿&#x27;</span>;   <span class="comment">// 可以用&#x27;&#x27;包含&quot;&quot;</span></span><br><span class="line"><span class="keyword">var</span> strMsg2 = <span class="string">&quot;我是&#x27;高帅富&#x27;程序猿&quot;</span>;  <span class="comment">// 也可以用&quot;&quot; 包含&#x27;&#x27;</span></span><br><span class="line"><span class="comment">//  常见错误</span></span><br><span class="line"><span class="keyword">var</span> badQuotes = <span class="string">&#x27;What on earth?&quot;; // 报错，不能 单双引号搭配</span></span><br></pre></td></tr></table></figure>
-
-<br />
-
-<h5 id="2-字符串转义符"><a href="#2-字符串转义符" class="headerlink" title="2. 字符串转义符"></a>2. 字符串转义符</h5><p>类似HTML里面的特殊字符，字符串中也有特殊字符，我们称之为转义符。<br>转义符都是 \ 开头的，常用的转义符及其说明如下：</p>
-<table>
-<thead>
-<tr>
-<th><strong>转义符</strong></th>
-<th><strong>解释说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>\n</td>
-<td>换行符，n 是 newline 的意思</td>
-</tr>
-<tr>
-<td>\ \</td>
-<td>斜杠 \</td>
-</tr>
-<tr>
-<td>\‘</td>
-<td>‘  单引号</td>
-</tr>
-<tr>
-<td>\“</td>
-<td>”双引号</td>
-</tr>
-<tr>
-<td>\t</td>
-<td>tab 缩进</td>
-</tr>
-<tr>
-<td>\b</td>
-<td>空格 ，b 是 blank 的意思</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>html的空格是<code>&amp;nbsp</code></p>
-</li>
-<li><p>2.1 案例-弹出网页警示框</p>
-<p><img src="../img/25/12.png" alt="12"></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    alert(<span class="string">&#x27;酷热难耐，火辣的太阳底下，我挺拔的身姿，成为了最为独特的风景。\n我审视四周，这里，是我的舞台，我就是天地间的王者。\n这一刻，我豪气冲天，终于大喊一声：&quot;收破烂啦～&quot;&#x27;</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<br />
-
-<h5 id="3-字符串长度"><a href="#3-字符串长度" class="headerlink" title="3. 字符串长度"></a>3. 字符串长度</h5><ul>
-<li><p>1.字符串是由若干字符组成的，这些字符的数量就是字符串的长度。通过字符串的 length 属性可以获取整个字符串的长度。</p>
-</li>
-<li><pre><code class="js"><span class="keyword">var</span> strMsg = <span class="string">"我是帅气多金的程序猿！"</span>;
-alert(strMsg.length); <span class="comment">// 显示 11</span>
-&lt;!--hexoPostRenderEscape:&lt;figure class="highlight awk"&gt;&lt;table&gt;&lt;tr&gt;&lt;td class="gutter"&gt;&lt;pre&gt;&lt;span class="line"&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;span class="comment"&gt;##### 4. 字符串拼接&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;+ &lt;span class="number"&gt;1&lt;/span&gt;.多个字符串之间可以使用 + 进行拼接，其拼接方式为 字符串 + 任何类型 = 拼接之后的字符串&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;+ &lt;span class="number"&gt;2&lt;/span&gt;.拼接前会把与字符串相加的任何类型转成字符串，再拼接成一个新的字符串&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;```js&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;span class="regexp"&gt;//&lt;/span&gt;&lt;span class="number"&gt;1.1&lt;/span&gt; 字符串 &lt;span class="string"&gt;&amp;quot;相加&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;alert(&lt;span class="string"&gt;&amp;#x27;hello&amp;#x27;&lt;/span&gt; + &lt;span class="string"&gt;&amp;#x27; &amp;#x27;&lt;/span&gt; + &lt;span class="string"&gt;&amp;#x27;world&amp;#x27;&lt;/span&gt;); &lt;span class="regexp"&gt;//&lt;/span&gt; hello world&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;span class="regexp"&gt;//&lt;/span&gt;&lt;span class="number"&gt;1.2&lt;/span&gt; 数值字符串 &lt;span class="string"&gt;&amp;quot;相加&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;alert(&lt;span class="string"&gt;&amp;#x27;100&amp;#x27;&lt;/span&gt; + &lt;span class="string"&gt;&amp;#x27;100&amp;#x27;&lt;/span&gt;); &lt;span class="regexp"&gt;//&lt;/span&gt; &lt;span class="number"&gt;100100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;span class="regexp"&gt;//&lt;/span&gt;&lt;span class="number"&gt;1.3&lt;/span&gt; 数值字符串 + 数值&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;alert(&lt;span class="string"&gt;&amp;#x27;11&amp;#x27;&lt;/span&gt; + &lt;span class="number"&gt;12&lt;/span&gt;);     &lt;span class="regexp"&gt;//&lt;/span&gt; &lt;span class="number"&gt;1112&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;
-</code></pre>
-</li>
-</ul>
-<p>+ 号总结口诀：数值相加 ，字符相连</p>
-<hr>
-<h5 id="5-字符串拼接加强"><a href="#5-字符串拼接加强" class="headerlink" title="5. 字符串拼接加强"></a>5. 字符串拼接加强</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;pink老师&#x27;</span> + <span class="number">18</span>);           <span class="comment">// 只要有字符就会相连 </span></span><br><span class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</span><br><span class="line"><span class="comment">// console.log(&#x27;pink老师age岁啦&#x27;);       // 这样不行哦</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;pink老师&#x27;</span> + age);          <span class="comment">// pink老师18</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;pink老师&#x27;</span> + age + <span class="string">&#x27;岁啦&#x27;</span>);  <span class="comment">// pink老师18岁啦</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>我们经常会将字符串和变量来拼接，因为变量可以很方便地修改里面的值</li>
-<li>变量是不能添加引号的，因为加引号的变量会变成字符串</li>
-<li>如果变量两侧都有字符串拼接，口诀“引引加加 ”，删掉数字，变量写加中间</li>
-</ul>
-<br />
-
-<h5 id="6-案例"><a href="#6-案例" class="headerlink" title="6. 案例"></a>6. 案例</h5><p>1.弹出一个输入框，需要用户输入年龄，之后弹出一个警示框显示“您今年 xx 岁啦”（xx 表示刚才输入的年龄）</p>
-<p><img src="../img/25/13.png" alt="13"></p>
-<p>2.案例分析</p>
-<p>交互编程的三个基本要素：</p>
-<ul>
-<li>用户输入 </li>
-<li>程序内部处理   </li>
-<li>这是 输出结果  </li>
-</ul>
-<p>3.那么在程序中要如何实现呢？</p>
-<p>3.1 弹出一个输入框（prompt)，让用户输入年龄（用户输入）<br>3.2 把用户输入的值用变量保存起来,把刚才输入的年龄与所要输出的字符串拼接 （程序内部处理）<br>3.3 使用alert语句弹出警示框（输出结果）</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> yourAge = prompt(<span class="string">&#x27;请输入你的年龄&#x27;</span>);</span></span><br><span class="line"><span class="javascript">        alert(<span class="string">&#x27;你今年&#x27;</span> + yourAge + <span class="string">&#x27;岁啦&#x27;</span>);</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br />
-
-<h4 id="4-3-4-布尔型"><a href="#4-3-4-布尔型" class="headerlink" title="4.3.4 布尔型"></a>4.3.4 布尔型</h4><p>1.布尔型 Boolean</p>
-<p>2.布尔类型有两个值：true 和 false ，其中 true 表示真（对），而 false 表示假（错）。<br>布尔型和数字型相加的时候， true 的值为 1 ，false 的值为 0。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span> + <span class="number">1</span>);  <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span> + <span class="number">1</span>); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
-
-<br />
-
-<h4 id="4-3-5-Undefined-和-Null"><a href="#4-3-5-Undefined-和-Null" class="headerlink" title="4.3.5 Undefined 和 Null"></a>4.3.5 Undefined 和 Null</h4><p>一个声明后没有被赋值的变量会有一个默认值 undefined ( 如果进行相连或者相加时，注意结果）</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> variable;</span><br><span class="line"><span class="built_in">console</span>.log(variable);           <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;你好&#x27;</span> + variable);  <span class="comment">// 你好undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">11</span> + variable);     <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span> + variable);   <span class="comment">//  NaN</span></span><br></pre></td></tr></table></figure>
-
-<p>一个声明变量给 null 值，里面存的值为空（学习对象时，我们继续研究null)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vari = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;你好&#x27;</span> + vari);  <span class="comment">// 你好null</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">11</span> + vari);     <span class="comment">// 11</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span> + vari);   <span class="comment">//  1</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>null可以与数值运算，这也是</li>
-</ul>
-<hr>
-<h3 id="4-4-获取变量数据类型"><a href="#4-4-获取变量数据类型" class="headerlink" title="4.4 获取变量数据类型"></a>4.4 获取变量数据类型</h3><h3 id="4-5-数据类型转换"><a href="#4-5-数据类型转换" class="headerlink" title="4.5 数据类型转换"></a>4.5 数据类型转换</h3>]]></content>
-      <tags>
-        <tag>JS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>25-JavaScript</title>
     <url>/1-(0~50)/25-JavaScript_%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h2 id="1-计算机编程基础"><a href="#1-计算机编程基础" class="headerlink" title="1. 计算机编程基础"></a>1. 计算机编程基础</h2><h3 id="1-1-编程语言"><a href="#1-1-编程语言" class="headerlink" title="1.1 编程语言"></a>1.1 编程语言</h3><h4 id="1-1-1-编程"><a href="#1-1-1-编程" class="headerlink" title="1.1.1 编程"></a>1.1.1 编程</h4><p>1.==编程==：就是让计算机为解决某个问题而使用某种程序设计语言编写程序代码，并最终得到结果的过程。</p>
 <a id="more"></a>
@@ -8326,12 +7701,12 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <hr>
 <h4 id="1-1-4-翻译器"><a href="#1-1-4-翻译器" class="headerlink" title="1.1.4 翻译器"></a>1.1.4 翻译器</h4><p>高级语言所编制的程序不能直接被计算机识别，必须经过转换才能被执行，为此，我们需要一个翻译器。</p>
 <p>翻译器可以将我们所编写的源代码转换为机器语言，这也被称为二进制化。 记住1和 0。</p>
-<p><img src="../img/25/1.png" alt="1"></p>
+<p><img src="../../img/25/1.png" alt="1"></p>
 <h4 id="1-1-5-编程语言与标记语言区别"><a href="#1-1-5-编程语言与标记语言区别" class="headerlink" title="1.1.5 编程语言与标记语言区别"></a>1.1.5 编程语言与标记语言区别</h4><p>1.编程语言有很强的逻辑和行为能力。在编程语言里, 你会看到很多 if else 、for 、while等具有逻辑性和行为能力的指令，这是主动的。</p>
 <p>2.标记语言（html）不用于向计算机发出指令，常用于格式化和链接。标记语言的存在是用来被读取的, 他是被动的。</p>
 <h5 id="1-1-6-总结"><a href="#1-1-6-总结" class="headerlink" title="1.1.6 总结"></a>1.1.6 总结</h5><p>1.计算机可以帮助人类解决某些问题<br>2.程序员利用编程语言编写程序发出指令控制计算机来实现这些任务<br>3.编程语言有机器语言、汇编语言、高级语言<br>4.高级语言需要一个翻译器转换为计算机识别的机器语言<br>5.编程语言是主动的有很强的逻辑性</p>
 <hr>
-<h3 id="1-2-计算机基础"><a href="#1-2-计算机基础" class="headerlink" title="1.2 计算机基础"></a>1.2 计算机基础</h3><h4 id="1-2-1-计算机组成"><a href="#1-2-1-计算机组成" class="headerlink" title="1.2.1 计算机组成"></a>1.2.1 计算机组成</h4><p><img src="../img/25/2.png" alt="2"></p>
+<h3 id="1-2-计算机基础"><a href="#1-2-计算机基础" class="headerlink" title="1.2 计算机基础"></a>1.2 计算机基础</h3><h4 id="1-2-1-计算机组成"><a href="#1-2-1-计算机组成" class="headerlink" title="1.2.1 计算机组成"></a>1.2.1 计算机组成</h4><p><img src="../../img/25/2.png" alt="2"></p>
 <br />
 
 <hr>
@@ -8349,7 +7724,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <li>太字节(TB):  1TB = 1024GB</li>
 <li>……</li>
 </ul>
-<h4 id="1-2-4-程序运行"><a href="#1-2-4-程序运行" class="headerlink" title="1.2.4 程序运行"></a>1.2.4 程序运行</h4><p><img src="../img/25/3.png" alt="3"></p>
+<h4 id="1-2-4-程序运行"><a href="#1-2-4-程序运行" class="headerlink" title="1.2.4 程序运行"></a>1.2.4 程序运行</h4><p><img src="../../img/25/3.png" alt="3"></p>
 <p>1.打开某个程序时，先从硬盘中把程序的代码加载到内存中<br>2.CPU执行内存中的代码</p>
 <p>==注意==：之所以要内存的一个重要原因，是因为 cpu 运行太快了，如果只从硬盘中读数据，会浪费cpu性能，所以，才使用存取速度更快的内存来保存运行时的数据。（内存是电，硬盘是机械）</p>
 <hr>
@@ -8373,7 +7748,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 </ul>
 </li>
 </ul>
-<p><img src="../img/25/4.png" alt="4"></p>
+<p><img src="../../img/25/4.png" alt="4"></p>
 <hr>
 <h4 id="2-1-3-JS的作用"><a href="#2-1-3-JS的作用" class="headerlink" title="2.1.3 JS的作用"></a>2.1.3 JS的作用</h4><ul>
 <li>表单动态校验（密码强度检测）  （ JS 产生最初的目的 ）<ul>
@@ -8407,9 +7782,9 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 </ul>
 <p>浏览器本身并不会执行JS代码，而是通过内置 JavaScript 引擎(解释器) 来执行 JS 代码 。JS 引擎执行代码时逐行解释每一句源码（转换为机器语言），然后由计算机去执行，</p>
 <p>所以 JavaScript 语言归为脚本语言，会逐行解释执行。</p>
-<p><img src="../img/25/5.png" alt="5"></p>
+<p><img src="../../img/25/5.png" alt="5"></p>
 <hr>
-<h4 id="2-1-6-JS的组成"><a href="#2-1-6-JS的组成" class="headerlink" title="2.1.6 JS的组成"></a>2.1.6 JS的组成</h4><p><img src="../img/25/6.png" alt="6"></p>
+<h4 id="2-1-6-JS的组成"><a href="#2-1-6-JS的组成" class="headerlink" title="2.1.6 JS的组成"></a>2.1.6 JS的组成</h4><p><img src="../../img/25/6.png" alt="6"></p>
 <p>1.JS基础，学习的是ECMAScript，js语法</p>
 <p>2.JS-API，学习的是dom与bom；</p>
 <hr>
@@ -8417,7 +7792,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <ul>
 <li>ECMAScript 是由ECMA 国际（ 原欧洲计算机制造商协会）进行标准化的一门编程语言，这种语言在万维网上应用广泛，它往往被称为 JavaScript 或 JScript，但实际上后两者是 ECMAScript 语言的实现和扩展。</li>
 </ul>
-<p><img src="../img/25/7.png" alt="7"></p>
+<p><img src="../../img/25/7.png" alt="7"></p>
 <ul>
 <li>ECMAScript：ECMAScript 规定了JS的编程语法和基础核心知识，是所有浏览器厂商共同遵守的一套JS语法工业标准。</li>
 <li>更多参看MDN:  <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview</a></li>
@@ -8505,8 +7880,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <hr>
 <h4 id="3-1-2-变量在内存中的存储"><a href="#3-1-2-变量在内存中的存储" class="headerlink" title="3.1.2 变量在内存中的存储"></a>3.1.2 变量在内存中的存储</h4><p>本质：变量是程序在<strong>内存</strong>中申请的一块用来存放数据的<strong>空间</strong>。</p>
 <p>类似我们酒店的房间，一个房间就可以看做是一个变量。  </p>
-<img src="../img/25/8.png" alt="8" style="zoom:80%;" />
-
+<p>&lt;../img src=”../../img/25/8.png” alt=”8” style=”zoom:80%;” /&gt;</p>
 <ul>
 <li>变量由：num2（变量名）+ 6（向内存申请的空间）组成的；</li>
 </ul>
@@ -8627,7 +8001,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 </ul>
 <hr>
 <h4 id="3-4-2-案例"><a href="#3-4-2-案例" class="headerlink" title="3.4.2 案例"></a>3.4.2 案例</h4><p>一下哪些是合法的变量名？</p>
-<p><img src="../img/25/9.png" alt="9"></p>
+<p><img src="../../img/25/9.png" alt="9"></p>
 <p>1-2. 不能数字开头</p>
 <p>1-4. 不能数字开头</p>
 <p>2-4. 没有安排&amp;符号，估计不是开头也不行</p>
@@ -8670,8 +8044,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> age = <span class="number">18</span>,</span></span><br><span class="line">            gz = 2000,</span><br><span class="line">            zhongjian;</span><br><span class="line">        zhongjian = age;</span><br><span class="line">        age = gz;</span><br><span class="line">        gz = zhongjian;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&#x27;age:&#x27;</span>+ age, <span class="string">&#x27;zhongjian:&#x27;</span> + zhongjian, <span class="string">&#x27;gz:&#x27;</span> + gz);</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>2.资料：</p>
-<img src="../img/25/10.png" alt="10" style="zoom:90%;" />
-
+<p>&lt;../img src=”../../img/25/10.png” alt=”10” style=”zoom:90%;” /&gt;</p>
 <br />
 
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">// js 是编程语言有很强的逻辑性在里面： 实现这个要求的思路 先怎么做后怎么做 </span></span><br><span class="line">    <span class="comment">// 1. 我们需要一个临时变量帮我们</span></span><br><span class="line">    <span class="comment">// 2. 把apple1 给我们的临时变量 temp </span></span><br><span class="line">    <span class="comment">// 3. 把apple2 里面的苹果给 apple1 </span></span><br><span class="line">    <span class="comment">// 4. 把临时变量里面的值 给 apple2 </span></span><br><span class="line">    <span class="keyword">var</span> temp; <span class="comment">// 声明了一个临时变量为空</span></span><br><span class="line">    <span class="keyword">var</span> apple1 = <span class="string">&#x27;青苹果&#x27;</span>;</span><br><span class="line">    <span class="keyword">var</span> apple2 = <span class="string">&#x27;红苹果&#x27;</span>;</span><br><span class="line">    temp = apple1; <span class="comment">// 把右边给左边</span></span><br><span class="line">    apple1 = apple2;</span><br><span class="line">    apple2 = temp;</span><br><span class="line">    <span class="built_in">console</span>.log(apple1);</span><br><span class="line">    <span class="built_in">console</span>.log(apple2);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
@@ -8808,7 +8181,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 
 <p><a href="https://fanyi.baidu.com/translate?aldtype=16047&query=alert&keyfrom=baidu&smartresult=dict&lang=auto2zh#en/zh/infinity">Infinity</a> ，代表无穷大，大于任何数值<br>-Infinity ，代表无穷小，小于任何数值<br>NaN ，Not a number，代表一个非数值</p>
 <h5 id="4-isNaN"><a href="#4-isNaN" class="headerlink" title="4. isNaN()"></a>4. isNaN()</h5><p>用来判断一个变量是否为非数字的类型，返回 true 或者 false</p>
-<p><img src="../img/25/11.png" alt="11"></p>
+<p><img src="../../img/25/11.png" alt="11"></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> usrAge = <span class="number">21</span>;</span><br><span class="line"><span class="keyword">var</span> isOk = <span class="built_in">isNaN</span>(userAge);</span><br><span class="line"><span class="built_in">console</span>.log(isOk);            <span class="comment">// false ，21 不是一个非数字</span></span><br><span class="line"><span class="keyword">var</span> usrName = <span class="string">&quot;andy&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isNaN</span>(userName));  <span class="comment">// true ，&quot;andy&quot;是一个非数字</span></span><br></pre></td></tr></table></figure>
 
 <br />
@@ -8870,7 +8243,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <li><p>html的空格是<code>&amp;nbsp</code></p>
 </li>
 <li><p>2.1 案例-弹出网页警示框</p>
-<p><img src="../img/25/12.png" alt="12"></p>
+<p><img src="../../img/25/12.png" alt="12"></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    alert(<span class="string">&#x27;酷热难耐，火辣的太阳底下，我挺拔的身姿，成为了最为独特的风景。\n我审视四周，这里，是我的舞台，我就是天地间的王者。\n这一刻，我豪气冲天，终于大喊一声：&quot;收破烂啦～&quot;&#x27;</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 </li>
@@ -8898,7 +8271,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <br />
 
 <h5 id="6-案例"><a href="#6-案例" class="headerlink" title="6. 案例"></a>6. 案例</h5><p>1.弹出一个输入框，需要用户输入年龄，之后弹出一个警示框显示“您今年 xx 岁啦”（xx 表示刚才输入的年龄）</p>
-<p><img src="../img/25/13.png" alt="13"></p>
+<p><img src="../../img/25/13.png" alt="13"></p>
 <p>2.案例分析</p>
 <p>交互编程的三个基本要素：</p>
 <ul>
@@ -8925,10 +8298,870 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vari = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;你好&#x27;</span> + vari);  <span class="comment">// 你好null</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">11</span> + vari);     <span class="comment">// 11</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span> + vari);   <span class="comment">//  1</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>null可以与数值运算，这也是</li>
+<li>null可以与数值运算，这也是 null 与 undefined 的不同之一</li>
 </ul>
 <hr>
-<h3 id="4-4-获取变量数据类型"><a href="#4-4-获取变量数据类型" class="headerlink" title="4.4 获取变量数据类型"></a>4.4 获取变量数据类型</h3><h3 id="4-5-数据类型转换"><a href="#4-5-数据类型转换" class="headerlink" title="4.5 数据类型转换"></a>4.5 数据类型转换</h3>]]></content>
+<h3 id="4-4-获取变量数据类型"><a href="#4-4-获取变量数据类型" class="headerlink" title="4.4 获取变量数据类型"></a>4.4 获取变量数据类型</h3><h4 id="4-4-1-获取"><a href="#4-4-1-获取" class="headerlink" title="4.4.1  获取"></a>4.4.1  获取</h4><p>1.获取检测变量的数据类型</p>
+<ul>
+<li>typeof 可用来获取检测变量的数据类型</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">18</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> num) <span class="comment">// 结果 number</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;pink&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str);<span class="comment">// string</span></span><br><span class="line"><span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> flag);<span class="comment">// boolean</span></span><br></pre></td></tr></table></figure>
+
+<p>不同类型的返回值:</p>
+<p><img src="../../img/25/14.png" alt="14"></p>
+<ul>
+<li>学了对象，就知道 为什么 typeof null 是 object;</li>
+</ul>
+<p>2.这个获取数据类型，有什么用呢==？==</p>
+<ul>
+<li><p>2.1 有些地方，会有歧义，不能明确是什么类型的数据</p>
+</li>
+<li><p>2.2 例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> age = prompt(<span class="string">&#x27;请输入你的年龄&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(age);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> age);</span><br></pre></td></tr></table></figure>
+
+<p>里面我们输入的是数字，但其实是字符串型。</p>
+</li>
+<li><p>这样避免了，有些地方你以为是数值类型，拿去做运算了，结果它是字符串类型，就会<strong>达不到</strong>程序员想要的效果。</p>
+</li>
+</ul>
+<hr>
+<h4 id="4-4-2-字面量"><a href="#4-4-2-字面量" class="headerlink" title="4.4.2 字面量"></a>4.4.2 字面量</h4><p>1.字面量是在源代码中一个固定值的表示法，通俗来说，就是字面量表示如何表达这个值。</p>
+<ul>
+<li>数字字面量：8, 9, 10</li>
+<li>字符串字面量：’黑马程序员’, “大前端”</li>
+<li>布尔字面量：true，false</li>
+</ul>
+<p>2.虽然我们人类一眼能看出，或者只要学习几句话，就能明白。</p>
+<ul>
+<li>但是，要给计算机下定义，是没这么简单的，字面量就是教计算机分辨什么是什么类型的数据；</li>
+</ul>
+<hr>
+<h3 id="4-5-数据类型转换"><a href="#4-5-数据类型转换" class="headerlink" title="4.5 数据类型转换"></a>4.5 数据类型转换</h3><h4 id="4-5-1-是什么？"><a href="#4-5-1-是什么？" class="headerlink" title="4.5.1 是什么？"></a>4.5.1 是什么？</h4><p>1.使用表单、prompt 获取过来的数据默认是字符串类型的，此时就不能直接简单的进行加法运算，而需要转换变量的数据类型。通俗来说，就是把==一种数据类型的变量转换成另外一种数据类型==。<br>我们通常会实现3种方式的转换：</p>
+<ul>
+<li>转换为字符串类型</li>
+<li>转换为数字型</li>
+<li>转换为布尔型</li>
+</ul>
+<h4 id="4-5-2-转换为字符串"><a href="#4-5-2-转换为字符串" class="headerlink" title="4.5.2 转换为字符串"></a>4.5.2 转换为字符串</h4><p>1.转换为字符串类型</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>说明</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>toString()</td>
+<td>转成字符串</td>
+<td>var num=1; alert(num.toString());</td>
+</tr>
+<tr>
+<td>String() 强制转换</td>
+<td>转成字符串</td>
+<td>var num=1; alert(String(num));</td>
+</tr>
+<tr>
+<td>加号拼接字符串</td>
+<td>和字符串拼接的结果都是字符串</td>
+<td>var num =1; alert(num+ “我是字符串”);</td>
+</tr>
+</tbody></table>
+<ul>
+<li>toString() 和 String()  使用方式不一样。</li>
+<li>三种转换方式，我们更喜欢用第三种加号拼接字符串转换方式， 这一种方式也称之为隐式转换。</li>
+</ul>
+<p>2.案例</p>
+<p>2.1 把数字型转换为字符串型</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> str = num.toString();</span><br><span class="line"><span class="built_in">console</span>.log(str);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str);</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<hr>
+<h4 id="4-5-3-转换为数字型（重点）"><a href="#4-5-3-转换为数字型（重点）" class="headerlink" title="4.5.3 转换为数字型（重点）"></a>4.5.3 转换为数字型（重点）</h4><p>1.</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>说明</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>parseInt(string) 函数</td>
+<td>将string类型转成整数数字型</td>
+<td>parselnt(‘78’)</td>
+</tr>
+<tr>
+<td>parseFloat(string) 函数</td>
+<td>将string类型转成浮点数 数字型</td>
+<td>parseFloat(‘78.21’)</td>
+</tr>
+<tr>
+<td>Number() 强制转换函数</td>
+<td>将string类型转换成数字型</td>
+<td>Number(‘12’)</td>
+</tr>
+<tr>
+<td>js 隐式转换( - * / )，+号不行</td>
+<td>利用算术运算符隐式转换为数字型</td>
+<td>‘12’ - 0</td>
+</tr>
+</tbody></table>
+<p>1.1 word:</p>
+<ul>
+<li>1.<a href="https://fanyi.baidu.com/translate#en/zh/parse">parse</a></li>
+</ul>
+<p>1.2 详细点的案例 - parseInt(string)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> age = prompt(<span class="string">&#x27;请输入你的年龄&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(age));</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>1.2.1 parseInt会取整，但不会四舍五入：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(<span class="string">&#x27;3.14&#x27;</span>)); <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(<span class="string">&#x27;3.94&#x27;</span>)); <span class="comment">// 3，还是3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.2.2 以数字开头的字符串，可以提取出数字</p>
+<p><code>console.log(parseInt(&#39;120sadwdsad&#39;)); 结果：120</code></p>
+<p>如果是字符开头的就是：NaN</p>
+<ul>
+<li>说明，没一个字符会检验一次是否能转换为数字类型。</li>
+<li>遇到第一个不能的，就切掉，保留前面已经转换的数据</li>
+<li>而第一个字符就是不能转换的数据，就返回NaN</li>
+</ul>
+</li>
+</ul>
+<p>1.3 parseFloat(string) 函数</p>
+<ul>
+<li>1.3.1 与1.2差不多，就是能保留小数，不卡头了</li>
+</ul>
+<p>1.4 Number() 强制转换函数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> num1 = <span class="built_in">Number</span>(str);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(str));</span><br><span class="line"><span class="built_in">console</span>.log(num1+<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="string">&#x27;12&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>1.5 隐式转换( - * / )，+号不行</p>
+<p><code>console.log(&#39;120&#39; - 0) // 120</code></p>
+<ul>
+<li>1.5.1 也可以两者都是字符串型</li>
+</ul>
+<p><code>console.log(&#39;123&#39; - &#39;120&#39;)// 3</code></p>
+<ul>
+<li>如果是加好，就会得到：<code>123120</code>;</li>
+</ul>
+<br />
+
+<p>2.注意 parseInt 和 parseFloat 单词的大小写，这2个是重点</p>
+<ul>
+<li>2.1 隐式转换是我们在进行算数运算的时候，JS 自动转换了数据类型</li>
+</ul>
+<p>3.案例：此案例要求在页面中弹出一个输入框，我们输入出生年份后， 能计算出我们的年龄。</p>
+<p>3.1 案例分析：</p>
+<ul>
+<li>弹出一个输入框（prompt)，让用户输入出生年份 （用户输入）</li>
+<li>把用户输入的值用变量保存起来，然后用今年的年份减去变量值，结果就是现在的年龄  （程序内部处理）</li>
+<li>弹出警示框（alert) ， 把计算的结果输出 （输出结果）</li>
+</ul>
+<p>3.2 代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1. 弹出输入框，输入出生年份，并存储在变量中  </span></span><br><span class="line"><span class="keyword">var</span> year = prompt(<span class="string">&#x27;请输入您的出生年份：&#x27;</span>);  <span class="comment">// 用户输入</span></span><br><span class="line"><span class="comment">// 2. 用今年减去刚才输入的年份   </span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">2019</span> - year;               <span class="comment">// 程序内部处理</span></span><br><span class="line"><span class="comment">// 3. 弹出提示框  </span></span><br><span class="line">alert(<span class="string">&#x27;您的年龄是:&#x27;</span> + result + <span class="string">&#x27;岁&#x27;</span>);     <span class="comment">// 输出结果</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 自写：</span></span><br><span class="line"><span class="keyword">var</span> years = prompt(<span class="string">&#x27;请输入出生年份&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> age = <span class="number">2020</span> - years;</span><br><span class="line"><span class="keyword">var</span> info = <span class="string">&#x27;你今年 &#x27;</span> + age + <span class="string">&#x27; 岁&#x27;</span>;</span><br><span class="line">alert(info);</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<p>4.案例：简单加法；</p>
+<p>计算两个数的值， 用户输入第一个值后，继续弹出第二个输入框并输入第二个值，最后通过弹出窗口显示出两次输入值相加的结果。</p>
+<ul>
+<li><p>4.1 分析：</p>
+</li>
+<li><p>先弹出第一个输入框，提示用户输入第一个值  保存起来<br>再弹出第二个框，提示用户输入第二个值  保存起来<br>把这两个值相加，并将结果赋给新的变量（注意数据类型转换）<br>弹出警示框（alert) ， 把计算的结果输出 （输出结果）</p>
+</li>
+<li><p>4.2 代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1.自写：</span></span><br><span class="line"><span class="keyword">var</span> num1 = <span class="built_in">parseFloat</span>(prompt(<span class="string">&#x27;请输入第一个数&#x27;</span>));</span><br><span class="line"><span class="keyword">var</span> num2 = <span class="built_in">parseFloat</span>(prompt(<span class="string">&#x27;请输入第二个数&#x27;</span>));</span><br><span class="line"><span class="keyword">var</span> add = num1 + num2;</span><br><span class="line"><span class="keyword">var</span> export1 = <span class="string">&#x27;两个数相加得：&#x27;</span> + add;</span><br><span class="line">alert(export1);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 资料：</span></span><br><span class="line"><span class="comment">// 1. 先弹出第一个输入框，提示用户输入第一个值 </span></span><br><span class="line"> <span class="keyword">var</span> num1 = prompt(<span class="string">&#x27;请输入第一个值：&#x27;</span>);</span><br><span class="line"><span class="comment">// 2. 再弹出第二个框，提示用户输入第二个值 </span></span><br><span class="line"> <span class="keyword">var</span> num2 = prompt(<span class="string">&#x27;请输入第二个值：&#x27;</span>);</span><br><span class="line"><span class="comment">// 3. 将输入的值转换为数字型后，把这两个值相加，并将结果赋给新的变量  </span></span><br><span class="line"> <span class="keyword">var</span> result = <span class="built_in">parseFloat</span>(num1) + <span class="built_in">parseFloat</span>(num2);</span><br><span class="line"><span class="comment">// 4. 弹出结果</span></span><br><span class="line"> alert(<span class="string">&#x27;结果是:&#x27;</span> + result);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br />
+
+</li>
+</ul>
+<h4 id="4-5-4-转换为布尔型"><a href="#4-5-4-转换为布尔型" class="headerlink" title="4.5.4 转换为布尔型"></a>4.5.4 转换为布尔型</h4><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>说明</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Boolean()函数</td>
+<td>其他类型转成布尔值</td>
+<td>Boolean(‘true’);</td>
+</tr>
+</tbody></table>
+<p>代表空、否定的值会被转换为 false  ，如 ‘’、0、NaN、null、undefined<br>其余值都会被转换为 true</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="string">&#x27;&#x27;</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="number">0</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="literal">NaN</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="literal">null</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="literal">undefined</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="string">&#x27;小白&#x27;</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(<span class="number">12</span>)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<br />
+
+<hr>
+<h3 id="4-6-扩展阅读"><a href="#4-6-扩展阅读" class="headerlink" title="4.6 扩展阅读"></a>4.6 扩展阅读</h3><h4 id="4-6-1-解释与编译"><a href="#4-6-1-解释与编译" class="headerlink" title="4.6.1 解释与编译"></a>4.6.1 解释与编译</h4><h5 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h5><p>1.解释型语言和编译型语言</p>
+<p>计算机不能直接理解任何除机器语言以外的语言，所以必须要把程序员所写的程序语言翻译成机器语言才能执行程序。程序语言翻译成机器语言的工具，被称为翻译器。</p>
+<p><img src="../../img/25/16.png" alt="16"></p>
+<ul>
+<li>翻译器翻译的方式有两种：一个是==编译==，另外一个是==解释==。两种方式之间的区别在于==翻译的时间点不同==</li>
+<li>编译器是在<strong>代码执行之前进行编译</strong>，生成中间代码文件</li>
+<li>解释器是在<strong>运行时进行及时解释</strong>，并立即执行(当编译器以解释方式运行的时候，也称之为解释器)</li>
+</ul>
+<h5 id="2-执行过程"><a href="#2-执行过程" class="headerlink" title="2. 执行过程"></a>2. 执行过程</h5><img src="../../img/25/17.png" alt="17" style="zoom:80%;" />
+
+<p>编译语言：把代码全部编译，编译完了才执行；<br>解释语言：读到第一行代码，解释成机器语言执行，然后执行。然后读到第二代码….</p>
+<h5 id="3-优劣点"><a href="#3-优劣点" class="headerlink" title="3. 优劣点"></a>3. 优劣点</h5><p>1.来源：<a href="https://blog.csdn.net/w782373711/article/details/88366471">https://blog.csdn.net/w782373711/article/details/88366471</a></p>
+<p><strong>编译型语言：</strong></p>
+<ol>
+<li>编译型语言最大的优势之一就是其执行速度。用C/C++编写的程序运行速度要比用Java编写的相同程序快30%-70%。</li>
+<li>编译型程序比解释型程序消耗的内存更少。</li>
+<li>不利的一面——编译器比解释器要难写得多。</li>
+<li>编译器在调试程序时提供不了多少帮助——有多少次在你的C语言代码中遇到一个“空指针异常”时，需要花费好几个小时来明确错误到底在代码中的什么位置。</li>
+<li>可执行的编译型代码要比相同的解释型代码大许多。例如，C/C++的.exe文件要比同样功能的Java的.class文件大很多。</li>
+<li>编译型程序是面向特定平台的因而是平台依赖的。</li>
+<li>编译型程序不支持代码中实现安全性——例如，一个编译型的程序可以访问内存的任何区域，并且可以对你的PC做它想做的任何事情（大部分病毒是使用编译型语言编写的）</li>
+<li>由于松散的安全性和平台依赖性，编译型语言不太适合开发因特网或者基于Web的应用。</li>
+</ol>
+<p><strong>解释型语言：</strong></p>
+<ol>
+<li>解释型语言提供了极佳的调试支持。一名Java程序员只需要几分钟就可以定位并修复一个“空指针异常”，因为Java运行环境不仅指明了异常的性质，而且给出了异常发生位置具体的行号和函数调用顺序（著名的堆栈跟踪信息）。这样的便利是编译型语言所无法提供的。</li>
+<li>另一个优势是解释器比编译器容易实现</li>
+<li>解释型语言最大的优势之一是其平台独立性</li>
+<li>解释型语言也可以保证高度的安全性——这是互联网应用迫切需要的</li>
+<li>中间语言代码的大小比编译型可执行代码小很多</li>
+<li>平台独立性，以及严密的安全性是使解释型语言成为适合互联网和Web应用的理想语言的2个最重要的因素。</li>
+<li>解释型语言存在一些严重的缺点。解释型应用占用更多的内存和CPU资源。这是由于，为了运行解释型语言编写的程序，相关的解释器必须首先运行。解释器是复杂的，智能的，大量消耗资源的程序并且它们会占用很多CPU周期和内存。</li>
+<li>由于解释型应用的decode-fetch-execute（解码-抓取-执行）的周期，它们比编译型程序慢很多。</li>
+<li>解释器也会做很多代码优化，运行时安全性检查；这些额外的步骤占用了更多的资源并进一步降低了应用的运行速度。</li>
+</ol>
+<hr>
+<h4 id="4-6-2-标识符、关键字、保留字"><a href="#4-6-2-标识符、关键字、保留字" class="headerlink" title="4.6.2 标识符、关键字、保留字"></a>4.6.2 标识符、关键字、保留字</h4><h5 id="1-标识符"><a href="#1-标识符" class="headerlink" title="1. 标识符"></a>1. 标识符</h5><p>1.标识(zhi)符：就是指开发人员为变量、属性、函数、参数取的名字。</p>
+<p><strong>标识符不能是关键字或保留字</strong>。</p>
+<h5 id="2-关键字"><a href="#2-关键字" class="headerlink" title="2. 关键字"></a>2. 关键字</h5><p>1.关键字：是指 JS本身已经使用了的字，不能再用它们充当变量名、方法名。</p>
+<ul>
+<li>包括：break、case、catch、continue、default、delete、do、else、finally、for、function、if、in、instanceof、new、return、switch、this、throw、try、typeof、var、void、while、with 等。</li>
+</ul>
+<h5 id="3-保留字"><a href="#3-保留字" class="headerlink" title="3. 保留字"></a>3. 保留字</h5><p>1.保留字：实际上就是预留的“关键字”，意思是现在虽然还不是关键字，但是未来可能会成为关键字，同样不能使用它们当变量名或方法名。</p>
+<ul>
+<li>包括：boolean、byte、<a href="https://fanyi.baidu.com/translate?aldtype=16047&query=login&keyfrom=baidu&smartresult=dict&lang=auto2zh#en/zh/char">char</a>、class、const、debugger、double、enum、export、extends、fimal、float、goto、implements、import、int、interface、long、mative、package、private、protected、public、short、static、super、synchronized、throws、transient、volatile 等。</li>
+<li><strong>注意</strong>：如果将保留字用作变量名或函数名，那么除非将来的浏览器实现了该保留字，否则很可能收不到任何错误消息。当浏览器将其实现后，该单词将被看做关键字，如此将出现关键字错误。</li>
+</ul>
+<hr>
+<h2 id="5-js运算符"><a href="#5-js运算符" class="headerlink" title="5. js运算符"></a>5. js运算符</h2><h3 id="5-1-概述"><a href="#5-1-概述" class="headerlink" title="5.1 概述"></a>5.1 概述</h3><p>运算符（operator）也被称为<strong>操作符</strong>，是用于实现赋值、比较和执行算数运算等功能的符号。</p>
+<p>JavaScript中常用的运算符有：</p>
+<ul>
+<li>算数运算符</li>
+<li>递增和递减运算符</li>
+<li>比较运算符</li>
+<li>逻辑运算符</li>
+<li>赋值运算符</li>
+</ul>
+<hr>
+<h3 id="5-2-算数运算符"><a href="#5-2-算数运算符" class="headerlink" title="5.2 算数运算符"></a>5.2 算数运算符</h3><p>1.概念：算术运算使用的符号，用于执行两个变量或值的算术运算。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td>加</td>
+<td>10 + 20 = 30</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减</td>
+<td>10 - 20 = -10</td>
+</tr>
+<tr>
+<td>*</td>
+<td>乘</td>
+<td>10 * 20 = 200</td>
+</tr>
+<tr>
+<td>/</td>
+<td>除</td>
+<td>10 / 20 = 0.2</td>
+</tr>
+<tr>
+<td>%</td>
+<td>取余数（取模）</td>
+<td>返回除法的余数 9 % 2 = 1</td>
+</tr>
+</tbody></table>
+<br />
+
+<hr>
+<h4 id="5-2-2-浮点数的精度问题"><a href="#5-2-2-浮点数的精度问题" class="headerlink" title="5.2.2 浮点数的精度问题"></a>5.2.2 浮点数的精度问题</h4><p>1.浮点数值的最高精度是 17 位小数，但在进行算术计算时其精确度远远不如整数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="number">0.1</span> + <span class="number">0.2</span>;    <span class="comment">// 结果不是 0.3，而是：0.30000000000000004</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0.07</span> * <span class="number">100</span>);   <span class="comment">// 结果不是 7，  而是：7.000000000000001</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0.3</span> == reseult); <span class="comment">// false </span></span><br></pre></td></tr></table></figure>
+
+<p>2.整数的话，1+2 就等于 3，没其他的；</p>
+<p>3.尽量不要用浮点数做运算。</p>
+<p>所以：==不要直接判断两个浮点数是否相等== !  </p>
+<hr>
+<p>4.提问：</p>
+<ul>
+<li><p>4.1 我们怎么判断 一个数能够被整除呢？</p>
+<p>它的余数是0 就说明这个数能被整除， 这就是 %  取余运算符的主要用途</p>
+</li>
+<li><p>4.2. 请问 1 + 2  *  3 结果是？</p>
+<p>结果是7 ，注意算术运算符优先级的，先乘除，后加减，有小括号先算小括号里面的</p>
+</li>
+</ul>
+<hr>
+<h4 id="5-2-3-表达式和返回值"><a href="#5-2-3-表达式和返回值" class="headerlink" title="5.2.3 表达式和返回值"></a>5.2.3 表达式和返回值</h4><p>1.表达式：是由数字、运算符、变量等以能求得数值的有意义排列方法所得的组合<br>简单理解：是由数字、运算符、变量等组成的式子</p>
+<p>例如： 1+1</p>
+<p>2.表达式最终都会有一个结果，返回给我们，我们成为返回值</p>
+<p>例如 1+1，会有一个2的结果；</p>
+<p>3.在外面，1+1=2.</p>
+<ul>
+<li><p>在程序：2=1+1，我们右边表达式计算完毕，返回值给左边。</p>
+<p><code>var num = 1+1;</code></p>
+</li>
+</ul>
+<hr>
+<h3 id="5-3-递增和递减"><a href="#5-3-递增和递减" class="headerlink" title="5.3 递增和递减"></a>5.3 递增和递减</h3><p>1.递增和递减运算符</p>
+<h4 id="5-3-1-概述"><a href="#5-3-1-概述" class="headerlink" title="5.3.1 概述"></a>5.3.1 概述</h4><p>如果需要反复给数字变量添加或减去1，可以使用<strong>递增</strong>（++）和<strong>递减</strong>（ – ）运算符来完成。</p>
+<p>在 JavaScript 中，递增（++）和递减（ – ）既可以放在变量前面，也可以放在变量后面。放在变量前面时，我们可以称为<strong>前置</strong>递增（递减）运算符，放在变量后面时，我们可以称为<strong>后置</strong>递增（递减）运算符。</p>
+<p>注意：递增和递减运算符必须和变量配合使用。 </p>
+<hr>
+<h4 id="5-3-2-前置递增"><a href="#5-3-2-前置递增" class="headerlink" title="5.3.2 前置递增"></a>5.3.2 前置递增</h4><p>++num 前置递增，就是自加1，类似于 num =  num + 1，但是 ++num 写起来更简单。<br>使用口诀：==先自加==，后返回值</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span>  num = <span class="number">10</span>;</span><br><span class="line">alert(++num + <span class="number">10</span>);   <span class="comment">// 21</span></span><br></pre></td></tr></table></figure>
+
+<br />
+
+<h4 id="5-3-3-后置递增"><a href="#5-3-3-后置递增" class="headerlink" title="5.3.3 后置递增"></a>5.3.3 后置递增</h4><p>1.后置递增运算符</p>
+<p>num++ 后置递增，就是自加1，类似于 num =  num + 1 ，但是 num++ 写起来更简单。<br>使用口诀：先返回原值，==后自加== </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span>  num = <span class="number">10</span>;</span><br><span class="line">alert(<span class="number">10</span> + num++);  <span class="comment">// 20</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="5-3-4-练习"><a href="#5-3-4-练习" class="headerlink" title="5.3.4 练习"></a>5.3.4 练习</h4><p>1.看代码，计算出值</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line">++a;</span><br><span class="line"><span class="keyword">var</span> b = ++a + <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c = <span class="number">10</span>;</span><br><span class="line">c++;</span><br><span class="line"><span class="keyword">var</span> d = c++ + <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(d);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> e = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> f = e++ + ++e;</span><br><span class="line"><span class="built_in">console</span>.log(f);</span><br></pre></td></tr></table></figure>
+
+<p>b14，c13，f22；</p>
+<ul>
+<li><p>f我第一次算成21了；</p>
+</li>
+<li><p>错在：</p>
+<p>e++,虽然返回的是10，但在++e的时候，已经是11了，再加上++e本身先+1，那么++e返回的值是12；</p>
+<p>∴是10+12=22；</p>
+</li>
+<li><p>第一次算成了：10+11=21；错误；</p>
+</li>
+</ul>
+<hr>
+<h4 id="5-3-5-小结"><a href="#5-3-5-小结" class="headerlink" title="5.3.5 小结"></a>5.3.5 小结</h4><ul>
+<li>前置递增和后置递增运算符可以简化代码的编写，让变量的值 + 1  比以前写法更简单</li>
+<li>单独使用时，运行结果相同</li>
+<li>与其他代码联用时，执行结果会不同 </li>
+<li>后置：先原值运算，后自加（先人后己） </li>
+<li>前置：先自加，后运算（先已后人）</li>
+<li>开发时，大多使用后置递增/减，并且代码独占一行，例如：num++; 或者 num–;</li>
+</ul>
+<hr>
+<h3 id="5-4-比较运算符"><a href="#5-4-比较运算符" class="headerlink" title="5.4 比较运算符"></a>5.4 比较运算符</h3><h4 id="5-4-1概述"><a href="#5-4-1概述" class="headerlink" title="5.4.1概述"></a>5.4.1概述</h4><p>1.概念：比较运算符（关系运算符）是两个数据进行比较时所使用的运算符，比较运算后，会返回一个布尔值（true / false）作为比较运算的结果。</p>
+<table>
+<thead>
+<tr>
+<th>运算符名称</th>
+<th>说明</th>
+<th>案例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;</td>
+<td>小于号</td>
+<td>1 &lt; 2</td>
+<td>true</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于号</td>
+<td>1 &gt; 2</td>
+<td>false</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于等于号(大于或者等于)</td>
+<td>2 &gt;= 2</td>
+<td>true</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于等于号(小于或者等于)</td>
+<td>3 &lt;= 2</td>
+<td>false</td>
+</tr>
+<tr>
+<td>==</td>
+<td>判等号（会转型）</td>
+<td>37 == 37</td>
+<td>true</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>不等号</td>
+<td>37 != 37</td>
+<td>false</td>
+</tr>
+<tr>
+<td>===    !==</td>
+<td>全等 要求值和 数据类型都一致</td>
+<td>37 === ‘37’</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<br />
+
+<h4 id="5-4-2-号"><a href="#5-4-2-号" class="headerlink" title="5.4.2 =号"></a>5.4.2 =号</h4><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>作用</th>
+<th>用法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>=</td>
+<td>赋值</td>
+<td>把右边给左边</td>
+</tr>
+<tr>
+<td>==</td>
+<td>判断</td>
+<td>判断两边值是否相等,会转换数据类型</td>
+</tr>
+<tr>
+<td>===</td>
+<td>全等</td>
+<td>判断两边的值 和 数据类型是否完全相同</td>
+</tr>
+</tbody></table>
+<br />
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">18</span> == <span class="string">&#x27;18&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">18</span> === <span class="string">&#x27;18&#x27;</span>); </span><br></pre></td></tr></table></figure>
+
+<p>1.在<code>console.log(18 == &#39;18&#39;);</code>中</p>
+<ul>
+<li>‘18’ 被转换成了 数字类型18；</li>
+<li>而 === 不会；</li>
+</ul>
+<p>2.练习：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> res1 = num1 &gt; num2; <span class="comment">// false  </span></span><br><span class="line"><span class="keyword">var</span> res2 = num1 == <span class="number">11</span>;  <span class="comment">// false </span></span><br><span class="line"><span class="keyword">var</span> res3 = num1 != num2; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>3.问题：</p>
+<ul>
+<li>3.1 !== 是什么？!=，我们认为是不相等；看来都是不相等；</li>
+</ul>
+<p>3.2 百度：<a href="https://zhidao.baidu.com/question/467153011.html">https://zhidao.baidu.com/question/467153011.html</a></p>
+<p>1、比较结果上的区别</p>
+<p>!=返回同类型值比较结果。</p>
+<p>!== 不同类型不比较，且无结果，同类型才比较。</p>
+<p>2、比较过程上的区别</p>
+<p>!= 比较时，若类型不同，会偿试转换类型。</p>
+<p>!== 只有相同类型才会比较。</p>
+<br />
+
+<hr>
+<h3 id="5-5-逻辑运算符"><a href="#5-5-逻辑运算符" class="headerlink" title="5.5 逻辑运算符"></a>5.5 逻辑运算符</h3><h4 id="5-5-1-概述"><a href="#5-5-1-概述" class="headerlink" title="5.5.1 概述"></a>5.5.1 概述</h4><p>概念：逻辑运算符是用来进行布尔值运算的运算符，其返回值也是布尔值。后面开发中经常用于多个条件的判断</p>
+<table>
+<thead>
+<tr>
+<th>逻辑运算符</th>
+<th>说明</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;&amp;</td>
+<td>“逻辑与”，简称“与” and，两边都是 true才返回 true，否则返回 false</td>
+<td>true &amp;&amp; false</td>
+</tr>
+<tr>
+<td>||</td>
+<td>“逻辑或”，简称 “或” or，两边都为 false 才返回 false，否则都为true</td>
+<td>true || false</td>
+</tr>
+<tr>
+<td>!</td>
+<td>“逻辑非“，简称 ”非“ not</td>
+<td>! true</td>
+</tr>
+</tbody></table>
+<br />
+
+<h4 id="5-5-2-逻辑与-amp-amp"><a href="#5-5-2-逻辑与-amp-amp" class="headerlink" title="5.5.2 逻辑与&amp;&amp;"></a>5.5.2 逻辑与&amp;&amp;</h4><p>两边都是 true才返回 true，否则返回 false</p>
+<p><img src="../../img/25/18.png" alt="18"></p>
+<h4 id="5-5-3-逻辑或"><a href="#5-5-3-逻辑或" class="headerlink" title="5.5.3 逻辑或 ||"></a>5.5.3 逻辑或 ||</h4><p>两边都为 false 才返回 false，否则都为true</p>
+<p><img src="../../img/25/19.png" alt="19"></p>
+<h4 id="5-5-4-逻辑非-！"><a href="#5-5-4-逻辑非-！" class="headerlink" title="5.5.4 逻辑非 ！"></a>5.5.4 逻辑非 ！</h4><p>逻辑非（!）也叫作取反符，用来取一个布尔值相反的值，如 true 的相反值是 false</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> isOk = !<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(isOk);  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<br />
+
+<h4 id="5-5-5-练习"><a href="#5-5-5-练习" class="headerlink" title="5.5.5 练习"></a>5.5.5 练习</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">7</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;我爱你~中国~&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num &gt; <span class="number">5</span> &amp;&amp; str.length &gt;= num); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(num &lt; <span class="number">5</span> &amp;&amp; str.length &gt;= num); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(!(num &lt; <span class="number">10</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(!(num &lt; <span class="number">10</span> || str.length == num)); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<br />
+
+<hr>
+<h4 id="5-5-6-短路运算（逻辑中断）"><a href="#5-5-6-短路运算（逻辑中断）" class="headerlink" title="5.5.6 短路运算（逻辑中断）"></a>5.5.6 短路运算（逻辑中断）</h4><p>0.上面都是布尔值参加的逻辑运算 true &amp;&amp; false == false</p>
+<ul>
+<li>如果是 值 123 &amp;&amp; 456 ,或表达式，参与逻辑运算呢？</li>
+</ul>
+<p><strong>短路运算的原理</strong>：当有多个表达式（值）时,左边的表达式值可以确定结果时,就不再继续运算右边的表达式的值;</p>
+<h5 id="1-逻辑与"><a href="#1-逻辑与" class="headerlink" title="1. 逻辑与"></a>1. 逻辑与</h5><ul>
+<li>语法： 表达式1 &amp;&amp; 表达式2</li>
+<li>如果第一个表达式的值为真，则返回表达式2</li>
+<li>如果第一个表达式的值为假，则返回表达式1</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( <span class="number">123</span> &amp;&amp; <span class="number">456</span> );        <span class="comment">// 456</span></span><br><span class="line"><span class="built_in">console</span>.log( <span class="number">0</span> &amp;&amp; <span class="number">456</span> );          <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">console</span>.log( <span class="number">0</span> &amp;&amp; <span class="number">456</span> &amp;&amp; <span class="number">789</span> );   <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">console</span>.log( <span class="number">123</span> &amp;&amp; <span class="number">456</span>&amp;&amp; <span class="number">789</span> );  <span class="comment">// 789</span></span><br></pre></td></tr></table></figure>
+
+<p>2.除了0以外，所有数值都是真的（负数也是吗？）实验一下：</p>
+<p><code>console.log( -20 &amp;&amp; 123);</code>返回了123，看来负数也是返回true;</p>
+<p>3.为==假==的还有：’ ‘，null，undefined，NaN</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log ( <span class="string">&#x27;&#x27;</span> &amp;&amp; <span class="number">1</span>+<span class="number">2</span> &amp;&amp; <span class="number">456</span>); <span class="comment">// &#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<br />
+
+<h5 id="2-逻辑或"><a href="#2-逻辑或" class="headerlink" title="2. 逻辑或"></a>2. 逻辑或</h5><ul>
+<li>语法： 表达式1 || 表达式2</li>
+<li>如果第一个表达式的值为真，则返回表达式1</li>
+<li>如果第一个表达式的值为假，则返回表达式2</li>
+<li>与逻辑与的逻辑中断相反</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( <span class="number">123</span> || <span class="number">456</span> );         <span class="comment">//  123</span></span><br><span class="line"><span class="built_in">console</span>.log( <span class="number">0</span> ||  <span class="number">456</span> );          <span class="comment">//  456</span></span><br><span class="line"><span class="built_in">console</span>.log( <span class="number">0</span> || <span class="number">456</span> || <span class="number">789</span> );    <span class="comment">//  456,第一个值为0位假，返回第二个值，第二个值为456为真，返回本身的值</span></span><br><span class="line"><span class="built_in">console</span>.log( <span class="number">123</span> || <span class="number">456</span> || <span class="number">789</span> );  <span class="comment">//  123</span></span><br></pre></td></tr></table></figure>
+
+<p>2.练习：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> || num++);</span><br><span class="line"><span class="built_in">console</span>.log(num);   </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>2.1 第一次算的的时候：123 与 1；</p>
+<p>==错了==，中断，中断。不是都执行了，而返回的某。是中断，逻辑或短路运算返回123后，就不在执行 num++，</p>
+<p>所以：num 为0，不是1；</p>
+</li>
+</ul>
+<h5 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h5><p>1.逻辑中断很重要，会直接影响是否进行运算，从而影响运算结果。</p>
+<hr>
+<h3 id="5-6-赋值运算符"><a href="#5-6-赋值运算符" class="headerlink" title="5.6 赋值运算符"></a>5.6 赋值运算符</h3><p>1.概念：用来把数据赋值给变量的运算符。</p>
+<ul>
+<li>1.1 虽然可以num++，+1。但如果要+2怎么办？+=2;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>赋值运算符</th>
+<th>说明</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>=</td>
+<td>直接赋值</td>
+<td>var usrName = ‘我是值’;</td>
+</tr>
+<tr>
+<td>+=、-=</td>
+<td>加、减 一个 数 后在赋值</td>
+<td>var age =10; age+=5; //15</td>
+</tr>
+<tr>
+<td>*=、/=、%=</td>
+<td>乘、除、取模 后再赋值</td>
+<td>var age =2; age*=5; //10</td>
+</tr>
+</tbody></table>
+<p>2.例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">10</span>;</span><br><span class="line">age += <span class="number">5</span>;  <span class="comment">// 相当于 age = age + 5;</span></span><br><span class="line">age -= <span class="number">5</span>;  <span class="comment">// 相当于 age = age - 5;</span></span><br><span class="line">age *= <span class="number">10</span>; <span class="comment">// 相当于 age = age * 10;</span></span><br></pre></td></tr></table></figure>
+
+<br />
+
+<h3 id="5-7-运算符优先级"><a href="#5-7-运算符优先级" class="headerlink" title="5.7 运算符优先级"></a>5.7 运算符优先级</h3><table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>运算符</th>
+<th>顺序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>小括号</td>
+<td>()</td>
+</tr>
+<tr>
+<td>2</td>
+<td>一元运算符：递加，递减，非</td>
+<td>++、 – 、!</td>
+</tr>
+<tr>
+<td>3</td>
+<td>算术运算符</td>
+<td>先* / %, 后 + -</td>
+</tr>
+<tr>
+<td>4</td>
+<td>关系运算符</td>
+<td>&gt;、 &gt;=、 &lt; 、&lt;=</td>
+</tr>
+<tr>
+<td>5</td>
+<td>相等运算符</td>
+<td>==、 != 、===、 !==</td>
+</tr>
+<tr>
+<td>6</td>
+<td>逻辑运算符</td>
+<td>先&amp;&amp; , 后 ||</td>
+</tr>
+<tr>
+<td>7</td>
+<td>赋值运算符</td>
+<td>=</td>
+</tr>
+<tr>
+<td>8</td>
+<td>逗号运算符</td>
+<td>,</td>
+</tr>
+</tbody></table>
+<ul>
+<li>一元运算符里面的逻辑非优先级很高</li>
+<li>逻辑与比逻辑或优先级高</li>
+</ul>
+<p>2.逗号是什么运算符？？？？怎么运算的？</p>
+<p>2.1 逗号运算符，它将先计算左边的参数，再计算右边的参数值。然后返回最右边参数的值。</p>
+<p>2.2 例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>, b = <span class="number">20</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CommaTest</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a++, b++, <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> c = CommaTest();</span><br><span class="line"> </span><br><span class="line">alert(a); <span class="comment">// 返回11</span></span><br><span class="line">alert(b); <span class="comment">// 返回21</span></span><br><span class="line">alert(c); <span class="comment">// 返回10</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>变量c的值是函数CommaTest返回的值。而a和b多加1了，但不是函数返回的值。</li>
+<li>来源：<a href="https://www.cnblogs.com/taohuaya/p/10955117.html；">https://www.cnblogs.com/taohuaya/p/10955117.html；</a></li>
+</ul>
+<p>3.练习：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( <span class="number">4</span> &gt;= <span class="number">6</span> || <span class="string">&#x27;人&#x27;</span> != <span class="string">&#x27;阿凡达&#x27;</span> &amp;&amp; !(<span class="number">12</span> * <span class="number">2</span> == <span class="number">144</span>) &amp;&amp; <span class="literal">true</span>) <span class="comment">//true</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log( <span class="number">5</span> == num / <span class="number">2</span> &amp;&amp; (<span class="number">2</span> + <span class="number">2</span> * num).toString() === <span class="string">&#x27;22&#x27;</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>3.1 第一个：<code>console.log( 4 &gt;= 6 || &#39;人&#39; != &#39;阿凡达&#39; &amp;&amp; !(12 * 2 == 144) &amp;&amp; true)</code></p>
+<ul>
+<li>1.你以为是去找括号？不是，这里是判断真假，不是数学运算，找出结构</li>
+<li>2.找到结构：||,&amp;&amp;。有一个逻辑或，两个逻辑与；</li>
+<li>3.先算逻辑与</li>
+<li>3.1 第一个逻辑与：<code>&#39;人&#39; != &#39;阿凡达&#39; &amp;&amp; !(12 * 2 == 144)</code></li>
+<li>3.2 true &amp;&amp; true = true</li>
+<li>3.3 第二个逻辑与：<code>!(12 * 2 == 144) &amp;&amp; true</code><ul>
+<li>也许，会纠结：是计算<code>!(12 * 2 == 144) &amp;&amp; true</code>，还是计算<code>前面逻辑与的结果 &amp;&amp; true</code></li>
+<li>视频里面是计算<code>!(12 * 2 == 144) &amp;&amp; true</code></li>
+<li>两边都是true，结果为true；</li>
+</ul>
+</li>
+<li>3.4 逻辑与计算完了，计算逻辑或</li>
+<li><code>4 &gt;= 6 ||true</code>，虽然左边是false，但右边是true。所以还是true；</li>
+<li>4.结果为：true；</li>
+</ul>
+<p>4.练习2：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">3</span> &gt; <span class="number">5</span> &amp;&amp; <span class="number">2</span> &lt; <span class="number">7</span> &amp;&amp; <span class="number">3</span> == <span class="number">4</span>; <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(a);  </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = <span class="number">3</span> &lt;= <span class="number">4</span> || <span class="number">3</span> &gt; <span class="number">1</span> || <span class="number">3</span> != <span class="number">2</span>; <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(b); </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c = <span class="number">2</span> === <span class="string">&quot;2&quot;</span>; <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(c);  </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> d = !c || b &amp;&amp; a ; <span class="comment">// ture</span></span><br><span class="line"><span class="built_in">console</span>.log(d);</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="6-JS流程控制-分支"><a href="#6-JS流程控制-分支" class="headerlink" title="6. JS流程控制-分支"></a>6. JS流程控制-分支</h2><p>1.目标：</p>
+<ul>
+<li>能够使用 if 分支语句</li>
+<li>能够使用 switch 分支语句</li>
+<li>能够使用三元表达式</li>
+</ul>
+<h3 id="6-1-流程控制"><a href="#6-1-流程控制" class="headerlink" title="6.1 流程控制"></a>6.1 流程控制</h3><p>1.在一个程序执行的过程中，各条代码的执行顺序对程序的结果是有直接影响的。很多时候我们要通过控制代码的执行顺序来实现我们要完成的功能。</p>
+<p>2.简单理解： 流程控制就是来控制我们的代码按照什么结构顺序来执行</p>
+<p>3.流程控制主要有三种结构，分别是<strong>顺序结构</strong>、<strong>分支结构</strong>和<strong>循环结构</strong>，这三种结构代表三种代码执行的顺序。</p>
+<p><img src="../../img/25/20.png" alt="20"></p>
+<br />
+
+<h3 id="6-2-顺序流程控制"><a href="#6-2-顺序流程控制" class="headerlink" title="6.2 顺序流程控制"></a>6.2 顺序流程控制</h3><p>1.顺序结构是程序中最简单、最基本的流程控制，它没有特定的语法结构，程序会按照代码的先后顺序，依次执行，程序中大多数的代码都是这样执行的。</p>
+<hr>
+<h3 id="6-3-分支流程控制"><a href="#6-3-分支流程控制" class="headerlink" title="6.3 分支流程控制"></a>6.3 分支流程控制</h3><p>1.分支结构：由上到下执行代码的过程中，根据不同的条件，执行不同的路径代码（执行代码多选一的过程），从而得到不同的结果</p>
+<p>2.JS 语言提供了两种分支结构语句</p>
+<ul>
+<li>if 语句</li>
+<li>switch 语句</li>
+</ul>
+<h4 id="6-3-1-if语句"><a href="#6-3-1-if语句" class="headerlink" title="6.3.1 if语句"></a>6.3.1 if语句</h4><h5 id="1-语法结构"><a href="#1-语法结构" class="headerlink" title="1. 语法结构"></a>1. 语法结构</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 条件成立执行代码，否则什么也不做</span></span><br><span class="line"><span class="keyword">if</span> (条件表达式) &#123;</span><br><span class="line">    <span class="comment">// 条件成立执行的代码语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>语句可以理解为一个行为，循环语句和分支语句就是典型的语句。一个程序由很多个语句组成，一般情况下，会分割成一个一个的语句。</p>
+<h5 id="2-执行流程"><a href="#2-执行流程" class="headerlink" title="2. 执行流程"></a>2. 执行流程</h5><p><img src="http://bucket-c70.test.upcdn.net/25/21.png" alt="21"></p>
+<br />
+
+<h5 id="3-案例"><a href="#3-案例" class="headerlink" title="3. 案例"></a>3. 案例</h5><p>1.弹出一个输入框，要求用户输入年龄，如果年龄大于等于 18 岁，允许进网吧。</p>
+<p>2.分析：</p>
+<ul>
+<li>弹出 prompt 输入框，用户输入年龄， 程序把这个值取过来保存到变量中</li>
+<li>使用 if 语句来判断年龄，如果年龄大于18 就执行 if 大括号里面的输出语句</li>
+</ul>
+<p>3.代码，自：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> ages = prompt(<span class="string">&#x27;请输入你的年龄&#x27;</span>);</span></span><br><span class="line">        if (ages &gt;= 18)&#123;</span><br><span class="line"><span class="javascript">            alert(<span class="string">&#x27;欢迎来到虚拟世界&#x27;</span>);</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="javascript">            alert(<span class="string">&#x27;抱歉，根据国家规定，暂时不能让贵客进入&#x27;</span>);</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>资料：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> usrAge = prompt(<span class="string">&#x27;请输入您的年龄：&#x27;</span>);</span><br><span class="line"><span class="keyword">if</span>(usrAge &gt;= <span class="number">18</span>)&#123;</span><br><span class="line">    alert(<span class="string">&#x27;您的年龄合法，欢迎来天际网吧享受学习的乐趣！&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<hr>
+<h4 id="6-3-2-if-else语句"><a href="#6-3-2-if-else语句" class="headerlink" title="6.3.2 if else语句"></a>6.3.2 if else语句</h4><p>1.双分支语句</p>
+<h5 id="1-语法结构-1"><a href="#1-语法结构-1" class="headerlink" title="1. 语法结构"></a>1. 语法结构</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 条件成立  执行 if 里面代码，否则执行else 里面的代码</span></span><br><span class="line"><span class="keyword">if</span> (条件表达式) &#123;</span><br><span class="line">    <span class="comment">// [如果] 条件成立执行的代码</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// [否则] 执行的代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<h5 id="2-执行过程-1"><a href="#2-执行过程-1" class="headerlink" title="2. 执行过程"></a>2. 执行过程</h5><p><img src="http://bucket-c70.test.upcdn.net/25/22.png" alt="22"></p>
+<br />
+
+<h5 id="3-案例-判断闰年"><a href="#3-案例-判断闰年" class="headerlink" title="3. 案例-判断闰年"></a>3. 案例-判断闰年</h5><p>1.接收用户输入的年份，如果是闰年就弹出闰年，否则弹出是平年</p>
+<p>2.分析：</p>
+<ul>
+<li>算法：能被4整除,且,不能被100整除的为闰年（如2004年就是闰年，1901年不是闰年）或者能够被 400 整除的就是闰年</li>
+<li>弹出prompt 输入框，让用户输入年份，把这个值取过来保存到变量中</li>
+<li>使用 if 语句来判断是否是闰年，如果是闰年，就执行 if 大括号里面的输出语句，否则就执行 else里面的输出语句</li>
+<li>一定要注意里面的且 &amp;&amp;  还有或者 || 的写法，同时注意判断整除的方法是取余为 0</li>
+</ul>
+<p>3.代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> != <span class="number">0</span> || year % <span class="number">400</span> == <span class="number">0</span>) &#123;</span><br><span class="line">   alert(<span class="string">&quot;这个年份是闰年&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123; <span class="comment">// 剩下的是平年</span></span><br><span class="line">   alert(<span class="string">&quot;这个年份是平年&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>自：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> year1 = prompt(<span class="string">&#x27;请输入年份&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> year2 = year1 % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year1 % <span class="number">100</span> != <span class="number">0</span> || year1 % <span class="number">400</span> == <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (year2) &#123;</span><br><span class="line">      alert(<span class="string">&#x27;这是闰年&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> &#123;</span><br><span class="line">      alert(<span class="string">&#x27;这是平年&#x27;</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<h4 id="6-3-3-if-else-if"><a href="#6-3-3-if-else-if" class="headerlink" title="6.3.3 if+else if"></a>6.3.3 if+else if</h4><h5 id="1-语法结构-2"><a href="#1-语法结构-2" class="headerlink" title="1. 语法结构"></a>1. 语法结构</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 适合于检查多重条件。</span></span><br><span class="line"><span class="keyword">if</span> (条件表达式<span class="number">1</span>) &#123;</span><br><span class="line">    语句<span class="number">1</span>；</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (条件表达式<span class="number">2</span>)  &#123;</span><br><span class="line">    语句<span class="number">2</span>；</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (条件表达式<span class="number">3</span>)  &#123;</span><br><span class="line">   语句<span class="number">3</span>；</span><br><span class="line"> ....</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 上述条件都不成立执行此处代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<h5 id="2-执行过程-2"><a href="#2-执行过程-2" class="headerlink" title="2. 执行过程"></a>2. 执行过程</h5><img src="http://bucket-c70.test.upcdn.net/25/23.png" alt="23" style="zoom:80%;" />
+
+<br />
+
+<h5 id="3-案例："><a href="#3-案例：" class="headerlink" title="3. 案例："></a>3. 案例：</h5><p>1.案例： 判断成绩级别</p>
+<p>2.要求：</p>
+<p>要求：接收用户输入的分数，根据分数输出对应的等级字母 A、B、C、D、E。<br>其中：<br>1.90分(含)以上 ，输出：A</p>
+<p>2.80分(含)~ 90 分(不含)，输出：B</p>
+<p>3.70分(含)~ 80 分(不含)，输出：C</p>
+<p>4.60分(含)~ 70 分(不含)，输出：D</p>
+<p>5.60分(不含) 以下，输出： E</p>
+<p>3.分析：</p>
+<ul>
+<li>按照从大到小判断的思路</li>
+<li>弹出prompt输入框，让用户输入分数，把这个值取过来保存到变量中</li>
+<li>使用多分支 if else if 语句来分别判断输出不同的值</li>
+</ul>
+<p>4.代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> score = prompt(<span class="string">&#x27;请您输入分数:&#x27;</span>);</span><br><span class="line"><span class="keyword">if</span> (score &gt;= <span class="number">90</span>) &#123;</span><br><span class="line">alert(<span class="string">&#x27;宝贝，你是我的骄傲&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (score &gt;= <span class="number">80</span>) &#123;</span><br><span class="line">alert(<span class="string">&#x27;宝贝，你已经很出色了&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (score &gt;= <span class="number">70</span>) &#123;</span><br><span class="line">alert(<span class="string">&#x27;你要继续加油喽&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (score &gt;= <span class="number">60</span>) &#123;</span><br><span class="line">alert(<span class="string">&#x27;孩子，你很危险&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">alert(<span class="string">&#x27;熊孩子，我不想和你说话，我只想用鞭子和你说话&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>自：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> chengJi = prompt(<span class="string">&#x27;请输入成绩分数&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (chengJi &gt;= <span class="number">90</span>) &#123;</span><br><span class="line">            alert(<span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (chengJi &gt;= <span class="number">80</span>) &#123;</span><br><span class="line">            alert(<span class="string">&#x27;B&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (chengJi &gt;= <span class="number">70</span>) &#123;</span><br><span class="line">            alert(<span class="string">&#x27;C&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (chengJi &gt;= <span class="number">60</span>) &#123;</span><br><span class="line">            alert(<span class="string">&#x27;D&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            alert(<span class="string">&#x27;E&#x27;</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.问题：为什么这么写，80分一下都是B？</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> chengJi = prompt(<span class="string">&#x27;请输入成绩分数&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (chengJi &gt;= <span class="number">90</span>) &#123;</span><br><span class="line">            alert(<span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">80</span> &lt;= chengJi &lt; <span class="number">90</span>) &#123;</span><br><span class="line">            alert(<span class="string">&#x27;B&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">70</span> &lt;= chengJi &lt; <span class="number">80</span>) &#123;</span><br><span class="line">            alert(<span class="string">&#x27;C&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">60</span> &lt;= chengJi &lt; <span class="number">70</span>) &#123;</span><br><span class="line">            alert(<span class="string">&#x27;D&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            alert(<span class="string">&#x27;E&#x27;</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>5.1 根据实验，这样的写法：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">80</span> &lt;= chengJi &lt; <span class="number">90</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>先算：80 &lt;= chengJi，返回true or false，true变成1，false变成0。再与 &lt; 90 计算；</p>
+</li>
+<li><p>记住，是 80小于等于chengJi，不是chengJi &gt;= 80。不要搞反了</p>
+<p>如果搞反：假设cj是85，那么80 &lt;= chengJi 返回 true , chengJi &gt;= 80也是true；….emmm</p>
+<p>好吧，还是结果一样，意义不一样；2020-9-24 00:52:42</p>
+</li>
+</ul>
+</li>
+<li><p>5.2 如何能写这样的，区间模样的呢？</p>
+<ul>
+<li>用逻辑运算符：chengJi &gt;= 80 &amp;&amp; chengJi &lt; 90；</li>
+<li>即使：80 &lt;= chengJi &amp;&amp; chengJi &lt; 90，结果一样。但意义不一样：chengJi &gt;= 80，是chengJi与80做比较。而80 &lt;= chengJi，是80与chengJi做比较；</li>
+</ul>
+</li>
+</ul>
+<p>6.</p>
+<br />
+
+<h4 id="6-3-4-switch"><a href="#6-3-4-switch" class="headerlink" title="6.3.4 switch"></a>6.3.4 switch</h4><p>分支流程控制 switch 语句</p>
+<h5 id="1-语法结构-3"><a href="#1-语法结构-3" class="headerlink" title="1 语法结构"></a>1 语法结构</h5><p>1.switch 语句也是多分支语句，它用于基于不同的条件来执行不同的代码。当要针对变量设置一系列的特定值的选项时，就可以使用 switch。</p>
+<p>2.有固定的值，就适合用switch。区间值：大于，小于等等，适合用if else if 它们；</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>( 表达式 )&#123; </span><br><span class="line">    <span class="keyword">case</span> value1:</span><br><span class="line">        <span class="comment">// 表达式 等于 value1 时要执行的代码</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> value2:</span><br><span class="line">        <span class="comment">// 表达式 等于 value2 时要执行的代码</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="comment">// 表达式 不等于任何一个 value 时要执行的代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 例子：</span></span><br><span class="line"><span class="keyword">switch</span> (<span class="number">2</span>)&#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;这是1&#x27;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;这是2&#x27;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;这是3&#x27;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;没有匹配结果&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>switch ：开关 转换  ， <a href="https://fanyi.baidu.com/?aldtype=16047#en/zh/case">case</a> ：小例子   选项</li>
+<li>关键字 switch 后面括号内可以是表达式或值， 通常是一个变量</li>
+<li>关键字 case , 后跟一个选项的表达式或值，后面跟一个冒号</li>
+<li>switch 表达式的值会与结构中的 case 的值做比较 </li>
+<li>如果存在==匹配全等==(===) ，则与该 case 关联的代码块会被执行，并在遇到 break 时停止，整个 switch 语句代码执行结束</li>
+<li>如果所有的 case 的值都和表达式的值不匹配，则执行 default 里的代码</li>
+</ul>
+<h5 id="2-注意事项"><a href="#2-注意事项" class="headerlink" title="2 注意事项"></a>2 注意事项</h5><p>1.我们在开发里面，表达式经常写成变量</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num =<span class="number">3</span>;</span><br><span class="line"><span class="keyword">switch</span>(num) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.num与case里的值，是全等关系。值和数据都一样才行；</p>
+<p>3.break：如果当前的case里面没有break，则不会退出switch，是继续执行下一个case；</p>
+<h5 id="3-案例-1"><a href="#3-案例-1" class="headerlink" title="3 案例"></a>3 案例</h5><p>1.查询水果：用户在弹出框里面输入一个水果，如果有就弹出该水果的价格， 如果没有该水果就弹出“没有此水果”。</p>
+<p>2.案例分析：</p>
+<ul>
+<li>弹出 prompt 输入框，让用户输入水果名称，把这个值取过来保存到变量中。</li>
+<li>将这个变量作为 switch 括号里面的表达式。</li>
+<li>case 后面的值写几个不同的水果名称，注意一定要加引号 ，因为必须是全等匹配。</li>
+<li>弹出不同价格即可。同样注意每个 case 之后加上 break ，以便退出 switch 语句。</li>
+<li>将 default 设置为没有此水果。</li>
+</ul>
+<p>3.代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> fruit = prompt(<span class="string">&#x27;请您输入查询的水果:&#x27;</span>);</span><br><span class="line"><span class="keyword">switch</span> (fruit) &#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;苹果&#x27;</span>:</span><br><span class="line">alert(<span class="string">&#x27;苹果的价格是 3.5/斤&#x27;</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;榴莲&#x27;</span>:</span><br><span class="line">alert(<span class="string">&#x27;榴莲的价格是 35/斤&#x27;</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">alert(<span class="string">&#x27;没有此水果&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>自：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> shuiGuo = prompt(<span class="string">&#x27;请输入要查价格的水果名称&#x27;</span>);</span><br><span class="line"><span class="keyword">switch</span>(shuiGuo)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;pingGuo&#x27;</span>:</span><br><span class="line">    alert(<span class="string">&#x27;苹果1元/斤&#x27;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;liZi&#x27;</span>:alert(<span class="string">&#x27;梨子2元/斤&#x27;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">    alert(<span class="string">&#x27;目前暂时没有收录此水果信息&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<h4 id="6-3-5-区别"><a href="#6-3-5-区别" class="headerlink" title="6.3.5 区别"></a>6.3.5 区别</h4><p>1.switch 语句和 if else if 语句的区别</p>
+<p>2.一般情况下，它们两个语句可以相互替换</p>
+<ul>
+<li><p>switch…case 语句通常处理 case为比较确定值的情况， 而 if…else…语句更加灵活，常用于范围判断(大于、等于某个范围)</p>
+</li>
+<li><p>switch 语句进行条件判断后==直接执行==到程序的条件语句，效率更高。而if…else 语句有几种条件，就得判断多少次。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> shuiGuo = prompt(<span class="string">&#x27;请输入要查价格的水果名称&#x27;</span>);</span><br><span class="line"><span class="keyword">switch</span>(shuiGuo)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;pingGuo&#x27;</span>:</span><br><span class="line">    alert(<span class="string">&#x27;苹果1元/斤&#x27;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;liZi&#x27;</span>:alert(<span class="string">&#x27;梨子2元/斤&#x27;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">    alert(<span class="string">&#x27;目前暂时没有收录此水果信息&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果输入’liZi’，直接跳到第二个case。解释器不会去解释其他case；if else 得一条条解释看满足条件没；</li>
+</ul>
+</li>
+<li><p>当分支比较少时，if… else语句的执行效率比 switch语句高。</p>
+</li>
+<li><p>当分支比较多时，switch语句的执行效率比较高，而且结构更清晰。 </p>
+</li>
+</ul>
+<hr>
+<h3 id="6-4-三元表达式"><a href="#6-4-三元表达式" class="headerlink" title="6.4 三元表达式"></a>6.4 三元表达式</h3><p>1.三元表达式也能做一些简单的条件选择。 有三元运算符组成的式子称为三元表达式</p>
+<p>2.语法结构：</p>
+<p>表达式1 ? 表达式2 : 表达式3;</p>
+<p>3.执行思路 </p>
+<ul>
+<li>如果表达式1为 true ，则返回表达式2的值，如果表达式1为 false，则返回表达式3的值</li>
+<li>简单理解： 就类似于  if  else （双分支） 的简写</li>
+</ul>
+<p>4.案例 - 数字补0：</p>
+<p>用户输入数字，如果数字小于10，则在前面补 0 ，比如01，09 ，如果数字大于10，则不需要补，比如 20。</p>
+<p>5.案例分析：</p>
+<ul>
+<li>用户输入0~59之间的一个数字</li>
+<li>如果数字小于10，则在这个数字前面补0,（加0） 否则  不做操作</li>
+<li>用一个变量接受这个返回值，输出</li>
+</ul>
+<p>6.代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> time = prompt(<span class="string">&#x27;请您输入一个 0 ~ 59 之间的一个数字&#x27;</span>);</span><br><span class="line"><span class="comment">// 三元表达式 表达式 ？ 表达式1 ：表达式2 </span></span><br><span class="line"><span class="keyword">var</span> result = time &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + time : time; <span class="comment">// 把返回值赋值给一个变量</span></span><br><span class="line">alert(result);</span><br></pre></td></tr></table></figure>
+
+<p>自：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="built_in">parseInt</span>(prompt(<span class="string">&#x27;请输入数字&#x27;</span>));</span><br><span class="line"><span class="keyword">var</span> jieGuo = num1 &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + num1 : num1;</span><br><span class="line"><span class="keyword">if</span> ( <span class="number">0</span>&lt;num1 &amp;&amp; num1 &lt; <span class="number">60</span>) &#123;</span><br><span class="line">    alert(jieGuo);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    alert(<span class="string">&#x27;请输入0~59的数字&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<hr>
+<h2 id="7-js流程控制-循环"><a href="#7-js流程控制-循环" class="headerlink" title="7. js流程控制-循环"></a>7. js流程控制-循环</h2>]]></content>
       <tags>
         <tag>JS</tag>
       </tags>
@@ -8940,7 +9173,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <p>2.B站发布的视频有严格的要求，很容易被B站二压</p>
 <a id="more"></a>
 
-<p><img src="../img/26/1.png" alt="1"></p>
+<p><img src="../../img/26/1.png" alt="1"></p>
 <p>3.软件资源：</p>
 <p><a href="https://pan.baidu.com/s/1VHonGHoZ0DmQBNZaRjML2A">https://pan.baidu.com/s/1VHonGHoZ0DmQBNZaRjML2A</a><br>提取码: crhu</p>
 <ul>
@@ -8948,12 +9181,10 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <li>要找最新版，要去搜索 微博@小丸酱</li>
 </ul>
 <p>4.软件预览：</p>
-<img src="../img/26/2.png" alt="2" style="zoom:100%;" />
-
+<p>&lt;../img src=”../../img/26/2.png” alt=”2” style=”zoom:100%;” /&gt;</p>
 <hr>
 <h3 id="1-2-B站投稿限制"><a href="#1-2-B站投稿限制" class="headerlink" title="1.2 B站投稿限制"></a>1.2 B站投稿限制</h3><p>1.以前分辨率最高是1080P；</p>
-<img src="../img/26/3.png" alt="3" style="zoom:90%;" />
-
+<p>&lt;../img src=”../../img/26/3.png” alt=”3” style=”zoom:90%;” /&gt;</p>
 <ul>
 <li>这是别人2019-08-24 13:05:13投稿的教学视频</li>
 <li>网址：<a href="https://www.bilibili.com/video/BV1L4411R75X?t=268">https://www.bilibili.com/video/BV1L4411R75X?t=268</a><ul>
@@ -8967,8 +9198,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <li>视频目标码率+音频目标码率(只是自己得出的假设概念)</li>
 </ul>
 <p>2.现在可以4k了；2020-9-19 03:12:46</p>
-<img src="../img/26/1.png" alt="1" style="zoom:90%;" />
-
+<p>&lt;../img src=”../../img/26/1.png” alt=”1” style=”zoom:90%;” /&gt;</p>
 <ul>
 <li>不知道什么时候改版</li>
 <li>但我屏幕就只有1080P，不过我也不需要录制2K及以上的视频</li>
@@ -8995,7 +9225,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <p>作者：吱吱吱果冻柠檬<br>链接：<a href="https://www.zhihu.com/question/401033586/answer/1295057660">https://www.zhihu.com/question/401033586/answer/1295057660</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <ul>
 <li><p>可是小丸工具箱里面只有一个码率设置。不知道是固定码率，还是最高码率啊</p>
-<p><img src="../img/26/4.png" alt="4"></p>
+<p><img src="../../img/26/4.png" alt="4"></p>
 </li>
 <li><p>百度一下，看能百度到不；2020-9-19 03:20:33</p>
 <p>没有百度到</p>
@@ -9028,7 +9258,7 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <li><p>1.Bandicam游戏录像下来的视频，在小丸工具箱的MediaTinfo里面看不到最高码率的参数与数据</p>
 </li>
 <li><p>2.但被小丸压制过的视频，有这个参数与数据</p>
-<p><img src="../img/26/5.png" alt="5"></p>
+<p><img src="../../img/26/5.png" alt="5"></p>
 <p>2.2 在最下面的详细信息里面</p>
 </li>
 </ul>
@@ -9043,6 +9273,28 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 </li>
 </ul>
 <p>5.</p>
+<br />
+
+<hr>
+<h2 id="2-Dism-x64"><a href="#2-Dism-x64" class="headerlink" title="2.Dism++x64"></a>2.Dism++x64</h2><p>1.自定义清理：</p>
+<p><a href="http://www.chuyu.me/zh-Hans/Document.html?file=Dism++Library/自定义规则.md">http://www.chuyu.me/zh-Hans/Document.html?file=Dism++Library/自定义规则.md</a></p>
+<p>2020-9-23 01:06:44</p>
+<p><img src="../../img/26/6.png" alt="6"></p>
+<p>2.</p>
+<p><img src="../../img/26/7.png" alt="7"></p>
+<br />
+
+<hr>
+<h2 id="3-RPG-maker-翻译器"><a href="#3-RPG-maker-翻译器" class="headerlink" title="3. RPG maker 翻译器"></a>3. RPG maker 翻译器</h2><p>1.9做的翻译器；</p>
+<p>2.来源：<a href="https://afdian.net/@AdventCirno">https://afdian.net/@AdventCirno</a></p>
+<ul>
+<li>下载也是这个页面，9一般都在这里更新，比群好用；</li>
+</ul>
+<p>3.预览：</p>
+<p><img src="../../img/26/8.png" alt="8"></p>
+<br />
+
+<p><img src="../../img/26/9.png" alt="9"></p>
 <br />
 
 <hr>
