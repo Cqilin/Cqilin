@@ -42,7 +42,7 @@
 <meta property="og:image" content="http://bucket-c70.test.upcdn.net/7/3.png">
 <meta property="og:image" content="http://bucket-c70.test.upcdn.net/7/5.png">
 <meta property="article:published_time" content="2020-07-22T16:05:27.000Z">
-<meta property="article:modified_time" content="2020-09-19T19:02:16.471Z">
+<meta property="article:modified_time" content="2020-09-27T20:06:06.857Z">
 <meta property="article:author" content="qilin">
 <meta property="article:tag" content="problem">
 <meta name="twitter:card" content="summary">
@@ -164,7 +164,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">30</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
 
   </li>
         <li class="menu-item menu-item-guestbook">
@@ -244,7 +244,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -325,7 +325,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-20 03:02:16" itemprop="dateModified" datetime="2020-09-20T03:02:16+08:00">2020-09-20</time>
+                <time title="修改时间：2020-09-28 04:06:06" itemprop="dateModified" datetime="2020-09-28T04:06:06+08:00">2020-09-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -609,12 +609,16 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <p>2.实验得出，是永久链接的问题</p>
 <ul>
 <li><p>1.如果永久链接是：<code>permalink: :title/</code>，就会在本地文件夹下创建–以文件名称 (relative to “source/_posts/“ folder)为名称的文件夹</p>
+<ul>
+<li>永久链接规则：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/permalinks.html">https://hexo.io/zh-cn/docs/permalinks.html</a></li>
+</ul>
 </li>
 <li><p>2.同时因为它是看source/_posts/目录下的文件。</p>
 <p>实验得出，在source/_posts/目录下，创建新目录存储md文件，本地也是创建新目录存储新文件。</p>
 <ul>
 <li>G:\1-sanciyuan\11-qilin_meiyao_luka.deploy_git\1-(0~50)</li>
 <li>G:\1-sanciyuan\11-qilin_meiyao_luka\source_posts\1-(0~50)</li>
+<li>如果是<code>permalink: :name/</code>只会收录文件名，不会收录这个目录下的文件夹。就算新建一个文件夹把md文件放进去，也不会在本地创建那个文件夹（推理，未实验）</li>
 </ul>
 </li>
 <li><p>3.目前就用这个方法来整理，本地图片需要多一个../</p>
@@ -623,6 +627,7 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 </ul>
 </li>
 </ul>
+<hr>
 
     </div>
 
@@ -705,12 +710,12 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">273k</span>
+    <span title="站点总字数">360k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:08</span>
+    <span title="站点阅读时长">5:27</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Amita:300,300italic,400,400italic,700,700italic|Montserrat:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-loading-bar.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"cqilin.gitee.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1. 概述1.1 原理使用媒体查询针对不同宽度的设备进行布局和样式的设置，从而适配不同设备的目的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12.3-响应式布局">
+<meta property="og:url" content="https://cqilin.gitee.io/1-(0~50)/12.3-Responsive_layout/index.html">
+<meta property="og:site_name" content="qilin&#39;s blog">
+<meta property="og:description" content="1. 概述1.1 原理使用媒体查询针对不同宽度的设备进行布局和样式的设置，从而适配不同设备的目的。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.3/1.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.3/2.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.3/3.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.3/4.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.3/5.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.3/6.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.3/7.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.3/8.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.3/9.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.3/10.png">
+<meta property="article:published_time" content="2020-10-23T17:37:31.000Z">
+<meta property="article:modified_time" content="2020-10-28T02:36:44.938Z">
+<meta property="article:author" content="qilin">
+<meta property="article:tag" content="web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cqilin.gitee.io/img/12.3/1.png">
+
+<link rel="canonical" href="https://cqilin.gitee.io/1-(0~50)/12.3-Responsive_layout/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>12.3-响应式布局 | qilin's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">qilin's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">web学习笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">25</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a>
+
+  </li>
+        <li class="menu-item menu-item-guestbook">
+
+    <a href="/guestbook/" rel="section"><i class="fa fa-comment fa-fw"></i>留言</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%A6%82%E8%BF%B0"><span class="nav-text">1. 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%8E%9F%E7%90%86"><span class="nav-text">1.1 原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8"><span class="nav-text">1.2 布局容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E6%A1%88%E4%BE%8B%EF%BC%9A%E5%AF%BC%E8%88%AA"><span class="nav-text">1.3 案例：导航</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-text">1. 需求分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="nav-text">2. 代码：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Bootstrap"><span class="nav-text">2. Bootstrap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E7%AE%80%E4%BB%8B"><span class="nav-text">2.1 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%98%E7%82%B9"><span class="nav-text">1. 优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%89%88%E6%9C%AC"><span class="nav-text">2. 版本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E4%BD%BF%E7%94%A8"><span class="nav-text">2.2 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">1. 创建文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BAhtml%E9%AA%A8%E6%9E%B6%E7%BB%93%E6%9E%84"><span class="nav-text">2. 创建html骨架结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E8%BE%93%E5%85%A5%E5%86%85%E5%AE%B9"><span class="nav-text">4. 输入内容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8"><span class="nav-text">2.3 布局容器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F"><span class="nav-text">3. 栅格系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E7%AE%80%E4%BB%8B"><span class="nav-text">3.1 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%8F%82%E6%95%B0"><span class="nav-text">3.2 参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E5%88%97%E5%B5%8C%E5%A5%97"><span class="nav-text">3.3 列嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4%E5%88%97%E5%81%8F%E7%A7%BB"><span class="nav-text">3.4列偏移</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%B1%85%E4%B8%AD"><span class="nav-text">2. 居中</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E5%88%97%E6%8E%92%E5%BA%8F"><span class="nav-text">3.5 列排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B7%A5%E5%85%B7"><span class="nav-text">3.6 响应式工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-%E6%A1%88%E4%BE%8B"><span class="nav-text">3.7 案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="nav-text">1. 技术选型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-text">2. 需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80"><span class="nav-text">2.1 页面布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-%E5%B1%8F%E5%B9%95%E5%88%92%E5%88%86"><span class="nav-text">2.2 屏幕划分</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C"><span class="nav-text">3. 页面制作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-container%E4%BF%AE%E6%94%B9"><span class="nav-text">3.2 container修改</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3-logo%E5%88%B6%E4%BD%9C"><span class="nav-text">3.3 logo制作</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x-%E8%B5%84%E6%96%99"><span class="nav-text">x. 资料</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="qilin"
+      src="/images/7.jpg">
+  <p class="site-author-name" itemprop="name">qilin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cqilin.gitee.io/1-(0~50)/12.3-Responsive_layout/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/7.jpg">
+      <meta itemprop="name" content="qilin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="qilin's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          12.3-响应式布局
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-24 01:37:31" itemprop="dateCreated datePublished" datetime="2020-10-24T01:37:31+08:00">2020-10-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-28 10:36:44" itemprop="dateModified" datetime="2020-10-28T10:36:44+08:00">2020-10-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html-css/" itemprop="url" rel="index"><span itemprop="name">html_css</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/1-(0~50)/12.3-Responsive_layout/" class="post-meta-item leancloud_visitors" data-flag-title="12.3-响应式布局" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/1-(0~50)/12.3-Responsive_layout/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/1-(0~50)/12.3-Responsive_layout/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>16k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>15 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h2><h3 id="1-1-原理"><a href="#1-1-原理" class="headerlink" title="1.1 原理"></a>1.1 原理</h3><p>使用媒体查询针对不同宽度的设备进行布局和样式的设置，从而适配不同设备的目的。</p>
+<a id="more"></a>
+
+<table>
+<thead>
+<tr>
+<th>设备划分</th>
+<th>尺寸区间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>超小屏幕（手机）</td>
+<td>&lt; 768px</td>
+</tr>
+<tr>
+<td>小屏设备（平板）</td>
+<td>&gt;= 768px ~ &lt; 992px</td>
+</tr>
+<tr>
+<td>中等屏幕（以前的小桌面显示器）</td>
+<td>&gt;= 992px ~ &lt; 1200px</td>
+</tr>
+<tr>
+<td>宽屏设备（桌面显示器）</td>
+<td>&gt;= 1200px</td>
+</tr>
+</tbody></table>
+<br />
+
+<h3 id="1-2-布局容器"><a href="#1-2-布局容器" class="headerlink" title="1.2 布局容器"></a>1.2 布局容器</h3><p>1.响应式需要一个父级做为布局容器，来配合子级元素来实现变化效果。</p>
+<p>原理就是在不同屏幕下，通过媒体查询来改变这个布局容器的大小，再改变里面子元素的排列方式和大小，从而实现不同<br>屏幕下，看到不同的页面布局和样式变化。</p>
+<p>2.平时我们的响应式尺寸划分</p>
+<p>超小屏幕（手机，小于 768px）：设置宽度为 100%<br>小屏幕（平板，大于等于 768px）：设置宽度为 750px<br>中等屏幕（桌面显示器，大于等于 992px）：宽度设置为 970px<br>大屏幕（大桌面显示器，大于等于 1200px）：宽度设置为 1170px</p>
+<ul>
+<li>为什么后3个，设置的总比总宽度小一些，视频里说的是为了两边留些空白，好看；2020-10-24 02:03:47</li>
+</ul>
+<p>但是我们也可以根据实际情况自己定义划分，上面的只是比较常用；</p>
+<p>3.代码练习：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">            height: 150px;</span><br><span class="line">            background-color: pink;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="comment">/* 1. 超小屏幕下  小于 768，最大不过768  布局容器的宽度为 100% */</span></span></span><br><span class="line">        </span><br><span class="line"><span class="css">        <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">767px</span>) &#123;</span></span><br><span class="line"><span class="css">            <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">                width: 100%;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="comment">/* 2. 小屏幕下  大于等于768,就是不小于768，最小不过768  布局容器改为 750px */</span></span></span><br><span class="line">        </span><br><span class="line"><span class="css">        <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">768px</span>) &#123;</span></span><br><span class="line"><span class="css">            <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">                width: 750px;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="comment">/* 3. 中等屏幕下 大于等于 992px   布局容器修改为 970px */</span></span></span><br><span class="line">        </span><br><span class="line"><span class="css">        <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">992px</span>) &#123;</span></span><br><span class="line"><span class="css">            <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">                width: 970px;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="comment">/* 4. 大屏幕下 大于等于1200 布局容器修改为 1170 */</span></span></span><br><span class="line">        </span><br><span class="line"><span class="css">        <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">1200px</span>) &#123;</span></span><br><span class="line"><span class="css">            <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">                width: 1170px;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 响应式开发里面，首先需要一个布局容器 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br />
+
+<h3 id="1-3-案例：导航"><a href="#1-3-案例：导航" class="headerlink" title="1.3 案例：导航"></a>1.3 案例：导航</h3><p>响应式导航；<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=502">视频</a></p>
+<h4 id="1-需求分析"><a href="#1-需求分析" class="headerlink" title="1. 需求分析"></a>1. 需求分析</h4><p>①当我们屏幕大于等于768像素，我们给nav宽度为750px，因为里面子盒子需要浮动，所以nav需要清除浮动。<br>② nav里面包含8个小li 盒子，每个盒子的宽度定为 93.75px（750/8）， 高度为 30px，浮动一行显示。<br>③ 当我们屏幕缩放，宽度小于768像素的时候， nav盒子宽度修改为 100% 宽度。<br>④ nav里面的8个小li，宽度修改为 33.33%，这样一行就只能显示3个小li ，剩余下行显示。</p>
+<h4 id="2-代码："><a href="#2-代码：" class="headerlink" title="2. 代码："></a>2. 代码：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    * &#123;</span><br><span class="line">      margin: 0;</span><br><span class="line">      padding: 0;</span><br><span class="line">    &#125;</span><br><span class="line">    ul &#123;</span><br><span class="line">      list-style: none;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.nav</span> &#123;</span></span><br><span class="line">      width: 750px;</span><br><span class="line">      margin: 0 auto;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span></span><br><span class="line">      float: left;</span><br><span class="line"><span class="css">      <span class="selector-tag">width</span>: 93<span class="selector-class">.75px</span>;</span></span><br><span class="line">      height: 30px;</span><br><span class="line">      background-color: green;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="comment">/* 大于768px直接设置了，就不用媒体查询了 */</span></span></span><br><span class="line"><span class="css">    <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">768px</span>) &#123;</span></span><br><span class="line"><span class="css">      <span class="selector-class">.nav</span> &#123;</span></span><br><span class="line">        width: 100%;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">width</span>: 33<span class="selector-class">.33</span>%;</span></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>导航栏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>导航栏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>导航栏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>导航栏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>导航栏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>导航栏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>导航栏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>导航栏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>视频结束于P502；2020-10-24 03:04:16</p>
+<hr>
+<h2 id="2-Bootstrap"><a href="#2-Bootstrap" class="headerlink" title="2. Bootstrap"></a>2. Bootstrap</h2><h3 id="2-1-简介"><a href="#2-1-简介" class="headerlink" title="2.1 简介"></a>2.1 简介</h3><p>1.Bootstrap 来自 Twitter（推特），是目前最受欢迎的前端框架。Bootstrap 是基于 HTML、CSS 和 JAVASCRIPT 的，它<br>简洁灵活，使得 Web 开发更加快捷。</p>
+<p>中文官网：<a target="_blank" rel="noopener" href="http://www.bootcss.com/">http://www.bootcss.com/</a><br>官网：<a target="_blank" rel="noopener" href="http://getbootstrap.com/">http://getbootstrap.com/</a><br>推荐使用：<a target="_blank" rel="noopener" href="http://bootstrap.css88.com/">http://bootstrap.css88.com/</a></p>
+<ul>
+<li>但这个网址，已经打不开了；打开是一个站点创建成功；2020-10-25 03:40:39</li>
+</ul>
+<p>2.框架：顾名思义就是一套架构，它有一套比较完整的网页功能解决方案，而且控制权在框架本身，有预制样式库、组件和<br>插件。使用者要按照框架所规定的某种规范进行开发。</p>
+<h4 id="1-优点"><a href="#1-优点" class="headerlink" title="1. 优点"></a>1. 优点</h4><p>标准化的html+css编码规范<br>提供了一套简洁、直观、强悍的组件<br>有自己的生态圈，不断的更新迭代<br>让开发更简单，提高了开发的效率</p>
+<h4 id="2-版本"><a href="#2-版本" class="headerlink" title="2. 版本"></a>2. 版本</h4><p>2.x.x：停止维护,兼容性好,代码不够简洁，功能不够完善。<br>3.x.x：目前使用最多,稳定,但是放弃了 IE6-IE7。对 IE8 支持但是界面效果不好,偏向用于开发响应式布局、移<br>动设备优先的 WEB 项目。<br>4.x.x ：最新版，目前还不是很流行</p>
+<hr>
+<h3 id="2-2-使用"><a href="#2-2-使用" class="headerlink" title="2.2 使用"></a>2.2 使用</h3><p>1.在现阶段我们还没有接触JS相关课程，所以我们只考虑使用它的样式库。</p>
+<p>2.控制权在框架本身，使用者要按照框架所规定的某种规范进行开发。</p>
+<p>3.Bootstrap 使用四步曲： 1. 创建文件夹结构 2. 创建 html 骨架结构 3. 引入相关样式文件 4. 书写内容</p>
+<h4 id="1-创建文件夹"><a href="#1-创建文件夹" class="headerlink" title="1. 创建文件夹"></a>1. 创建文件夹</h4><p>1.单纯的创建一个文件夹；</p>
+<p><img src="../../img/12.3/1.png" alt="1"></p>
+<p>2.bootstrap的css与js，放在里面。不要放在外面的css和js文件里；2020-10-25 03:58:49</p>
+<h4 id="2-创建html骨架结构"><a href="#2-创建html骨架结构" class="headerlink" title="2. 创建html骨架结构"></a>2. 创建html骨架结构</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if lt IE 9]&gt;</span></span><br><span class="line"><span class="comment">&lt;script src=&quot;https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="comment">&lt;script src=&quot;https://oss.maxcdn.com/respond/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>解析：</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--要求当前网页使用IE浏览器最高版本的内核来渲染--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--视口的设置：视口的宽度和设备一致，默认的缩放比例和PC端一致，用户不能自行缩放--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1, user-scalable=0&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if lt IE 9]&gt;</span></span><br><span class="line"><span class="comment">&lt;!--解决ie9以下浏览器对html5新增标签的不识别，并导致CSS不起作用的问题--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--解决ie9以下浏览器对 css3 Media Query 的不识别 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://oss.maxcdn.com/respond/1.4.2/respond.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">![endif]--</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<ul>
+<li><p>但其实也可以不写：</p>
+<p>也可以不写第六行：<code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</code></p>
+<p>不用强制使用IE浏览器内核来渲染吧；</p>
+<p>2020-10-25 04:09:11</p>
+</li>
+<li><pre><code class="html"><span class="comment">&lt;!--[if lt IE 9]&gt;</span>
+<span class="comment">&lt;script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;</span>
+<span class="comment">&lt;script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"&gt;&lt;/script&gt;</span>
+<span class="comment">&lt;![endif]--&gt;</span>
+<span class="comment">&lt;!--hexoPostRenderEscape:&lt;figure class="highlight yaml"&gt;&lt;table&gt;&lt;tr&gt;&lt;td class="gutter"&gt;&lt;pre&gt;&lt;span class="line"&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;  &lt;span class="string"&gt;也可以不写，一般没有IE浏览器；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;span class="meta"&gt;---&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;span class="comment"&gt;#### 3. 引入样式&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;span class="string"&gt;```html&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;span class="string"&gt;&amp;lt;link&lt;/span&gt; &lt;span class="string"&gt;rel=&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="string"&gt;href=&amp;quot;./6-bootstrap/css/bootstrap.min.css&amp;quot;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class="line"&gt;&lt;span class="string"&gt;title&amp;gt;Document&amp;lt;/title&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;:hexoPostRenderEscape--&gt;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="4-输入内容"><a href="#4-输入内容" class="headerlink" title="4. 输入内容"></a>4. 输入内容</h4><p>1.直接拿Bootstrap 预先定义好的样式来使用</p>
+<p>2.修改Bootstrap 原来的样式，注意权重问题</p>
+<p>2.1 比如：</p>
+<ul>
+<li><p>1.<code>&lt;div class=&quot;btn btn-success&quot;&gt;登录&lt;/div&gt;</code></p>
+</li>
+<li><p>2.你不想要它的样式，你想改变一些长宽；</p>
+<p>2.1 你可以加个类；</p>
+<p><code>&lt;div class=&quot;btn btn-success login&quot;&gt;登录&lt;/div&gt;</code></p>
+<p>2.3 预览：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.login</span> &#123;</span></span><br><span class="line">      width: 80px;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-success&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-success login&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<p>  <img src="../../img/12.3/2.png" alt="2"></p>
+<p>  2.2 也可以去css文件改，但这样会打乱你记忆原版的样子。不建议，建议新添加自己的类；</p>
+<ul>
+<li>3.想修改其他样式，或添加，同理；2020-10-25 04:28:48</li>
+</ul>
+<p>3.学好Bootstrap 的<red>关键</red>在于知道它定义了哪些样式，以及这些样式能实现什么样的效果</p>
+<ul>
+<li><p>1.可以在官网先看一些有的资料。一个个去实验，或者去查看代码要比这个先慢一些。毕竟有预览效果；</p>
+<p>1.1 <a target="_blank" rel="noopener" href="https://v3.bootcss.com/css/">https://v3.bootcss.com/css/</a></p>
+</li>
+</ul>
+<hr>
+<h3 id="2-3-布局容器"><a href="#2-3-布局容器" class="headerlink" title="2.3 布局容器"></a>2.3 布局容器</h3><p>1.响应式开发页面，需要一个大的布局容器</p>
+<p>2.Bootstrap 需要为页面内容和栅格系统包裹一个 .container 容器，它提供了两个作此用处的类。</p>
+<p>2.1 container 类</p>
+<p>响应式布局的容器 固定宽度<br>大屏 ( &gt;=1200px) 宽度定为 1170px<br>中屏 ( &gt;=992px) 宽度定为 970px<br>小屏 ( &gt;=768px) 宽度定为 750px<br>超小屏 (100%)</p>
+<ul>
+<li>这个类自己把媒体查询就写好了；</li>
+<li>当然还有其他属性，内边距等等，自己查看；</li>
+</ul>
+<p>2.2 container-fluid 类</p>
+<p>流式布局容器 ，百分百宽度，一直是100%</p>
+<p>占据全部视口（viewport）的容器。</p>
+<p>适合做移动端页面</p>
+<hr>
+<h2 id="3-栅格系统"><a href="#3-栅格系统" class="headerlink" title="3. 栅格系统"></a>3. 栅格系统</h2><h3 id="3-1-简介"><a href="#3-1-简介" class="headerlink" title="3.1 简介"></a>3.1 简介</h3><p>0.开始于P508</p>
+<p>1.栅格系统英文为“grid systems”,也有人翻译为“网格系统”，它是指将页面布局划分为等宽的列，然后通过列数<br>的定义来模块化页面布局。</p>
+<p>2.Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会<br>自动分为最多12列。</p>
+<p>Bootstrap里面container宽度是固定的，但不同屏幕下，container宽度不同，我们再爸container划分为12等份；</p>
+<ul>
+<li>但父元素许是container；</li>
+</ul>
+<h3 id="3-2-参数"><a href="#3-2-参数" class="headerlink" title="3.2 参数"></a>3.2 参数</h3><p>1.可在官网查看其他资料：<a target="_blank" rel="noopener" href="https://v3.bootcss.com/css/#grid">https://v3.bootcss.com/css/#grid</a></p>
+<p>2.栅格系统用于通过一系列的行（row）与列（column）的组合来创建页面布局，你的内容就可以放入这些创建好的布局中。</p>
+<ul>
+<li>先有行，后有列；</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">超小屏幕 手机 (&lt;768px)</th>
+<th align="left">小屏幕 平板 (≥768px)</th>
+<th align="left">中等屏幕 桌面显示器 (≥992px)</th>
+<th align="left">大屏幕 大桌面显示器 (≥1200px)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">栅格系统行为</td>
+<td align="left">总是水平排列</td>
+<td align="left">开始是堆叠在一起的，当大于这些阈值时将变为水平排列C</td>
+<td align="left">同左</td>
+<td align="left">同左</td>
+</tr>
+<tr>
+<td align="left"><code>.container</code> 最大宽度</td>
+<td align="left">None （自动）</td>
+<td align="left">750px</td>
+<td align="left">970px</td>
+<td align="left">1170px</td>
+</tr>
+<tr>
+<td align="left">类前缀</td>
+<td align="left"><code>.col-xs-</code></td>
+<td align="left"><code>.col-sm-</code></td>
+<td align="left"><code>.col-md-</code></td>
+<td align="left"><code>.col-lg-</code></td>
+</tr>
+<tr>
+<td align="left">列（column）数</td>
+<td align="left">12</td>
+<td align="left">同左</td>
+<td align="left">同左</td>
+<td align="left">同左</td>
+</tr>
+</tbody></table>
+<ul>
+<li>行（row）必须放到container布局容器里面</li>
+<li>我们实现列的平均划分，需要给列添加<red>类前缀</red></li>
+<li>xs-extra small：超小； sm-small：小； md-medium：中等； lg-large：大；</li>
+<li>列（column）大于 12，多余的“列（column）”所在的元素将被作为一个整体另起一行排列</li>
+<li>每一列默认有左右15像素的 padding</li>
+<li>可以同时为一列指定多个设备的类名，以便划分不同份数 例如 class=”col-md-4 col-sm-6”</li>
+</ul>
+<p>3.行列代码练习：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./6-bootstrap/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-attr">[class^=<span class="string">&quot;col&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ccc</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="comment">/* 类名col开头的类 */</span></span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 如果列数总为12，能占满整个container宽度 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>                      </span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 如果小于12，则不会占满，精确度到1份 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-1&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>                      </span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 如果小于12，所有份数都会向左靠齐 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-2&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>                      </span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 如果大于12，所有多的，会另起一行 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-4&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>                      </span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=508">P508</a>-end</p>
+<p>3.1 如果在中等屏幕下，一行占3个怎么写？</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3 col-md-4&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3 col-md-4&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3 col-md-4&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-3 col-md-4&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>                      </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>为什么col-md有这样的效果，因为在bootstrap.css那边已经弄好了媒体查询</li>
+</ul>
+<br />
+
+<h3 id="3-3-列嵌套"><a href="#3-3-列嵌套" class="headerlink" title="3.3 列嵌套"></a>3.3 列嵌套</h3><p>1.栅格系统内置的栅格系统将内容再次嵌套。简单理解就是一个列内再分成若干份小列。我们可以通过添加一个新的 .row 元素和一系<br>列 .col-sm-* 元素到已经存在的 .col-sm-* 元素内。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 列嵌套 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-sm-4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-sm-6&quot;</span>&gt;</span>小列<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-sm-6&quot;</span>&gt;</span>小列<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.栅格系统的参数是相对于父元素的，也是因为一个盒子的宽度继承父盒子的宽度；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-4&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 我们列嵌套最好加1个行 row 这样可以取消父元素的padding值 而且高度自动和父级一样高 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-6&quot;</span>&gt;</span>a<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-6&quot;</span>&gt;</span>b<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-4&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-4&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br />
+
+<hr>
+<h3 id="3-4列偏移"><a href="#3-4列偏移" class="headerlink" title="3.4列偏移"></a>3.4列偏移</h3><p>1.P511；2020-10-28 00:18:01</p>
+<p>2.使用 .col-md-offset-* 类可以将列向右侧偏移。这些类实际是通过使用 * 选择器为当前元素增加了左侧的边距（margin）。</p>
+<p>2.1 在栅格系统，有浮动。一行不满12列的时候，不同的列块只会靠在一起；</p>
+<p><img src="../../img/12.3/3.png" alt="3"></p>
+<p>2.2 如何让不满12的情况下，分开列块呢？用浮动覆盖吗？但这里是响应式，固定的px无法动态的变化</p>
+<p>2.3 只能用bootstrap给的：.col-md-offset-* 类</p>
+<p>3.代码练习</p>
+<p>3.1 练习框架：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./6-bootstrap/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-attr">[class^=<span class="string">&quot;col&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ccc</span>;</span></span><br><span class="line"><span class="css">    &#125;<span class="comment">/* 类名col开头的类 */</span></span></span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.row</span>&gt;<span class="selector-tag">div</span> &#123;</span></span><br><span class="line">      height: 50px;</span><br><span class="line">      background-color: pink;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-4&quot;</span>&gt;</span>左侧<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- &lt;div class=&quot;col-md-4&quot;&gt;右侧&lt;/div&gt; --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-4 col-md-offset-4&quot;</span>&gt;</span>右侧<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>3.2 将右侧盒子往右侧偏移4份；2020-10-28 00:37:01</p>
+<p><code>&lt;div class=&quot;col-md-4 col-md-offset-4&quot;&gt;右侧&lt;/div&gt;</code></p>
+<p>3.3 预览：</p>
+<p><img src="../../img/12.3/4.png" alt="4"></p>
+<h4 id="2-居中"><a href="#2-居中" class="headerlink" title="2. 居中"></a>2. 居中</h4><p>1.如果只有一个盒子，能居中吗？</p>
+<p>2.可以，例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-8 col-md-offset-2&quot;</span>&gt;</span>中间盒子<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.1 因为只有一个盒子；</p>
+<p>2.2 所以右偏移剩下的列数/2就可以了，左边一半，右边一半；</p>
+<p>3.预览：</p>
+<p><img src="../../img/12.3/5.png" alt="5"></p>
+<hr>
+<h3 id="3-5-列排序"><a href="#3-5-列排序" class="headerlink" title="3.5 列排序"></a>3.5 列排序</h3><p>1.通过使用 .col-md-push-* 和 .col-md-pull-* 类就可以很容易的改变列（column）的顺序。</p>
+<p>2.例如：</p>
+<p><img src="../../img/12.3/6.png" alt="6"></p>
+<p>左侧跑到右侧，右侧跑到左侧；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 列排序 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-4 col-lg-push-8&quot;</span>&gt;</span>左侧<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-8 col-lg-pull-4&quot;</span>&gt;</span>右侧<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>3.<a target="_blank" rel="noopener" href="https://fanyi.baidu.com/?aldtype=16047#en/zh/push">push</a><br>英 [pʊʃ]   美 [pʊʃ]<br>v.推动(人或物);移动(身体部位);推进(道路);挤开;推动;促使(达到某程度或状态)<br>n.推;搡;进攻;攻势;挺进;矢志的追求;坚定的努力</p>
+<p>3.1 pull<br>英 [pʊl]   美 [pʊl]<br>v.拉;拽;扯;拖;拔出;抽出;(向某方向)拖，拉动<br>n.拉;拽;扯;力;引力;磁力;吸引力;诱惑;影响</p>
+<p>4.左侧推出去，右侧拉过来；</p>
+<p>5.自己练习：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-8&quot;</span>&gt;</span>左侧<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-4&quot;</span>&gt;</span>右侧<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-8 col-md-push-8&quot;</span>&gt;</span>左侧<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-4 col-md-pull-4&quot;</span>&gt;</span>右侧<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>5.1 如图所示：</p>
+<p><img src="../../img/12.3/7.png" alt="7"></p>
+<hr>
+<br />
+
+<h3 id="3-6-响应式工具"><a href="#3-6-响应式工具" class="headerlink" title="3.6 响应式工具"></a>3.6 响应式工具</h3><p>0.视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=513">P513</a>；</p>
+<p>0.1 bootstrap中文官网此部分：<a target="_blank" rel="noopener" href="https://v3.bootcss.com/css/#responsive-utilities">链接</a></p>
+<p>1.为了加快对移动设备友好的页面开发工作，利用媒体查询功能，并使用这些工具类可以方便的针对不同设备展示<br>或隐藏页面内容。</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">超小屏幕手机 (&lt;768px)</th>
+<th align="left">小屏幕平板 (≥768px)</th>
+<th align="left">中等屏幕桌面 (≥992px)</th>
+<th align="left">大屏幕桌面 (≥1200px)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>.visible-xs-*</code></td>
+<td align="left">可见</td>
+<td align="left">隐藏</td>
+<td align="left">隐藏</td>
+<td align="left">隐藏</td>
+</tr>
+<tr>
+<td align="left"><code>.visible-sm-*</code></td>
+<td align="left">隐藏</td>
+<td align="left">可见</td>
+<td align="left">隐藏</td>
+<td align="left">隐藏</td>
+</tr>
+<tr>
+<td align="left"><code>.visible-md-*</code></td>
+<td align="left">隐藏</td>
+<td align="left">隐藏</td>
+<td align="left">可见</td>
+<td align="left">隐藏</td>
+</tr>
+<tr>
+<td align="left"><code>.visible-lg-*</code></td>
+<td align="left">隐藏</td>
+<td align="left">隐藏</td>
+<td align="left">隐藏</td>
+<td align="left">可见</td>
+</tr>
+<tr>
+<td align="left"><code>.hidden-xs</code></td>
+<td align="left">隐藏</td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+</tr>
+<tr>
+<td align="left"><code>.hidden-sm</code></td>
+<td align="left">可见</td>
+<td align="left">隐藏</td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+</tr>
+<tr>
+<td align="left"><code>.hidden-md</code></td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+<td align="left">隐藏</td>
+<td align="left">可见</td>
+</tr>
+<tr>
+<td align="left"><code>.hidden-lg</code></td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+<td align="left">隐藏</td>
+</tr>
+</tbody></table>
+<p>1.1 visible；英 [ˈvɪzəbl]   美 [ˈvɪzəbl] ；adj.看得见的;可见的;明显的;能注意到的</p>
+<p>2.代码练习</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.row</span> <span class="selector-tag">div</span> &#123;</span></span><br><span class="line">        height: 300px;</span><br><span class="line">        background-color: purple;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="css">    <span class="selector-class">.row</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</span></span><br><span class="line">        background-color: pink;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    span &#123;</span><br><span class="line">        font-size: 50px;</span><br><span class="line"><span class="css">        <span class="selector-tag">color</span>: <span class="selector-id">#fff</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-xs-3&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;visible-lg&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-xs-3&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-xs-3 hidden-md hidden-xs&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-xs-3&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.1 说明</p>
+<ul>
+<li>1只在超大屏幕显示，3在中等屏幕与超小屏幕隐藏；2020-10-28 06:38:59</li>
+</ul>
+<hr>
+<h3 id="3-7-案例"><a href="#3-7-案例" class="headerlink" title="3.7 案例"></a>3.7 案例</h3><p>1.阿里百秀首页</p>
+<h4 id="1-技术选型"><a href="#1-技术选型" class="headerlink" title="1. 技术选型"></a>1. 技术选型</h4><p>方案：我们采取响应式页面开发方案<br>技术：bootstrap框架<br>设计图： 本设计图采用 1280px 设计尺寸</p>
+<h4 id="2-需求分析"><a href="#2-需求分析" class="headerlink" title="2. 需求分析"></a>2. 需求分析</h4><h5 id="2-1-页面布局"><a href="#2-1-页面布局" class="headerlink" title="2.1 页面布局"></a>2.1 页面布局</h5><p><img src="../../img/12.3/8.png" alt="8"></p>
+<h5 id="2-2-屏幕划分"><a href="#2-2-屏幕划分" class="headerlink" title="2.2 屏幕划分"></a>2.2 屏幕划分</h5><p>① 屏幕缩放发现 中屏幕 和 大屏幕布局 是一致的。 因此我们列 定义为 col-md- 就可以了， md 是大于等于 970 以上的<br>② 屏幕缩放发现 小屏幕 布局发生变化，因此我们需要为 小屏幕根据需求改变布局<br>③ 屏幕缩放发现 超小屏幕布局又发生变化，因此我们需要为 超小屏幕根据需求改变布局<br>④ 策略： 我们先布局 md以上的 pc端布局，最后根据实际需求在修改 小屏幕 和 超小屏幕的 特殊布局样式</p>
+<h4 id="3-页面制作"><a href="#3-页面制作" class="headerlink" title="3. 页面制作"></a>3. 页面制作</h4><p>1.Bootstrap 使用四步曲： 1. 创建文件夹结构 2. 创建 html 骨架结构 3. 引入相关样式文件 4. 书写内容</p>
+<h5 id="3-2-container修改"><a href="#3-2-container修改" class="headerlink" title="3.2 container修改"></a>3.2 container修改</h5><p>1.因为本效果图采取 1280的宽度， 而Bootstrap 里面 container宽度 最大为 1170px，因此我们需要手动改下container宽度</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 利用媒体查询修改 container宽度适合效果图宽度 */</span></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width:</span> <span class="number">1280px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.container</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">1280px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-3-logo制作"><a href="#3-3-logo制作" class="headerlink" title="3.3 logo制作"></a>3.3 logo制作</h5><p>1.先布局；</p>
+<p>2.放入logo图片，因为logo背景图片是白色的，所以背景颜色加个蓝</p>
+<p>3.去掉左内边距，但不能改col-md-2的，它是隶属于bootstrap的，一改全改，也会错乱bootstrap的使用；</p>
+<ul>
+<li>在css那边修改标签header；</li>
+<li>不过标签的权重只有1，类名的权重有10；所以要加个!important;</li>
+</ul>
+<p><img src="../../img/12.3/9.png" alt="9"></p>
+<p>4.图片不随着变化，当宽度不够时，显示不完整</p>
+<p><img src="../../img/12.3/10.png" alt="10"></p>
+<p>4.1 配置：父元素宽度100%</p>
+<p>html:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./1-bootstrap/css/bootstrap.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./2-css/index.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">&quot;col-md-2&quot;</span>&gt;</span></span><br><span class="line">              <span class="comment">&lt;!-- （2） --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;logo&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./3-img/logo.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">&quot;col-md-7&quot;</span>&gt;</span>中间<span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aside</span> <span class="attr">class</span>=<span class="string">&quot;col-md-3&quot;</span>&gt;</span>右侧<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>css:</p>
+<hr>
+<br />
+
+<h2 id="x-资料"><a href="#x-资料" class="headerlink" title="x. 资料"></a>x. 资料</h2><p>1.视频资料：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=499">https://www.bilibili.com/video/BV14J4114768?p=499</a></p>
+<p>2.pdf资料：</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1wnjKpjBo22olVEs2KAhjpA">https://pan.baidu.com/s/1wnjKpjBo22olVEs2KAhjpA</a><br>提取码：d0zw </p>
+<ul>
+<li>想找PPT，pdf没ppt好用；</li>
+</ul>
+<p>3.视频相应的代码资料： <a target="_blank" rel="noopener" href="https://gitee.com/xiaoqiang001/html_css_material.git">https://gitee.com/xiaoqiang001/html_css_material.git</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/1-(0~50)/31-word/" rel="prev" title="30-英语单词">
+      <i class="fa fa-chevron-left"></i> 30-英语单词
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">qilin</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">360k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:27</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: location.pathname,
+    }, {"enable":true,"appId":"l9X7oYVrse5t6umGkFbQyhXs-gzGzoHsz","appKey":"dcwRazDbDakW6HdC3xERrYHu","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"language":null,"visitor":true,"comment_count":true,"recordIP":true,"serverURLs":null}
+    ));
+  }, window.Valine);
+});
+</script>
+
+
+  
+  <script type="text/javascript" onmobile="true" color="0,0,0" opacity='0.7' zIndex="-1" count="120" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>
