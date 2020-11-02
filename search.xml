@@ -2938,13 +2938,13 @@ songs.push(<span class="string">'样'</span>)
 </li>
 </ul>
 <hr>
-<h2 id="8-引用css"><a href="#8-引用css" class="headerlink" title="8. 引用css"></a>8. 引用css</h2><p>1.三种方法：</p>
+<h2 id="9-引用css"><a href="#9-引用css" class="headerlink" title="9. 引用css"></a>9. 引用css</h2><p>1.三种方法：</p>
 <ul>
 <li>外部样式表(External style sheet)</li>
 <li>内部样式表(Internal style sheet)</li>
 <li>内联样式(Inline style)</li>
 </ul>
-<h3 id="8-1外部样式表"><a href="#8-1外部样式表" class="headerlink" title="8.1外部样式表"></a>8.1外部样式表</h3><p>1.当样式需要应用于很多页面时，外部样式表将是理想的选择。在使用外部样式表的情况下，你可以通过改变一个文件来改变整个站点的外观。每个页面使用 <code>&lt;link&gt;</code> 标签链接到样式表。 <code>&lt;link&gt;</code> 标签在（文档的）头部：</p>
+<h3 id="9-1外部样式表"><a href="#9-1外部样式表" class="headerlink" title="9.1外部样式表"></a>9.1外部样式表</h3><p>1.当样式需要应用于很多页面时，外部样式表将是理想的选择。在使用外部样式表的情况下，你可以通过改变一个文件来改变整个站点的外观。每个页面使用 <code>&lt;link&gt;</code> 标签链接到样式表。 <code>&lt;link&gt;</code> 标签在（文档的）头部：</p>
 <ul>
 <li><code>&lt;head&gt; &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt; &lt;/head&gt;</code></li>
 </ul>
@@ -2954,25 +2954,28 @@ songs.push(<span class="string">'样'</span>)
 
 <p>不要在属性值与单位之间留有空格（如：”margin-left: 20 px” ），正确的写法是 “margin-left: 20px” 。</p>
 <hr>
-<h3 id="8-2内部样式表"><a href="#8-2内部样式表" class="headerlink" title="8.2内部样式表"></a>8.2内部样式表</h3><p>1.当单个文档需要特殊的样式时，就应该使用内部样式表。你可以使用 <code>&lt;style&gt;</code> 标签在文档头部定义内部样式表，就像这样:</p>
+<h3 id="9-2内部样式表"><a href="#9-2内部样式表" class="headerlink" title="9.2内部样式表"></a>9.2内部样式表</h3><p>1.当单个文档需要特殊的样式时，就应该使用内部样式表。你可以使用 <code>&lt;style&gt;</code> 标签在文档头部定义内部样式表，就像这样:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-tag">hr</span> &#123;<span class="attribute">color</span>:sienna;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">p</span> &#123;<span class="attribute">margin-left</span>:<span class="number">20px</span>;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">body</span> &#123;<span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">&quot;images/back40.gif&quot;</span>);&#125;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <br />
 
 <hr>
-<h3 id="8-3-内联样式"><a href="#8-3-内联样式" class="headerlink" title="8.3 内联样式"></a>8.3 内联样式</h3><p>1.由于要将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势。请慎用这种方法，</p>
+<h3 id="9-3-内联样式"><a href="#9-3-内联样式" class="headerlink" title="9.3 内联样式"></a>9.3 内联样式</h3><p>1.由于要将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势。请慎用这种方法，</p>
 <p>例如当样式仅需要在一个元素上应用一次时。</p>
 <p>2.要使用内联样式，你需要在相关的标签内使用样式（style）属性。Style 属性可以包含任何 </p>
 <p>CSS 属性。本例展示如何改变段落的颜色和左外边距：</p>
 <p><code>&lt;p style=&quot;color:sienna;margin-left:20px&quot;&gt;这是一个段落。&lt;/p&gt;</code></p>
 <hr>
-<h3 id="8-4-优先级"><a href="#8-4-优先级" class="headerlink" title="8.4 优先级"></a>8.4 优先级</h3><p>样式表允许以多种方式规定样式信息。样式可以规定在单个的 HTML 元素中，在 HTML 页的头元素中，或在一个外部的 CSS 文件中。甚至可以在同一个 HTML 文档内部引用多个外部样式表。</p>
+<h3 id="9-4-优先级"><a href="#9-4-优先级" class="headerlink" title="9.4 优先级"></a>9.4 优先级</h3><p>样式表允许以多种方式规定样式信息。样式可以规定在单个的 HTML 元素中，在 HTML 页的头元素中，或在一个外部的 CSS 文件中。甚至可以在同一个 HTML 文档内部引用多个外部样式表。</p>
 <p>一般情况下，优先级如下：</p>
 <p><strong>内联样式）Inline style &gt; （内部样式）Internal style sheet &gt;（外部样式）External style sheet &gt; 浏览器默认样式</strong></p>
 <p><strong>注意</strong>：如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。</p>
 <ul>
 <li>因为执行html代码是，从前到后的；</li>
 </ul>
+<hr>
+<h2 id="10-伪类-和伪元素"><a href="#10-伪类-和伪元素" class="headerlink" title="10. 伪类(:)和伪元素(::)"></a>10. 伪类(:)和伪元素(::)</h2><p><a href="https://blog.csdn.net/cuishizun/article/details/89188574">https://blog.csdn.net/cuishizun/article/details/89188574</a></p>
+<p>2020-10-30 13:01:41</p>
 ]]></content>
       <tags>
         <tag>css</tag>
@@ -4568,9 +4571,172 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
       </tags>
   </entry>
   <entry>
+    <title>12-前篇</title>
+    <url>/1-(0~50)/12-before/</url>
+    <content><![CDATA[<h2 id="1-HTML简介"><a href="#1-HTML简介" class="headerlink" title="1. HTML简介"></a>1. HTML简介</h2><h3 id="1-1-网页"><a href="#1-1-网页" class="headerlink" title="1.1 网页"></a>1.1 网页</h3><a id="more"></a>
+
+<h4 id="1-什么是网页"><a href="#1-什么是网页" class="headerlink" title="1. 什么是网页"></a>1. 什么是网页</h4><p>1.网站是指在因特网上根据一定的规则，使用 HTML 等制作的用于展示特定内容相关的网页集合。</p>
+<p>2.网页是网站中的一“页”，通常是 HTML 格式的文件，它要通过浏览器来阅读。</p>
+<p>3.网页是构成网站的基本元素，它通常由图片、链接、文字、声音、视频等元素组成。通常我们看到的网页，常见以 .htm 或 .html 后缀结尾的文件，因此将其俗称为 HTML 文件。</p>
+<h4 id="2-什么是HTML"><a href="#2-什么是HTML" class="headerlink" title="2 .什么是HTML"></a>2 .什么是HTML</h4><p>1.HTML 指的是超文本标记语言 (Hyper Text Markup Language) ，它是用来描述网页的一种语言。</p>
+<p>2.HTML 不是一种编程语言，而是一种标记语言 (markup language)。</p>
+<p>3.标记语言是一套标记标签 (markup tag)。</p>
+<p>4.所谓超文本，有 2 层含义：</p>
+<ul>
+<li>它可以加入图片、声音、动画、多媒体等内容（超越了文本限制 ）。</li>
+<li>它还可以从一个文件跳转到另一个文件，与世界各地主机的文件连接（超级链接文本 ）。</li>
+</ul>
+<h4 id="3-网页的形成"><a href="#3-网页的形成" class="headerlink" title="3. 网页的形成"></a>3. 网页的形成</h4><p>1.网页是由网页元素组成的，这些元素是利用 html 标签描述出来，然后通过浏览器解析来显示给用户的。</p>
+<p>2.前端人员开发代码 —-&gt; 浏览器显示代码（解析、渲染） —–&gt; 生成最后的 Web 页面</p>
+<h4 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h4><p>1.网页是图片、链接、文字、声音、视频等元素组成, 其实就是一个html文件(后缀名为html)<br>2.网页生成制作: 有前端人员书写 HTML 文件, 然后浏览器打开,就能看到了网页.<br>3.HTML: 超文本标记语言, 用来制作网页的一门语言. 有标签组成的. 比如 图片标签 链接标签 视频标签等…</p>
+<h3 id="1-2-常用浏览器"><a href="#1-2-常用浏览器" class="headerlink" title="1.2 常用浏览器"></a>1.2 常用浏览器</h3><p>1.网页是通过浏览器来展示的, 关于浏览器我们要介绍以下两点:</p>
+<ul>
+<li>常用的浏览器</li>
+<li>浏览器内核</li>
+</ul>
+<p>2.浏览器是网页显示、运行的平台。常用的浏览器有 IE、火狐（Firefox）、谷歌（Chrome）、Safari和Opera等。<br>平时称为五大浏览器。</p>
+<p>3.查看浏览器市场份额：<a href="http://tongji.baidu.com/data/browser">http://tongji.baidu.com/data/browser</a></p>
+<h4 id="2-内核"><a href="#2-内核" class="headerlink" title="2. 内核"></a>2. 内核</h4><p>1.浏览器内核（渲染引擎）： 负责读取网页内容，整理讯息，计算网页的显示方式并显示页面。</p>
+<table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>内核</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IE</td>
+<td>Trident</td>
+<td>IE、猎豹安全、360极速浏览器、百度浏览器</td>
+</tr>
+<tr>
+<td>firefox</td>
+<td>Gecko</td>
+<td>火狐浏览器内核</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>Webkit</td>
+<td>苹果浏览器内核</td>
+</tr>
+<tr>
+<td>chrome/Opera</td>
+<td>Blink</td>
+<td>chrome/opera浏览器内核。Blink其实WebKit的分支</td>
+</tr>
+</tbody></table>
+<ul>
+<li>目前国内一般浏览器都会采用 Webkit/Blink 内核，如 360、UC、QQ、搜狗等。</li>
+</ul>
+<h3 id="1-3-Web标准"><a href="#1-3-Web标准" class="headerlink" title="1.3 Web标准"></a>1.3 Web标准</h3><p>1.Web 标准是由 W3C 组织和其他标准化组织制定的一系列标准的集合。W3C（万维网联盟）是国际最著名的标准化组织。</p>
+<h4 id="1-为何需要"><a href="#1-为何需要" class="headerlink" title="1. 为何需要"></a>1. 为何需要</h4><p>1.为什么需要 Web 标准？</p>
+<ul>
+<li>浏览器不同，它们显示页面或者排版就有些许差异</li>
+</ul>
+<p>2.由于不同浏览器解析出来的效果可能不一致，开发者常常需要为多版本的开发而艰苦工作。</p>
+<p>3.遵循 Web 标准除了可以让不同的开发人员写出的页面更标准、更统一外，还有以下优点：</p>
+<ul>
+<li>1.让 Web 的发展前景更广阔。</li>
+<li>2.内容能被更广泛的设备访问。</li>
+<li>3.更容易被搜寻引擎搜索。</li>
+<li>4.降低网站流量费用。</li>
+<li>5.使网站更易于维护。</li>
+<li>6.提高页面浏览速度。</li>
+</ul>
+<h4 id="2-Web标准的构成"><a href="#2-Web标准的构成" class="headerlink" title="2. Web标准的构成"></a>2. Web标准的构成</h4><p>1.主要包括结构（Structure） 、表现（Presentation）和行为（Behavior）三个方面。</p>
+<table>
+<thead>
+<tr>
+<th>标准</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>结构</td>
+<td>结构用于对网页元素进行整理和分类，现阶段主要学HTML。</td>
+</tr>
+<tr>
+<td>表现</td>
+<td>表现用于设置网页元素的版式、颜色、大小等外观样式，主要指的是CSS</td>
+</tr>
+<tr>
+<td>行为</td>
+<td>行为是指网页模型的定义及交互的编写，现阶段主要学JavaScript</td>
+</tr>
+</tbody></table>
+<p>2.Web 标准提出的最佳体验方案：结构、样式、行为相分离。</p>
+<ul>
+<li>简单理解： 结构写到 HTML 文件中， 表现写到 CSS 文件中， 行为写到 JavaScript 文件中。</li>
+</ul>
+<hr>
+<h2 id="2-标签-上"><a href="#2-标签-上" class="headerlink" title="2. 标签-上"></a>2. 标签-上</h2><h2 id="3-标签-下"><a href="#3-标签-下" class="headerlink" title="3. 标签-下"></a>3. 标签-下</h2><h3 id="3-1-表格"><a href="#3-1-表格" class="headerlink" title="3.1 表格"></a>3.1 表格</h3><p>表格是实际开发中非常常用的标签:</p>
+<ol>
+<li>表格的主要作用</li>
+<li>表格的基本语法</li>
+</ol>
+<h4 id="1-主要作用"><a href="#1-主要作用" class="headerlink" title="1. 主要作用"></a>1. 主要作用</h4><p>1.表格主要用于显示、展示数据，因为它可以让数据显示的非常的规整，可读性非常好。特别是后台展示数据的时候，能够熟练运用表格就显得很重要。一个清爽简约的表格能够把繁杂的数据表现得很有条理。</p>
+<p>2.总结: 表格<strong>不是</strong>用来布局页面的,而是用来展示数据的.</p>
+<h4 id="2-基本语法"><a href="#2-基本语法" class="headerlink" title="2. 基本语法"></a>2. 基本语法</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>单元格内的文字<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><table> </table> 是用于定义表格的标签。
+</li>
+<li><p><code>&lt;tr&gt; &lt;/tr&gt;</code> 标签用于定义表格中的行，必须嵌套在 <code>&lt;table&gt; &lt;/table&gt;</code>标签中。</p>
+<p>2.1 表格行：tr：table row；</p>
+</li>
+<li><p><code>&lt;td&gt; &lt;/td&gt;</code> 用于定义表格中的单元格，必须嵌套在<code>&lt;tr&gt;&lt;/tr&gt;</code>标签中。</p>
+</li>
+<li><p>字母 td 指表格数据（table data），即数据单元格的内容。</p>
+</li>
+</ol>
+<h4 id="3-表头"><a href="#3-表头" class="headerlink" title="3. 表头"></a>3. 表头</h4><p>1.一般表头单元格位于表格的第一行或第一列，表头单元格里面的文本内容加粗居中显示.<code>&lt;th&gt;</code> 标签表示 HTML 表格的表头部分(table head 的缩写)</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span> 姓名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.表头单元格也是单元格, 常用于表格第一行, 突出重要性, 表头单元格里面的文字会加粗居中显示.</p>
+<hr>
+<h4 id="4-表格属性"><a href="#4-表格属性" class="headerlink" title="4. 表格属性"></a>4. 表格属性</h4><p>1.表格标签这部分属性我们实际开发我们不常用，后面通过 CSS 来设置.<br>目的有2个:</p>
+<ol>
+<li>记住这些英语单词,后面 CSS 会使用.</li>
+<li>直观感受表格的外观形态.</li>
+</ol>
+<p><img src="../../img/12.b/2.png" alt="1"></p>
+<h4 id="5-案例"><a href="#5-案例" class="headerlink" title="5. 案例"></a>5. 案例</h4><p>1.预览：</p>
+<p><img src="../../img/12.b/1.png" alt="2"></p>
+<p>2.思路：</p>
+<p>先制作表格的结构.</p>
+<ol>
+<li>第一行里面是 th 表头单元格</li>
+<li>第二行开始里面是 td 普通单元格</li>
+<li>单元格里面可以放任何元素,文字链接图片等都可以</li>
+</ol>
+<p>后书写表格属性.</p>
+<ol>
+<li>用到宽度高度边框cellpadding 和 cellspacing</li>
+<li>表格浏览器中对齐 align</li>
+</ol>
+<p>3.代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span> <span class="attr">width</span>=<span class="string">&quot;500&quot;</span> <span class="attr">height</span>=<span class="string">&quot;249&quot;</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span> <span class="attr">cellspacing</span>=<span class="string">&quot;0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>排名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>关键词<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>趋势<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>进入搜索<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>最近七日<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>相关链接<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>鬼吹灯<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;down.jpg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>456<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>123<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>贴吧<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>图片<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>百科<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>鬼吹灯<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;down.jpg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>456<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>123<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>贴吧<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>图片<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>百科<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>3<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>西游记<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;up.jpg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>456<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>123<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>贴吧<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>图片<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>百科<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>鬼吹灯<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;down.jpg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>456<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>123<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>贴吧<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>图片<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>百科<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>鬼吹灯<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;down.jpg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>456<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>123<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>贴吧<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>图片<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>百科<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>鬼吹灯<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;down.jpg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>456<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>123<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>贴吧<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>图片<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>百科<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span>           </span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>html_css</category>
+      </categories>
+      <tags>
+        <tag>html_css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>12-html+css-入门-pink</title>
     <url>/1-(0~50)/12-html+css_introdiction-pink/</url>
-    <content><![CDATA[<h2 id="0-建议使用的软件"><a href="#0-建议使用的软件" class="headerlink" title="0. 建议使用的软件"></a>0. 建议使用的软件</h2><h2 id="1-盒子模型"><a href="#1-盒子模型" class="headerlink" title="1. 盒子模型"></a>1. 盒子模型</h2><h3 id="1、网页布局的本质"><a href="#1、网页布局的本质" class="headerlink" title="1、网页布局的本质"></a>1、网页布局的本质</h3><p>网页布局的核心本质： 就是利用 CSS 摆盒子。</p>
+    <content><![CDATA[<h2 id="0-建议使用的软件"><a href="#0-建议使用的软件" class="headerlink" title="0. 建议使用的软件"></a>0. 建议使用的软件</h2><h2 id="3-盒子模型"><a href="#3-盒子模型" class="headerlink" title="3. 盒子模型"></a>3. 盒子模型</h2><p>1.页面布局要学习三大核心, 盒子模型, 浮动 和 定位. 学习好盒子模型能非常好的帮助我们布局页面.</p>
+<h3 id="3-1-网页布局的本质"><a href="#3-1-网页布局的本质" class="headerlink" title="3.1 网页布局的本质"></a>3.1 网页布局的本质</h3><p>网页布局的核心本质： 就是利用 CSS 摆盒子。</p>
 <a id="more"></a>
 
 <p>网页布局过程：</p>
@@ -4579,7 +4745,7 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <li>利用 CSS 设置好盒子样式，然后摆放到相应位置。</li>
 <li>往盒子里面装内容</li>
 </ol>
-<h3 id="2、盒子模型（Box-Model）组成"><a href="#2、盒子模型（Box-Model）组成" class="headerlink" title="2、盒子模型（Box Model）组成"></a>2、盒子模型（Box Model）组成</h3><p>​        盒子模型：把 HTML 页面中的布局元素看作是一个矩形的盒子，也就是一个盛装内容的容器。</p>
+<h3 id="3-2-盒子模型（Box-Model）组成"><a href="#3-2-盒子模型（Box-Model）组成" class="headerlink" title="3.2 盒子模型（Box Model）组成"></a>3.2 盒子模型（Box Model）组成</h3><p>​        盒子模型：把 HTML 页面中的布局元素看作是一个矩形的盒子，也就是一个盛装内容的容器。</p>
 <p>​        CSS 盒子模型本质上是一个盒子，封装周围的 HTML 元素，它包括：<strong>边框</strong>、<strong>外边距</strong>、<strong>内边距</strong>、和 <strong>实际内容</strong></p>
 <h3 id="1-3、边框（border）"><a href="#1-3、边框（border）" class="headerlink" title="1.3、边框（border）"></a>1.3、边框（border）</h3><h4 id="1-3-1、边框的使用"><a href="#1-3-1、边框的使用" class="headerlink" title="1.3.1、边框的使用"></a>1.3.1、边框的使用</h4><p>1、border可以设置元素的边框。边框有三部分组成：边框宽度(粗细) 边框样式  边框颜色；</p>
 <p>2、语法：</p>
@@ -4716,8 +4882,203 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 
 <p>​        注意：行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距。但是转换为块级和行内块元素就可以了</p>
 <hr>
-<h2 id="2-表格"><a href="#2-表格" class="headerlink" title="2. 表格"></a>2. 表格</h2><hr>
-<h2 id="5-学成在线案例"><a href="#5-学成在线案例" class="headerlink" title="5. 学成在线案例"></a>5. 学成在线案例</h2><h3 id="5-1-页面布局整体思路"><a href="#5-1-页面布局整体思路" class="headerlink" title="5.1 页面布局整体思路"></a>5.1 页面布局整体思路</h3><p>为了提高网页制作的效率，布局时通常有以下的整体思路：</p>
+<h2 id="4-CSS浮动"><a href="#4-CSS浮动" class="headerlink" title="4. CSS浮动"></a>4. CSS浮动</h2><h3 id="4-1-浮动"><a href="#4-1-浮动" class="headerlink" title="4.1 浮动"></a>4.1 浮动</h3><h4 id="1-传统网页布局的三种方式"><a href="#1-传统网页布局的三种方式" class="headerlink" title="1.传统网页布局的三种方式"></a>1.传统网页布局的三种方式</h4><p>CSS 提供了三种传统布局方式(简单说,就是盒子如何进行排列顺序)：</p>
+<ul>
+<li><p>普通流（标准流）</p>
+</li>
+<li><p>浮动</p>
+</li>
+<li><p>定位</p>
+<p>这三种布局方式都是用来摆放盒子的，盒子摆放到合适位置，布局自然就完成了。</p>
+</li>
+</ul>
+<p>注意：实际开发中，一个页面基本都包含了这三种布局方式（后面移动端学习新的布局方式） 。</p>
+<h4 id="2-标准流"><a href="#2-标准流" class="headerlink" title="2. 标准流"></a>2. 标准流</h4><p>1.所谓的标准流: 就是标签按照规定好默认方式排列.</p>
+<p>2.块级元素会独占一行，从上向下顺序排列。</p>
+<ul>
+<li>常用元素：div、hr、p、h1~h6、ul、ol、dl、form、table</li>
+</ul>
+<p>3.行内元素会按照顺序，从左到右顺序排列，碰到父元素边缘则自动换行。</p>
+<ul>
+<li>常用元素：span、a、i、em 等</li>
+</ul>
+<p>4.以上都是标准流布局，我们前面学习的就是标准流，标准流是最基本的布局方式。</p>
+<p>5.这三种布局方式都是用来摆放盒子的，盒子摆放到合适位置，布局自然就完成了。</p>
+<p>6.注意：实际开发中，一个页面基本都包含了这三种布局方式（后面移动端学习新的布局方式） 。</p>
+<hr>
+<h4 id="3-为什么需要浮动"><a href="#3-为什么需要浮动" class="headerlink" title="3. 为什么需要浮动"></a>3. 为什么需要浮动</h4><p>1.提问：我们用标准流能很方便的实现如下效果吗？</p>
+<p>1.1 如何让多个块级盒子(div)水平排列成一行？</p>
+<p>1.2 比较难，虽然转换为行内块元素可以实现一行显示，但是他们之间会有大的空白缝隙，很难控制。</p>
+<p>2.提问：我们用标准流能很方便的实现如下效果吗？</p>
+<p>2.1 如何实现两个盒子的左右对齐？</p>
+<img src="http://bucket-c70.test.upcdn.net/12/95.png" alt="95" style="zoom:80%;" />
+
+<p>3.总结：</p>
+<p>有很多的布局效果，标准流没有办法完成，此时就可以利用浮动完成布局。 因为浮动可以改变元素标签默认的排列方式.</p>
+<p>浮动最典型的应用：可以让多个块级元素一行内排列显示。</p>
+<p>网页布局第一准则：<strong>多个块级元素纵向排列找标准流，多个块级元素横向排列找浮动</strong>。</p>
+<hr>
+<h4 id="4-什么是浮动"><a href="#4-什么是浮动" class="headerlink" title="4. 什么是浮动"></a>4. 什么是浮动</h4><p>1.float 属性用于创建浮动框，将其移动到一边，直到左边缘或右边缘触及包含块或另一个浮动框的边缘。</p>
+<p>2.语法：</p>
+<p><code>选择器 &#123; float: 属性值; &#125;</code></p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>none</td>
+<td>元素不浮动（默认值）</td>
+</tr>
+<tr>
+<td>left</td>
+<td>元素向左浮动</td>
+</tr>
+<tr>
+<td>right</td>
+<td>向右浮动</td>
+</tr>
+</tbody></table>
+<br />
+
+<hr>
+<h4 id="5-浮动的特性"><a href="#5-浮动的特性" class="headerlink" title="5. 浮动的特性"></a>5. 浮动的特性</h4><p>1.加了浮动之后的元素,会具有很多特性,需要我们掌握的.</p>
+<ul>
+<li>浮动元素会脱离标准流(脱标)</li>
+<li>浮动的元素会一行内显示并且元素顶部对齐</li>
+<li>浮动的元素会具有行内块元素的特性.</li>
+</ul>
+<p>2.设置了浮动（float）的元素最重要特性：</p>
+<ul>
+<li>1.脱离标准普通流的控制（浮） 移动到指定位置（动）, （俗称脱标）</li>
+<li>2.浮动的盒子不再保留原先的位置</li>
+</ul>
+<p><img src="http://bucket-c70.test.upcdn.net/12/96.png" alt="96"></p>
+<p>3.如果多个盒子都设置了浮动，则它们会按照属性值一行内显示并且顶端对齐排列。</p>
+<p><img src="http://bucket-c70.test.upcdn.net/12/97.png" alt="97"></p>
+<p>4.浮动的元素是互相贴靠在一起的（不会有缝隙），如果父级宽度装不下这些浮动的盒子， 多出的盒子<br>会另起一行对齐。</p>
+<p>5.浮动元素会具有行内块元素特性。</p>
+<ul>
+<li>1.任何元素都可以浮动。不管原先是什么模式的元素，添加浮动之后具有行内块元素相似的特性。</li>
+<li>2.如果块级盒子没有设置宽度，默认宽度和父级一样宽，但是添加浮动后，它的大小根据内容来决定</li>
+<li>3.浮动的盒子中间是没有缝隙的，是紧挨着一起的</li>
+<li>4.行内元素同理</li>
+</ul>
+<h4 id="6-搭配"><a href="#6-搭配" class="headerlink" title="6. 搭配"></a>6. 搭配</h4><p>1.为了约束浮动元素位置, 我们网页布局一般采取的策略是:</p>
+<ul>
+<li>先用标准流的父元素排列上下位置, 之后内部子元素采取浮动排列左右位置. 符合网页布局第一准侧.</li>
+</ul>
+<p><img src="http://bucket-c70.test.upcdn.net/12/98.png" alt="98"></p>
+<hr>
+<h4 id="7-注意"><a href="#7-注意" class="headerlink" title="7. 注意"></a>7. 注意</h4><p>1.浮动和标准流的父盒子搭配。</p>
+<ul>
+<li>先用标准流的父元素排列上下位置, 之后内部子元素采取浮动排列左右位置</li>
+</ul>
+<p>2.一个元素浮动了，理论上其余的兄弟元素也要浮动。（一浮全浮）</p>
+<ul>
+<li>一个盒子里面有多个子盒子，如果其中一个盒子浮动了，那么其他兄弟也应该浮动，以防止引起问题。</li>
+<li>浮动的盒子只会影响浮动盒子后面的标准流,不会影响前面的标准流。</li>
+</ul>
+<hr>
+<h3 id="4-2-清除浮动"><a href="#4-2-清除浮动" class="headerlink" title="4.2 清除浮动"></a>4.2 清除浮动</h3><h4 id="1-为什么？"><a href="#1-为什么？" class="headerlink" title="1. 为什么？"></a>1. 为什么？</h4><p>1.为什么需要清除浮动？</p>
+<ul>
+<li>由于父级盒子很多情况下，不方便给高度，但是子盒子浮动又不占有位置，最后父级盒子高度为 0 时，就会<br>影响下面的标准流盒子。</li>
+</ul>
+<p><img src="http://bucket-c70.test.upcdn.net/12/99.png" alt="99"></p>
+<p>2.由于浮动元素不再占用原文档流的位置，所以它会对后面的元素排版产生影响</p>
+<h4 id="2-本质"><a href="#2-本质" class="headerlink" title="2. 本质"></a>2. 本质</h4><p>1.清除浮动的本质是清除浮动元素造成的影响</p>
+<p>2.如果父盒子本身有高度，则不需要清除浮动</p>
+<p>3.清除浮动之后，父级就会根据浮动的子盒子自动检测高度。父级有了高度，就不会影响下面的标准流了</p>
+<h4 id="3-清除"><a href="#3-清除" class="headerlink" title="3. 清除"></a>3. 清除</h4><p>1.语法：<code>选择器&#123;clear:属性值;&#125;</code></p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>不允许左侧有浮动元素（清除左侧浮动的影响）</td>
+</tr>
+<tr>
+<td>right</td>
+<td>不允许右侧有浮动元素（清除右侧浮动的影响）</td>
+</tr>
+<tr>
+<td>both</td>
+<td>同时清除左右两侧浮动的影响</td>
+</tr>
+</tbody></table>
+<p>1.1 我们实际工作中， 几乎只用 clear: both;  清除浮动的策略是: 闭合浮动.</p>
+<p>2.方法：</p>
+<ol>
+<li>额外标签法也称为隔墙法，是 W3C 推荐的做法。</li>
+<li>父级添加 overflow 属性</li>
+<li>父级添加after伪元素</li>
+<li>父级添加双伪元素</li>
+</ol>
+<h5 id="3-1-额外标签法"><a href="#3-1-额外标签法" class="headerlink" title="3.1 额外标签法"></a>3.1 额外标签法</h5><p>1.额外标签法也称为隔墙法，是 W3C 推荐的做法。<br>2.额外标签法会在浮动元素末尾添加一个空的标签。例如 <code>&lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;</code>，或者其他标签<br>（如<code>&lt;br /&gt;</code>等）。</p>
+<ul>
+<li>优点： 通俗易懂，书写方便</li>
+<li>缺点： 添加许多无意义的标签，结构化较差</li>
+<li>注意： 要求这个新的空标签必须是块级元素。</li>
+</ul>
+<h5 id="3-2-overflow"><a href="#3-2-overflow" class="headerlink" title="3.2 overflow"></a>3.2 overflow</h5><p>可以给父级添加 overflow 属性，将其属性值设置为 hidden、 auto 或 scroll 。<br>子不教,父之过,注意是给父元素添加代码</p>
+<ul>
+<li>优点：代码简洁</li>
+<li>缺点：无法显示溢出的部分</li>
+</ul>
+<h5 id="3-3-after-伪元素法"><a href="#3-3-after-伪元素法" class="headerlink" title="3.3 :after 伪元素法"></a>3.3 :after 伪元素法</h5><p>1，:after 方式是额外标签法的升级版。也是给父元素添加</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123; <span class="comment">/* IE6、7 专有 */</span></span><br><span class="line">    *zoom: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优点：没有增加标签，结构更简单<br>缺点：照顾低版本浏览器<br>代表网站： 百度、淘宝网、网易等</p>
+<h5 id="3-4-双伪元素"><a href="#3-4-双伪元素" class="headerlink" title="3.4 双伪元素"></a>3.4 双伪元素</h5><p>1.也是给给父元素添加</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>,<span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">clear</span>:both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom:1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优点：代码更简洁<br>缺点：照顾低版本浏览器<br>代表网站：小米、腾讯等</p>
+<h5 id="3-5-总结"><a href="#3-5-总结" class="headerlink" title="3.5 总结"></a>3.5 总结</h5><p>1.为什么需要清除浮动？</p>
+<p>① 父级没高度。<br>② 子盒子浮动了。<br>③ 影响下面布局了，我们就应该清除浮动了。</p>
+<table>
+<thead>
+<tr>
+<th>清除浮动的方式</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>额外标签法（隔墙法）</td>
+<td>通俗易懂，书写方便</td>
+<td>添加许多无意义的标签，结构化较差</td>
+</tr>
+<tr>
+<td>父级overflow:hidden;</td>
+<td>书写简单</td>
+<td>溢出隐藏</td>
+</tr>
+<tr>
+<td>父级after伪元素</td>
+<td>结构语义化正确</td>
+<td>IE6~7不支持:after,兼容性问题</td>
+</tr>
+<tr>
+<td>父级双伪元素</td>
+<td>结构语义化正确</td>
+<td>IE6~7不支持:after,兼容性问题</td>
+</tr>
+</tbody></table>
+<h4 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h4><ol>
+<li>清除浮动本质是?<br>清除浮动的本质是清除浮动元素脱离标准流造成的影响</li>
+<li>清除浮动策略是?<br>闭合浮动. 只让浮动在父盒子内部影响,不影响父盒子外面的其他盒子.</li>
+<li>额外标签法?<br>隔墙法, 就是在最后一个浮动的子元素后面添加一个额外标签, 添加 清除浮动样式.<br>实际工作可能会遇到,但是不常用</li>
+</ol>
+<br />
+
+<h2 id="5-学成在线案例"><a href="#5-学成在线案例" class="headerlink" title="5. 学成在线案例"></a>5. 学成在线案例</h2><h3 id="5-0-PS切图"><a href="#5-0-PS切图" class="headerlink" title="5.0 PS切图"></a>5.0 PS切图</h3><p>1.PS 有很多的切图方式：图层切图、切片切图、PS 插件切图等。</p>
+<h3 id="5-1-页面布局整体思路"><a href="#5-1-页面布局整体思路" class="headerlink" title="5.1 页面布局整体思路"></a>5.1 页面布局整体思路</h3><p>为了提高网页制作的效率，布局时通常有以下的整体思路：</p>
 <ol>
 <li><p>必须确定页面的版心（可视区），我们测量可得知。</p>
 </li>
@@ -5764,7 +6125,11 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <li><code>top:50%</code></li>
 <li>margin-top: -50px; (高度的一半)</li>
 </ol>
-<h6 id="1-3-方法二-transform-translate-50-50"><a href="#1-3-方法二-transform-translate-50-50" class="headerlink" title="1.3.方法二-transform: translate(-50%, -50%);"></a><strong>1.3.方法二-transform: translate(-50%, -50%);</strong></h6><p>绝对定位，这个方法不需要子元素固定宽高，所以不再需要size类了，HTML代码如下</p>
+<h6 id="1-3-方法二-transform"><a href="#1-3-方法二-transform" class="headerlink" title="1.3.方法二-transform"></a>1.3.方法二-transform</h6><p>1.方法二-transform: translate(-50%, -50%);</p>
+<ul>
+<li>这种方法应该需要有绝对定位存在。</li>
+</ul>
+<p>绝对定位，这个方法不需要子元素固定宽高，所以不再需要size类了，HTML代码如下</p>
 <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;wp&quot;</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;box&quot;</span>&gt;<span class="number">123123</span>&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 <p>修复绝对定位的问题，还可以使用css3新增的transform，transform的translate属性也可以设置百分比，其是相对于自身的宽和高，所以可以讲translate设置为-50%，就可以做到居中了，代码如下</p>
@@ -7604,15 +7969,15 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <li>1只在超大屏幕显示，3在中等屏幕与超小屏幕隐藏；2020-10-28 06:38:59</li>
 </ul>
 <hr>
-<h3 id="3-7-案例"><a href="#3-7-案例" class="headerlink" title="3.7 案例"></a>3.7 案例</h3><p>1.阿里百秀首页</p>
-<h4 id="1-技术选型"><a href="#1-技术选型" class="headerlink" title="1. 技术选型"></a>1. 技术选型</h4><p>方案：我们采取响应式页面开发方案<br>技术：bootstrap框架<br>设计图： 本设计图采用 1280px 设计尺寸</p>
-<h4 id="2-需求分析"><a href="#2-需求分析" class="headerlink" title="2. 需求分析"></a>2. 需求分析</h4><h5 id="2-1-页面布局"><a href="#2-1-页面布局" class="headerlink" title="2.1 页面布局"></a>2.1 页面布局</h5><p><img src="../../img/12.3/8.png" alt="8"></p>
-<h5 id="2-2-屏幕划分"><a href="#2-2-屏幕划分" class="headerlink" title="2.2 屏幕划分"></a>2.2 屏幕划分</h5><p>① 屏幕缩放发现 中屏幕 和 大屏幕布局 是一致的。 因此我们列 定义为 col-md- 就可以了， md 是大于等于 970 以上的<br>② 屏幕缩放发现 小屏幕 布局发生变化，因此我们需要为 小屏幕根据需求改变布局<br>③ 屏幕缩放发现 超小屏幕布局又发生变化，因此我们需要为 超小屏幕根据需求改变布局<br>④ 策略： 我们先布局 md以上的 pc端布局，最后根据实际需求在修改 小屏幕 和 超小屏幕的 特殊布局样式</p>
-<h4 id="3-页面制作"><a href="#3-页面制作" class="headerlink" title="3. 页面制作"></a>3. 页面制作</h4><p>1.Bootstrap 使用四步曲： 1. 创建文件夹结构 2. 创建 html 骨架结构 3. 引入相关样式文件 4. 书写内容</p>
-<h5 id="3-2-container修改"><a href="#3-2-container修改" class="headerlink" title="3.2 container修改"></a>3.2 container修改</h5><p>1.因为本效果图采取 1280的宽度， 而Bootstrap 里面 container宽度 最大为 1170px，因此我们需要手动改下container宽度</p>
+<h2 id="4-案例"><a href="#4-案例" class="headerlink" title="4. 案例"></a>4. 案例</h2><p>1.阿里百秀首页</p>
+<h3 id="1-技术选型"><a href="#1-技术选型" class="headerlink" title="1. 技术选型"></a>1. 技术选型</h3><p>方案：我们采取响应式页面开发方案<br>技术：bootstrap框架<br>设计图： 本设计图采用 1280px 设计尺寸</p>
+<h3 id="2-需求分析"><a href="#2-需求分析" class="headerlink" title="2. 需求分析"></a>2. 需求分析</h3><h4 id="2-1-页面布局"><a href="#2-1-页面布局" class="headerlink" title="2.1 页面布局"></a>2.1 页面布局</h4><p><img src="../../img/12.3/8.png" alt="8"></p>
+<h4 id="2-2-屏幕划分"><a href="#2-2-屏幕划分" class="headerlink" title="2.2 屏幕划分"></a>2.2 屏幕划分</h4><p>① 屏幕缩放发现 中屏幕 和 大屏幕布局 是一致的。 因此我们列 定义为 col-md- 就可以了， md 是大于等于 970 以上的<br>② 屏幕缩放发现 小屏幕 布局发生变化，因此我们需要为 小屏幕根据需求改变布局<br>③ 屏幕缩放发现 超小屏幕布局又发生变化，因此我们需要为 超小屏幕根据需求改变布局<br>④ 策略： 我们先布局 md以上的 pc端布局，最后根据实际需求在修改 小屏幕 和 超小屏幕的 特殊布局样式</p>
+<h3 id="3-页面制作"><a href="#3-页面制作" class="headerlink" title="3. 页面制作"></a>3. 页面制作</h3><p>1.Bootstrap 使用四步曲： 1. 创建文件夹结构 2. 创建 html 骨架结构 3. 引入相关样式文件 4. 书写内容</p>
+<h4 id="3-2-container修改"><a href="#3-2-container修改" class="headerlink" title="3.2 container修改"></a>3.2 container修改</h4><p>1.因为本效果图采取 1280的宽度， 而Bootstrap 里面 container宽度 最大为 1170px，因此我们需要手动改下container宽度</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 利用媒体查询修改 container宽度适合效果图宽度 */</span></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width:</span> <span class="number">1280px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.container</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">1280px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="3-3-logo制作"><a href="#3-3-logo制作" class="headerlink" title="3.3 logo制作"></a>3.3 logo制作</h5><p>1.先布局；</p>
+<h4 id="3-3-logo制作"><a href="#3-3-logo制作" class="headerlink" title="3.3 logo制作"></a>3.3 logo制作</h4><p>1.先布局；</p>
 <p>2.放入logo图片，因为logo背景图片是白色的，所以背景颜色加个蓝</p>
 <p>3.去掉左内边距，但不能改col-md-2的，它是隶属于bootstrap的，一改全改，也会错乱bootstrap的使用；</p>
 <ul>
@@ -7623,10 +7988,41 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <p>4.图片不随着变化，当宽度不够时，显示不完整</p>
 <p><img src="../../img/12.3/10.png" alt="10"></p>
 <p>4.1 配置：父元素宽度100%</p>
-<p>html:</p>
+<h4 id="3-4-nav"><a href="#3-4-nav" class="headerlink" title="3.4 nav"></a>3.4 nav</h4><p>5.建造nav</p>
+<p>5.1 清除小点；清除外内边距</p>
+<p><img src="../../img/12.3/11.png" alt="11"></p>
+<p>5.2 鼠标放上a，有底色变化。</p>
+<ul>
+<li>1.把a变成块级元素，给个高度；2020-10-29 00:32:55</li>
+<li>2.添加伪元素:hover</li>
+</ul>
+<p><img src="../../img/12.3/12.png" alt="12"></p>
+<p>5.3 加入字体图标</p>
+<p><img src="../../img/12.3/13.png" alt="13"></p>
+<ul>
+<li><p>1.包括250多个来自 Glyphicon Halflings 的字体图标。<a href="http://glyphicons.com/">Glyphicons</a> Halflings 一般是收费的，但是他们的作者允许 Bootstrap 免费使用。为了表示感谢，希望你在使用时尽量为 <a href="http://glyphicons.com/">Glyphicons</a> 添加一个友情链接。</p>
+</li>
+<li><p>2.复制图标下的类名，即可使用；<a href="https://v3.bootcss.com/components/">https://v3.bootcss.com/components/</a></p>
+</li>
+<li><p>3.利用关键词可以快速查找：</p>
+<p>例如：电话-phone，照相机-camera，图片-picture；</p>
+</li>
+</ul>
+<p>5.3.1 图标垂直居中</p>
+<ul>
+<li><p>1.图片是没对齐的，需要用css垂直居中；（此处：<a href="https://www.bilibili.com/video/BV14J4114768?p=518">视频</a>+6：19）</p>
+<p><img src="../../img/12.3/14.png" alt="14"></p>
+</li>
+</ul>
+<p>5.4</p>
+<h4 id="3-x-代码："><a href="#3-x-代码：" class="headerlink" title="3.x 代码："></a>3.x 代码：</h4><p>1.html:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./1-bootstrap/css/bootstrap.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./2-css/index.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">&quot;col-md-2&quot;</span>&gt;</span></span><br><span class="line">              <span class="comment">&lt;!-- （2） --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;logo&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./3-img/logo.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">&quot;col-md-7&quot;</span>&gt;</span>中间<span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aside</span> <span class="attr">class</span>=<span class="string">&quot;col-md-3&quot;</span>&gt;</span>右侧<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>css:</p>
+<p>2.css:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width:</span> <span class="number">1280px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.container</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">1280px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* header */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 3 */</span></span><br><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.logo</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#429ad9</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 4 */</span></span><br><span class="line"><span class="selector-class">.logo</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 5 */</span></span><br><span class="line"><span class="selector-class">.nav</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 5.1 */</span></span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 5.2.1 */</span></span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 5.2.2 */</span></span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <hr>
 <br />
 
@@ -7720,7 +8116,8 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
 <p>Internet上几乎所有内容都以DNS请求开头。DNS是Internet的目录。单击链接，打开一个应用程序，发送电子邮件，然后您的设备首先询问目录：<strong>在哪里可以找到它？</strong></p>
 <p>不幸的是，默认情况下，DNS通常缓慢且不安全。您的ISP和任何其他在Internet上侦听的人都可以看到您访问的每个站点以及您使用的每个应用程序，即使它们的内容是加密的。令人毛骨悚然的是，一些DNS提供商会出售有关您的Internet活动的数据，或将其用于广告定位。</p>
 <p>我们认为这很严重。如果您也这样做，现在可以选择：<strong>1.1.1.1</strong></p>
-<h3 id="1-2-配置"><a href="#1-2-配置" class="headerlink" title="1.2 配置"></a>1.2 配置</h3><h1 id="在电脑上安装"><a href="#在电脑上安装" class="headerlink" title="在电脑上安装"></a>在电脑上安装</h1><p>设置<strong>1.1.1.1</strong>需要两分钟，并且不需要任何技术技能或特殊软件。即使您是计算机的新手，也请在下面选择您的设备，以获取易于遵循的设置指南。</p>
+<h3 id="1-2-配置"><a href="#1-2-配置" class="headerlink" title="1.2 配置"></a>1.2 配置</h3><p>1.在电脑上安装</p>
+<p>设置<strong>1.1.1.1</strong>需要两分钟，并且不需要任何技术技能或特殊软件。即使您是计算机的新手，也请在下面选择您的设备，以获取易于遵循的设置指南。</p>
 <p>苹果手机安卓系统苹果系统视窗的Linux路由器</p>
 <ol>
 <li>单击开始菜单，然后单击<strong>控制面板</strong>。</li>
@@ -11674,6 +12071,9 @@ alert(strMsg.length); <span class="comment">// 显示 11</span>
 <ul>
 <li>2和3可以快捷为：hexo g -d </li>
 </ul>
+<hr>
+<h3 id="7-camera"><a href="#7-camera" class="headerlink" title="7. camera"></a>7. camera</h3><p>camera<br>英 [ˈkæmərə]   美 [ˈkæmərə]<br>n.照相机;(电影)摄影机;(电视)摄像机</p>
+<p><a href="https://fanyi.baidu.com/?aldtype=16047#en/zh/camera">https://fanyi.baidu.com/?aldtype=16047#en/zh/camera</a></p>
 <hr>
 ]]></content>
   </entry>
