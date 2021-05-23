@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Amita:300,300italic,400,400italic,700,700italic|Montserrat:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-loading-bar.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"cqilin.gitee.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1. 多层继承模板">
+<meta property="og:type" content="article">
+<meta property="og:title" content="15.3-node笔记">
+<meta property="og:url" content="https://cqilin.gitee.io/1-(0~50)/15.3-node%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="qilin&#39;s blog">
+<meta property="og:description" content="1. 多层继承模板">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cqilin.gitee.io/img/15/56.png">
+<meta property="article:published_time" content="2021-04-30T09:33:23.000Z">
+<meta property="article:modified_time" content="2021-05-23T16:01:01.318Z">
+<meta property="article:author" content="qilin">
+<meta property="article:tag" content="node">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cqilin.gitee.io/img/15/56.png">
+
+<link rel="canonical" href="https://cqilin.gitee.io/1-(0~50)/15.3-node%E7%AC%94%E8%AE%B0/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>15.3-node笔记 | qilin's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">qilin's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">web学习笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">50</span></a>
+
+  </li>
+        <li class="menu-item menu-item-guestbook">
+
+    <a href="/guestbook/" rel="section"><i class="fa fa-comment fa-fw"></i>留言</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%A4%9A%E5%B1%82%E7%BB%A7%E6%89%BF%E6%A8%A1%E6%9D%BF"><span class="nav-text">1. 多层继承模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%9D%91%E5%B0%B1%E7%AE%97%E4%B8%8D%E5%A1%AB%EF%BC%8C%E5%86%99%E4%BA%86%E8%83%BD%E4%BA%8C%E7%BA%A7%E7%BB%A7%E6%89%BF"><span class="nav-text">2. 坑就算不填，写了能二级继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%A6%82%E6%9E%9C%E4%B8%80%E7%BA%A7%E6%8D%A2%E5%9D%91%E4%BD%8D"><span class="nav-text">3. 如果一级换坑位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%8A%A5%E9%94%99%EF%BC%9B"><span class="nav-text">4. 报错；</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%97%AE%E9%A2%98"><span class="nav-text">2. 问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E8%87%AA%E5%B7%B1%E8%B0%83%E7%94%A8%E5%8F%98%E9%87%8F"><span class="nav-text">2.1 自己调用变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%BB%93%E8%AE%BA%EF%BC%9A"><span class="nav-text">1.结论：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%BA%E4%BB%80%E4%B9%88if%E9%87%8C%E5%B0%B1%E4%B8%80%E4%B8%AA%E9%87%8F"><span class="nav-text">3. 为什么if里就一个量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%B7%AF%E5%BE%84"><span class="nav-text">3. 路径</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-render"><span class="nav-text">2.render</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E8%A1%A8%E5%8D%95%E8%B7%AF%E5%BE%84"><span class="nav-text">3.2 表单路径</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-req-body"><span class="nav-text">4. req.body</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-res-render"><span class="nav-text">5. res.render</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E5%AE%98%E6%96%B9"><span class="nav-text">5.1 官方</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%A8%A1%E6%9D%BF%E4%B8%8E%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E"><span class="nav-text">6. 模板与模板引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-res-send"><span class="nav-text">7. res.send</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%B8%AD%E6%96%AD"><span class="nav-text">2. 中断</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E8%AE%BA%E6%96%87%E9%87%8D%E6%B8%A9"><span class="nav-text">8. 论文重温</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="qilin"
+      src="/images/7.jpg">
+  <p class="site-author-name" itemprop="name">qilin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cqilin.gitee.io/1-(0~50)/15.3-node%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/7.jpg">
+      <meta itemprop="name" content="qilin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="qilin's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          15.3-node笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-30 17:33:23" itemprop="dateCreated datePublished" datetime="2021-04-30T17:33:23+08:00">2021-04-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-05-24 00:01:01" itemprop="dateModified" datetime="2021-05-24T00:01:01+08:00">2021-05-24</time>
+              </span>
+
+          
+            <span id="/1-(0~50)/15.3-node%E7%AC%94%E8%AE%B0/" class="post-meta-item leancloud_visitors" data-flag-title="15.3-node笔记" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/1-(0~50)/15.3-node%E7%AC%94%E8%AE%B0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/1-(0~50)/15.3-node%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>8.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="1-多层继承模板"><a href="#1-多层继承模板" class="headerlink" title="1. 多层继承模板"></a>1. 多层继承模板</h2><a id="more"></a>
+
+<p>2.6 美化错误信息页面（可选）</p>
+<ul>
+<li>1.在<code>admin/common/</code> 创建 error.art</li>
+<li>2.视频里面是单独的页面，而我，想再login.art的基础上；</li>
+</ul>
+<p>2.6.1 继承能套吗？</p>
+<ul>
+<li>1.我在login.art里面写了<code>&#123;&#123;block 'err'&#125;&#125;&#123;&#123;/block&#125;&#125;</code></li>
+<li>2.然后在error.art那边写：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;extend <span class="string">&#x27;./login.art&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;</span><br><span class="line">&lt;p <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;bg-danger error&quot;</span>&gt;&#123;&#123;msg&#125;&#125;&lt;/p&gt;</span><br><span class="line">&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3.没有效果；</li>
+</ul>
+<p>2.6.2 中间，还尝试了很多办法，包含，或者直接在login.art写html;</p>
+<ul>
+<li>1.都不行；</li>
+</ul>
+<p>2.6.3 后来，我突发奇想：事先在layout，里留下err坑；</p>
+<ul>
+<li>1.一级继承，login.art不填这个坑</li>
+<li>2.二级继承，error.art可以填这个坑吗？</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// layout.art</span></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;main&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// error.art</span></span><br><span class="line">&#123;&#123;extend <span class="string">&#x27;./login.art&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;</span><br><span class="line">&lt;p <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;bg-danger error&quot;</span>&gt;&#123;&#123;msg&#125;&#125;&lt;/p&gt;</span><br><span class="line">&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3.有效果；</li>
+</ul>
+<p>2.6.4 写入node笔记；</p>
+<p>2.7 我如何能写进main的div的后面？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// layout.art</span></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;main&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写成：可以吗？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// layout.art</span></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;main&#x27;</span>&#125;&#125;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line">    &#123;&#123;/block&#125;&#125; </span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>1.实验；</li>
+<li>没有效果</li>
+</ul>
+<h3 id="2-坑就算不填，写了能二级继承"><a href="#2-坑就算不填，写了能二级继承" class="headerlink" title="2. 坑就算不填，写了能二级继承"></a>2. 坑就算不填，写了能二级继承</h3><p>2.8 如果一级继承没有写上不填坑的X坑，那么二级继承不会X坑；</p>
+<p>2.9 反之就会有；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// layout.art</span></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;main&#x27;</span>&#125;&#125;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line">    &#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>login.art</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="number">1.</span>继承骨架模块 --&gt;</span><br><span class="line">&#123;&#123;extend <span class="string">&#x27;./common/layout.art&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- <span class="number">2.</span>这里是主体部分，填坑 --&gt;</span><br><span class="line">&#123;&#123;block <span class="string">&#x27;main&#x27;</span>&#125;&#125;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;login-body&quot;</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;login-container&quot;</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>error.art</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;extend <span class="string">&#x27;./login.art&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;</span><br><span class="line">&lt;p <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;bg-danger error&quot;</span>&gt;asdas &#123;&#123;msg&#125;&#125;&lt;/p&gt;</span><br><span class="line">&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.如果在被继承文件里面，不是那样的格式；</p>
+<ul>
+<li>1.即使是这样</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;main&#x27;</span>&#125;&#125;</span><br><span class="line">    &#123;&#123;/block&#125;&#125;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2.不是这样</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;main&#x27;</span>&#125;&#125;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line">    &#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.1 效果也一样；</p>
+<ul>
+<li>1.是不是可以假设！</li>
+<li>2.坑在继承中，可以随意调整位置；</li>
+<li>3.每一个坑，都是单独了一个东西，与包它，和，被它包的坑，没关系；</li>
+</ul>
+<p>3.2 但是留坑，必须是原始被继承文件配置，中间的继承文件无法留坑；</p>
+<h3 id="3-如果一级换坑位"><a href="#3-如果一级换坑位" class="headerlink" title="3. 如果一级换坑位"></a>3. 如果一级换坑位</h3><p>1.那么二级会出现两个坑；</p>
+<p>2.然而并不是，只是浏览器，或者是本地服务器没有刷新过来；</p>
+<p>3.一个坑都没有了；</p>
+<p>4.如果保留，原始坑位，复制坑位；效果是怎样？</p>
+<ul>
+<li>1.原始坑位</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;block <span class="string">&#x27;main&#x27;</span>&#125;&#125;</span><br><span class="line">&#123;&#123;/block&#125;&#125;</span><br><span class="line">&#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2.login.art继承</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 1.继承骨架模块 --&gt;</span></span><br><span class="line">&#123;&#123;extend &#x27;./common/layout.art&#x27;&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 2.这里是主体部分，填坑 --&gt;</span></span><br><span class="line">&#123;&#123;block &#x27;main&#x27;&#125;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;login-body&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 复制的坑位 --&gt;</span></span><br><span class="line">        &#123;&#123;block &#x27;err&#x27;&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;&#123;/block&#125;&#125;</span><br><span class="line">&#123;&#123;block &#x27;err&#x27;&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3.看有没有效果</li>
+</ul>
+<p>4.1 没有效果；</p>
+<h3 id="4-报错；"><a href="#4-报错；" class="headerlink" title="4. 报错；"></a>4. 报错；</h3><p>多重继承好像要报错；</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// admin.js:45</span><br><span class="line">let a2 = res.status(401).render(&#x27;admin/error&#x27;, &#123; msg: &#x27;邮件地址或密码错误&#x27; &#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">Error </span>[ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the </span><br><span class="line"></span><br><span class="line">at F:\2<span class="string">-3</span>ciyuan\11-data base-shujuk\3-lianxi\8-blog\route\admin.js:45:30</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="2-问题"><a href="#2-问题" class="headerlink" title="2. 问题"></a>2. 问题</h2><h3 id="2-1-自己调用变量"><a href="#2-1-自己调用变量" class="headerlink" title="2.1 自己调用变量"></a>2.1 自己调用变量</h3><p>3.2 通过异步函数的方式，获取到异步API查询方法findOne的返回值；</p>
+<ul>
+<li>1.用变量接收；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2. 实现登录功能</span></span><br><span class="line">admin.post(<span class="string">&#x27;/login&#x27;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 接收请求参数</span></span><br><span class="line">    <span class="keyword">const</span> &#123; email, password &#125; = req.body;</span><br><span class="line">    <span class="comment">// 2.5</span></span><br><span class="line">    <span class="keyword">let</span> x = <span class="string">&#x27;如果不是警告，而是页面内容，则你的JS没被使用&#x27;</span>;</span><br><span class="line">    <span class="keyword">let</span> a = res.status(<span class="number">400</span>).send(<span class="string">&#x27;&lt;h4&gt;邮件地址或密码错误&lt;/h4&gt;&#x27;</span> + x);</span><br><span class="line">    <span class="keyword">if</span> (email.trim().length == <span class="number">0</span> || password.trim().length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 6.1 根据邮箱地址查询用户信息</span></span><br><span class="line">    <span class="keyword">let</span> user = <span class="keyword">await</span> User.findOne(&#123; email &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.3 如果邮箱存在，user变量类型是对象类型，不存在，为空；</p>
+<ul>
+<li>1.根据返回值的类型判断</li>
+</ul>
+<p>4.报错：一直报错；</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UnhandledPromiseRejectionWarning: <span class="builtin-name">Error</span> [ERR_HTTP_HEADERS_SENT]: Cannot <span class="builtin-name">set</span> headers after they are sent <span class="keyword">to</span> the client</span><br></pre></td></tr></table></figure>
+
+<p>将头发送到客户端后无法设置头</p>
+<ul>
+<li>1.我何时发了什么头？</li>
+<li>2.结果，一旦有路由过来</li>
+</ul>
+<p><code>let a = res.status(400).send(&#39;&lt;h4&gt;邮件地址或密码错误&lt;/h4&gt;&#39; + x);</code></p>
+<p>就自动触发，不需要使用就触发了；占用了响应头；</p>
+<p>4.1 百度无果，</p>
+<h4 id="1-结论："><a href="#1-结论：" class="headerlink" title="1.结论："></a>1.结论：</h4><p>1.原因：无；</p>
+<p>2.结果：</p>
+<ul>
+<li>1.就是要调用；</li>
+</ul>
+<p>2.1 例如app.js里面的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> home = <span class="built_in">require</span>(<span class="string">&quot;./route/home&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> admin = <span class="built_in">require</span>(<span class="string">&#x27;./route/admin&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.2 虽然home接收了，但右边的，自己也用了；</p>
+<ul>
+<li>1.相当于：函数名();</li>
+<li>2.相当于，函数下面，接了一个 函数名();</li>
+<li>3.运行了这个方法；</li>
+</ul>
+<p>2.3 平常，我们感受不到，因为，有些函数，他的返回结果，既不面向前端，也不面向后端。</p>
+<ul>
+<li><p>1.就是一个数据，一个运算。</p>
+</li>
+<li><p>2.但这些：<code>res.status(400).send(&#39;&lt;h4&gt;邮件地址或密码错误&lt;/h4&gt;&#39; + x);</code></p>
+</li>
+<li><p>3.是响应给服务器的，有没有量接收，服务器都会反应；</p>
+</li>
+</ul>
+<p>2021-5-1 17:07:27</p>
+<h3 id="3-为什么if里就一个量"><a href="#3-为什么if里就一个量" class="headerlink" title="3. 为什么if里就一个量"></a>3. 为什么if里就一个量</h3><p>0.例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (user) &#123;</span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        <span class="keyword">if</span> (is_valid)</span><br><span class="line">            req.session.username = user.username;</span><br><span class="line"></span><br><span class="line">            req.app.locals.userInfo = user;</span><br><span class="line">            <span class="comment">// 9.重定向到用户列表页面</span></span><br><span class="line">            res.redirect(<span class="string">&#x27;/admin/user&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;密码错误&#x27;</span>);</span><br><span class="line">            res.send(<span class="string">&#x27;密码错误&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;没有这账号&#x27;</span>);</span><br><span class="line">        res.send(<span class="string">&#x27;没有这账号&#x27;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>1.这是C语言的，应该差不多</p>
+<blockquote>
+<p>C语言里面使用0代表逻辑假，非0代表逻辑真。</p>
+<p>if(n)这种写法和if(n!=0)是完全等价的。</p>
+<p>因为n=0时，n本身为0就是逻辑假<br>n!=0时，n本身非0就是逻辑真</p>
+<p>if(n)只有当n!=0的时候，里面的条件才是逻辑真，才会走到if分支里面。那不就是和n!=0完全等价了？一种省略的写法而已。</p>
+</blockquote>
+<hr>
+<h2 id="3-路径"><a href="#3-路径" class="headerlink" title="3. 路径"></a>3. 路径</h2><p>1.后端很多路径；</p>
+<ul>
+<li>2.这个重定向，是与localhost+端口；拼接的；</li>
+<li>3.模板那些，有模板设置的路径；</li>
+<li>4.路由那些，也是localhost+端口；二级路由会相对于一级路由的路径；</li>
+<li>5.静态资源那些，也有设置静态资源根目录；</li>
+</ul>
+<h3 id="2-render"><a href="#2-render" class="headerlink" title="2.render"></a>2.render</h3><p>2.res.render放到的路径呢？</p>
+<ul>
+<li><p>2.自动拼接，模板路径，模板后缀，模板文件使用哪个模板引擎；这些不都是自己先set了吗？</p>
+</li>
+<li><p>3.然后把拼接好的结果响应给客户端</p>
+</li>
+<li><p>4.还有第二个参数，就是向模板中传入的数据；</p>
+</li>
+</ul>
+<p>3.<code>app.engine(&#39;art&#39;, require(&#39;express-art-template&#39;));</code></p>
+<ul>
+<li>1.告诉express框架，你使用的模板引擎是什么；什么时候使用（第一个参数）</li>
+<li>engine：引擎；</li>
+</ul>
+<p>3.1 告诉模板文件的地方：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 设置模板存放目录</span></span><br><span class="line">app.set(<span class="string">&#x27;views&#x27;</span>, path.join(__dirname, <span class="string">&#x27;views&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>app.set很有多效果；是用来配置express的</li>
+<li>1.第一个参数，是配置什么，配置模板的关键字 就是 views；</li>
+<li>2.第二个参数，是模板的位置信息；推荐写绝对路径；</li>
+<li></li>
+</ul>
+<p>3.2 设置模板后缀</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 渲染模板时不写后缀 默认拼接art后缀</span></span><br><span class="line">app.set(<span class="string">&#x27;view engine&#x27;</span>, <span class="string">&#x27;art&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>1.express可以同时使用多个模板引擎；</li>
+<li>2.配置模板后缀的关键字：view engine</li>
+<li>3.当写了这个关键字后，第二个参数，就是后缀名了；</li>
+</ul>
+<h3 id="3-2-表单路径"><a href="#3-2-表单路径" class="headerlink" title="3.2 表单路径"></a>3.2 表单路径</h3><p>1.表单里面的 相对路径，跟url的host后面拼接；</p>
+<p><img src="../../img/15/56.png" alt="26"></p>
+<h2 id="4-req-body"><a href="#4-req-body" class="headerlink" title="4. req.body"></a>4. req.body</h2><p>1.是啥来着？</p>
+<p>1.1  <code>app.use(bodyParser.urlencoded(&#123; extended: false &#125;));</code></p>
+<ul>
+<li>1.抢先在所有请求前，先用bodyParser下的urlencoded方法处理；</li>
+<li>2.该方法会检测当前请求中是否有请求参数，如果有，会接收请求参数，处理成对象类型；</li>
+<li>3.然后再为req对象，添加一个属性，属性的名字是body，并把请求参数的值，赋值了req.body</li>
+<li>4.最后在方法内部，调用了next()方法，将请求控制权，交给了下一个中间件</li>
+<li>5.所以，在接下来的路由中，我们可以通过req.body拿到这个对象类型的请求参数。</li>
+</ul>
+<p>1.2 出至：15.1-6.3.3 post参数获取</p>
+<h2 id="5-res-render"><a href="#5-res-render" class="headerlink" title="5. res.render"></a>5. res.render</h2><p>1.渲染一个<code>view</code>带有响应的回调，该回调以渲染的字符串作为响应。当发生错误时，<code>next(err)</code> 在内部调用。提供回调时，可能的错误和呈现的字符串都将传递，并且不会执行自动响应。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">res.render(<span class="string">&#x27;index&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, html</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">res.render(<span class="string">&#x27;user&#x27;</span>, &#123; <span class="attr">name</span>: <span class="string">&#x27;Tobi&#x27;</span> &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">err, html</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>1.1 <code>res.render(view, [locals], callback)</code></p>
+<p>2.</p>
+<ul>
+<li>1.为了使用res.render[^16]</li>
+<li>2.是res，是响应下的方法；</li>
+<li>3.在方法内部，做了很多事情；<ul>
+<li>1.里面写模板名称。</li>
+<li>2.自动拼接，模板路径，模板后缀，模板文件使用哪个模板引擎；这些不都是自己先set了吗？</li>
+<li>3.然后把拼接好的结果响应给客户端</li>
+</ul>
+</li>
+<li>4.还有第二个参数，就是向模板中传入的数据；</li>
+</ul>
+<blockquote>
+<p>15.1-6.3-7</p>
+</blockquote>
+<h3 id="5-1-官方"><a href="#5-1-官方" class="headerlink" title="5.1 官方"></a>5.1 官方</h3><p>1.<a target="_blank" rel="noopener" href="http://expressjs.com/en/api.html#res.render">http://expressjs.com/en/api.html#res.render</a></p>
+<p>2.呈现a<code>view</code>并将呈现的HTML字符串发送到客户端。可选参数：</p>
+<ul>
+<li><code>locals</code>，一个对象，其属性定义视图的局部变量。</li>
+<li><code>callback</code>，一个回调函数。如果提供了该方法，则该方法将同时返回可能的错误和呈现的字符串，但不会执行自动响应。发生错误时，该方法在<code>next(err)</code>内部调用。</li>
+</ul>
+<p>该<code>view</code>参数是一个字符串，它是视图文件来渲染的文件路径。这可以是绝对路径，也可以是相对于<code>views</code>设置的路径。如果路径不包含文件扩展名，则该<code>view engine</code>设置确定文件扩展名。如果路径中确实包含文件扩展名，则Express将（通过<code>require()</code>）为指定的模板引擎加载模块，并使用加载的模块的<code>__express</code>功能对其进行呈现。</p>
+<p>有关更多信息，请参阅<a target="_blank" rel="noopener" href="http://expressjs.com/guide/using-template-engines.html">将模板引擎与Express结合使用</a>。</p>
+<p><strong>注意：</strong>该<code>view</code>参数执行文件系统操作，例如从磁盘读取文件并评估Node.js模块，因此出于安全原因，不应包含最终用户的输入。</p>
+<p>局部变量<code>cache</code>启用视图缓存。将其设置为<code>true</code>，以在开发过程中缓存视图；默认情况下，生产中启用了视图缓存。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// send the rendered view to the client</span></span><br><span class="line">res.render(<span class="string">&#x27;index&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// if a callback is specified, the rendered HTML string has to be sent explicitly</span></span><br><span class="line">res.render(<span class="string">&#x27;index&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, html</span>) </span>&#123;</span><br><span class="line">  res.send(html)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// pass a local variable to the view</span></span><br><span class="line">res.render(<span class="string">&#x27;user&#x27;</span>, &#123; <span class="attr">name</span>: <span class="string">&#x27;Tobi&#x27;</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err, html</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="6-模板与模板引擎"><a href="#6-模板与模板引擎" class="headerlink" title="6. 模板与模板引擎"></a>6. 模板与模板引擎</h2><p><code>$&#123;&#125;</code>与<code>&#123;&#123;&#125;&#125;`
+
+1. `$&#123;&#125;`是模板的语法，那`&#123;&#123;&#125;&#125;</code>呢</p>
+<ul>
+<li>1.<code>$&#123;&#125;</code>是ES6模板字符串的语法，<code>&#123;&#123;好像是模板引擎的&#125;&#125;</code></li>
+</ul>
+<p>2021-5-2 10:52:50</p>
+<p>2.但具体下一步，搜索：模板字符串 里的 美元符号 是什么意思；</p>
+<ul>
+<li>1.百度不到；</li>
+</ul>
+<h2 id="7-res-send"><a href="#7-res-send" class="headerlink" title="7. res.send"></a>7. res.send</h2><ol>
+<li><code>res.send（[body]）</code></li>
+</ol>
+<p>发送HTTP响应。</p>
+<p>所述<code>body</code>参数可以是一个<code>Buffer</code>对象，一个<code>String</code>，对象，<code>Boolean</code>或<code>Array</code>。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">res.send(Buffer.from(<span class="string">&#x27;whoop&#x27;</span>))</span><br><span class="line">res.send(&#123; <span class="attr">some</span>: <span class="string">&#x27;json&#x27;</span> &#125;)</span><br><span class="line">res.send(<span class="string">&#x27;&lt;p&gt;some html&lt;/p&gt;&#x27;</span>)</span><br><span class="line">res.status(<span class="number">404</span>).send(<span class="string">&#x27;Sorry, we cannot find that!&#x27;</span>)</span><br><span class="line">res.status(<span class="number">500</span>).send(&#123; <span class="attr">error</span>: <span class="string">&#x27;something blew up&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>此方法对简单的非流式响应执行许多有用的任务：例如，它自动分配<code>Content-Length</code>HTTP响应标头字段（除非先前定义），并提供自动的HEAD和HTTP缓存新鲜度支持。</p>
+<p>当参数为<code>Buffer</code>对象时，该方法将<code>Content-Type</code> 响应头字段设置为“ application / octet-stream”，除非事先定义如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res.set(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;text/html&#x27;</span>)</span><br><span class="line">res.send(Buffer.from(<span class="string">&#x27;&lt;p&gt;some html&lt;/p&gt;&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>当参数为a时<code>String</code>，该方法将设置<code>Content-Type</code>为“ text / html”：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">res.send(<span class="string">&#x27;&lt;p&gt;some html&lt;/p&gt;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>当参数为<code>Array</code>或时<code>Object</code>，Express将以JSON表示形式进行响应：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res.send(&#123; <span class="attr">user</span>: <span class="string">&#x27;tobi&#x27;</span> &#125;)</span><br><span class="line">res.send([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-中断"><a href="#2-中断" class="headerlink" title="2. 中断"></a>2. 中断</h3><p>没有中断效果，会继续执行下面的代码；只是显示效果拦截</p>
+<h2 id="8-论文重温"><a href="#8-论文重温" class="headerlink" title="8. 论文重温"></a>8. 论文重温</h2><p>1.在写论文的过程中，有对代码有一些问题；2021-5-3 22:29:44</p>
+<p>2.在写这个笔记之前，就已经做了很多了，都没笔记，虽然都自己会做；</p>
+<ul>
+<li>1.但还是写几笔思路比较好，因为我现在，都记不起刚才遇到的什么问题了；2021-5-3 22:30:37</li>
+</ul>
+<p>3.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/node/" rel="tag"># node</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/1-(0~50)/15.2-nodeJS/" rel="prev" title="15.2-node.js">
+      <i class="fa fa-chevron-left"></i> 15.2-node.js
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/1-(0~50)/99-hello-world/" rel="next" title="99-Hello World">
+      99-Hello World <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">qilin</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">759k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11:30</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: location.pathname,
+    }, {"enable":true,"appId":"l9X7oYVrse5t6umGkFbQyhXs-gzGzoHsz","appKey":"dcwRazDbDakW6HdC3xERrYHu","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"language":null,"visitor":true,"comment_count":true,"recordIP":true,"serverURLs":null}
+    ));
+  }, window.Valine);
+});
+</script>
+
+
+  
+  <script type="text/javascript" onmobile="true" color="0,0,0" opacity='0.7' zIndex="-1" count="120" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>

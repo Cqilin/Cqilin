@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Amita:300,300italic,400,400italic,700,700italic|Montserrat:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-loading-bar.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"cqilin.gitee.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1. flex布局体验https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV14J4114768?p&#x3D;416 1.1 传统布局与flex布局传统布局  兼容性好 布局繁琐 局限性，不能再移动端很好的布局  flex弹性布局  操作方便 PC端浏览器支持情况较差 IE 11或更低版本，不支持或仅部分支持  1.2 初体验1. 搭建HTML结构12345&lt;div&gt;    &amp;lt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12.4">
+<meta property="og:url" content="https://cqilin.gitee.io/1-(0~50)/12.4-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8E%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/index.html">
+<meta property="og:site_name" content="qilin&#39;s blog">
+<meta property="og:description" content="1. flex布局体验https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV14J4114768?p&#x3D;416 1.1 传统布局与flex布局传统布局  兼容性好 布局繁琐 局限性，不能再移动端很好的布局  flex弹性布局  操作方便 PC端浏览器支持情况较差 IE 11或更低版本，不支持或仅部分支持  1.2 初体验1. 搭建HTML结构12345&lt;div&gt;    &amp;lt">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.4/1.jpg">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.4/2.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.4/3.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.4/4.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.4/5.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.4/6.png">
+<meta property="article:published_time" content="2021-03-06T11:13:29.000Z">
+<meta property="article:modified_time" content="2021-05-23T15:14:53.932Z">
+<meta property="article:author" content="qilin">
+<meta property="article:tag" content="web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cqilin.gitee.io/img/12.4/1.jpg">
+
+<link rel="canonical" href="https://cqilin.gitee.io/1-(0~50)/12.4-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8E%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>12.4 | qilin's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">qilin's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">web学习笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">50</span></a>
+
+  </li>
+        <li class="menu-item menu-item-guestbook">
+
+    <a href="/guestbook/" rel="section"><i class="fa fa-comment fa-fw"></i>留言</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-flex%E5%B8%83%E5%B1%80%E4%BD%93%E9%AA%8C"><span class="nav-text">1. flex布局体验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E4%BC%A0%E7%BB%9F%E5%B8%83%E5%B1%80%E4%B8%8Eflex%E5%B8%83%E5%B1%80"><span class="nav-text">1.1 传统布局与flex布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E5%88%9D%E4%BD%93%E9%AA%8C"><span class="nav-text">1.2 初体验</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%90%AD%E5%BB%BAHTML%E7%BB%93%E6%9E%84"><span class="nav-text">1. 搭建HTML结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-flex%E5%B8%83%E5%B1%80%E5%8E%9F%E7%90%86"><span class="nav-text">2. flex布局原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%B8%83%E5%B1%80%E5%8E%9F%E7%90%86"><span class="nav-text">2.1 布局原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-flex%E5%B8%83%E5%B1%80%E7%88%B6%E9%A1%B9%E5%B8%B8%E8%A7%81%E5%B1%9E%E6%80%A7"><span class="nav-text">3. flex布局父项常见属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%B8%B8%E8%A7%81%E7%88%B6%E9%A1%B9%E5%B1%9E%E6%80%A7"><span class="nav-text">3.1 常见父项属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-flex-direction"><span class="nav-text">3.2 flex-direction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-justify-content"><span class="nav-text">3.3 justify-content</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E6%8D%A2%E8%A1%8C"><span class="nav-text">3.4 换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E4%BE%A7%E8%BD%B4%E4%B8%8A%E5%AD%90%E5%85%83%E7%B4%A0%E6%8E%92%E5%88%97%E6%96%B9%E5%BC%8F-%E5%8D%95%E8%A1%8C"><span class="nav-text">3.5 侧轴上子元素排列方式(单行)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="nav-text">水平垂直居中</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-align-content"><span class="nav-text">3.6 align-content</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-align-content-%E5%92%8C-align-items-%E5%8C%BA%E5%88%AB"><span class="nav-text">2. align-content 和 align-items 区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-flex-flow"><span class="nav-text">3.7 flex-flow</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-flex%E5%B8%83%E5%B1%80%E5%AD%90%E9%A1%B9%E5%B8%B8%E8%A7%81%E5%B1%9E%E6%80%A7"><span class="nav-text">4. flex布局子项常见属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-flex%E5%B1%9E%E6%80%A7"><span class="nav-text">4.1 flex属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-align-self-%E6%8E%A7%E5%88%B6%E5%AD%90%E9%A1%B9%E4%BE%A7%E8%BD%B4"><span class="nav-text">4.2 align-self 控制子项侧轴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-order%E5%B1%9E%E6%80%A7%E5%AE%9A%E4%B9%89%E9%A1%BA%E5%BA%8F"><span class="nav-text">4.3 order属性定义顺序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%90%BA%E7%A8%8B%E7%BD%91%E9%A6%96%E9%A1%B5%E6%A1%88%E4%BE%8B%E5%88%B6%E4%BD%9C"><span class="nav-text">5. 携程网首页案例制作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="nav-text">5.1 技术选型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#X-%E8%84%9A%E6%B3%A8"><span class="nav-text">X. 脚注</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="qilin"
+      src="/images/7.jpg">
+  <p class="site-author-name" itemprop="name">qilin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cqilin.gitee.io/1-(0~50)/12.4-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8E%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/7.jpg">
+      <meta itemprop="name" content="qilin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="qilin's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          12.4
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-06 19:13:29" itemprop="dateCreated datePublished" datetime="2021-03-06T19:13:29+08:00">2021-03-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-05-23 23:14:53" itemprop="dateModified" datetime="2021-05-23T23:14:53+08:00">2021-05-23</time>
+              </span>
+
+          
+            <span id="/1-(0~50)/12.4-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8E%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" class="post-meta-item leancloud_visitors" data-flag-title="12.4" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/1-(0~50)/12.4-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8E%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/1-(0~50)/12.4-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8E%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="1-flex布局体验"><a href="#1-flex布局体验" class="headerlink" title="1. flex布局体验"></a>1. flex布局体验</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=416">https://www.bilibili.com/video/BV14J4114768?p=416</a></p>
+<h3 id="1-1-传统布局与flex布局"><a href="#1-1-传统布局与flex布局" class="headerlink" title="1.1 传统布局与flex布局"></a>1.1 传统布局与flex布局</h3><p>传统布局</p>
+<ul>
+<li>兼容性好</li>
+<li>布局繁琐</li>
+<li>局限性，不能再移动端很好的布局</li>
+</ul>
+<p>flex弹性布局</p>
+<ul>
+<li>操作方便</li>
+<li>PC端浏览器支持情况较差</li>
+<li>IE 11或更低版本，不支持或仅部分支持</li>
+</ul>
+<h3 id="1-2-初体验"><a href="#1-2-初体验" class="headerlink" title="1.2 初体验"></a>1.2 初体验</h3><h4 id="1-搭建HTML结构"><a href="#1-搭建HTML结构" class="headerlink" title="1. 搭建HTML结构"></a>1. 搭建HTML结构</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>3<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>…</p>
+<p>后面的笔记没法做，看视频才效果好；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">            div &#123;</span><br><span class="line">                display: flex;</span><br><span class="line">                width: 80%;</span><br><span class="line">                height: 300px;</span><br><span class="line">                background-color: pink;</span><br><span class="line">                justify-content: space-around;</span><br><span class="line">            &#125;</span><br><span class="line">            div span &#123;</span><br><span class="line"><span class="css">                <span class="comment">/* width: 150px; */</span></span></span><br><span class="line"><span class="css">                <span class="selector-tag">height</span><span class="selector-pseudo">:100px</span>;</span></span><br><span class="line">                background-color: purple;</span><br><span class="line">                margin-right: 5px;</span><br><span class="line">                flex: 1;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br >
+
+<hr>
+<h2 id="2-flex布局原理"><a href="#2-flex布局原理" class="headerlink" title="2. flex布局原理"></a>2. flex布局原理</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=417">https://www.bilibili.com/video/BV14J4114768?p=417</a></p>
+<h3 id="2-1-布局原理"><a href="#2-1-布局原理" class="headerlink" title="2.1 布局原理"></a>2.1 布局原理</h3><p>1.flex是flexible[^4] Box 的缩写，意为“弹性布局”，用来为盒状模型提供最大的灵活性，任何一个容器都可以指定为flex布局。</p>
+<ul>
+<li>不管是块级元素，还是行内元素。都可以弹性布局</li>
+</ul>
+<p>1.2注意：</p>
+<ul>
+<li><p>当我们为父盒子设为flex布局以后，子元素的float、clear和vertical-align属性将失效。</p>
+<blockquote>
+<p>float: 不需要，flex布局可以把盒子弄在一行；</p>
+<p>同样的，清楚浮动的clear也不需要，同时也失效；</p>
+<p>浮动并不完美，flex才是最完美的；</p>
+</blockquote>
+<blockquote>
+<p>vertical-align：同样是因为，flex布局有垂直居中的功效，所以也没用与失效；2021-3-7 14:06:02</p>
+</blockquote>
+</li>
+<li><p>伸缩布局 = 弹性布局 = 伸缩盒布局 = 弹性盒布局 = flex布局</p>
+<p>这些布局都叫：flex布局；</p>
+</li>
+</ul>
+<p>2.采用Flex布局的元素，称为flex容器（flex container），简称“容器”。它的所有子元素自动称为容器成员，称为Flex项目（flex item)，简称“项目”。</p>
+<ul>
+<li>体验中div就是flex父容器</li>
+<li>span是子容器flex项目</li>
+<li>子容器可以横向排位，也可以纵向排列</li>
+</ul>
+<p>总结flex布局原理：通过给父盒子添加flex属性，来控制子盒子的位置和排列方式。</p>
+<hr>
+<h2 id="3-flex布局父项常见属性"><a href="#3-flex布局父项常见属性" class="headerlink" title="3. flex布局父项常见属性"></a>3. flex布局父项常见属性</h2><h3 id="3-1-常见父项属性"><a href="#3-1-常见父项属性" class="headerlink" title="3.1 常见父项属性"></a>3.1 常见父项属性</h3><p>1.以下由6个属性是对父元素设置的</p>
+<ul>
+<li><p>flex-direction: 设置主轴的方向</p>
+<blockquote>
+<p>direction<br>英 [dəˈrekʃn]   美 [dəˈrekʃn]<br>n.方向;方位;趋势;动向;方面</p>
+</blockquote>
+</li>
+<li><p>justify-content:  设置主轴上的子元素排位方式</p>
+<blockquote>
+<p>justify<br>英 [ˈdʒʌstɪfaɪ]   美 [ˈdʒʌstɪfaɪ]<br>v.证明…正确(或正当、有理);对…作出解释;为…辩解(或辩护);调整使全行排满;使每行排齐;使齐行</p>
+</blockquote>
+<blockquote>
+<p>content<br>英 [ˈkɒntent , kənˈtent]  美 [ˈkɑːntent , kənˈtent]<br>n.所容纳之物;所含之物;内容;(书的)目录，目次;(书、讲话、节目等的)主题，主要内容<br>adj.满意;满足;愿意<br>v.满足;满意;知足;使满意;使满足</p>
+</blockquote>
+</li>
+<li><p>flex-wrap[^1]: 设置子元素是否换行</p>
+</li>
+<li><p>align[^2]-content：设置侧轴上的子元素的排列方式（多行）</p>
+</li>
+<li><p>align[^2]-items[^3]：设置侧轴上的子元素排位方式（单行)</p>
+</li>
+<li><p>flex-flow：复合属性，相当于同时设置了flex-direction和flex-wrap</p>
+</li>
+</ul>
+<hr>
+<h3 id="3-2-flex-direction"><a href="#3-2-flex-direction" class="headerlink" title="3.2 flex-direction"></a>3.2 flex-direction</h3><p>1.主轴与侧轴</p>
+<p>在flex布局中，是分为主轴和侧轴两个方向，同样的叫法有：行和列、x轴和y轴；</p>
+<ul>
+<li>默认主轴方向是x轴方向，水平向右</li>
+<li>默认侧轴方向是y轴方向，水平向下</li>
+</ul>
+<img src="../../img/12.4/1.jpg" alt="1" style="zoom:80%;" />
+
+<p>2.属性值</p>
+<p>flex-direction属性决定主轴的方向（即项目的排列方向）</p>
+<p>注意：主轴和侧轴是会变化的，就看flex-direction设置谁为主轴，剩下的就是侧轴。而子元素是跟着主轴来排列的</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">row</td>
+<td>默认值从左到右</td>
+</tr>
+<tr>
+<td align="left">row-reverse[^5]</td>
+<td>从右到左</td>
+</tr>
+<tr>
+<td align="left">column[^6]</td>
+<td>从上到下</td>
+</tr>
+<tr>
+<td align="left">column-reverse</td>
+<td>从下到上</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=419&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV14J4114768?p=419&amp;spm_id_from=pageDriver</a></p>
+</blockquote>
+<h3 id="3-3-justify-content"><a href="#3-3-justify-content" class="headerlink" title="3.3 justify-content"></a>3.3 justify-content</h3><p>0.设置主轴上的子元素排列方式</p>
+<p>1.justify[^8]-content属性定义了项目再主轴上的对齐方式</p>
+<p>注意：使用这个属性之前，一定要确定主轴是哪个；</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>默认值从头部开始，如果主轴是x轴，则从左到右</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>从尾部开始排列</td>
+</tr>
+<tr>
+<td>center</td>
+<td>在主轴居中对齐（如果主轴是x轴，则水平居中）</td>
+</tr>
+<tr>
+<td>space-around</td>
+<td>平分剩余空间</td>
+</tr>
+<tr>
+<td>space-between[^7]</td>
+<td>先两边贴边，再平分剩余空间（重要）</td>
+</tr>
+</tbody></table>
+<hr>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=420&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV14J4114768?p=420&amp;spm_id_from=pageDriver</a></p>
+</blockquote>
+<h3 id="3-4-换行"><a href="#3-4-换行" class="headerlink" title="3.4 换行"></a>3.4 换行</h3><p>0.flex-wrap 设置子元素是否换行</p>
+<p>1.默认情况下，项目都排在一条直线上（又称为“轴线”）上。flex-wrap属性定义，flex布局中默认是不换行的。</p>
+<ul>
+<li>改小子元素（项目）的宽度也要装下去</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nowrap</td>
+<td>默认值，不换行</td>
+</tr>
+<tr>
+<td>wrap</td>
+<td>换行</td>
+</tr>
+</tbody></table>
+<p>flex-wrap：wrap;</p>
+<hr>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=421&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV14J4114768?p=421&amp;spm_id_from=pageDriver</a></p>
+</blockquote>
+<h3 id="3-5-侧轴上子元素排列方式-单行"><a href="#3-5-侧轴上子元素排列方式-单行" class="headerlink" title="3.5 侧轴上子元素排列方式(单行)"></a>3.5 侧轴上子元素排列方式(单行)</h3><p>0.align-items[^3]</p>
+<p>1.该属性是控制子项在侧轴（默认是y轴）上的排列方式，在子项为单项的时候使用。</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>从上到下</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>从下到上</td>
+</tr>
+<tr>
+<td>center</td>
+<td>挤在一起居中（垂直居中）</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>拉伸（默认值）(拉的和父元素一样高)</td>
+</tr>
+</tbody></table>
+<h4 id="水平垂直居中"><a href="#水平垂直居中" class="headerlink" title="水平垂直居中"></a>水平垂直居中</h4><p>就用得到它；</p>
+<p>2.代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: pink;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.1 主要是：</p>
+<p>justify-content: center;  主轴居中</p>
+<p>align-items: center; 侧轴居中</p>
+<img src="../../img/12.4/2.png" alt="2" style="zoom:80%;" />
+
+<p>2.2 如果主轴是y轴；则是竖着的居中</p>
+<img src="../../img/12.4/3.png" alt="3" style="zoom:70%;" />
+
+<hr>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=422&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV14J4114768?p=422&amp;spm_id_from=pageDriver</a></p>
+</blockquote>
+<h3 id="3-6-align-content"><a href="#3-6-align-content" class="headerlink" title="3.6 align-content"></a>3.6 align-content</h3><p>0.设置侧轴上的子元素的排列方式（多行）</p>
+<p>1.设置子项在侧轴上的排列方式，并且只能用于子项出现==换行==的情况，在单行下是没效果的。</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>默认值，在侧轴的头部开始排列</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>在侧轴的尾部开始排列</td>
+</tr>
+<tr>
+<td>center</td>
+<td>在侧轴中间显示</td>
+</tr>
+<tr>
+<td>space-around</td>
+<td>子项在侧轴，平分剩余空间</td>
+</tr>
+<tr>
+<td>space-between</td>
+<td>子项在侧轴，先分布在两头，再平分剩余空间</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>设置 子项元素高度平分父元素高度</td>
+</tr>
+</tbody></table>
+<p>2.普通换行。中间有很大缝隙；</p>
+<p><img src="../../img/12.4/4.png" alt="4"></p>
+<p>2.1 加上：align-content: flex-start;</p>
+<p><img src="../../img/12.4/5.png" alt="5"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: pink;</span><br><span class="line">    <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">    <span class="attribute">align-content</span>: flex-start;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.写了：<code>align-content: center;</code>，侧轴没有居中，怎么回事？</p>
+<ul>
+<li>可能只有一行，单行这个是没有效果的；</li>
+</ul>
+<h4 id="2-align-content-和-align-items-区别"><a href="#2-align-content-和-align-items-区别" class="headerlink" title="2. align-content 和 align-items 区别"></a>2. align-content 和 align-items 区别</h4><p>1.align-items使用与单行情况下，只有上对齐、下对齐、居中和拉伸</p>
+<p>2.align-content使用于换行，多行，的情况下（单行情况下无效），可以设置上对齐、下对齐、居中、拉伸以及平均分配剩余空间等属性值。</p>
+<p>3.总觉就是单行找align-items，多行找，align-content</p>
+<hr>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=423">https://www.bilibili.com/video/BV14J4114768?p=423</a></p>
+</blockquote>
+<h3 id="3-7-flex-flow"><a href="#3-7-flex-flow" class="headerlink" title="3.7 flex-flow"></a>3.7 flex-flow</h3><p>1.flex-flow属性是flex-direction和flex-wrap属性的复合属性；</p>
+<p>2.语法：flex-flow: <em>flex-direction</em> <em>flex-wrap</em></p>
+<ul>
+<li>来源：<a target="_blank" rel="noopener" href="https://www.runoob.com/cssref/css3-pr-flex-flow.html">https://www.runoob.com/cssref/css3-pr-flex-flow.html</a></li>
+</ul>
+<p>3.</p>
+<hr>
+<h2 id="4-flex布局子项常见属性"><a href="#4-flex布局子项常见属性" class="headerlink" title="4. flex布局子项常见属性"></a>4. flex布局子项常见属性</h2><p>1.flex子项目占的份数</p>
+<p>2.align-self控制子项自己在侧轴的排列方式</p>
+<p>3.order属性定义子项的排列顺序（前后顺序）</p>
+<h3 id="4-1-flex属性"><a href="#4-1-flex属性" class="headerlink" title="4.1 flex属性"></a>4.1 flex属性</h3><p>1.flex属性定义子项目分配剩余空间，用flex来表示占多少份数</p>
+<p>2.flex 属性是 flex-grow、flex-shrink 和 flex-basis 属性的简写属性。</p>
+<p><strong>注意：</strong>如果元素不是弹性盒模型对象的子元素，则 flex 属性不起作用。</p>
+<p>3.</p>
+<table>
+<thead>
+<tr>
+<th align="left">默认值：</th>
+<th>0 1 auto</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">继承：</td>
+<td>否</td>
+</tr>
+<tr>
+<td align="left">可动画化：</td>
+<td>是，<em>参见个别的属性</em>。请参阅 <a target="_blank" rel="noopener" href="https://www.runoob.com/cssref/css-animatable.html"><em>可动画化（animatable）</em></a>。</td>
+</tr>
+<tr>
+<td align="left">版本：</td>
+<td>CSS3</td>
+</tr>
+<tr>
+<td align="left">JavaScript 语法：</td>
+<td><em>object</em>.style.flex=”1”<a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=trycss3_js_flex">尝试一下</a></td>
+</tr>
+</tbody></table>
+<p>4.语法：flex: <em>flex-grow</em> <em>flex-shrink</em> <em>flex-basis</em>|auto|initial|inherit;</p>
+<blockquote>
+<p>2~4，是菜鸟教程上面的；2021-3-8 16:52:01</p>
+</blockquote>
+<hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">    <span class="attribute">flex</span>: &lt;number&gt;; <span class="comment">/* default 0 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>默认0。数字1就一份，数字2就两份；2021-3-8 16:51:23</p>
+<p>当数字变化，总份数也会变化；</p>
+<p>5.例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        section &#123;</span><br><span class="line">            display: flex;</span><br><span class="line">            width: 60%;</span><br><span class="line">            height: 150px;</span><br><span class="line">            background-color: pink;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-tag">section</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(1)</span> &#123;</span></span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 150px;</span><br><span class="line">            background-color: red;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-tag">section</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(2)</span> &#123;</span></span><br><span class="line">            flex: 1;</span><br><span class="line">            background-color: green;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-tag">section</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</span></span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 150px;</span><br><span class="line">            background-color: blue;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>5.1 解析：</p>
+<p>div:nth-child(1)与(3)，各设置了width：150px；</p>
+<p>div:nth-child(2)，直接</p>
+<h3 id="4-2-align-self-控制子项侧轴"><a href="#4-2-align-self-控制子项侧轴" class="headerlink" title="4.2 align-self 控制子项侧轴"></a>4.2 align-self 控制子项侧轴</h3><p>0.align-self控制子项自己在侧轴上的排列方式</p>
+<p>1.align-self属性允许单个项目有其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，标识继承父元素的align-items属性，如果没有父元素，则等同于stretch。</p>
+<p>2.它可以一个一个的控制，上面的align-items是一行行的；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        div &#123;</span><br><span class="line">            display: flex;</span><br><span class="line">            width: 80%;</span><br><span class="line">            height: 300px;</span><br><span class="line">            background-color: pink;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        div span &#123;</span><br><span class="line">            width: 150px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background-color: purple;</span><br><span class="line">            margin-right: 5px;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-tag">div</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</span></span><br><span class="line">            align-self: flex-end;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br />
+
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?t=187&amp;p=425">https://www.bilibili.com/video/BV14J4114768?t=187&amp;p=425</a></p>
+</blockquote>
+<h3 id="4-3-order属性定义顺序"><a href="#4-3-order属性定义顺序" class="headerlink" title="4.3 order属性定义顺序"></a>4.3 order属性定义顺序</h3><p>0.order[^9]属性定义项目的排列顺序</p>
+<blockquote>
+<p>菜鸟教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/cssref/css3-pr-order.html">https://www.runoob.com/cssref/css3-pr-order.html</a></p>
+</blockquote>
+<p>1.数值越小，排列越靠前，默认为0；</p>
+<ul>
+<li>注意：和z-index不一样；</li>
+</ul>
+<hr>
+<h2 id="5-携程网首页案例制作"><a href="#5-携程网首页案例制作" class="headerlink" title="5. 携程网首页案例制作"></a>5. 携程网首页案例制作</h2><h3 id="5-1-技术选型"><a href="#5-1-技术选型" class="headerlink" title="5.1 技术选型"></a>5.1 技术选型</h3><p>方案：我们采取单独制作移动页面方案</p>
+<p>技术：布局采取flex布局</p>
+<ol start="2">
+<li>搭建相关文件夹结构</li>
+</ol>
+<img src="../../img/12.4/6.png" alt="6" style="zoom:50%;" />
+
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=426&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV14J4114768?p=426&amp;spm_id_from=pageDriver</a></p>
+<p>01:32</p>
+</blockquote>
+<h2 id="X-脚注"><a href="#X-脚注" class="headerlink" title="X. 脚注"></a>X. 脚注</h2><p>[^1]:wrap英 [ræp]   美 [ræp] v.包，裹(礼物等);用…包裹(或包扎、覆盖等);用…缠绕(或围紧)<br>n.(女用)披肩，围巾;包裹(或包装)材料;(拍摄电影时)完成拍摄，停机</p>
+<p>[^2]:align 英 [əˈlaɪn]   美 [əˈlaɪn] v.排整齐;校准;(尤指)使成一条直线;使一致</p>
+<p>[^3]:item 英 [ˈaɪtəm]   美 [ˈaɪtəm] n.项目;一件商品(或物品);一则，一条(新闻)</p>
+<p>[^4]:flexible 英 [ˈfleksəbl]   美 [ˈfleksəbl]<br>adj.能适应新情况的;灵活的;可变动的;柔韧的;可弯曲的;有弹性的</p>
+<p>[^5]:reverse 英 [rɪˈvɜːs]   美 [rɪˈvɜːrs]<br>v.颠倒;彻底转变;使完全相反;撤销，废除(决定、法律等);使反转;使次序颠倒<br>n.相反的情况(或事物);后面;背面;反面;倒挡<br>adj.相反的;反面的;反向的;背面的;后面的</p>
+<p>[^6]:column 英 [ˈkɒləm]   美 [ˈkɑːləm]<br>n.柱;(通常为)圆形石柱;纪念柱;圆柱状物;柱形物;(书、报纸印刷页上的)栏</p>
+<p>[^7]:between 英 [bɪˈtwiːn]   美 [bɪˈtwiːn]<br>prep.(空间上)在…中间，介于…之间;(时间上)在…之间，在…中间;(数量、重量、距离等)介于…之间<br>adv.(空间或时间上)介于…之间</p>
+<p>[^8]:justify英 [ˈdʒʌstɪfaɪ]   美 [ˈdʒʌstɪfaɪ]<br>v.证明…正确(或正当、有理);对…作出解释;为…辩解(或辩护);调整使全行排满;使每行排齐;使齐行</p>
+<p>[^9]:order 英 [ˈɔːdə(r)]   美 [ˈɔːrdər]<br>n.顺序;次序;条理;治安;秩序;规矩<br>v.命令;指挥;要求;订购;订货;要求提供服务;点(酒菜等)</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/1-(0~50)/12-before/" rel="prev" title="12-前篇">
+      <i class="fa fa-chevron-left"></i> 12-前篇
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/1-(0~50)/25.2-JS%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83_DOM_BOM/" rel="next" title="25.2-JavaScript">
+      25.2-JavaScript <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">qilin</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">759k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11:30</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: location.pathname,
+    }, {"enable":true,"appId":"l9X7oYVrse5t6umGkFbQyhXs-gzGzoHsz","appKey":"dcwRazDbDakW6HdC3xERrYHu","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"language":null,"visitor":true,"comment_count":true,"recordIP":true,"serverURLs":null}
+    ));
+  }, window.Valine);
+});
+</script>
+
+
+  
+  <script type="text/javascript" onmobile="true" color="0,0,0" opacity='0.7' zIndex="-1" count="120" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>

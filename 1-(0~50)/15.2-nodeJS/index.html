@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Amita:300,300italic,400,400italic,700,700italic|Montserrat:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-loading-bar.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"cqilin.gitee.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="7. 博客1.虽然是案例，但这个案例会有很多新知识点； 2.是案例驱动知识点的章节">
+<meta property="og:type" content="article">
+<meta property="og:title" content="15.2-node.js">
+<meta property="og:url" content="https://cqilin.gitee.io/1-(0~50)/15.2-nodeJS/index.html">
+<meta property="og:site_name" content="qilin&#39;s blog">
+<meta property="og:description" content="7. 博客1.虽然是案例，但这个案例会有很多新知识点； 2.是案例驱动知识点的章节">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cqilin.gitee.io/img/15.2/1.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/12.b/6.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/15.2/2.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/15.2/3.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/15.2/4.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/15.2/5.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/15.2/9.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/15.2/6.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/15.2/7.png">
+<meta property="og:image" content="https://cqilin.gitee.io/img/15.2/8.png">
+<meta property="article:published_time" content="2021-04-29T03:26:42.000Z">
+<meta property="article:modified_time" content="2021-05-23T15:58:57.489Z">
+<meta property="article:author" content="qilin">
+<meta property="article:tag" content="node">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cqilin.gitee.io/img/15.2/1.png">
+
+<link rel="canonical" href="https://cqilin.gitee.io/1-(0~50)/15.2-nodeJS/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>15.2-node.js | qilin's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">qilin's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">web学习笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">50</span></a>
+
+  </li>
+        <li class="menu-item menu-item-guestbook">
+
+    <a href="/guestbook/" rel="section"><i class="fa fa-comment fa-fw"></i>留言</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E5%8D%9A%E5%AE%A2"><span class="nav-text">7. 博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-text">7.1 项目环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="nav-text">1. 项目介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%A1%88%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">2. 案例初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1"><span class="nav-text">5.构建模块化路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF"><span class="nav-text">6.构建博客管理页面模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%A4%96%E9%83%A8%E9%93%BE%E6%8E%A5%E9%97%AE%E9%A2%98"><span class="nav-text">7.静态资源外部链接问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-%E4%BC%98%E5%8C%96%E6%A8%A1%E6%9D%BF"><span class="nav-text">8. 优化模板</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#8-1-%E5%85%AC%E5%85%B1%E5%88%86%E7%A6%BB"><span class="nav-text">8.1 公共分离</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-2-%E9%AA%A8%E6%9E%B6%E5%88%86%E7%A6%BB"><span class="nav-text">8.2 骨架分离</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-%E5%8A%9F%E8%83%BD-%E7%99%BB%E5%BD%95"><span class="nav-text">7.2 功能-登录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9F%BA%E7%A1%80%E7%99%BB%E5%BD%95"><span class="nav-text">1. 基础登录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E9%9B%86%E5%90%88%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E7%94%A8%E6%88%B7"><span class="nav-text">1.创建用户集合，初始化用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E8%A1%A8%E5%8D%95%E8%AE%BE%E7%BD%AE"><span class="nav-text">1.2 表单设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%85%8D%E7%BD%AE"><span class="nav-text">1. 配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E6%8F%90%E4%BA%A4%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="nav-text">2. 获取用户提交的信息</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%BC%84%E6%88%90%E5%AF%B9%E8%B1%A1"><span class="nav-text">3. 弄成对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E9%AA%8C%E8%AF%81%E6%95%B0%E6%8D%AE"><span class="nav-text">4. 验证数据</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-%E7%99%BB%E5%BD%95%E8%B7%AF%E7%94%B1"><span class="nav-text">1.3 登录路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-%E9%82%AE%E7%AE%B1%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%EF%BC%9B"><span class="nav-text">1.4 邮箱是否存在；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86"><span class="nav-text">2. 密码加密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E4%BB%A3%E7%A0%81%E9%AA%8C%E8%AF%81"><span class="nav-text">2.2 代码验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E6%AF%94%E5%AF%B9%E5%AF%86%E7%A0%81"><span class="nav-text">2.3 比对密码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%99%BB%E5%BD%95%E7%BC%BA%E9%99%B7"><span class="nav-text">3. 登录缺陷</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-cookie%E4%B8%8Esession"><span class="nav-text">3.2 cookie与session</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="nav-text">1. 简介</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="nav-text">2. 如何使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%B7%BB%E5%8A%A0%E4%BB%A3%E7%A0%81"><span class="nav-text">3. 在项目中添加代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%99%BB%E5%BD%95%E5%90%8E"><span class="nav-text">4. 登录后</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-%E8%B7%B3%E8%BD%AC%E5%88%B0%E7%94%A8%E6%88%B7%E9%A1%B5%E9%9D%A2"><span class="nav-text">4.1 跳转到用户页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-%E6%98%BE%E7%A4%BA%E5%9C%A8%E5%8F%B3%E4%B8%8A%E8%A7%92"><span class="nav-text">4.2 显示在右上角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-%E7%99%BB%E5%BD%95%E6%8B%A6%E6%88%AA"><span class="nav-text">4.3 登录拦截</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E4%BC%98%E5%8C%96"><span class="nav-text">5. 优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-%E5%88%86%E7%A6%BB%E7%99%BB%E5%BD%95%E6%8B%A6%E6%88%AA"><span class="nav-text">5.1 分离登录拦截</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-admin%E5%88%86%E7%A6%BB%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-text">5.2 admin分离处理函数（可选）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-%E5%8A%9F%E8%83%BD-%E6%96%B0%E5%A2%9E%E7%94%A8%E6%88%B7"><span class="nav-text">7.3 功能-新增用户</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8C%89%E9%92%AE%E8%AE%BE%E7%BD%AE"><span class="nav-text">1.按钮设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-%E8%A1%A8%E5%8D%95%E8%AE%BE%E7%BD%AE"><span class="nav-text">1.1 表单设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E6%8F%90%E4%BA%A4%E5%8A%9F%E8%83%BD"><span class="nav-text">1.2 提交功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Joi"><span class="nav-text">1. Joi</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-%E9%AA%8C%E8%AF%81%E9%82%AE%E7%AE%B1"><span class="nav-text">1.3 验证邮箱</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%EF%BC%9B"><span class="nav-text">2. 密码加密；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B7%BB%E5%8A%A0%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">3. 添加到数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96"><span class="nav-text">4. 代码优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-%E5%88%86%E7%A6%BB%E9%AA%8C%E8%AF%81post%E5%8F%82%E6%95%B0"><span class="nav-text">4.1 分离验证post参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="nav-text">4.2 错误处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%B8%B2%E6%9F%93%E7%94%A8%E6%88%B7%E5%88%97%E8%A1%A8"><span class="nav-text">5. 渲染用户列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%88%86%E9%A1%B5"><span class="nav-text">6. 分页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%88%86%E9%A1%B5%E6%8C%89%E9%92%AE"><span class="nav-text">7. 分页按钮</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-4-%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7"><span class="nav-text">7.4 修改用户</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4%E5%9C%B0%E5%9D%80"><span class="nav-text">4. 修改提交地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%AF%B9%E6%AF%94%E5%AF%86%E7%A0%81"><span class="nav-text">5. 对比密码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-5-%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="nav-text">7.5 删除用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-6-%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86"><span class="nav-text">7.6 文章管理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#X-%E9%A2%98%E6%B3%A8"><span class="nav-text">X. 题注</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AB%E5%B0%BE"><span class="nav-text">末尾</span></a></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="qilin"
+      src="/images/7.jpg">
+  <p class="site-author-name" itemprop="name">qilin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cqilin.gitee.io/1-(0~50)/15.2-nodeJS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/7.jpg">
+      <meta itemprop="name" content="qilin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="qilin's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          15.2-node.js
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-29 11:26:42" itemprop="dateCreated datePublished" datetime="2021-04-29T11:26:42+08:00">2021-04-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-05-23 23:58:57" itemprop="dateModified" datetime="2021-05-23T23:58:57+08:00">2021-05-23</time>
+              </span>
+
+          
+            <span id="/1-(0~50)/15.2-nodeJS/" class="post-meta-item leancloud_visitors" data-flag-title="15.2-node.js" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/1-(0~50)/15.2-nodeJS/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/1-(0~50)/15.2-nodeJS/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>47k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>43 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="7-博客"><a href="#7-博客" class="headerlink" title="7. 博客"></a>7. 博客</h1><p>1.虽然是案例，但这个案例会有很多新知识点；</p>
+<p>2.是案例驱动知识点的章节</p>
+<a id="more"></a>
+
+<h2 id="7-1-项目环境搭建"><a href="#7-1-项目环境搭建" class="headerlink" title="7.1 项目环境搭建"></a>7.1 项目环境搭建</h2><h3 id="1-项目介绍"><a href="#1-项目介绍" class="headerlink" title="1. 项目介绍"></a>1. 项目介绍</h3><p>1.多人博客管理系统</p>
+<ul>
+<li>博客内容展示<br>博客管理功能</li>
+</ul>
+<h3 id="2-案例初始化"><a href="#2-案例初始化" class="headerlink" title="2. 案例初始化"></a>2. 案例初始化</h3><ol>
+<li>建立项目所需文件夹</li>
+</ol>
+<ul>
+<li>public 静态资源<br>model 数据库操作<br>route 路由<br>views 模板</li>
+</ul>
+<p>2.初始化项目描述文件<br>  npm init -y<br>3.下载项目所需第三方模块<br>  npm install express mongoose art-template express-art-template</p>
+<p>4.创建网站服务器</p>
+<ul>
+<li><p>1.创建app.js；这个文件是项目的入口文件，也是项目的主文件；</p>
+</li>
+<li><p>2.引入express模块；创建服务器；监听端口；</p>
+</li>
+</ul>
+<h4 id="5-构建模块化路由"><a href="#5-构建模块化路由" class="headerlink" title="5.构建模块化路由"></a>5.构建模块化路由</h4><ul>
+<li><p>1.在route文件下，创建home.js；admin.js；</p>
+<ul>
+<li>1.home.js；页面路由</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> home = express.Router();</span><br><span class="line"></span><br><span class="line">home.get(<span class="string">&#x27;/&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.send(<span class="string">&#x27;欢迎home&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = home;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li>2.admin.js；管理路由</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> admin = express.Router();</span><br><span class="line"></span><br><span class="line">admin.get(<span class="string">&#x27;/admin&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.send(<span class="string">&#x27;欢迎admin&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = admin;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>2.app.js那边引入；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.引入express模块</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="comment">// 2.创建服务器</span></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"><span class="keyword">const</span> home = <span class="built_in">require</span>(<span class="string">&quot;./route/home&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> admin = <span class="built_in">require</span>(<span class="string">&#x27;./route/admin&#x27;</span>);</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">&#x27;/home&#x27;</span>, home);</span><br><span class="line">app.use(<span class="string">&#x27;/admin&#x27;</span>, admin);</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;网站建立成功&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-构建博客管理页面模板"><a href="#6-构建博客管理页面模板" class="headerlink" title="6.构建博客管理页面模板"></a>6.构建博客管理页面模板</h4><ul>
+<li><p>1.要构建模板文件，需要得到页面的静态文件；</p>
+<ul>
+<li>1.把前端的东西复制到public文件夹里面；</li>
+</ul>
+</li>
+<li><p>2.把CSS,JS那些开放出去，静态资源开放出去；</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.开放静态资源文件</span></span><br><span class="line">app.use(express.static(path.join(__dirname, <span class="string">&#x27;public&#x27;</span>)));</span><br><span class="line"><span class="comment">// 3.1 引入path文件</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6.1 静态资源，直接路径就可以访问，不需要路由：<a target="_blank" rel="noopener" href="http://localhost:3000/home/article.html">http://localhost:3000/home/article.html</a></p>
+<ul>
+<li>1.需要添加的路由，是public里面的文件夹与文件名；</li>
+<li>2.为什么静态资源，就可以直接访问，看看之前的笔记有没有信息；</li>
+</ul>
+<blockquote>
+<p>服务器端不需要处理，可以直接响应给客户端的资源就是静态资源，例如CSS、JavaScript、image文件。——15-3-3.4-5</p>
+</blockquote>
+<p>6.2 在这里，我们不能把html当做静态文件，要与数据库的数据拼接，放到views文件里面去；</p>
+<ul>
+<li>1.但视频说方便管理也建立home与admin文件夹；</li>
+</ul>
+<p>6.3 渲染登录模板</p>
+<ul>
+<li>1.本来render里面要写绝对路径，但这里太多了，进行设置</li>
+<li>2.告诉express框架，你的模板文件放在了哪里；</li>
+</ul>
+<p>6.3.1 所以，先是模板配置；</p>
+<ul>
+<li>1.缺一步就要报错；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 4.模板配置根目录</span></span><br><span class="line">app.set(<span class="string">&#x27;views&#x27;</span>, path.join(__dirname, <span class="string">&#x27;views&#x27;</span>));</span><br><span class="line"><span class="comment">// 4.1 配置模板后缀</span></span><br><span class="line">app.set(<span class="string">&#x27;view engine&#x27;</span>, <span class="string">&#x27;art&#x27;</span>);</span><br><span class="line"><span class="comment">// 4.2 当渲染后缀为art的模板时，用什么模板引擎</span></span><br><span class="line">app.engine(<span class="string">&#x27;art&#x27;</span>, <span class="built_in">require</span>(<span class="string">&#x27;express-art-template&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>6.3.2 admin.js路由配置路径；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> admin = express.Router();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.渲染登录模板</span></span><br><span class="line"><span class="comment">// 1.1 本来render里面要写绝对路径，但这里太多了，进行设置</span></span><br><span class="line">admin.get(<span class="string">&#x27;/login&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 写/admin/login要报错</span></span><br><span class="line">    res.render(<span class="string">&#x27;admin/login&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = admin;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="7-静态资源外部链接问题"><a href="#7-静态资源外部链接问题" class="headerlink" title="7.静态资源外部链接问题"></a>7.静态资源外部链接问题</h4><p>0.静态资源是浏览器解析的，所以相对路径，是相对的请求路径</p>
+<p>1.虽然css能访问到，但这是一个意外；</p>
+<p>2.在html文件，里面有外链的css；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;lib/bootstrap/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/base.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>3.这个href里面的路径，是拼接在路由请求的第一个参数后面；</p>
+<ul>
+<li>1.因为app.js和文件夹名都是admin，所有有效；</li>
+<li>2.把app.js的路由路径改为abc就没效果了；</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">app</span><span class="selector-class">.use</span>(<span class="string">&#x27;/abc&#x27;</span>, admin);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3.找不到css；</li>
+</ul>
+<p>4.怎么解决？相对路径，改为，绝对路径；</p>
+<p>4.1 怎么改成绝对路径；</p>
+<ul>
+<li><p>1.视频说，前面加个/，就可以了；。。。</p>
+</li>
+<li><p>2.因为绝对路径了，就不会与路由路径拼接了；</p>
+</li>
+<li><p>3.与静态资源路径拼接；</p>
+</li>
+<li><p>4.现在静态资源路径是：<code>app.use(express.static(path.join(__dirname, &#39;public&#39;)));</code></p>
+</li>
+<li><p>5.~\app.js所在的硬盘路径\public</p>
+<ul>
+<li>1.还差一步，中间还去一个\admin；</li>
+<li>2.那么就只有手写填上：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;lib/bootstrap/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/base.css&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/admin/lib/bootstrap/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/admin/css/base.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>5.成功响应；</p>
+<p>6.总结：</p>
+<p>6.1 外链的相对路径，是相对请求路径；</p>
+<p>6.2 为了不出问题，要用绝对路径，代替相对路径，谁是哪个绝对路径呢？就是那个/</p>
+<p>6.3 需要把其他的相对路径，都改成这样的绝对路径；</p>
+<ul>
+<li>1.我不想改，我把请求路径，改成文件夹名一样的！！！</li>
+<li>2021-4-29 19:57:38</li>
+</ul>
+<h4 id="8-优化模板"><a href="#8-优化模板" class="headerlink" title="8. 优化模板"></a>8. 优化模板</h4><h5 id="8-1-公共分离"><a href="#8-1-公共分离" class="headerlink" title="8.1 公共分离"></a>8.1 公共分离</h5><p>1.什么叫优化模板，就是把模板的公共部分，抽到单独的文件里去</p>
+<p>2.一旦要修改这些部分，就能一修全修；</p>
+<p>3.先看看哪些是公共的，可以分到子模板里面去；</p>
+<p>4.先把页面都打开，看看哪里感觉相同；</p>
+<ul>
+<li>1.然后去找代码；</li>
+<li>例如这案例里面，是头部，与侧边栏；</li>
+</ul>
+<p>5.在模板文件夹里面，新建common文件夹；</p>
+<ul>
+<li>1.创建header.art（头部模板）<ul>
+<li>1.把头部代码，剪切一份过去。</li>
+</ul>
+</li>
+<li>2.创建aside.art（侧边栏模板）</li>
+</ul>
+<p>6.通过模板语法，拼接回来；</p>
+<ul>
+<li>1.头部：<code>&#123;&#123;include './common/header.art'&#125;&#125;</code></li>
+<li>2.侧边栏：<code>&#123;&#123;include './common/aside.art'&#125;&#125;</code></li>
+<li>3.因为这里是模板引擎解析，解析到的路径就是文件路径，与相对路径拼接正是正确路径；</li>
+</ul>
+<p>7.路由的路径，是什么算来着？</p>
+<ul>
+<li>1.查看代码</li>
+<li>2.应该也是因为配置了模板目录吧；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 4.模板配置根目录</span></span><br><span class="line">app.set(<span class="string">&#x27;views&#x27;</span>, path.join(__dirname, <span class="string">&#x27;views&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3.不然路由这么写：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建后台用户列表路由</span></span><br><span class="line">admin.get(<span class="string">&#x27;/user&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.render(<span class="string">&#x27;admin/user&#x27;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>7.1 <code>admin/user</code>和模板根目录拼接，不正好；去复习一下路由；</p>
+<ul>
+<li>1.找到了</li>
+</ul>
+<blockquote>
+<ul>
+<li>1.为了使用res.render[^16]</li>
+<li>2.是res，是响应下的方法；</li>
+<li>3.在方法内部，做了很多事情；<ul>
+<li>1.里面写模板名称。</li>
+<li>2.自动拼接，模板路径，模板后缀，模板文件使用哪个模板引擎；这些不都是自己先set了吗？</li>
+<li>3.然后把拼接好的结果响应给客户端</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>2.在：15.1-6.3-7；2021-4-29 21:06:02</li>
+</ul>
+<h5 id="8-2-骨架分离"><a href="#8-2-骨架分离" class="headerlink" title="8.2 骨架分离"></a>8.2 骨架分离</h5><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=100&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=100&amp;spm_id_from=pageDriver</a></p>
+<p>2021-4-29 21:09:58</p>
+<p>1.接下来，我们要把admin下面的模板文件的骨架分离出来；</p>
+<ul>
+<li>1.在common文件夹下，创建，layout[^2].art文件；</li>
+</ul>
+<p>2.因为他这里link的css，和，使用的js，一样，所以这些地方，没有个性化配置；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">content</span>=<span class="string">&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Blog - Content Manager<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;lib/bootstrap/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/base.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;lib/jquery/dist/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;lib/bootstrap/js/bootstrap.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>1.把body外面的基本分离了，加了body里面链接js的代码。其他都是body外面的；</li>
+</ul>
+<p>3.留坑；</p>
+<p>3.1 css需要留坑，方便自定义；JS同理；</p>
+<p>3.2 每个页面，都有自己的主体部分，主体部分也留坑，大部分都是留坑的；</p>
+<blockquote>
+<p>01:50</p>
+</blockquote>
+<p>3.3 怎么留坑呢？</p>
+<ul>
+<li><p>1.语法：<code>&#123;&#123;block '坑名'&#125;&#125; &#123;&#123;/block&#125;&#125;</code></p>
+</li>
+<li><p>2.代码</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">content</span>=<span class="string">&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Blog - Content Manager<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;lib/bootstrap/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/base.css&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123;block &#x27;link&#x27;&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    &#123;&#123;block &#x27;main&#x27;&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;lib/jquery/dist/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;lib/bootstrap/js/bootstrap.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    &#123;&#123;block &#x27;JS&#x27;&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>4.继承；</p>
+<p>4.1 分离了骨架，也留了坑。怎么让模板使用这些子模板？</p>
+<ul>
+<li>1.这需要继承</li>
+</ul>
+<p>4.2 我们修改user.art为例；</p>
+<img src="../../img/15.2/1.png" alt="1" style="zoom:80%;" />
+
+
+
+<p>5.测试代码；</p>
+<ul>
+<li>1.nodemon app.js</li>
+<li>2.输入网址：<a target="_blank" rel="noopener" href="http://localhost:3000/admin/user">http://localhost:3000/admin/user</a></li>
+</ul>
+<p>5.1 有效，成功；</p>
+<p>6.接着把其他模板也继承；</p>
+<ul>
+<li>1.article-edit会有JS的填坑；</li>
+</ul>
+<h2 id="7-2-功能-登录"><a href="#7-2-功能-登录" class="headerlink" title="7.2 功能-登录"></a>7.2 功能-登录</h2><h3 id="1-基础登录"><a href="#1-基础登录" class="headerlink" title="1. 基础登录"></a>1. 基础登录</h3><ol>
+<li>创建用户集合，初始化用户<br>连接数据库<br>创建用户集合<br>初始化用户</li>
+<li>为登录表单项设置请求地址、请求方式以及表单项name属性</li>
+<li>当用户点击登录按钮时，客户端验证用户是否填写了登录表单</li>
+<li>如果其中一项没有输入，阻止表单提交</li>
+<li>服务器端接收请求参数，验证用户是否填写了登录表单</li>
+</ol>
+<p>6.如果其中一项没有输入，为客户端做出响应，阻止程序向下执行</p>
+<ol start="7">
+<li><p>根据邮箱地址查询用户信息</p>
+</li>
+<li><p>如果用户不存在，为客户端做出响应，阻止程序向下执行</p>
+</li>
+<li><p>如果用户存在，将用户名和密码进行比对</p>
+</li>
+<li><p>比对成功，用户登录成功</p>
+</li>
+<li><p>比对失败，用户登录失败</p>
+</li>
+<li><p>保存登录状态</p>
+</li>
+<li><p>密码加密处理 </p>
+</li>
+</ol>
+<h4 id="1-创建用户集合，初始化用户"><a href="#1-创建用户集合，初始化用户" class="headerlink" title="1.创建用户集合，初始化用户"></a>1.创建用户集合，初始化用户</h4><ul>
+<li>连接数据库<br>创建用户集合<br>初始化用户</li>
+</ul>
+<p>1.1 链接数据库</p>
+<ul>
+<li>1.在model文件夹下面，创建connect.js</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 1.1 引入mongoose第三方模块</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>);</span><br><span class="line"><span class="comment">// 1.链接数据库</span></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost/blog&#x27;</span>)</span><br><span class="line">    .then(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">&#x27;数据库链接成功&#x27;</span>))</span><br><span class="line">    .catch(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">&#x27;数据库链接失败&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2.在项目入口文件中引入；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 5.数据库链接，因为那边没有导出什么，这边也不需要用变量接收</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;./model/connect&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>1.2 创建用户集合</p>
+<ul>
+<li>1.unique: true可以确保数据唯一，不能重复；</li>
+<li>2.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.引入mongoose第三方模块</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.创建规则，调用构造函数mongoose.Schema</span></span><br><span class="line"><span class="keyword">const</span> userShema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    username: &#123;</span><br><span class="line">        type: <span class="built_in">String</span>,</span><br><span class="line">        required: <span class="literal">true</span>,</span><br><span class="line">        minlength: <span class="number">2</span>,</span><br><span class="line">        maxlength: <span class="number">20</span>,</span><br><span class="line">        unique: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    email: &#123;</span><br><span class="line">        type: <span class="built_in">String</span>,</span><br><span class="line">        unique: <span class="literal">true</span>,</span><br><span class="line">        required: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    password: &#123;</span><br><span class="line">        type: <span class="built_in">String</span>,</span><br><span class="line">        required: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 角色</span></span><br><span class="line">    role: &#123;</span><br><span class="line">        type: <span class="built_in">String</span>,</span><br><span class="line">        required: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 状态，0为启用，1位禁用</span></span><br><span class="line">    state: &#123;</span><br><span class="line">        type: <span class="built_in">Number</span>,</span><br><span class="line">        required: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.创建集合,mongoose.model返回的是一个构造函数，需要一个量来接收；</span></span><br><span class="line"><span class="keyword">const</span> User = mongoose.model(<span class="string">&#x27;User&#x27;</span>, userShema);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4.导出,如果需要导出的多，可以写集合的形式；如果键与值相同可以只写键；</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    User</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>1.3 初始化用户，不然没得登录，不对，注册一个不就行了；不过项目里面没有注册模块，虽然有添加用户页面；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 5.插入超级管理员文档</span></span><br><span class="line">User.create(&#123;</span><br><span class="line">    username: <span class="string">&#x27;70admin&#x27;</span>,</span><br><span class="line">    email: <span class="string">&#x27;70@70.com&#x27;</span>,</span><br><span class="line">    password: <span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">    role: <span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">    state: <span class="number">0</span></span><br><span class="line">&#125;).then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;用户创建成&#x27;</span>)</span><br><span class="line">&#125;).catch(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;用户创建失败&#x27;</span>)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>1.4 app.js导入user.js；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 6.导入数据库集合模板</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;./model/user&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>1.引入后直接执行模板里面的代码</p>
+</li>
+<li><p>2.命令行工具那边会打印创建结果；</p>
+</li>
+<li><p>3.然后删除，不是在这里用，user.js要在路由那边用；</p>
+</li>
+</ul>
+<p>1.5 1.3也要删掉，不然每次都要创建，会报错；这些只是测试代码；</p>
+<hr>
+<h4 id="1-2-表单设置"><a href="#1-2-表单设置" class="headerlink" title="1.2 表单设置"></a>1.2 表单设置</h4><h5 id="1-配置"><a href="#1-配置" class="headerlink" title="1. 配置"></a>1. 配置</h5><p>1.登录表单设置</p>
+<ul>
+<li>1.请求地址、请求方式以及表单项name属性</li>
+<li>2.地方：views–login.art</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">&quot;/login&quot;</span> method=<span class="string">&quot;POST&quot;</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-group&quot;</span>&gt;</span><br><span class="line">        &lt;label&gt;邮件&lt;/label&gt;</span><br><span class="line">        &lt;input name=<span class="string">&quot;email&quot;</span> type=<span class="string">&quot;email&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-control&quot;</span> placeholder=<span class="string">&quot;请输入邮件地址&quot;</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-group&quot;</span>&gt;</span><br><span class="line">        &lt;label&gt;密码&lt;/label&gt;</span><br><span class="line">        &lt;input name=<span class="string">&quot;password&quot;</span> type=<span class="string">&quot;password&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-control&quot;</span> placeholder=<span class="string">&quot;请输入密码&quot;</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;button name=<span class="string">&quot;submit&quot;</span> type=<span class="string">&quot;submit&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;btn btn-primary&quot;</span>&gt;登录&lt;/button&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>1.1 action=”/login”，为啥？</p>
+<ul>
+<li><p>1.这里是输入url；点击提交后，网站网址为：<a target="_blank" rel="noopener" href="http://localhost:3000/login">http://localhost:3000/login</a></p>
+</li>
+<li><p>2.目前没有这个路由，所以是找不到的；</p>
+</li>
+<li><p><del>3.action里面的路径，写的是绝对路径；</del></p>
+</li>
+</ul>
+<p>1.2 路径的写法</p>
+<p><img src="../../img/12.b/6.png" alt="6"></p>
+<ul>
+<li>1.那么上面写的，和最终写的，都是相对路径里面的：下一级路径；</li>
+<li>2.看来是相对于url的协议+host；（如果没有auth）</li>
+</ul>
+<h5 id="2-获取用户提交的信息"><a href="#2-获取用户提交的信息" class="headerlink" title="2. 获取用户提交的信息"></a>2. 获取用户提交的信息</h5><p>2.当用户点击登录按钮时，客户端验证用户是否填写了登录表单</p>
+<ul>
+<li><p>1.把登录请求先拦截，先过验证路由；</p>
+</li>
+<li><p>2.代码；视频里面写的是jq；oh no</p>
+</li>
+</ul>
+<blockquote>
+<p>视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=103&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=103&amp;spm_id_from=pageDriver</a></p>
+<p>06:50~</p>
+</blockquote>
+<p>2.1 先给form加id；</p>
+<p>2.2 然后下面加js；还以为验证是后端代码，是前端代码；</p>
+<ul>
+<li>1.serializeArray()；可以获取表单所有控件的，返回的是数组；<ul>
+<li>1.比如上面是两个input，返回值应该是：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(2) <span class="selector-attr">[&#123;…&#125;, &#123;…&#125;]</span></span><br><span class="line">0: &#123;<span class="attribute">name</span>: <span class="string">&quot;email&quot;</span>, value: <span class="string">&quot;123@qq.com&quot;</span>&#125;</span><br><span class="line">1: &#123;<span class="attribute">name</span>: <span class="string">&quot;password&quot;</span>, value: <span class="string">&quot;213123&quot;</span>&#125;</span><br><span class="line"><span class="selector-tag">length</span>: 2</span><br><span class="line">__<span class="selector-tag">proto__</span>: <span class="selector-tag">Array</span>(0)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.3 但数组不方便，我们希望是对象；</p>
+<ul>
+<li><p>1.而且，也不是name，value；而是键值对的方式</p>
+</li>
+<li><p>email: ‘<a href="mailto:123@qq.com">123@qq.com</a>’,password: ‘213123’</p>
+</li>
+<li><p>2.有没有这样的方法呢？</p>
+</li>
+<li><p>没有，自己实现；</p>
+</li>
+</ul>
+<h5 id="3-弄成对象"><a href="#3-弄成对象" class="headerlink" title="3. 弄成对象"></a>3. 弄成对象</h5><p>2.4 自己先写一个空对象，循环，把返回的数组里面的name的值作为键，value的值作为键的值；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">serializeToJson</span>(<span class="params">form</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 空对象</span></span><br><span class="line">        <span class="keyword">var</span> result = &#123;&#125;;</span><br><span class="line">    <span class="comment">// 表单信息数组化，变量接收返回值</span></span><br><span class="line">        <span class="keyword">var</span> f = form.serializeArray();</span><br><span class="line">    <span class="comment">// 循环数组，forEach回把每次循环的结果，都返回一次；</span></span><br><span class="line">        f.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">            <span class="comment">// 添加对象，但是，是这样的格式吗？疑问1</span></span><br><span class="line">            result[item.name] = item.value;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 为表单添加提交事件</span></span><br><span class="line">    $(<span class="string">&#x27;#loginForm&#x27;</span>).on(<span class="string">&#x27;submit&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> f = serializeToJson($(<span class="built_in">this</span>));</span><br><span class="line">        <span class="built_in">console</span>.log(f);</span><br><span class="line">        <span class="comment">// 阻止表单默认提交的行为</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>1.疑问1：不过这里没有单引号；</p>
+<blockquote>
+<p>2.1 对象里面的属性调用 : 对象.属性名 ，这个小点 . 就理解为“ 的 ”  </p>
+<p>对象里面属性的另一种调用方式 : 对象[‘属性名’]，注意方括号里面的属性必须加引号，我们后面会用</p>
+<p>2.2 对象里面的方法调用：对象.方法名() ，注意这个方法名字后面一定加括号 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(star.name)     <span class="comment">// 调用名字属性</span></span><br><span class="line"><span class="built_in">console</span>.log(star[<span class="string">&#x27;name&#x27;</span>])  <span class="comment">// 调用名字属性</span></span><br><span class="line">star.sayHi();              <span class="comment">// 调用 sayHi 方法,注意，一定不要忘记带后面的括号</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>2.疑问2：item为什么是每一次循环的返回结果；</p>
+<blockquote>
+<p>1.forEach每次循环返回的那一个数组，作为了 实参，传到了 item上面去</p>
+<p>2.function (item) {</p>
+<pre><code>    // 添加对象，但是，是这样的格式吗？疑问1
+    result[item.name] = item.value;
+&#125;);</code></pre><p>3.直接写在forEach()的小括号里面，那么就省略了调用形参里面的函数；</p>
+<p>4.等于函数本身就有调用回调函数；</p>
+<p>5.那么关键点就是，回调函数的实参是什么？形参是item；</p>
+<p>从结论来看，实参是  forEach每次循环返回的那一个数组</p>
+</blockquote>
+<ul>
+<li>笔记：15-3-3.4-8.3</li>
+</ul>
+</li>
+</ul>
+<p>2.5 在一个项目中，对表单数据处理，非常正常。</p>
+<ul>
+<li>1.我们要把这个方法变成公共方法；</li>
+<li>2.写入public,创建common.js；</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=103&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=103&amp;spm_id_from=pageDriver</a></p>
+<p>18:05~</p>
+</blockquote>
+<ul>
+<li>3.在login.art引入这个js</li>
+</ul>
+<p><code>&lt;script src=&quot;/admin/js/common.js&quot;&gt;&lt;/script&gt;</code></p>
+<ul>
+<li>4.验证代码是否有问题：<a target="_blank" rel="noopener" href="http://localhost:3000/admin/login">http://localhost:3000/admin/login</a><ul>
+<li>1.输入数据，看console，打印出数据的对象没；</li>
+<li>有，成功；</li>
+</ul>
+</li>
+</ul>
+<p>2.5.1 还是tm的放在了layout里面了；</p>
+<h5 id="4-验证数据"><a href="#4-验证数据" class="headerlink" title="4. 验证数据"></a>4. 验证数据</h5><p>1.如果长度大于0，就输入了地址，但要排除空格；</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=103&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=103&amp;spm_id_from=pageDriver</a></p>
+<p>20:38</p>
+</blockquote>
+<p>2.trim()，可以去除空格；trim[^3]</p>
+<p>4.如果其中一项没有输入，阻止表单提交<br>5.服务器端接收请求参数，验证用户是否填写了登录表单</p>
+<p>6.如果其中一项没有输入，为客户端做出响应，阻止程序向下执行</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">// 为表单添加提交事件</span></span><br><span class="line">    $(<span class="string">&#x27;#loginForm&#x27;</span>).on(<span class="string">&#x27;submit&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> result = serializeToJson($(<span class="built_in">this</span>));</span><br><span class="line">        <span class="comment">// console.log(result)</span></span><br><span class="line">        <span class="comment">// 如果用户没有输入邮件地址</span></span><br><span class="line">        <span class="keyword">if</span> (result.email.trim().length == <span class="number">0</span>) &#123;</span><br><span class="line">            alert(<span class="string">&#x27;邮箱没输入&#x27;</span>);</span><br><span class="line">            <span class="comment">// 阻止程序向下执行</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (result.password.trim().length == <span class="number">0</span>) &#123;</span><br><span class="line">            alert(<span class="string">&#x27;密码没输入&#x27;</span>);</span><br><span class="line">            <span class="comment">// 阻止程序向下执行</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 阻止表单默认提交的行为</span></span><br><span class="line">        <span class="comment">// return false;</span></span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h4 id="1-3-登录路由"><a href="#1-3-登录路由" class="headerlink" title="1.3 登录路由"></a>1.3 登录路由</h4><p>1.改action</p>
+<ul>
+<li><p><code>&lt;form action=&quot;/admin/login&quot;</code></p>
+</li>
+<li><p>之前是<code>&lt;form action=&quot;/login&quot;</code></p>
+</li>
+</ul>
+<p>2.写路由；</p>
+<ul>
+<li>8-blog\route；的admin.js；里面</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// route\admin.js</span></span><br><span class="line"><span class="comment">// 1. 实现登录功能</span></span><br><span class="line">admin.post(<span class="string">&#x27;/login&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 接收请求参数</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.1 要在express获得post的参数，需要引入第三方模块，bodyPaser</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js</span></span><br><span class="line"><span class="comment">// 2. 引入body-parser模块，用来处理post请求</span></span><br><span class="line"><span class="keyword">const</span> bodyPaser = <span class="built_in">require</span>(<span class="string">&#x27;body-parser&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.2 处理post参数，变成对象格式；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js</span></span><br><span class="line"><span class="comment">// 3. 处理post请求参数,无视弃用的报错，有效果，且没找到新的方法；</span></span><br><span class="line">app.use(bodyPaser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.3 接收请求参数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// route\admin.js</span></span><br><span class="line"><span class="comment">// 2. 实现登录功能</span></span><br><span class="line">admin.post(<span class="string">&#x27;/login&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 2.3接收请求参数</span></span><br><span class="line">    res.send(req.body);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.4 上面那个步骤，只是测验接收到参数了没；</p>
+<ul>
+<li>1.对象解构；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2. 实现登录功能</span></span><br><span class="line">admin.post(<span class="string">&#x27;/login&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 接收请求参数</span></span><br><span class="line">    <span class="comment">// 2.4 对象解构</span></span><br><span class="line">    <span class="keyword">const</span> &#123; email, password &#125; = req.body;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.5 二次验证，因为浏览器可以禁用js；后端的代码无法操作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2. 实现登录功能</span></span><br><span class="line">admin.post(<span class="string">&#x27;/login&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 接收请求参数</span></span><br><span class="line">    <span class="keyword">const</span> &#123; email, password &#125; = req.body;</span><br><span class="line">    <span class="comment">// 2.5</span></span><br><span class="line">    <span class="keyword">let</span> x = <span class="string">&#x27;如果不是警告，而是页面内容，则你的JS没被使用&#x27;</span>;</span><br><span class="line">    <span class="keyword">let</span> a = res.status(<span class="number">400</span>).send(<span class="string">&#x27;&lt;h4&gt;邮件地址或密码错误&lt;/h4&gt;&#x27;</span> + x);</span><br><span class="line">    <span class="keyword">if</span> (email.trim().length == <span class="number">0</span> || password.trim().length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.6 美化错误信息页面（可选）</p>
+<ul>
+<li>1.在admin/common/ 创建 error.art</li>
+<li>2.视频里面是单独的页面，而我，想再login.art的基础上；</li>
+</ul>
+<p>2.6.1 继承能套吗？</p>
+<ul>
+<li>1.我在login.art里面写了<code>&#123;&#123;block 'err'&#125;&#125;&#123;&#123;/block&#125;&#125;</code></li>
+<li>2.然后在error.art那边写：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;extend <span class="string">&#x27;./login.art&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;</span><br><span class="line">&lt;p <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;bg-danger error&quot;</span>&gt;&#123;&#123;msg&#125;&#125;&lt;/p&gt;</span><br><span class="line">&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3.没有效果；</li>
+</ul>
+<p>2.6.2 中间，还尝试了很多办法，包含，或者直接在login.art写html;</p>
+<ul>
+<li>1.都不行；</li>
+</ul>
+<p>2.6.3 后来，我突发奇想：事先在layout，里留下err坑；</p>
+<ul>
+<li>1.一级继承，login.art不填这个坑</li>
+<li>2.二级继承，error.art可以填这个坑吗？</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// layout.art</span></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;main&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br><span class="line">    &#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// error.art</span></span><br><span class="line">&#123;&#123;extend <span class="string">&#x27;./login.art&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;block <span class="string">&#x27;err&#x27;</span>&#125;&#125;</span><br><span class="line">&lt;p <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;bg-danger error&quot;</span>&gt;&#123;&#123;msg&#125;&#125;&lt;/p&gt;</span><br><span class="line">&#123;&#123;/block&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3.有效果；</li>
+</ul>
+<p>2.6.4 写入node笔记；</p>
+<h4 id="1-4-邮箱是否存在；"><a href="#1-4-邮箱是否存在；" class="headerlink" title="1.4 邮箱是否存在；"></a>1.4 邮箱是否存在；</h4><p>1.这个邮箱是用来登录使用的登录名，可以举一反三，手机号，用户名等等；</p>
+<p>2.引入用户集合；</p>
+<ul>
+<li>1.返回的是匿名对象，</li>
+<li>2.这里用对象解构出User，不给量接收取名；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// route/admin.js</span></span><br><span class="line"><span class="comment">// 6. 导入用户集合构造函数</span></span><br><span class="line"><span class="keyword">const</span> &#123; User &#125; = <span class="built_in">require</span>(<span class="string">&#x27;../model/user&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.根据邮箱地址查询用户信息</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 6.1 根据邮箱地址查询用户信息</span></span><br><span class="line">User.findOne(&#123; <span class="attr">email</span>: email &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>3.1 在ES6语法中，如果键与值一样，可以只写一个键；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 6.1 根据邮箱地址查询用户信息</span></span><br><span class="line">User.findOne(&#123;email&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>3.2 通过异步函数的方式，获取到异步API查询方法findOne的返回值；</p>
+<ul>
+<li>1.用变量接收；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2. 实现登录功能</span></span><br><span class="line">admin.post(<span class="string">&#x27;/login&#x27;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 接收请求参数</span></span><br><span class="line">    <span class="keyword">const</span> &#123; email, password &#125; = req.body;</span><br><span class="line">    <span class="comment">// 2.5</span></span><br><span class="line">    <span class="keyword">let</span> x = <span class="string">&#x27;如果不是警告，而是页面内容，则你的JS没被使用&#x27;</span>;</span><br><span class="line">    <span class="keyword">let</span> a = res.status(<span class="number">400</span>).send(<span class="string">&#x27;&lt;h4&gt;邮件地址或密码错误&lt;/h4&gt;&#x27;</span> + x);</span><br><span class="line">    <span class="keyword">if</span> (email.trim().length == <span class="number">0</span> || password.trim().length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 6.1 根据邮箱地址查询用户信息</span></span><br><span class="line">    <span class="keyword">let</span> user = <span class="keyword">await</span> User.findOne(&#123; email &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.3 如果邮箱存在，user变量类型是对象类型，不存在，为空；</p>
+<ul>
+<li>1.根据返回值的类型判断</li>
+</ul>
+<p>4.报错：一直报错；</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UnhandledPromiseRejectionWarning: <span class="builtin-name">Error</span> [ERR_HTTP_HEADERS_SENT]: Cannot <span class="builtin-name">set</span> headers after they are sent <span class="keyword">to</span> the client</span><br></pre></td></tr></table></figure>
+
+<p>将头发送到客户端后无法设置头</p>
+<ul>
+<li>1.我何时发了什么头？</li>
+<li>2.结果，一旦有路由过来</li>
+</ul>
+<p><code>let a = res.status(400).send(&#39;&lt;h4&gt;邮件地址或密码错误&lt;/h4&gt;&#39; + x);</code></p>
+<p>就自动触发，不需要使用就触发了；占用了响应头；</p>
+<p>4.1 百度无果，</p>
+<p>5.这里的笔记好像有点乱了；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">admin.post(<span class="string">&#x27;/login&#x27;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 接收请求参数</span></span><br><span class="line">    <span class="keyword">const</span> &#123; email, password &#125; = req.body;</span><br><span class="line">    <span class="comment">// 2.5</span></span><br><span class="line">    <span class="keyword">let</span> x = <span class="string">&#x27;如果不是警告，而是页面内容，则你的JS没被使用&#x27;</span>;</span><br><span class="line">    <span class="keyword">let</span> ps_err = <span class="string">&#x27;密码错误&#x27;</span>;</span><br><span class="line">    <span class="comment">// let a = res.status(400).send(&#x27;&lt;h4&gt;邮件地址或密码为空&lt;/h4&gt;&#x27;);</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 6.1 根据邮箱地址查询用户信息</span></span><br><span class="line">    <span class="keyword">let</span> user = <span class="keyword">await</span> User.findOne(&#123; email &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// let a2 = res.status(401).render(&#x27;admin/error&#x27;, &#123; msg: &#x27;邮件地址或密码错误&#x27; &#125;);</span></span><br><span class="line">    <span class="keyword">if</span> (email.trim().length == <span class="number">0</span> || password.trim().length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;1&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> res.status(<span class="number">400</span>).send(<span class="string">&#x27;&lt;h4&gt;邮件地址或密码为空&lt;/h4&gt;&#x27;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (user) &#123;</span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        <span class="keyword">if</span> (password == user.password) &#123;</span><br><span class="line">            res.send(<span class="string">&#x27;登录成功&#x27;</span>);</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;2&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;密码错误&#x27;</span>);</span><br><span class="line">            res.send(<span class="string">&#x27;密码错误&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;没有这账号&#x27;</span>);</span><br><span class="line">        res.send(<span class="string">&#x27;没有这账号&#x27;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>主要是登录实现过程中</li>
+</ul>
+<p>6.无法触发邮箱不存在；</p>
+<ul>
+<li>1.如果只填一个错误邮箱，不写密码，会被</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (email.trim().length == <span class="number">0</span> || password.trim().length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;1&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> res.status(<span class="number">400</span>).send(<span class="string">&#x27;&lt;h4&gt;邮件地址或密码为空&lt;/h4&gt;&#x27;</span>);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>返回邮件地址或密码为空密码为空</p>
+<ul>
+<li>2.于是，我注释了；不用这个了；</li>
+</ul>
+<p>6.1 然后是为空的时候，密码比对出错；</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">从数据库中根据eamil找到的user：<span class="literal">null</span></span><br><span class="line">(node:<span class="number">30052</span>) UnhandledPromiseRejectionWarning: <span class="built_in">TypeError</span>: Cannot read property <span class="string">&#x27;password&#x27;</span> <span class="keyword">of</span> <span class="literal">null</span></span><br><span class="line">    at <span class="built_in">module</span>.exports (F:\<span class="number">2</span><span class="number">-3</span>ciyuan\<span class="number">11</span>-data base-shujuk\<span class="number">3</span>-lianxi\<span class="number">8</span>-blog\route\admin\<span class="number">5</span>-login.js:<span class="number">28</span>:<span class="number">56</span>)</span><br><span class="line">    at processTicksAndRejections (internal/process/task_queues.js:<span class="number">93</span>:<span class="number">5</span>)</span><br><span class="line">(Use <span class="string">`node --trace-warnings ...`</span> to show where the warning was created)</span><br><span class="line">(node:<span class="number">30052</span>) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside <span class="keyword">of</span> an <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">without</span> <span class="title">a</span> <span class="title">catch</span> <span class="title">block</span>, <span class="title">or</span> <span class="title">by</span> <span class="title">rejecting</span> <span class="title">a</span> <span class="title">promise</span> <span class="title">which</span> <span class="title">was</span> <span class="title">not</span> <span class="title">handled</span> <span class="title">with</span> .<span class="title">catch</span>(<span class="params"></span>). <span class="title">To</span> <span class="title">terminate</span> <span class="title">the</span> <span class="title">node</span> <span class="title">process</span> <span class="title">on</span> <span class="title">unhandled</span> <span class="title">promise</span> <span class="title">rejection</span>, <span class="title">use</span> <span class="title">the</span> <span class="title">CLI</span> <span class="title">flag</span> `--<span class="title">unhandled</span>-<span class="title">rejections</span>=<span class="title">strict</span>` (<span class="params">see https:<span class="regexp">//</span>nodejs.org<span class="regexp">/api/</span>cli.html#cli_unhandled_rejections_mode</span>). (<span class="params">rejection id: <span class="number">1</span></span>)</span></span><br><span class="line">(node:30052) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>1.第56列，是user.password；也就是说，找不到集合中的password；</p>
+</li>
+<li><p>2.而表单那边password null是不报错的；</p>
+</li>
+<li><p>3.找不到集合中的password，是因为邮箱不存在，找不到集合</p>
+</li>
+<li><p>4.只有邮箱存在的时候，才比对密码；</p>
+</li>
+<li><p>5.把这个比对，放在集合已经找到的前提下；</p>
+</li>
+</ul>
+<h3 id="2-密码加密"><a href="#2-密码加密" class="headerlink" title="2. 密码加密"></a>2. 密码加密</h3><p>1.关于登录的基本逻辑，就到这里了；</p>
+<p>2.在数据库中，以明文的形式，存储数据是不安全的。</p>
+<ul>
+<li>1.一下就看到了密码；</li>
+</ul>
+<p><img src="../../img/15.2/2.png" alt="2"></p>
+<p>3.哈希加密是单程加密方式：1234 =&gt; abcd<br>在加密的密码中加入随机字符串可以增加密码被破解的难度。</p>
+<ul>
+<li>1.不能解密，只能加密；</li>
+</ul>
+<p>4.看一串代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入bcrypt模块</span></span><br><span class="line"><span class="keyword">const</span> bcrypt = <span class="built_in">require</span>(<span class="string">&#x27;bcrypt&#x27;</span>);</span><br><span class="line"><span class="comment">// 生成随机字符串 gen =&gt; generate 生成 salt 盐</span></span><br><span class="line"><span class="keyword">let</span> salt = <span class="keyword">await</span> bcrypt.genSalt(<span class="number">10</span>);</span><br><span class="line"><span class="comment">// 使用随机字符串对密码进行加密</span></span><br><span class="line"><span class="keyword">let</span> pass = <span class="keyword">await</span> bcrypt.hash(<span class="string">&#x27;明文密码&#x27;</span>, salt);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4.1 genSalt一看就是个方法，参数是数值参数，数值越大越复杂。</p>
+<ul>
+<li><p>1.不知道生成多少位；</p>
+</li>
+<li><p>2.默认值是10，不需要修改，使用默认值就行了；</p>
+</li>
+<li><p>3.是异步api，返回 什么 对象来着？听不清；</p>
+</li>
+</ul>
+<p>4.2 <code>bcrypt.hash(&#39;明文密码&#39;, salt);</code></p>
+<ul>
+<li>1.明文密码，就是明文的密码，你要加密的密码；</li>
+<li>2.这个方法就是加密，上面那个算是规则；</li>
+<li>3.hash[^16]</li>
+<li>4.hash方法，也是一个异步api；</li>
+</ul>
+<h4 id="2-2-代码验证"><a href="#2-2-代码验证" class="headerlink" title="2.2 代码验证"></a>2.2 代码验证</h4><p>1.有很多依赖的东西：</p>
+<ul>
+<li><p>bcrypt依赖的其他环境<br>1.python 2.x<br>2.node-gyp</p>
+<pre><code>npm install -g node-gyp</code></pre><p>3.windows-build-tools</p>
+<pre><code>npm install --global --production windows-build-tools</code></pre></li>
+<li><p>windows-build-tools；是windows用户要安装的；</p>
+</li>
+</ul>
+<p>2.npm install –global –production windows-build-tools；需要一定的时间，跳过这两节课；</p>
+<p>安装好了，再回来；</p>
+<p>3.<del>在route/admin.js中，引入模块</del></p>
+<ul>
+<li>1.好吧，错了，在model/user.js中引入</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 7.导入加密模块</span></span><br><span class="line"><span class="keyword">const</span> bcrypt = <span class="built_in">require</span>(<span class="string">&#x27;bcrypt&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4.把下面的5.插入超级管理员文档，注释去掉；复活；</p>
+<p>5.创建加密函数；超级管理员文档也剪切了进去</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建加密函数</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">encryption</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> salt = <span class="keyword">await</span> bcrypt.genSalt(<span class="number">7</span>);</span><br><span class="line">    <span class="keyword">const</span> pass = <span class="keyword">await</span> bcrypt.hash(<span class="string">&#x27;admin&#x27;</span>, salt);</span><br><span class="line">    <span class="comment">// 5.插入超级管理员文档</span></span><br><span class="line">    <span class="keyword">const</span> user = User.create(&#123;</span><br><span class="line">        username: <span class="string">&#x27;70admin&#x27;</span>,</span><br><span class="line">        email: <span class="string">&#x27;70@70.com&#x27;</span>,</span><br><span class="line">        password: pass,</span><br><span class="line">        role: <span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">        state: <span class="number">0</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">encryption();</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-3-比对密码"><a href="#2-3-比对密码" class="headerlink" title="2.3 比对密码"></a>2.3 比对密码</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 密码比对</span></span><br><span class="line"><span class="keyword">let</span> isEqual = <span class="keyword">await</span> bcrypt.compare(<span class="string">&#x27;明文密码&#x27;</span>, <span class="string">&#x27;加密密码&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>1.还是异步api；</p>
+<p>2.方法的返回值，是一个布尔类型，true就比对成功，false比对失败；</p>
+<p>3.这个是验证密码用的吗？</p>
+<p>4.Equal[^6]</p>
+<p>5.这个方法，做了三件事情：</p>
+<ul>
+<li>1.知道加密密码里面，哪些是随机字符串；</li>
+<li>2.对明文密码，进行加密；将获取的随机字符串，随机添加到密码中；</li>
+<li>3.把刚加密的，明文密码；与，第二个参数，加密密码；比对；</li>
+<li>4.</li>
+</ul>
+<p>6.代码验证：</p>
+<p>6.1 去admin的路由那边，找到密码比对；</p>
+<p>6.2 还是要引入</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 7.导入加密模块</span></span><br><span class="line"><span class="keyword">const</span> bcrypt = <span class="built_in">require</span>(<span class="string">&#x27;bcrypt&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6.3 密码加密了，以前的判断条件不行了</p>
+<p><code>if (password == user.password)</code></p>
+<p>6.4</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 7.1 比对密码</span></span><br><span class="line">    <span class="comment">// @ts-ignore</span></span><br><span class="line">    <span class="comment">// 前面的是请求参数的，后面的是数据库里面的</span></span><br><span class="line">    <span class="keyword">let</span> is_valid = <span class="keyword">await</span> bcrypt.compare(password, user.password);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (user) &#123;</span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        <span class="keyword">if</span> (is_valid) &#123;</span><br><span class="line">            res.send(<span class="string">&#x27;登录成功&#x27;</span>);</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;2&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-登录缺陷"><a href="#3-登录缺陷" class="headerlink" title="3. 登录缺陷"></a>3. 登录缺陷</h3><p>1.登录成功后，浏览器没记住。和没登录一样；</p>
+<p>2.代码验证</p>
+<ul>
+<li>1.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将用户名存储在请求对象中</span></span><br><span class="line"><span class="comment">// @ts-ignore</span></span><br><span class="line">req.username = user.username;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2.向页面传入数据；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">admin.get(<span class="string">&#x27;/user&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.render(<span class="string">&#x27;admin/user&#x27;</span>, &#123;</span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        msg: req.username,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3.</li>
+</ul>
+<p>3.算了，这里不笔记了</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=109&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=109&amp;spm_id_from=pageDriver</a></p>
+</blockquote>
+<h4 id="3-2-cookie与session"><a href="#3-2-cookie与session" class="headerlink" title="3.2 cookie与session"></a>3.2 cookie与session</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=110&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=110&amp;spm_id_from=pageDriver</a></p>
+<p>2021-4-30 23:17:12</p>
+</blockquote>
+<h5 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h5><p>1.cookie：浏览器在电脑硬盘中开辟的一块空间，主要供服务器端存储数据。<br>2.cookie中的数据是以域名的形式进行区分的。<br>3.cookie中的数据是有过期时间的，超过时间数据会被浏览器自动删除。</p>
+<ul>
+<li>1.如果不设置过期时间，关闭浏览器的时候，cookie就会被删除；</li>
+</ul>
+<p>4.cookie中的数据会随着请求被自动发送到服务器端。</p>
+<ul>
+<li>1.请求才有；</li>
+</ul>
+<p><img src="../../img/15.2/3.png" alt="3"></p>
+<p>5.session：实际上就是一个对象，存储在服务器端的内存中，在session对象中也可以存储多条数据，每一条数据都有一个sessionid做为唯一标识。</p>
+<ul>
+<li>1.第一次请求时</li>
+</ul>
+<p><img src="../../img/15.2/4.png" alt="3"></p>
+<ul>
+<li>2.再一次请求；客户端发cookie给服务器；</li>
+</ul>
+<p><img src="../../img/15.2/5.png" alt="3"></p>
+<h5 id="2-如何使用"><a href="#2-如何使用" class="headerlink" title="2. 如何使用"></a>2. 如何使用</h5><p>1.在node.js中需要借助express-session实现session[^7]功能</p>
+<p>1.1 示例代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> session = <span class="built_in">require</span>(<span class="string">&#x27;express-session&#x27;</span>);</span><br><span class="line">app.use(session(&#123; <span class="attr">secret</span>: <span class="string">&#x27;secret key&#x27;</span> &#125;));</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>secret[^8]</li>
+</ul>
+<p>1.2 express-session，也是官方提供的，是中间件；</p>
+<p>1.3 用use在所有请求之前，先处理</p>
+<p>1.4 session方法做了什么</p>
+<ul>
+<li><p>1.会在请求对象添加一个属性，属性名叫session，这个属性值是一个对象。</p>
+<ul>
+<li><p>0.添加了属性后，就可以<code>req.session</code>使用</p>
+</li>
+<li><p>1.这个对象，可以在用户登录成功后，保存用户信息。</p>
+</li>
+</ul>
+</li>
+<li><p>2.方法内部，在我们给session存储数据时，生成session_ID。</p>
+<ul>
+<li>1.这个ID，是当前存储数据的，唯一标识；</li>
+</ul>
+</li>
+<li><p>3.然后将这个id，存储在客户端的cookie[^9]当中；</p>
+</li>
+<li><p>4.客户端，再次访问服务器端的时候，方法会拿到客户端传过来的cookie，在cookie里提取出session_ID；</p>
+</li>
+<li><p>5.然后根据ID，在cookie中找到用户信息。</p>
+</li>
+<li><p>6.此时服务器知道了，访问服务器的客户端是谁；也就真正建立了客户端与服务器的联系；</p>
+</li>
+</ul>
+<p>1.5 在调用session方法时，传递了一个参数secret[^8]，含义是：存储一个密钥；</p>
+<ul>
+<li>1.这个密钥可以自定义；</li>
+<li>2.用来加密cookie的信息；</li>
+<li>3.加密后，value就是乱码的；</li>
+</ul>
+<p><img src="../../img/15.2/9.png" alt="9"></p>
+<h5 id="3-在项目中添加代码"><a href="#3-在项目中添加代码" class="headerlink" title="3. 在项目中添加代码"></a>3. 在项目中添加代码</h5><p>1.下载模块express-session</p>
+<ul>
+<li>1.npm install express-session</li>
+</ul>
+<p>2.导入app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 7.引入express-session模块，这个模块返回一个方法，我们用一个量来接收它</span></span><br><span class="line"><span class="keyword">const</span> session = <span class="built_in">require</span>(<span class="string">&#x27;express-session&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.使用方法</p>
+<ul>
+<li>1.配置session密匙；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 7.1 配置session</span></span><br><span class="line">app.use(session(&#123; <span class="attr">secret</span>: <span class="string">&#x27;qilinc key&#x27;</span> &#125;))</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>2.然后去route/admin.js；在用户登录成功后，要把用户的信息，存储在session当中；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (user) &#123;</span><br><span class="line">    <span class="comment">// @ts-ignore</span></span><br><span class="line">    <span class="keyword">if</span> (is_valid) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将用户名存储在请求对象中</span></span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        <span class="comment">// req.username = user.username;</span></span><br><span class="line">        <span class="comment">// 8.在用户登录成功后，要把用户的信息，存储在session当中；</span></span><br><span class="line">        req.session.username = user.username;</span><br><span class="line">        res.send(<span class="string">&#x27;登录成功&#x27;</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;2&#x27;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4.nodemon app.js运行本地服务器，打开登录页面；输入正确邮箱和密码；</p>
+<ul>
+<li>1.在这里，会报两句提示；</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">express-session</span> <span class="selector-tag">deprecated</span> <span class="selector-tag">undefined</span> <span class="selector-tag">resave</span> <span class="selector-tag">option</span>; <span class="selector-tag">provide</span> <span class="selector-tag">resave</span> <span class="selector-tag">option</span> <span class="selector-tag">app</span><span class="selector-class">.js</span><span class="selector-pseudo">:23</span><span class="selector-pseudo">:9</span></span><br><span class="line"><span class="selector-tag">express-session</span> <span class="selector-tag">deprecated</span> <span class="selector-tag">undefined</span> <span class="selector-tag">saveUninitialized</span> <span class="selector-tag">option</span>; <span class="selector-tag">provide</span> <span class="selector-tag">saveUninitialized</span> <span class="selector-tag">option</span> <span class="selector-tag">app</span><span class="selector-class">.js</span><span class="selector-pseudo">:23</span><span class="selector-pseudo">:9</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2.翻译</li>
+</ul>
+<blockquote>
+<p>express session已弃用未定义的resave选项；提供重新保存选项app.js:23:9</p>
+<p>express session不推荐使用未定义的saveUninitialized选项；提供saveUninitialized选项app.js:23:9</p>
+</blockquote>
+<ul>
+<li>3.获取这些属性的含义</li>
+</ul>
+<blockquote>
+<p>resave:(是否允许)当客户端并行发送多个请求时，其中一个请求在另一个请求结束时对session进行修改覆盖并保存。</p>
+<p>默认为true。但是(后续版本)有可能默认失效，所以最好手动添加。</p>
+<p>saveUninitialized:初始化session时是否保存到存储。默认为true， 但是(后续版本)有可能默认失效，所以最好手动添加。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u012679583/article/details/50510717">https://blog.csdn.net/u012679583/article/details/50510717</a></p>
+</blockquote>
+<p>引用来源：<a target="_blank" rel="noopener" href="https://www.imooc.com/wenda/detail/439174">https://www.imooc.com/wenda/detail/439174</a></p>
+<p>4.1 回到上面的3.1步，修改配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">app.use(session(&#123;</span><br><span class="line">    secret: <span class="string">&#x27;qilinc key&#x27;</span>,</span><br><span class="line">    resave: <span class="literal">true</span>,</span><br><span class="line">    saveUninitialized: <span class="literal">true</span></span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4.2 登录成功后，F12；</p>
+<p><img src="../../img/15.2/6.png" alt="6"></p>
+<p>4.3 connect.sid；是express-session设置的默认名字，value是加密的字符串，里面保存了，服务器端为客户端生成的session-id；</p>
+<ul>
+<li>1.接下来，我们再往服务器端，发送请求的时候，这个cookie，就会被自动携带；</li>
+<li>2.这个cookie就是value</li>
+<li>3.然后服务器提取id，查找用户数据；为一个登录成功</li>
+</ul>
+<p>4.4 视频里，接下来是验证4.3所说；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">admin.get(<span class="string">&#x27;/user&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.render(<span class="string">&#x27;admin/user&#x27;</span>, &#123;</span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        <span class="comment">// 8.1 验证cookie与session</span></span><br><span class="line">        msg: req.session.username,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>route/admin.js</p>
+</li>
+<li><p>1.res.render，是返回与渲染模板文件的；</p>
+</li>
+</ul>
+<p>4.5 需要在模板admin/user.art里，添加放置msg；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 分类标题 --&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;title&quot;</span>&gt;</span><br><span class="line">    &lt;h4&gt;用户 &#123;&#123;msg&#125;&#125;&lt;/h4&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4.6 每次修改代码保存后，服务器会重启，session当服务器重启后就会失效。</p>
+<ul>
+<li>1.重新登录</li>
+<li>2.然后去user看；</li>
+</ul>
+<p>4.7 成功，没有问题；</p>
+<ul>
+<li>1.到现在，登录的功能，才实现好；</li>
+<li>2021-5-1 15:52:30</li>
+</ul>
+<hr>
+<h3 id="4-登录后"><a href="#4-登录后" class="headerlink" title="4. 登录后"></a>4. 登录后</h3><h4 id="4-1-跳转到用户页面"><a href="#4-1-跳转到用户页面" class="headerlink" title="4.1 跳转到用户页面"></a>4.1 跳转到用户页面</h4><p>1.重定向，express的重定向怎么写？</p>
+<p>1.1 <code>res.redirect()</code>方法；redirect[^10]</p>
+<ul>
+<li>1.参数是，你要跳转的地址；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (user) &#123;</span><br><span class="line">    <span class="comment">// @ts-ignore</span></span><br><span class="line">    <span class="keyword">if</span> (is_valid) &#123;</span><br><span class="line">        <span class="comment">// 将用户名存储在请求对象中</span></span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        <span class="comment">// req.username = user.username;</span></span><br><span class="line">        <span class="comment">// 8.在用户登录成功后，要把用户的信息，存储在session当中；</span></span><br><span class="line">        req.session.username = user.username;</span><br><span class="line">        <span class="comment">// res.send(&#x27;登录成功&#x27;);</span></span><br><span class="line">        <span class="comment">// console.log(&#x27;2&#x27;);</span></span><br><span class="line">        <span class="comment">// 9.重定向到用户列表页面</span></span><br><span class="line">        res.redirect(<span class="string">&#x27;/admin/user&#x27;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-2-显示在右上角"><a href="#4-2-显示在右上角" class="headerlink" title="4.2 显示在右上角"></a>4.2 显示在右上角</h4><p>1.右上角是公共区域；</p>
+<p>2.去views/admin/common/header.art</p>
+<ul>
+<li><p>1.先需要公共数据；在登录成功后</p>
+</li>
+<li><p>2.虽然是公共数据，但这个数据，不是一开始就有。而是登录成功后，才知道这个登录进来的用户名；</p>
+</li>
+<li><p>3.看起来是，私人数据。</p>
+</li>
+<li><p>4.但这里要在公共模板里，所以有私人数据，公共化显示。</p>
+</li>
+<li><p>5.所以在成功后，才生成这个数据；</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (user) &#123;</span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        <span class="keyword">if</span> (is_valid) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 将用户名存储在请求对象中</span></span><br><span class="line">            <span class="comment">// @ts-ignore</span></span><br><span class="line">            <span class="comment">// req.username = user.username;</span></span><br><span class="line">            <span class="comment">// 8.在用户登录成功后，要把用户的信息，存储在session当中；</span></span><br><span class="line">            req.session.username = user.username;</span><br><span class="line">            <span class="comment">// res.send(&#x27;登录成功&#x27;);</span></span><br><span class="line">            <span class="comment">// console.log(&#x27;2&#x27;);</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 10. 生成公共用户数据</span></span><br><span class="line">            req.app.locals.userInfo = user;</span><br><span class="line">            <span class="comment">// 9.重定向到用户列表页面</span></span><br><span class="line">            res.redirect(<span class="string">&#x27;/admin/user&#x27;</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.1 req.app.locals.userInfo = user;</p>
+<ul>
+<li>1.上面的app，和app.js里面的app，是一个app；</li>
+<li>2.为什么?</li>
+<li>3.个人猜想：<ul>
+<li>1.请求报文里面，一定有，向谁请求的标识。存储了向那个服务器请求的名字，app；</li>
+<li>2.在创建服务器入口的app.js里面。</li>
+<li>3.写了监听和路由，这样，在正确的url里面，req就能知道服务器的名字，也就是app；</li>
+<li>req.app = app.js里面的app；</li>
+</ul>
+</li>
+</ul>
+<p>3.去掉路由里面传入的数据，也就是8.1；因为这个数据在公共里面有了；userInfo.username;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建后台用户列表路由</span></span><br><span class="line">admin.get(<span class="string">&#x27;/user&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.render(<span class="string">&#x27;admin/user&#x27;</span>, &#123;</span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        <span class="comment">// 8.1 验证cookie与session</span></span><br><span class="line">        msg: req.session.username,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><del>msg: req.session.username,</del></p>
+<p>3.1 然后去hearer.art里面，把admin改为模板语法：<code>&#123;&#123;userInfo.username&#125;&#125;</code></p>
+<p>3.2 同时，在user.art里面，以前写的<code>&#123;&#123;msg&#125;&#125;</code>，也可以改为userInfo.username</p>
+<ul>
+<li>1.验证；</li>
+</ul>
+<h4 id="4-3-登录拦截"><a href="#4-3-登录拦截" class="headerlink" title="4.3 登录拦截"></a>4.3 登录拦截</h4><p>1.现在你不登录，直接输入域名admin/user</p>
+<ul>
+<li>1.也能过去，不过是报错；</li>
+<li>2.因为userInfo.username没有东西；</li>
+</ul>
+<p><code>RuntimeError: Cannot read property &#39;username&#39; of undefined</code></p>
+<ul>
+<li>3.改为<code>&#123;&#123;userInfo && userInfo.username&#125;&#125;</code></li>
+<li>4.就不会报错了，不过也能跳转到user页面了；</li>
+</ul>
+<p>1.2 我们不能让用户在没有登录的情况下，跑到某个用户的个人页面去；</p>
+<ul>
+<li>1.如果这个请求，是admin开头的；</li>
+<li>2.判断用户登录状态</li>
+<li>3.如果用户是登录的，我们让请求，继续往下走；一级路由通过；</li>
+<li>4.反之不往下走，一级路由拦截；重定向到登录界面；</li>
+</ul>
+<p>1.3 不过，登录模板，也是在admin下面，所以要除开login，其他的是1.2那样；</p>
+<p>1.4 明显是用中间件（视频说）</p>
+<ul>
+<li>1.中间件，是有顺序的，从上到下；</li>
+<li>2.所以，要写在一级路由上面（express的路由，也是中间件）</li>
+</ul>
+<p>1.5 代码</p>
+<ul>
+<li>1.<code>req.a = user.username;</code>为空，就不是登录状态</li>
+<li>2.这个重定向，是与localhost+端口；拼接的；</li>
+<li>3.模板那些，有模板设置的路径；</li>
+<li>4.路由那些，也是localhost+端口；二级路由会相对于一级路由的路径；</li>
+<li>5.静态资源那些，也有设置静态资源根目录；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 8. 判断用户登录状态</span></span><br><span class="line">app.use(<span class="string">&#x27;/admin&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (req.url != <span class="string">&#x27;/login&#x27;</span> &amp;&amp; !req.session.username) &#123;</span><br><span class="line">        res.redirect(<span class="string">&#x27;/admin/login&#x27;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        next();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.不用重启服务器，在F12里面删除cookie，就可以重新登录了；</p>
+<h3 id="5-优化"><a href="#5-优化" class="headerlink" title="5. 优化"></a>5. 优化</h3><h4 id="5-1-分离登录拦截"><a href="#5-1-分离登录拦截" class="headerlink" title="5.1 分离登录拦截"></a>5.1 分离登录拦截</h4><p>1.app.js一般不写具体的功能代码；</p>
+<ul>
+<li>1.分离登录拦截；</li>
+</ul>
+<p>2.在项目文件夹下面，创建新文件：middleware；ware[^11]</p>
+<ul>
+<li>1.建立login_guard.js</li>
+<li>2.guard[^12]</li>
+</ul>
+<p>3.剪切代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> (req, res, next) =&gt; &#123;</span><br><span class="line">    <span class="comment">// @ts-ignore</span></span><br><span class="line">    <span class="keyword">if</span> (req.url != <span class="string">&#x27;/login&#x27;</span> &amp;&amp; !req.session.username) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        <span class="built_in">console</span>.log(req.session.username);</span><br><span class="line">        res.redirect(<span class="string">&#x27;/admin/login&#x27;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 若是登录状态，放行；</span></span><br><span class="line">        next();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>只剩：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 8. 判断用户登录状态</span></span><br><span class="line">app.use(<span class="string">&#x27;/admin&#x27;</span>,);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.1 给个名字；</p>
+<p><code>const guard = (req, res, next)</code></p>
+<p>4.导出：<code>module.exports = guard;</code></p>
+<p>5.app.js引入；</p>
+<ul>
+<li>1.登录拦截路由使用；</li>
+</ul>
+<h4 id="5-2-admin分离处理函数（可选）"><a href="#5-2-admin分离处理函数（可选）" class="headerlink" title="5.2 admin分离处理函数（可选）"></a>5.2 admin分离处理函数（可选）</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=114&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=114&amp;spm_id_from=pageDriver</a></p>
+</blockquote>
+<p>1.在真实的项目中，路由非常多；</p>
+<p>2.分离路由的处理方法；路由的请求函数；</p>
+<p>3.分离</p>
+<p>4.分离方法和5.1一样，我觉得这么写挺好的，我不分离；</p>
+<ul>
+<li><p>1.主要有些处理方法有模块依赖；</p>
+</li>
+<li><p>2.依赖模块的路由也会变化</p>
+</li>
+</ul>
+<h2 id="7-3-功能-新增用户"><a href="#7-3-功能-新增用户" class="headerlink" title="7.3 功能-新增用户"></a>7.3 功能-新增用户</h2><p>思路：</p>
+<ol>
+<li>为用户列表页面的新增用户按钮添加链接</li>
+<li>添加一个连接对应的路由，在路由处理函数中渲染新增用户模板<br>3 .为新增用户表单指定请求地址、请求方式、为表单项添加name属性</li>
+<li>增加实现添加用户的功能路由</li>
+<li>接收到客户端传递过来的请求参数</li>
+<li>对请求参数的格式进行验证</li>
+<li>验证当前要注册的邮箱地址是否已经注册过</li>
+<li>对密码进行加密处理</li>
+<li>将用户信息添加到数据库中</li>
+</ol>
+<p>10.重定向页面到用户列表页面</p>
+<h3 id="1-按钮设置"><a href="#1-按钮设置" class="headerlink" title="1.按钮设置"></a>1.按钮设置</h3><h4 id="1-1-表单设置"><a href="#1-1-表单设置" class="headerlink" title="1.1 表单设置"></a>1.1 表单设置</h4><p>1.action</p>
+<ul>
+<li>1.在admin/user.art</li>
+</ul>
+<p><code>&lt;a href=&quot;user-edit.html&quot; class=&quot;btn btn-primary new&quot;&gt;新增用户&lt;/a&gt;</code></p>
+<p>1.1 是一个a，不是input</p>
+<p>1.2 修改href</p>
+<p><code>href=&quot;/admin/user-edit&quot;</code></p>
+<ul>
+<li>1.这里的跳转是怎样的？</li>
+<li>2.先是直接是单纯的url</li>
+<li>3.一级路由，admin；</li>
+<li>4.二级路由，admin下的user-edit；</li>
+</ul>
+<p>1.3  路由再route文件下，能获取到吗？</p>
+<ul>
+<li>1.能</li>
+<li>2.因为app.js里面有引入；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> home = <span class="built_in">require</span>(<span class="string">&quot;./route/home&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> admin = <span class="built_in">require</span>(<span class="string">&#x27;./route/admin&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.增加路由；</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=115&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=115&amp;spm_id_from=pageDriver</a></p>
+<p>03:20</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.创建用户编辑页面路由</span></span><br><span class="line">admin.get(<span class="string">&#x27;/user-edit&#x27;</span>, <span class="built_in">require</span>(<span class="string">&#x27;./admin/1-user-edit&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.user-edit页面表单设置</p>
+<p><code>&lt;form class=&quot;form-container&quot; action=&quot;/admin/user-edit&quot; method=&quot;POST&quot;&gt;</code></p>
+<ul>
+<li>1.请求地址，就是这个页面的路径么</li>
+</ul>
+<p>3.1 input加name；</p>
+<ul>
+<li>1.与数据库一致，去数据库看看名字；</li>
+<li>2.</li>
+</ul>
+<p>3.2 注意选择栏里面，加value，因为role</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=<span class="string">&quot;role&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-control&quot;</span>&gt;</span><br><span class="line">    &lt;option value=<span class="string">&quot;normal&quot;</span>&gt;普通用户&lt;/option&gt;</span><br><span class="line">    &lt;option value=<span class="string">&quot;admin&quot;</span>&gt;超级管理员&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>1.解析：<ul>
+<li>1.你选普通用户，提交的是normal</li>
+<li>2.你选管理员，提交的是admin；</li>
+</ul>
+</li>
+</ul>
+<p>3.3 状态这边也是这样</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-group&quot;</span>&gt;</span><br><span class="line">    &lt;label&gt;状态&lt;/label&gt;</span><br><span class="line">    &lt;select name=<span class="string">&quot;state&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-control&quot;</span>&gt;</span><br><span class="line">        &lt;option value=<span class="string">&quot;0&quot;</span>&gt;启用&lt;/option&gt;</span><br><span class="line">        &lt;option value=<span class="string">&quot;1&quot;</span>&gt;禁用&lt;/option&gt;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.4 表单的提交地址，提交方式，name都设置完了；</p>
+<ul>
+<li>1.又要去新增用户，做提交功能；</li>
+</ul>
+<h4 id="1-2-提交功能"><a href="#1-2-提交功能" class="headerlink" title="1.2 提交功能"></a>1.2 提交功能</h4><p>1.admin.js路由添加</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.1 创建用户添加路由</span></span><br><span class="line">admin.post(<span class="string">&#x27;/user-edit&#x27;</span>, <span class="built_in">require</span>(<span class="string">&#x27;./admin/2-userEditPost&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.编写处理函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 接收请求参数</span></span><br><span class="line">    res.send(req.body);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>req.body是啥来着？</p>
+</li>
+<li><p>1.把post参数弄成对象类型，并在req下创建body，传给body</p>
+</li>
+<li><p>2.15.1-6.3.3 post参数获取</p>
+</li>
+</ul>
+<h5 id="1-Joi"><a href="#1-Joi" class="headerlink" title="1. Joi"></a>1. Joi</h5><p>0.现在呢，请求参数已经接收到了。接下来，我们要对请求参数的格式，进行验证</p>
+<ul>
+<li><p>1.因为当前表单的字段比较多；</p>
+</li>
+<li><p>2.代码写起来不难，但啰嗦，费时间</p>
+</li>
+<li><p>3.使用第三方模块Joi</p>
+</li>
+<li><p>4.读作：zuai，zhuai。拽</p>
+</li>
+</ul>
+<p>1.JavaScript对象的规则描述语言和验证器。</p>
+<p>2.示例代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Joi = <span class="built_in">require</span>(<span class="string">&#x27;joi&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> schema = &#123;</span><br><span class="line">    username: Joi.string().alphanum().min(<span class="number">3</span>).max(<span class="number">30</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(‘错误信息’)),</span><br><span class="line">    password: Joi.string().regex(<span class="regexp">/^[a-zA-Z0-9]&#123;3,30&#125;$/</span>),</span><br><span class="line">    access_token: [Joi.string(), Joi.number()],</span><br><span class="line">    birthyear: Joi.number().integer().min(<span class="number">1900</span>).max(<span class="number">2013</span>),</span><br><span class="line">    email: Joi.string().email()</span><br><span class="line">&#125;;</span><br><span class="line">Joi.validate(&#123; <span class="attr">username</span>: <span class="string">&#x27;abc&#x27;</span>, <span class="attr">birthyear</span>: <span class="number">1994</span> &#125;, schema);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.1 <code>Joi.string()</code></p>
+<ul>
+<li>1.表示类型；</li>
+</ul>
+<p>2.2 <code>alphanum()</code>；字母or数字，字符串；下划线,@那些不行；不能特殊字符</p>
+<p>2.3 required() ；表示必选属性；如果没有，验证不通过；</p>
+<p>2.4 以上方法都可选；</p>
+<p>2.5 error(new Error(‘错误信息’))</p>
+<ul>
+<li>1.自定义错误信息，外面的error是个方法；</li>
+<li>2.里面的参数，是一个Error对象，两个不一样；</li>
+</ul>
+<p>2.6 <code>[Joi.string(), Joi.number()]</code></p>
+<ul>
+<li>1.数组的话，就是，都可以；</li>
+</ul>
+<p>2.7 integer()  ;   必须整数；</p>
+<p>2.8 email() ；满足邮件格式；</p>
+<p>2.9 valid()；合法值；</p>
+<ul>
+<li>例如：valid(‘normal’,’admin’) ；valid(0,1)</li>
+</ul>
+<p>3.每一个属性第一个是 数据类型方法，不同的数据类型，后面的验证规则也不一样；</p>
+<p>4.Joi，还有很多其他规则，实际的需求，再；</p>
+<p>5.<code>Joi.validate(&#123; username: &#39;abc&#39;, birthyear: 1994 &#125;, schema);</code></p>
+<ul>
+<li>1.是验证的</li>
+<li>2.第一个参数，是被验证的数据；第二个参数，是验证的规则；</li>
+</ul>
+<p>5.1 validate方法，返回的是promise对象；</p>
+<ul>
+<li>1.可以使用异步函数的方式，使用；</li>
+</ul>
+<p>6.代码：</p>
+<ul>
+<li>1.新建joi.js</li>
+<li>2.8-blog\joi.js</li>
+<li>3.就在项目文件夹下面新建；</li>
+</ul>
+<ol start="7">
+<li>在项目中添加验证；</li>
+</ol>
+<p>7.1 在8-blog\route\admin\2-userEditPost.js 里面；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.验证规则</span></span><br><span class="line">    <span class="keyword">const</span> schema = &#123;</span><br><span class="line">        username: Joi.string().min(<span class="number">2</span>).max(<span class="number">12</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;用户名不符合验证规则&#x27;</span>)),</span><br><span class="line">        email: Joi.string().email().required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;邮箱格式不符合要求&#x27;</span>)),</span><br><span class="line">        password: Joi.string().regex(<span class="regexp">/^[a-zA-Z0-9]&#123;3,30&#125;$/</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;密码格式不符合要求&#x27;</span>)),</span><br><span class="line">        role: Joi.string().valid(<span class="string">&#x27;normal&#x27;</span>, <span class="string">&#x27;admin&#x27;</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;角色值非法&#x27;</span>)),</span><br><span class="line">        state: Joi.number().valid(<span class="number">0</span>, <span class="number">1</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;状态值非法&#x27;</span>))</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>7.2 验证数据；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Joi = <span class="built_in">require</span>(<span class="string">&#x27;joi&#x27;</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 1.验证规则</span></span><br><span class="line">    <span class="keyword">const</span> schema = &#123;</span><br><span class="line">        username: Joi.string().min(<span class="number">2</span>).max(<span class="number">12</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;用户名不符合验证规则&#x27;</span>)),</span><br><span class="line">        email: Joi.string().email().required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;邮箱格式不符合要求&#x27;</span>)),</span><br><span class="line">        password: Joi.string().regex(<span class="regexp">/^[a-zA-Z0-9]&#123;3,30&#125;$/</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;密码格式不符合要求&#x27;</span>)),</span><br><span class="line">        role: Joi.string().valid(<span class="string">&#x27;normal&#x27;</span>, <span class="string">&#x27;admin&#x27;</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;角色值非法&#x27;</span>)),</span><br><span class="line">        state: Joi.number().valid(<span class="number">0</span>, <span class="number">1</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;状态值非法&#x27;</span>))</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 验证数据</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 实施验证</span></span><br><span class="line">        <span class="comment">// @ts-ignore</span></span><br><span class="line">        <span class="keyword">await</span> Joi.validate(req.body, schema);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">        <span class="comment">// res.redirect(&#x27;/admin/user-edit?message=&#x27; + err.message);</span></span><br><span class="line">        res.redirect(<span class="string">`/admin/user-edit?message=<span class="subst">$&#123;err.message&#125;</span>`</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(err.message);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 接收请求参数</span></span><br><span class="line">    <span class="comment">// res.send(req.body);</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>1.报错：Joi.validate is not a function</li>
+<li>2.网上说版本新了，不支持；</li>
+</ul>
+<p>7.2.1 我下载的版本：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PS F:\<span class="number">2</span><span class="number">-3</span>ciyuan\<span class="number">11</span>-data base-shujuk\<span class="number">3</span>-lianxi\<span class="number">8</span>-blog&gt; npm install joi</span><br><span class="line">npm WARN <span class="number">8</span>-<span class="symbol">blog@</span><span class="number">1.0</span><span class="number">.0</span> No description</span><br><span class="line">npm WARN <span class="number">8</span>-<span class="symbol">blog@</span><span class="number">1.0</span><span class="number">.0</span> No repository field.</span><br><span class="line"></span><br><span class="line">+ <span class="symbol">joi@</span><span class="number">17.4</span><span class="number">.0</span></span><br><span class="line">added <span class="number">6</span> packages <span class="keyword">in</span> <span class="number">1.636</span>s</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>1.但是，网上有2014年，就说有这错误；2021-5-1 20:50:04</p>
+</li>
+<li><p>2.我想找找新方法；</p>
+</li>
+</ul>
+<p>7.2.2 </p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/64383989/typeerror-joi-validate-is-not-a-function">https://stackoverflow.com/questions/64383989/typeerror-joi-validate-is-not-a-function</a></p>
+</blockquote>
+<p>这里的新格式不行；</p>
+<p><code>await schema.validate(req.body);</code></p>
+<p>7.2.3</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.pianshen.com/article/38651932782/">https://www.pianshen.com/article/38651932782/</a></p>
+</blockquote>
+<p>也不行；<code>await schema.validateAsync(req.body);</code></p>
+<p>7.2.4 卸载最新版本，下载14.3.1</p>
+<ul>
+<li>1.卸载：<code>npm uninstall joi</code></li>
+<li>2.下载：<code>npm install joi@14.3.1</code></li>
+</ul>
+<p>7.3 再次验证；</p>
+<ul>
+<li>1.成功，没有问题；2021-5-1 21:03:07</li>
+</ul>
+<p>8.把这个错误返回信息，弄到页面上去；</p>
+<p>8.1 找到这个页面的get请求路由；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.创建用户编辑页面路由</span></span><br><span class="line">admin.get(<span class="string">&#x27;/user-edit&#x27;</span>, <span class="built_in">require</span>(<span class="string">&#x27;./admin/1-user-edit&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+
+
+<p>8.2 在处理函数里面写</p>
+<ul>
+<li>1.获取get请求参数，<code>req.query</code></li>
+<li>2.解构出message</li>
+</ul>
+<p><code>const &#123; message &#125; = req.query;</code></p>
+<ul>
+<li>3.传入数据</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; message &#125; = req.query;</span><br><span class="line">    <span class="comment">// 渲染用户编辑页面</span></span><br><span class="line">    res.render(<span class="string">&#x27;admin/user-edit&#x27;</span>, &#123;</span><br><span class="line">        message</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>4.修改模板文件</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 分类标题 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>5b9a716cb2d2bf17706bcc0a<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;tips&quot;</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>9.over</p>
+<h4 id="1-3-验证邮箱"><a href="#1-3-验证邮箱" class="headerlink" title="1.3 验证邮箱"></a>1.3 验证邮箱</h4><p>1.回到：8-blog\route\admin\2-userEditPost.js</p>
+<p>2.在验证下面写查询：</p>
+<ul>
+<li>1.查询，要用到用户集合的构造函数。</li>
+<li>2.引入</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.1 引入用户集合</span></span><br><span class="line"><span class="keyword">const</span> user = <span class="built_in">require</span>(<span class="string">&#x27;../../model/user&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3.视频里是这样的：<code>const &#123; User &#125; = require(&#39;../../model/user&#39;);</code><ul>
+<li>1.想了想，好像是这样没错；</li>
+<li>2.我试试自己的写法；</li>
+</ul>
+</li>
+<li>4.我的3是错误的；</li>
+<li>5.根据邮箱地址，查询用户是否存在</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3. 根据邮箱地址，查询用户是否存在</span></span><br><span class="line"><span class="keyword">let</span> user = <span class="keyword">await</span> User.findOne(&#123; <span class="attr">email</span>: req.body.email &#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>6.如果存在，就有那个用户的对象，如果不存在就为空；</li>
+<li>7.利用返回值判断；</li>
+<li>8.测试</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.2 测试</span></span><br><span class="line">res.send(user);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>9.输入<a href="mailto:70@70.com">70@70.com</a>，会返回这个文档的信息；输入其他为空；</li>
+</ul>
+<p>2.1 写判断：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (user) &#123;</span><br><span class="line">    <span class="comment">// 3.3 重定向回用户添加页面</span></span><br><span class="line">    <span class="keyword">return</span> res.redirect(<span class="string">`/admin/user-edit?message=邮件已被注册`</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.2 测试；</p>
+<ul>
+<li>1.</li>
+</ul>
+<h3 id="2-密码加密；"><a href="#2-密码加密；" class="headerlink" title="2. 密码加密；"></a>2. 密码加密；</h3><p>1.处于思路中的第八步；</p>
+<blockquote>
+<ol start="8">
+<li>对密码进行加密处理</li>
+</ol>
+</blockquote>
+<p>2.位置：8-blog\route\admin\2-userEditPost.js</p>
+<p>3.引入加密模块</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 4. 引入加密模块</span></span><br><span class="line"><span class="keyword">const</span> bcrypt = <span class="built_in">require</span>(<span class="string">&#x27;bcrypt&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4.生成随机字符串.</p>
+<p>5.加密</p>
+<p>6.替换密码；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 4.1 生成随机字符串</span></span><br><span class="line"><span class="keyword">const</span> salt = <span class="keyword">await</span> bcrypt.genSalt(<span class="number">7</span>);</span><br><span class="line"><span class="comment">// 4.2 加密</span></span><br><span class="line"><span class="keyword">const</span> password = <span class="keyword">await</span> bcrypt.hash(req.body.password, salt);</span><br><span class="line"><span class="comment">// 4.3 替换密码，替换到post参数里；上传就能上传加密的</span></span><br><span class="line">req.body.password = password;</span><br></pre></td></tr></table></figure>
+
+<p>hash[^4]，</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=118&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=118&amp;spm_id_from=pageDriver</a></p>
+<p>09:45</p>
+</blockquote>
+<h3 id="3-添加到数据库"><a href="#3-添加到数据库" class="headerlink" title="3. 添加到数据库"></a>3. 添加到数据库</h3><p>1.继续：8-blog\route\admin\2-userEditPost.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 5.将用户信息添加到数据库中</span></span><br><span class="line"><span class="keyword">await</span> User.create(req.body);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.重定向到用户列表页面</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 5.1 重定向到用户列表页面</span></span><br><span class="line">res.redirect(<span class="string">&#x27;./admin/user&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-代码优化"><a href="#4-代码优化" class="headerlink" title="4. 代码优化"></a>4. 代码优化</h3><h4 id="4-1-分离验证post参数"><a href="#4-1-分离验证post参数" class="headerlink" title="4.1 分离验证post参数"></a>4.1 分离验证post参数</h4><p>1.对请求参数格式验证的代码，也是处理数据的操作；</p>
+<p>1.1 所以应该放到，专门操作数据的地方</p>
+<p>1.2 其实就是model文件夹；</p>
+<p>1.3 又和用户相关，所以放到user.js中；</p>
+<ul>
+<li>8-blog\model\user.js</li>
+</ul>
+<p>1.4 将验证代码，从路由中分离出来，也有利于代码==复用==，因为修改还要用</p>
+<p>2.代码操作；</p>
+<p>1.验证用户信息，接收从\route\admin\2-userEditPost.js分离过来的验证函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 8.验证用户信息，接收从\route\admin\2-userEditPost.js分离过来的验证函数</span></span><br><span class="line"><span class="keyword">const</span> validate_User = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.剪切规则过去</p>
+<p>3.剪切验证过去</p>
+<p><code>return Joi.validate(req.body, schema);</code></p>
+<blockquote>
+<p>5.<code>Joi.validate(&#123; username: &#39;abc&#39;, birthyear: 1994 &#125;, schema);</code></p>
+<ul>
+<li>1.是验证的</li>
+<li>2.第一个参数，是被验证的数据；第二个参数，是验证的规则；</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>1.不过，在新版本里面没有这个方法，这里用的和视频百度一直14.3.1；</p>
+</li>
+<li><p>2.剪切过去后，用返回。估计等会，会在2-userEditPost.js调用这里的validate_User方法</p>
+</li>
+</ul>
+<p>4.函数添加形参，接收提交的用户信息；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 8.验证用户信息，接收从\route\admin\2-userEditPost.js分离过来的验证函数</span></span><br><span class="line"><span class="keyword">const</span> validate_User = <span class="function">(<span class="params">user</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> schema = &#123;</span><br><span class="line">        username: Joi.string().min(<span class="number">2</span>).max(<span class="number">12</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;用户名不符合验证规则&#x27;</span>)),</span><br><span class="line">        email: Joi.string().email().required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;邮箱格式不符合要求&#x27;</span>)),</span><br><span class="line">        password: Joi.string().regex(<span class="regexp">/^[a-zA-Z0-9]&#123;3,30&#125;$/</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;密码格式不符合要求&#x27;</span>)),</span><br><span class="line">        role: Joi.string().valid(<span class="string">&#x27;normal&#x27;</span>, <span class="string">&#x27;admin&#x27;</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;角色值非法&#x27;</span>)),</span><br><span class="line">        state: Joi.number().valid(<span class="number">0</span>, <span class="number">1</span>).required().error(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;状态值非法&#x27;</span>))</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> Joi.validate(user, schema);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>1.目前是怎么接收到的，我还不清楚；</li>
+<li>下面6.1.2有了</li>
+</ul>
+<p>5.导出方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    User,</span><br><span class="line">    <span class="comment">// 8.1 导出</span></span><br><span class="line">    validate_User,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6.在8-blog\route\admin\2-userEditPost.js，引入验证</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.1 引入用户集合</span></span><br><span class="line"><span class="comment">// 6. 引入验证</span></span><br><span class="line"><span class="keyword">const</span> &#123; User, validate_User &#125; = <span class="built_in">require</span>(<span class="string">&#x27;../../model/user&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6.1 给try调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 1.验证规则</span></span><br><span class="line">    <span class="comment">// 2. 验证数据</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 实施验证</span></span><br><span class="line">        <span class="keyword">await</span> validate_User(req.body);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">        <span class="comment">// res.redirect(&#x27;/admin/user-edit?message=&#x27; + err.message);</span></span><br><span class="line">        res.redirect(<span class="string">`/admin/user-edit?message=<span class="subst">$&#123;err.message&#125;</span>`</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(err.message);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>1.传入实参req.body</li>
+<li>2.validate_User方法那边，形参user接收；</li>
+</ul>
+<p>7.验证；成功；2021-5-2 10:12:06</p>
+<h4 id="4-2-错误处理"><a href="#4-2-错误处理" class="headerlink" title="4.2 错误处理"></a>4.2 错误处理</h4><p>1.post参数不符合规则，邮箱已被注册；</p>
+<p>2.express给我们了一个错误处理的中间件，让我们把错误都写在那里；</p>
+<p>3.在：app.js；写错误处理中间件；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 10.错误处理中间件</span></span><br><span class="line">app.use(<span class="function">(<span class="params">err, req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 10.1 post验证错误，来自8-blog\route\admin\2-userEditPost.js</span></span><br><span class="line">    res.redirect(<span class="string">`/admin/user-edit?message=<span class="subst">$&#123;err.message&#125;</span>`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4.为了使错误信息灵活，不能写死路径和错误信息；</p>
+<ul>
+<li>1.这两个地方，应该通过参数，传递过来</li>
+</ul>
+<p>5.要调用错误处理中间件，要使用next方法，说的是之前学过；</p>
+<ul>
+<li>1.并且要为next方法，传递一个参数</li>
+<li>2.在路由这里先把next加上；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="keyword">async</span> (req, res, next) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 1.验证规则</span></span><br><span class="line">    <span class="comment">// 2. 验证数据</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 实施验证</span></span><br><span class="line">        <span class="keyword">await</span> validate_User(req.body);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>5.1 发生错误的地方，调用next函数</p>
+<ul>
+<li>1.首先在请求参数格式出错的地方</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="keyword">async</span> (req, res, next) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 1.验证规则</span></span><br><span class="line">    <span class="comment">// 2. 验证数据</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 实施验证</span></span><br><span class="line">        <span class="keyword">await</span> validate_User(req.body);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">        <span class="comment">// res.redirect(&#x27;/admin/user-edit?message=&#x27; + err.message);</span></span><br><span class="line">        <span class="comment">// res.redirect(`/admin/user-edit?message=$&#123;err.message&#125;`);转移app.js</span></span><br><span class="line">        next();</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>2.即使调用next方法，也需要停止向下运行，这里是处理错误；</li>
+</ul>
+<p><code>return next()</code></p>
+<ul>
+<li><p>3.next方法，只能传递一个参数，且是字符串类型；</p>
+<ul>
+<li>1.现在我们需要传递两个参数</li>
+<li>2.我们传递一个参数，写成对象。然后把对象转换成字符串；</li>
+<li>3.使用转换方法：<code>JSON.stringify()</code></li>
+<li>4.方法的返回值，是，转换之后的结果；</li>
+</ul>
+</li>
+<li><p>4.一个参数，两个属性；</p>
+<ul>
+<li>1.第一个属性是path</li>
+<li>2.message</li>
+</ul>
+<p><code>&#123;path: &#39;/admin/user-edit&#39;,message: err.message&#125;</code></p>
+</li>
+<li><p>5.转换成字符串给next</p>
+</li>
+</ul>
+<p><code>return next(JSON.stringify(&#123; path: &#39;/admin/user-edit&#39;, message: err.message &#125;));</code></p>
+<p>5.2 <del>在express中，凡是错误里面的next，会next到错误处理中间件；</del></p>
+<ul>
+<li><del>1.所以不用担心，本来next是向下传的。怎么就传到app.js里面了呢？</del></li>
+<li><del>2.是框架设置的</del></li>
+<li>3.下面6.1发现了这个假设的错误；2021-5-2 11:05:21</li>
+</ul>
+<p>5.3 但字符串不好用，在app.js这里，还是转换回来</p>
+<ul>
+<li>1.<code>JSON.parse()</code></li>
+<li>2.上面错误里的next的参数，是错误信息，在app.js的错误中间件中，是形参err的实参；</li>
+<li>3.所以，处理err</li>
+<li>4.<code>const result = JSON.parse(err);</code></li>
+<li>5.修改重定向</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">res.redirect(<span class="string">`<span class="subst">$&#123;result.path&#125;</span>?message=<span class="subst">$&#123;result.message&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>5.4 <code>$&#123;&#125;</code>是模板的语法，那<code>&#123;&#123;&#125;&#125;`呢
+
++ 1.`$&#123;&#125;`是ES6模板字符串的语法，`&#123;&#123;好像是模板引擎的&#125;&#125;</code></p>
+<p>5.5 测试，成功；2021-5-2 10:54:06</p>
+<p>6.把邮箱已注册的重定向也修改了；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3. 根据邮箱地址，查询用户是否存在</span></span><br><span class="line"><span class="keyword">let</span> user = <span class="keyword">await</span> User.findOne(&#123; <span class="attr">email</span>: req.body.email &#125;)</span><br><span class="line"><span class="comment">// 3.2 测试</span></span><br><span class="line"><span class="comment">// res.send(user);</span></span><br><span class="line"><span class="keyword">if</span> (user) &#123;</span><br><span class="line">    <span class="comment">// 3.3 重定向回用户添加页面</span></span><br><span class="line">    <span class="comment">// return res.redirect(`/admin/user-edit?message=邮件已被注册`); </span></span><br><span class="line">    <span class="keyword">return</span> next((<span class="built_in">JSON</span>.stringify(&#123; <span class="attr">path</span>: <span class="string">&#x27;/admin/user-edit&#x27;</span>, <span class="attr">message</span>: <span class="string">`邮件已被注册`</span> &#125;)));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>6.1 我在上面5.2做出了假设：在express中，凡是错误里面的next</p>
+<ul>
+<li>1.是错误的；因为这里不是报错；含义是报错，但关键字不是</li>
+<li>2.所以5.2的假设是错的</li>
+</ul>
+<p>6.2 新假设：8-blog\route\admin\2-userEditPost.js的调用是：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.1 创建用户添加路由</span></span><br><span class="line">admin.post(<span class="string">&#x27;/user-edit&#x27;</span>, <span class="built_in">require</span>(<span class="string">&#x27;./admin/2-userEditPost&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>的调用；</p>
+<ul>
+<li>2.而这个的调用，是：<code>app.use(&#39;/admin&#39;, admin);</code>一级路由；</li>
+<li>3.所以这里的next，如同一级路由的处理函数。</li>
+<li>4.而一级路由下面，正是错误处理中间件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用路由模块</span></span><br><span class="line">app.use(<span class="string">&#x27;/home&#x27;</span>, home);</span><br><span class="line">app.use(<span class="string">&#x27;/admin&#x27;</span>, admin);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 10.错误处理中间件</span></span><br><span class="line">app.use(<span class="function">(<span class="params">err, req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 10.1 post验证错误，来自8-blog\route\admin\2-userEditPost.js</span></span><br><span class="line">    <span class="keyword">const</span> result = <span class="built_in">JSON</span>.parse(err);</span><br><span class="line">    res.redirect(<span class="string">`<span class="subst">$&#123;result.path&#125;</span>?message=<span class="subst">$&#123;result.message&#125;</span>`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6.3 验证，提交已经注册过的邮箱，看有没有错误提示；</p>
+<ul>
+<li>1.成功；</li>
+</ul>
+<hr>
+<h3 id="5-渲染用户列表"><a href="#5-渲染用户列表" class="headerlink" title="5. 渲染用户列表"></a>5. 渲染用户列表</h3><p>1.post参数添加给数据库后，就是显示在列表页面了；</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=120&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=120&amp;spm_id_from=pageDriver</a></p>
+</blockquote>
+<p>2.找到路由；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建后台用户列表路由</span></span><br><span class="line">admin.get(<span class="string">&#x27;/user&#x27;</span>, <span class="built_in">require</span>(<span class="string">&#x27;./admin/3-user&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.用对象解构，导出User方法；</p>
+<p>3.1 查询，传递；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 9.1 引入集合模块</span></span><br><span class="line"><span class="comment">// const user = require(&#x27;../../model/user&#x27;);</span></span><br><span class="line"><span class="comment">// 9.2 用对象解构，导出User方法；</span></span><br><span class="line"><span class="keyword">const</span> &#123; User &#125; = <span class="built_in">require</span>(<span class="string">&#x27;../../model/user&#x27;</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 9. 将用户信息从数据库中查询出来</span></span><br><span class="line">    <span class="comment">// 9.3 查询</span></span><br><span class="line">    <span class="keyword">let</span> users = <span class="keyword">await</span> User.find(&#123;&#125;);</span><br><span class="line"></span><br><span class="line">    res.render(<span class="string">&#x27;admin/user&#x27;</span>, &#123;</span><br><span class="line">        <span class="comment">// 9.4 传递User集合的数据</span></span><br><span class="line">        user: users,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.2 查询返回的结果是一个数组，find()方法返回的是一个数组；</p>
+<p>3.3 去模板页面，循环；</p>
+<ul>
+<li><p>1.8-blog\views\admin\user.art</p>
+</li>
+<li><p>2.代码</p>
+<ul>
+<li>1.<code>$value</code>，是当前循环时。第一次循环就是第一次，第二次循环就是第二次</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">    &#123;&#123;each user&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123;$value._id&#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123;$value.username&#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123;$value.email&#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123;$value.role&#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123;$value.state&#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;user-edit.html&quot;</span> <span class="attr">class</span>=<span class="string">&quot;glyphicon glyphicon-edit&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;glyphicon glyphicon-remove&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;modal&quot;</span> <span class="attr">data-target</span>=<span class="string">&quot;.confirm-modal&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3.测试，报错：<code>SyntaxError: Unexpected token T in JSON at position 0</code></li>
+<li>4.没有加<code>&#123;&#123;/each&#125;&#125;</code></li>
+</ul>
+<p>3.4 优化列表里面的角色与状态</p>
+<p><img src="../../img/15.2/7.png" alt="7"></p>
+<ul>
+<li>1.状态代码：<code>&lt;td&gt;&#123;&#123;$value.state == 0? '启用':'禁用'&#125;&#125;&lt;/td&gt;</code></li>
+<li>2.角色不改，就这样；</li>
+</ul>
+<p>3.5 去掉id的引号；</p>
+<p><img src="../../img/15.2/8.png" alt="8"></p>
+<ul>
+<li>1.因为id，在数据库中是一个特殊的类型，obj_id类型？？？</li>
+<li>2.在模板中，会对这种类型，加上引号</li>
+<li>3.如何去掉引号，只需要对_id原文输出；</li>
+<li>4.在模板语法的，标准语法里面：@是原文输出<ul>
+<li>1.代码</li>
+<li>2.<code>&lt;td&gt;&#123;&#123;@$value._id&#125;&#125;&lt;/td&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="6-分页"><a href="#6-分页" class="headerlink" title="6. 分页"></a>6. 分页</h3><p>1.当数据库中的数据非常多时，数据需要分批次显示，这时就需要用到数据分页功能。</p>
+<p>2.分页功能核心要素：</p>
+<ul>
+<li>当前页，用户通过点击上一页或者下一页或者页码产生，客户端通过get参数方式传递到服务器</li>
+<li>总页数，根据总页数判断当前页是否为最后一页，根据判断结果做响应操作</li>
+</ul>
+<p>3.问题：能给用户列表里面加一个序号吗？</p>
+<ul>
+<li>1.现在不知道这个，赶时间，以后再说吧；2021-5-2 20:33:56</li>
+</ul>
+<p>4.总页数，自己算；结果向上取进；</p>
+<ul>
+<li>1.Math.ceil（总数据条数 / 每页显示数据条数）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 10.3 总页数</span></span><br><span class="line"><span class="keyword">let</span> total = <span class="built_in">Math</span>.ceil(count / pagesize);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>5.接收客户端传来的当前页参数，这个参数是自己设置；啥意思？怎么自己设置的？</p>
+<ul>
+<li>1.每一页显示的数据条数</li>
+<li>2.查询用户数据的总数<ul>
+<li>1.集合下的一个方法：countDocuments；计数文档</li>
+<li>2.count；计数</li>
+<li>3.documents[^13]</li>
+<li>4.第一个参数，是查询条件；如果不设置条件，那么是无或空对象；表示，查询所有；</li>
+</ul>
+</li>
+<li>3.计算总页数；</li>
+<li>4.代码；上面1~3，对应10.1~10.3</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 10. 接收客户端传来的当前页参数，这个参数是自己设置</span></span><br><span class="line">    <span class="keyword">let</span> page = req.query.page;</span><br><span class="line">    <span class="comment">// 10.1 每一页显示的数据条数</span></span><br><span class="line">    <span class="keyword">let</span> pagesize = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 10.2 查询用户数据的总数</span></span><br><span class="line">    <span class="keyword">let</span> count = <span class="keyword">await</span> User.countDocuments(&#123;&#125;);</span><br><span class="line">    <span class="comment">// 10.3 总页数</span></span><br><span class="line">    <span class="keyword">let</span> total = <span class="built_in">Math</span>.ceil(count / pagesize);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 9. 将用户信息从数据库中查询出来</span></span><br><span class="line">    <span class="comment">// 9.3 查询</span></span><br><span class="line">    <span class="keyword">let</span> users = <span class="keyword">await</span> User.find(&#123;&#125;);</span><br><span class="line"></span><br><span class="line">    res.render(<span class="string">&#x27;admin/user&#x27;</span>, &#123;</span><br><span class="line">        <span class="comment">// 9.4 传递User集合的数据</span></span><br><span class="line">        user: users,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6.limit()，与，skip()</p>
+<ul>
+<li>1.skip()跳过多少条数据，跳过多少条数据开始查询<ul>
+<li>0.第一条数据，是0</li>
+<li>1.在分页中，是指定查询开始的位置；</li>
+<li>2.比如，你想查询第一页的数据，开始位置就是0</li>
+<li>3.第二页的数据，就要从10开始查询，第一页是0~9</li>
+<li>4.客户端传递的是，当前页的页码，而不是数据开始位置；<ul>
+<li>1.所以，我们要把当前页，转换到数据开始的位置；</li>
+<li>2.如何转换？</li>
+<li>3.比如，你想查询第二页的数据；数据应该从10开始，</li>
+<li>4.我们可以用当前页2，减去1，再乘以10；</li>
+<li>5.结果就是页码2的开始条数；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>1.1 数据开始查询位置=（当前页-1）* 每页显示的数据条数（这里每页显示10条数据）</li>
+</ul>
+<ul>
+<li>2.limit()限制查询数量，只查询设置的数量<ul>
+<li>这个是从1开始的</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">limit(<span class="number">2</span>) <span class="comment">// limit 限制查询数量  传入每页显示的数据数量</span></span><br><span class="line">skip(<span class="number">1</span>) <span class="comment">// skip 跳过多少条数据  传入显示数据的开始位置</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>6.1 切换到编辑器中；</p>
+<p>6.2 设置限制查询数量</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 9.3 查询</span></span><br><span class="line"><span class="keyword">let</span> users = <span class="keyword">await</span> User.find(&#123;&#125;).limit(pagesize);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>1.每页显示10条，但能不写死，就不写死；</li>
+<li>2.pagesize正是每页显示的数据条数。</li>
+</ul>
+<p>6.3 页码对应的，数据查询的，开始位置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 10.4 页码对应的，数据查询的，开始位置</span></span><br><span class="line"><span class="keyword">let</span> start = (page - <span class="number">1</span>) * pagesize;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 9.3 查询</span></span><br><span class="line"><span class="keyword">let</span> users = <span class="keyword">await</span> User.find(&#123;&#125;).limit(pagesize).skip(start);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6.4 页码默认1</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 10. 接收客户端传来的当前页参数，这个参数是自己设置</span></span><br><span class="line"><span class="keyword">let</span> page = req.query.page || <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>1.这个参数是自己的设置的，到底是什么意思？</p>
+</li>
+<li><p>1.1 自己在req.query里面添加了一个page？</p>
+</li>
+<li><p>1.2 回到15-node md文档中查看了req.query的返回值，确实没有page</p>
+</li>
+<li><p>1.3 那么，是如何自己设置的呢？</p>
+<ul>
+<li><p>1.因为：Express框架中使用req.query即可获取GET参数，框架内部会将GET参数转换为对象并返回。</p>
+</li>
+<li><p>2.而在模板那边，我们自己手动设置了get参数：page</p>
+<p><code>&lt;a href=&quot;/admin/user?page=&lt;%=i%&gt;&quot;&gt;&#123;&#123;i&#125;&#125;&lt;/a&gt;&lt;/li&gt;</code></p>
+</li>
+<li><p>3.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-分页按钮"><a href="#7-分页按钮" class="headerlink" title="7. 分页按钮"></a>7. 分页按钮</h3><p>1.路由传递数据，当前页码page，总页数total</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">res.render(<span class="string">&#x27;admin/user&#x27;</span>, &#123;</span><br><span class="line">        <span class="comment">// 9.4 传递User集合的数据</span></span><br><span class="line">        user: users,</span><br><span class="line">        page,</span><br><span class="line">        total</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.去模板，找分页器；</p>
+<ul>
+<li>8-blog\views\admin\user.art</li>
+</ul>
+<p>2.1 我们要让页码有多少，才显示多少个</p>
+<ul>
+<li>1.原来模板的原始语法就是这；</li>
+<li>2.为什么不使用标准语法？<ul>
+<li>1.因为这里的total是一个数值，不是一个对象；</li>
+<li>2.为什么这么说？</li>
+<li>3.查看：15.1-5.1-3.4.1</li>
+</ul>
+</li>
+</ul>
+<p>2.2 设置盒子的超链接</p>
+<p>2.3 实现上一页，下一页可以点击；</p>
+<ul>
+<li><p>1.第一个page，是请求参数，第二个page，才是渲染模板传递的数据；</p>
+</li>
+<li><p>2.上一页成功，下一页失败，变成了11</p>
+<ul>
+<li>1.减号有隐式转换，+没有；</li>
+<li>2.转换成数值page-0</li>
+</ul>
+</li>
+</ul>
+<p>2.4 不能超过总页数，第二页再点击下一页，url的page参数变成了3</p>
+<ul>
+<li>1.判断，如果是最后一页，下一页按钮隐藏；<ul>
+<li>1.block会破坏样式，inline也能显示；</li>
+</ul>
+</li>
+<li>2.同理上一页；</li>
+</ul>
+<p>2.5 代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 分页 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;pagination&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 3.2 上一页按钮 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 4.1 上一页判断 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;display: &lt;%= page-1 &lt; 1 ? &#x27;none&#x27; : &#x27;inline&#x27; %&gt;&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/admin/user?page=&lt;%=page-1%&gt;&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="symbol">&amp;laquo;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 1.设置页码 --&gt;</span></span><br><span class="line">    &lt;% for (var i=1; i&lt;=total; i++) &#123; %&gt;</span><br><span class="line">        <span class="comment">&lt;!-- 2.设置盒子的超链接 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/admin/user?page=&lt;%=i%&gt;&quot;</span>&gt;</span>&#123;&#123;i&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%&#125;%</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 4.判断，如果是最后一页，下一页按钮隐藏； --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;display: &lt;%= page-0+1 &gt; total ? &#x27;none&#x27; : &#x27;inline&#x27; %&gt;&quot;</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- 3.1 下一页按钮 --&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- 3.3 转换成数值page-0 --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/admin/user?page=&lt;%=page-0+1%&gt;&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="symbol">&amp;raquo;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- /分页 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="7-4-修改用户"><a href="#7-4-修改用户" class="headerlink" title="7.4 修改用户"></a>7.4 修改用户</h2><p>0.思路：</p>
+<ol>
+<li><p>将要修改的用户ID传递到服务器端</p>
+</li>
+<li><p>建立用户信息修改功能对应的路由</p>
+</li>
+<li><p>接收客户端表单传递过来的请求参数 </p>
+</li>
+<li><p>根据id查询用户信息，并将客户端传递过来的密码和数据库中的密码进行比对</p>
+</li>
+<li><p>如果比对失败，对客户端做出响应</p>
+</li>
+<li><p>如果密码对比成功，将用户信息更新到数据库中</p>
+</li>
+</ol>
+<p>1.添加和修改页面都是同一个模板</p>
+<ul>
+<li>1.如何区分是修改，还是添加？</li>
+</ul>
+<p>2.如果是添加，直接跳转，如果是修改，把id参数，由get传递过去；</p>
+<p>2.1 如果是修改操作，我们还要从数据库中查询文档，并显示在页面中；</p>
+<ul>
+<li>1.找到user.art</li>
+<li>2.设置修改按钮的href</li>
+<li>3.传递id</li>
+<li>views\admin\user.art:51</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 15.2-7.4-2.1.2 设置修改按钮的href --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 15.2-7.4-2.1.3 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/admin/user-edit?id=&#123;&#123;@$value._id&#125;&#125;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;glyphicon glyphicon-edit&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;glyphicon glyphicon-remove&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;modal&quot;</span> <span class="attr">data-target</span>=<span class="string">&quot;.confirm-modal&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.找到路由；8-blog\route\admin\1-user-edit.js</p>
+<ul>
+<li>1.获取到地址栏中的id参数<ul>
+<li>route\admin\1-user-edit.js:5</li>
+</ul>
+</li>
+<li>2.如果当前传递了id，就是修改操作；否则是添加操作；<ul>
+<li>route\admin\1-user-edit.js:8</li>
+</ul>
+</li>
+<li>3.查询当前修改的文档信息；<ul>
+<li>route\admin\1-user-edit.js:11</li>
+</ul>
+</li>
+<li>4.引入用户集合的构造函数；<ul>
+<li>route\admin\1-user-edit.js:2</li>
+</ul>
+</li>
+</ul>
+<p>3.1 传递给模板，已经查找到的当前修改文档的信息；</p>
+<ul>
+<li>route\admin\1-user-edit.js:16</li>
+</ul>
+<p>3.2 去模板获取信息；</p>
+<p><code>value=&quot;&#123;&#123;user.username&#125;&#125;&quot;</code></p>
+<p>这种格式</p>
+<p>3.3 现在在修改的渲染模板里面，添加了user，但是添加的时候没有。</p>
+<ul>
+<li>1.而模板里面又改了</li>
+<li>2.那么添加的时候会报错；</li>
+<li>3.用并且；<ul>
+<li><code>&#123;&#123;user && user.username&#125;&#125;</code></li>
+<li>1.判断用户存不存在；不存在，就不执行<code>&#123;&#123;user.username&#125;&#125;</code></li>
+<li>2.这样的写法，用了并且的短路特性；</li>
+<li>3.如果左边的数据为假，右边的就不会执行；直接返回false；</li>
+</ul>
+</li>
+<li>4.密码，先不弄</li>
+<li>5.看角色<ul>
+<li>1.角色是一个下拉框</li>
+<li>2.如果是管理员，让管理员选中；反之如果是普通用户，就普通被选中；</li>
+<li>3.</li>
+</ul>
+</li>
+</ul>
+<p>3.4 禁用同理；</p>
+<p>3.5 密码等会处理；</p>
+<p>3.6 提交地址</p>
+<ul>
+<li><p>1.修改和添加的提交一样不一样；</p>
+</li>
+<li><p>2.但这里是固定的action</p>
+</li>
+<li><p>3.在渲染模板里面，添加新的数据link；这样能区别修改和添加的表单地址</p>
+</li>
+<li><p>4.回模板，在action写判断</p>
+</li>
+<li><p>5.修改用户名显示，添加隐藏盒子；</p>
+<ul>
+<li>1.报错</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SyntaxError: Unexpected token T <span class="keyword">in</span> JSON at position <span class="number">0</span></span><br><span class="line">    at JSON.parse (&lt;anonymous&gt;)</span><br><span class="line">    at F:\<span class="number">2</span><span class="number">-3</span>ciyuan\<span class="number">11</span>-data base-shujuk\<span class="number">3</span>-lianxi\<span class="number">8</span>-blog\app.js:<span class="number">49</span>:<span class="number">25</span></span><br><span class="line">    at module.exports (F:\<span class="number">2</span><span class="number">-3</span>ciyuan\<span class="number">11</span>-data base-shujuk\<span class="number">3</span>-lianxi\<span class="number">8</span>-blog\route\admin\<span class="number">1</span>-user-edit.js:<span class="number">24</span>:<span class="number">13</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2.首先，错误是：anonymous不存在；</li>
+<li>3.<code>1-user-edit.js:24:13</code></li>
+<li>4.后面是行和列；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">res.render(<span class="string">&#x27;admin/user-edit&#x27;</span>, &#123;</span><br><span class="line">    message,</span><br><span class="line">    <span class="comment">// 15.2-7.4-3.6·3 在渲染模板里面，添加新的数据link；</span></span><br><span class="line">    link: <span class="string">&#x27;/admin/user-edit&#x27;</span>,</span><br><span class="line">    button: <span class="string">&#x27;新增&#x27;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>5.没有东西，没有user</li>
+<li>6.解决：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h4 style=<span class="string">&quot;display: &#123;&#123;button == &#x27;修改&#x27; ? &#x27;block&#x27; : &#x27;none&#x27;&#125;&#125;;&quot;</span>&gt;用户：&#123;&#123;user &amp;&amp; user.username&#125;&#125;&lt;/h4&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ul>
+<h3 id="4-修改提交地址"><a href="#4-修改提交地址" class="headerlink" title="4. 修改提交地址"></a>4. 修改提交地址</h3><p>1.找到地址</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 15.2-7.4-3.6·3 在渲染模板里面，添加新的数据link；</span></span><br><span class="line">link: <span class="string">&#x27;/admin/user-modify&#x27;</span>,</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.把id作为get参数，传递给服务器端，告诉服务器，我们修改的谁；</p>
+<p><code>link: &#39;/admin/user-modify?id=&#39; + id,</code>；</p>
+<p>3.建立用户信息修改功能对应的路由</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 15.2-7.4-4.3 建立用户信息修改功能对应的路由</span></span><br><span class="line">admin.post(<span class="string">&#x27;/user-modify&#x27;</span>,)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.1 测试</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 15.2-7.4-4_3.1</span></span><br><span class="line">    res.send(<span class="string">&#x27;ok&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4.获取admin/user-edit传递过来的修改post参数</p>
+<p>4.1 获得被修改的id</p>
+<p>5.密码比对；</p>
+<ul>
+<li>1.后去修改post过来的密码；</li>
+<li>2.引入User集合；</li>
+</ul>
+<p>5.1 根据id查询文档；</p>
+<p>5.2 引入bcrypt</p>
+<p><code>const bcrypt = require(&#39;bcrypt&#39;);</code></p>
+<p>5.3 对比</p>
+<ul>
+<li>1.第一个参数，是明文；第二个参数是 加密后的密码；</li>
+<li>2.是异步方法；返回的是布尔值；</li>
+</ul>
+<h3 id="5-对比密码"><a href="#5-对比密码" class="headerlink" title="5. 对比密码"></a>5. 对比密码</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=126&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=126&amp;spm_id_from=pageDriver</a></p>
+</blockquote>
+<p>1.判断；</p>
+<ul>
+<li><p>1.失败后去错误处理中间件；</p>
+</li>
+<li><p>2.重定向到页面修改，并提示原密码错误；</p>
+</li>
+<li><p>3.转换成，字符串；为next参数</p>
+</li>
+</ul>
+<p>2.错误信息的拼接写死了；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">res.redirect(<span class="string">`<span class="subst">$&#123;result.path&#125;</span>?message=<span class="subst">$&#123;result.message&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.1 视频中，说写循环；</p>
+<ul>
+<li>1.接收到错误信息后，转回对象类型；</li>
+<li>2.对象循环用 for in<ul>
+<li>1.for in 循环笔记：25.1-14.4 ；</li>
+<li>2.push 方法：添加元素（在数组最后一项元素的后面添加</li>
+</ul>
+</li>
+<li>3.循环后，传递给res.redirect；<ul>
+<li>1.数组.join：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join</a></li>
+<li><code>join()</code> 方法将一个数组（或一个<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN_docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects">类数组对象</a>）的所有元素连接成一个字符串并返回这个字符串。如果数组只有一个项目，那么将返回该项目而不使用分隔符。</li>
+</ul>
+</li>
+</ul>
+<p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">// y_2.1·2</span></span><br><span class="line">    <span class="keyword">let</span> params = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> attr <span class="keyword">in</span> result) &#123;</span><br><span class="line">        <span class="keyword">if</span> (attr != <span class="string">&#x27;path&#x27;</span>) &#123;</span><br><span class="line">            params.push(attr + <span class="string">&#x27;=&#x27;</span> + result[attr]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// res.redirect(`$&#123;result.path&#125;?message=$&#123;result.message&#125;`);</span></span><br><span class="line">    res.redirect(<span class="string">`<span class="subst">$&#123;result.path&#125;</span>?<span class="subst">$&#123;params.join(<span class="string">&#x27;&amp;&#x27;</span>)&#125;</span>`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.密码比对成功，我们就需要把修改过的信息，传递到数据库中；</p>
+<ul>
+<li>1.使用的是，数据库更新方法。</li>
+<li>2.第一个参数是查询条件；</li>
+<li>3.第二个参数，是一个对象，是已经被修改过的用户信息；</li>
+<li>4.req.body是post参数，但这里的密码，只是比对，</li>
+</ul>
+<p>3.1 所以，第二个参数，我们写具体的数据；</p>
+<ul>
+<li><p>1.先解构</p>
+</li>
+<li><p>2.当键值对的键与值都是一个名的时候，可以只写一个键；</p>
+</li>
+</ul>
+<p>4.数据更新到数据库后，我们要重定向到用户列表页面；</p>
+<p>5.测试；</p>
+<ul>
+<li>1.出错；没有报错；</li>
+<li>2.但没有效果；</li>
+</ul>
+<p>5.1 原来是没有写 await，所以获取不到返回值；</p>
+<ul>
+<li>1.但是不报错，有点不爽；</li>
+<li>2.用try/catch，试试能不能报错；</li>
+<li>3.没有反应；</li>
+<li>4.查看错误中间件，添加：console.log(err.message);</li>
+</ul>
+<p>5.2 再次实验；还是没有打印任何报错；</p>
+<ul>
+<li>1.先放在这里吧，下次再来；</li>
+</ul>
+<h2 id="7-5-删除用户"><a href="#7-5-删除用户" class="headerlink" title="7.5 删除用户"></a>7.5 删除用户</h2><p>0.思路</p>
+<ol>
+<li><p>在确认删除框中添加隐藏域用以存储要删除用户的ID值</p>
+</li>
+<li><p>为删除按钮添自定义属性用以存储要删除用户的ID值</p>
+</li>
+<li><p>为删除按钮添加点击事件，在点击事件处理函数中获取自定义属性中存储的ID值并将ID值存储在表单的隐藏域中</p>
+</li>
+<li><p>为删除表单添加提交地址以及提交方式</p>
+</li>
+<li><p>在服务器端建立删除功能路由</p>
+</li>
+<li><p>接收客户端传递过来的id参数</p>
+</li>
+<li><p>根据id删除用户</p>
+</li>
+</ol>
+<p>1.点击删除，弹出确认警示框；</p>
+<p>2.但视频说，这个框是一个表单</p>
+<p>2.1 要通过这个表单，把要删除的用户id传递给服务器端；</p>
+<p>2.2 如何传递？</p>
+<ul>
+<li>1.在表单中，写一个隐藏域<ul>
+<li>1.这是啥玩意？</li>
+</ul>
+</li>
+</ul>
+<p>2.3 代码了，我得先去学习一下隐藏域；</p>
+<ul>
+<li>1.隐藏域在页面中对于用户是不可见的，在表单中插入隐藏域的目的在于收集或发送信息，以利于被处理表单的程序所使用。浏览者单击发送按钮发送表单的时候，隐藏域的信息也被一起发送到服务器</li>
+<li>2.个人理解：看不到的input；</li>
+</ul>
+<p>2.4 代码：添加隐藏域；</p>
+<ul>
+<li>1.首先找到位置，在用户列表页面；</li>
+</ul>
+<p>2.5 接下来，找到删除案例；我们要把当前用户的id，作为自定义属性，存储在删除按钮上；</p>
+<ul>
+<li><p>1.data-id=“” ；是自定义属性，这就自定义了？</p>
+</li>
+<li><p>2.F12看html，可以看里面有没有id；</p>
+</li>
+<li><p>3.有</p>
+</li>
+<li><p>4.然我想想，为什么？</p>
+<ul>
+<li>1.是路由那边</li>
+<li>2.路由那边，渲染模板的时候，传过来了集合<code>user: users</code></li>
+<li>3.然后这个按钮，在each user；</li>
+<li>4.所以<code>@$value._id</code>能接收到；</li>
+</ul>
+</li>
+</ul>
+<p>2.6 给删除按钮，添加点击事件，在点击事件里面，要获取id值；</p>
+<ul>
+<li>1.给删除按钮添加一个类名，delete</li>
+<li>2.在下面填js的坑；</li>
+<li>3.获取用户id；<ul>
+<li>1.<code>.attr</code>是什么的属性；</li>
+</ul>
+</li>
+<li>4.获取失败，上面的自定义写错了，写成了date，改为data</li>
+</ul>
+<p>2.7 把获取的id，存储在隐藏域中；</p>
+<ul>
+<li>1.给隐藏域添加id属性；</li>
+</ul>
+<p><code>&lt;input type=&quot;hidden&quot; name=&quot;id&quot; id=&quot;delete_userID&quot;&gt;</code></p>
+<ul>
+<li><p>2.让这个隐藏域的值，等于获取的id；</p>
+<ul>
+<li>1.点击的时候，会增加value属性，值是id</li>
+<li>2.</li>
+</ul>
+</li>
+<li><p>3.这些是在user.art操作；</p>
+</li>
+</ul>
+<p>3.为删除表单添加提交地址以及提交方式</p>
+<p>4.在服务器端建立删除功能路由</p>
+<ul>
+<li>1.找到：8-blog\route\admin.js</li>
+<li>2.添加二级路由；</li>
+</ul>
+<p><code>admin.get(&#39;./delete&#39;, require(&#39;./admin/6-user_delete&#39;));</code></p>
+<ul>
+<li>3.</li>
+</ul>
+<p>5.接收客户端传递过来的id参数</p>
+<p>6.根据id删除用户</p>
+<ul>
+<li>1.需要用户集合模块；引入；</li>
+<li>2.当用户删除成功后，重定向会用户列表页面；</li>
+</ul>
+<p>7.res.send 没有中断效果，会继续执行下面的代码；只是显示效果拦截</p>
+<p>8.完毕</p>
+<h2 id="7-6-文章管理"><a href="#7-6-文章管理" class="headerlink" title="7.6 文章管理"></a>7.6 文章管理</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1j5411K7EH?p=129&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1j5411K7EH?p=129&amp;spm_id_from=pageDriver</a></p>
+</blockquote>
+<h1 id="X-题注"><a href="#X-题注" class="headerlink" title="X. 题注"></a>X. 题注</h1><p>[^1]:common英 [ˈkɒmən]   美 [ˈkɑːmən]  adj.常见的;通常的;普遍的;共有的;共享的;共同的;普通的;平常的;寻常的;平凡的n.公共用地;公地;(学校、大学等的)学生公共食堂</p>
+<p>[^2]:layout英 [ˈleɪaʊt]   美 [ˈleɪaʊt]  n.布局;布置;设计;安排<br>[^3]:trim英 [trɪm]   美 [trɪm]  v.修剪;修整;切去，割掉，剪下，除去(不必要的部分);装饰，修饰，点缀(尤指某物的边缘)<br>n.(尤指毛发的)修剪;(衣服、家具、汽车等的)饰物，边饰，装饰配件<br>adj.苗条的;修长的;健康优雅的;整齐的;精心照管的;井然有序的<br>[^4]:hash英 [hæʃ]   美 [hæʃ]  n.回锅)肉丁土豆;(尤指电话上的)#号v.反复推敲;仔细考虑;把……弄糟（乱）;斩碎;斩（肉）;剁（肉）;细切（肉）<br>[^5]:compare英 [kəmˈpeə(r)]   美 [kəmˈper]  v.比较;对比;与…类似(或相似);表明…与…相似;将…比作n.比较<br>[^6]:equal英 [ˈiːkwəl]   美 [ˈiːkwəl]  adj.(大小、数量、价值等)相同的，同样的;相等的;平等的;同等的;(力气、勇气、能力等)相当的;能胜任的;能应付的n.<br>同等的人;相等物<br>v.(大小、数量、价值等)与…相等，等于;比得上;敌得过;导致;结果为</p>
+<p>[^7]:session英 [ˈseʃn]   美 [ˈseʃn]  n.一场;一节;一段时间;(法庭的)开庭，开庭期;(议会等的)会议，会期;学年<br>[^8]:secret英 [ˈsiːkrət]   美 [ˈsiːkrət]  adj.秘密的;保密的;外人不得而知的;(指行为与习惯)暗中进行的，未公开的，隐秘的;诡秘;神秘n.秘密;机密;诀窍;秘诀;奥秘;奥妙<br>[^9]:cookie英 [ˈkʊki]   美 [ˈkʊki]  n.曲奇饼;精明强干的人;坚强的人;网络饼干(网络或互联网使用者发给中央服务器信息的计算机文件)</p>
+<p>[^10]:redirect英 [ˌriːdəˈrekt , ˈriːdərekt]   美 [ˌriːdəˈrekt , ˈriːdərekt]  v.(以新的方式或目的)重新使用;改寄;改变投递方向<br>[^11]:ware英 [weə(r)]   美 [wer]  n.用某材料(或以某方式、在某地)制造的物品;作…用的器皿;…室的物品;(尤指小商贩在大街上或市场里出售的)物品<br>[^12]:guard英 [ɡɑːd]   美 [ɡɑːrd]  n.卫兵;警卫员;看守;(统称)卫兵，警卫;警戒;保卫;保护v.警卫;守卫;保卫;看守;监视</p>
+<p>[^13]:documents英 [ˈdɒkjuments]   美 [ˈdɑːkjuments]  n.文件;公文;文献;证件;(计算机)文档v.记录，记载(详情);用文件证明(或证实)document的第三人称单数和复数<br>[^14]:limit英 [ˈlɪmɪt]   美 [ˈlɪmɪt]  n.限度;限制;极限;限量;限额;(地区或地方的)境界，界限，范围v.限制;限定;限量;减量</p>
+<p>[^15]:unique英 [juˈniːk]   美 [juˈniːk]  adj.唯一的;独一无二的;独特的;罕见的;(某人、地或事物)独具的，特有的<br>[^16]:hash英 [hæʃ]   美 [hæʃ]  n.回锅)肉丁土豆;(尤指电话上的)#号v.反复推敲;仔细考虑;把……弄糟（乱）;斩碎;斩（肉）;剁（肉）;细切（肉）</p>
+<h2 id="末尾"><a href="#末尾" class="headerlink" title="末尾"></a>末尾</h2>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/node/" rel="tag"># node</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/1-(0~50)/15.1-nodeJS/" rel="prev" title="15.1-node.js">
+      <i class="fa fa-chevron-left"></i> 15.1-node.js
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/1-(0~50)/15.3-node%E7%AC%94%E8%AE%B0/" rel="next" title="15.3-node笔记">
+      15.3-node笔记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">qilin</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">759k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11:30</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: location.pathname,
+    }, {"enable":true,"appId":"l9X7oYVrse5t6umGkFbQyhXs-gzGzoHsz","appKey":"dcwRazDbDakW6HdC3xERrYHu","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"language":null,"visitor":true,"comment_count":true,"recordIP":true,"serverURLs":null}
+    ));
+  }, window.Valine);
+});
+</script>
+
+
+  
+  <script type="text/javascript" onmobile="true" color="0,0,0" opacity='0.7' zIndex="-1" count="120" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>
