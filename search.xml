@@ -10403,7 +10403,9 @@ wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看
     <title>12.4</title>
     <url>/1-(0~50)/12.4-%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8E%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</url>
     <content><![CDATA[<h2 id="1-flex布局体验"><a href="#1-flex布局体验" class="headerlink" title="1. flex布局体验"></a>1. flex布局体验</h2><p><a href="https://www.bilibili.com/video/BV14J4114768?p=416">https://www.bilibili.com/video/BV14J4114768?p=416</a></p>
-<h3 id="1-1-传统布局与flex布局"><a href="#1-1-传统布局与flex布局" class="headerlink" title="1.1 传统布局与flex布局"></a>1.1 传统布局与flex布局</h3><p>传统布局</p>
+<h3 id="1-1-传统布局与flex布局"><a href="#1-1-传统布局与flex布局" class="headerlink" title="1.1 传统布局与flex布局"></a>1.1 传统布局与flex布局</h3><a id="more"></a>
+
+<p>传统布局</p>
 <ul>
 <li>兼容性好</li>
 <li>布局繁琐</li>
@@ -23943,7 +23945,7 @@ var average = 0; // 平均成绩</code></li>
 ]]></content>
   </entry>
   <entry>
-    <title>39_出租信息</title>
+    <title>39_出租信息_rentalInfo</title>
     <url>/1-(0~50)/39_Rental_info/</url>
     <content><![CDATA[<h2 id="1-价格"><a href="#1-价格" class="headerlink" title="1. 价格"></a>1. 价格</h2><p>1·.价格构成: 1100房租+170物业费-水电补助50-宽带助50=1170</p>
 <p>1.1.水电为商业价格。水:  ;电:</p>
