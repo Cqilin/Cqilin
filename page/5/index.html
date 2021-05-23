@@ -620,7 +620,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-23 23:16:52" itemprop="dateModified" datetime="2021-05-23T23:16:52+08:00">2021-05-23</time>
+                <time title="修改时间：2021-05-24 00:21:26" itemprop="dateModified" datetime="2021-05-24T00:21:26+08:00">2021-05-24</time>
               </span>
 
           
@@ -671,123 +671,14 @@
       
           <h1 id="1-jQuery-入门"><a href="#1-jQuery-入门" class="headerlink" title="1. jQuery 入门"></a>1. jQuery 入门</h1><p>能够说出什么是 jQuery<br>能够说出 jQuery 的优点<br>能够简单使用 jQuery</p>
 <p>能够说出 DOM 对象和 jQuery 对象的区别</p>
-<p>jQuery 概述</p>
-<p>jQuery 的基本使用</p>
-<h2 id="1-1-jQuery-概述"><a href="#1-1-jQuery-概述" class="headerlink" title="1.1  jQuery 概述"></a>1.1  jQuery 概述</h2><p>1.仓库：   可以把很多东西放到这个仓库里面。找东西只需要到仓库里面查找到就可以了。</p>
-<p>2.JavaScript库：即 library，是一个封装好的特定的集合（方法和函数）。从封装一大堆函数的角度理解库，就是在这个库中，封装了很多预先定义好的函数在里面，比如动画animate、hide、show，比如获取元素等。<br>简单理解： 就是一个JS 文件，里面对我们原生js代码进行了封装，存放到里面。这样我们可以快速高效的使用这些封装好的功能了。<br>比如 jQuery，就是为了快速方便的操作DOM，里面基本都是函数（方法）。</p>
-<p>3.常见的JavaScript 库</p>
-<p>jQuery<br>Prototype<br>YUI<br>Dojo<br>Ext JS<br>移动端的zepto</p>
-<p>4.这些库都是对原生 JavaScript 的封装，内部都是用 JavaScript 实现的，我们主要学习的是 jQuery。</p>
-<h2 id="1-2-jQuery-的概念"><a href="#1-2-jQuery-的概念" class="headerlink" title="1.2 jQuery 的概念"></a>1.2 jQuery 的概念</h2><p>1.jQuery 是一个快速、简洁的 JavaScript 库，其设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。</p>
-<p>2.j 就是 JavaScript；   Query 查询； 意思就是查询js，把js中的DOM操作做了封装，我们可以快速的查询使用里面的功能。</p>
-<p>3.jQuery 封装了 JavaScript 常用的功能代码，优化了 DOM 操作、事件处理、动画设计和 Ajax 交互。<br>学习jQuery本质： 就是学习调用这些函数（方法）。<br>jQuery 出现的目的是加快前端人员的开发速度，我们可以非常方便的调用和使用它，从而提高开发效率。</p>
-<h3 id="2-优点"><a href="#2-优点" class="headerlink" title="2. 优点"></a>2. 优点</h3><p>轻量级。核心文件才几十kb，不会影响页面加载速度<br>跨浏览器兼容。基本兼容了现在主流的浏览器<br>链式编程、隐式迭代<br>对事件、样式、动画支持，大大简化了DOM操作<br>支持插件扩展开发。有着丰富的第三方的插件，例如：树形菜单、日期控件、轮播图等<br>免费、开源</p>
-<h2 id="1-3-jQuery-的基本使用"><a href="#1-3-jQuery-的基本使用" class="headerlink" title="1.3 jQuery 的基本使用"></a>1.3 jQuery 的基本使用</h2><h4 id="1-jQuery-的下载"><a href="#1-jQuery-的下载" class="headerlink" title="1. jQuery 的下载"></a>1. jQuery 的下载</h4><p>1.官网地址： <a target="_blank" rel="noopener" href="https://jquery.com/">https://jquery.com/</a></p>
-<p>2.版本：<br>1x ：兼容 IE 678 等低版本浏览器， 官网不再更新<br>2x ：不兼容 IE 678 等低版本浏览器， 官网不再更新<br>3x ：不兼容 IE 678 等低版本浏览器， 是官方主要更新维护的版本</p>
-<p>3.各个版本的下载：<a target="_blank" rel="noopener" href="https://code.jquery.com/">https://code.jquery.com/</a></p>
-<h3 id="2-使用步骤"><a href="#2-使用步骤" class="headerlink" title="2. 使用步骤"></a>2. 使用步骤</h3><p>1.直接复制粘贴一个新文件；</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1a4411w7Gx?p=4&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1a4411w7Gx?p=4&amp;spm_id_from=pageDriver</a></p>
-</blockquote>
-<h3 id="3-入口函数"><a href="#3-入口函数" class="headerlink" title="3. 入口函数"></a>3. 入口函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;   </span><br><span class="line">    ...  <span class="comment">// 此处是页面 DOM 加载完成的入口</span></span><br><span class="line"> &#125;) ;         </span><br></pre></td></tr></table></figure>
-
-<br />
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   ...  <span class="comment">//  此处是页面DOM加载完成的入口</span></span><br><span class="line">&#125;);       </span><br></pre></td></tr></table></figure>
-
-<p>1.等着 DOM 结构渲染完毕即可执行内部代码，不必等到所有外部资源加载完成，jQuery 帮我们完成了封装。</p>
-<p>2.相当于原生 js 中的 DOMContentLoaded。</p>
-<p>3.不同于原生 js 中的 load 事件是等页面文档、外部的 js 文件、css文件、图片加载完毕才执行内部代码。</p>
-<p>4.更推荐使用第一种方式。</p>
-<h3 id="4-jQuery-的顶级对象"><a href="#4-jQuery-的顶级对象" class="headerlink" title="4. jQuery 的顶级对象 $"></a>4. jQuery 的顶级对象 $</h3><p>1.$ 是 jQuery 的别称，在代码中可以使用 jQuery 代替 $，但一般为了方便，通常都直接使用 ​$ 。</p>
-<p>2.$ 是jQuery 的顶级对象， 相当于原生JavaScript中的 window。把元素利用$包装成jQuery对象，就可以调用jQuery 的方法。</p>
-<h3 id="5-jQuery-对象和-DOM-对象"><a href="#5-jQuery-对象和-DOM-对象" class="headerlink" title="5. jQuery 对象和 DOM 对象"></a>5. jQuery 对象和 DOM 对象</h3><p>1.用原生 JS 获取来的对象就是 DOM 对象。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>); <span class="comment">//myDiv 是DOM对象</span></span><br><span class="line"><span class="built_in">console</span>.dir(myDiv);</span><br></pre></td></tr></table></figure>
-
-
-
-<p>2.jQuery 方法获取的元素就是 jQuery 对象。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;div&#x27;</span>); <span class="comment">// $(&#x27;div&#x27;)是一个jquery对象</span></span><br><span class="line"><span class="built_in">console</span>.dir($(<span class="string">&#x27;div&#x27;</span>));</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3.jQuery 对象本质是： 利用$对DOM 对象包装后产生的对象（伪数组形式存储）。</p>
-<ul>
-<li>div是原生</li>
-<li>S.fn.init(1)是jquery</li>
-</ul>
-<p><img src="../../img/34/1.png" alt="1"></p>
-<p>==注意：==<br>只有 jQuery 对象才能使用 jQuery 方法，DOM 对象则使用原生的 JavaScirpt 方法。</p>
-<h4 id="2-相互转换"><a href="#2-相互转换" class="headerlink" title="2. 相互转换"></a>2. 相互转换</h4><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1a4411w7Gx?p=7&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1a4411w7Gx?p=7&amp;spm_id_from=pageDriver</a></p>
-</blockquote>
-<p>1.DOM 对象与 jQuery 对象之间是可以相互转换的。</p>
-<p>2.因为原生js 比 jQuery 更大，原生的一些属性和方法 jQuery没有给我们封装.,要想使用这些属性和方法需要把</p>
-<p>jQuery对象转换为DOM对象才能使用。</p>
-<p>3.DOM 对象转换为 jQuery 对象： $(DOM对象)</p>
-<p><code>$(&#39;div&#39;)</code></p>
-<p>4.jQuery 对象转换为 DOM 对象（两种方式）</p>
-<p><code>$(&#39;div&#39;) [index]       index 是索引号</code></p>
-<p><code>$(&#39;div&#39;) .get(index)    index 是索引号</code></p>
-<h1 id="2-jquery常用API"><a href="#2-jquery常用API" class="headerlink" title="2. jquery常用API"></a>2. jquery常用API</h1><ol>
-<li>能够写出常用的 jQuery 选择器<br>能够操作 jQuery 样式<br>能够写出常用的 jQuery 动画<br>能够操作 jQuery 属性<br>能够操作 jQuery 元素<br>能够操作 jQuery 元素尺寸、位置</li>
-<li>jQuery 选择器<br>jQuery 样式操作<br>jQuery 效果<br>jQuery 属性操作<br>jQuery 文本属性值<br>jQuery 元素操作<br>jQuery 尺寸、位置操作</li>
-</ol>
-<h2 id="2-1-jQuery-选择器"><a href="#2-1-jQuery-选择器" class="headerlink" title="2.1 jQuery 选择器"></a>2.1 jQuery 选择器</h2><h3 id="1-基础选择器"><a href="#1-基础选择器" class="headerlink" title="1. 基础选择器"></a>1. 基础选择器</h3><p>1.原生 JS 获取元素方式很多，很杂，而且兼容性情况不一致，因此 jQuery 给我们做了封装，使获取元素统一标准。</p>
-<p><code>$(“选择器”)   //  里面选择器直接写 CSS 选择器即可，但是要加引号</code></p>
-<p><img src="../../img/34/2.png" alt="2"></p>
-<h3 id="2-jQuery-层级选择器"><a href="#2-jQuery-层级选择器" class="headerlink" title="2. jQuery 层级选择器"></a>2. jQuery 层级选择器</h3><p>1.</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>用法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>子代选择器</td>
-<td>$(“ul&gt;li”);</td>
-<td>使用&gt;号，获取下一层级的元素。不会获取更下一层的</td>
-</tr>
-<tr>
-<td>后代选择器</td>
-<td>$(“ul li”);</td>
-<td>使用空格，代表后代选择器，获取ul下所以li元素。</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>2.jQuery 设置样式</p>
-<p><code>$(&#39;div&#39;).css(&#39;属性&#39;, &#39;值&#39;)</code></p>
-<h3 id="3-隐式迭代（重要）"><a href="#3-隐式迭代（重要）" class="headerlink" title="3. 隐式迭代（重要）"></a>3. 隐式迭代（重要）</h3><p>1.遍历内部 DOM 元素（伪数组形式存储）的过程就叫做隐式迭代。</p>
-<p>2.简单理解：给匹配到的所有元素进行循环遍历，执行相应的方法，而不用我们再进行循环，简化我们的操作，方便我们调用。</p>
-<h3 id="4-jQuery-筛选选择器"><a href="#4-jQuery-筛选选择器" class="headerlink" title="4. jQuery 筛选选择器"></a>4. jQuery 筛选选择器</h3><p>1.</p>
-<p><img src="../../img/34/3.png" alt="3"></p>
-<h3 id="5-jQuery-筛选方法（重点）"><a href="#5-jQuery-筛选方法（重点）" class="headerlink" title="5. jQuery 筛选方法（重点）"></a>5. jQuery 筛选方法（重点）</h3><p>1.</p>
-<p><img src="../../img/34/4.png" alt="3"></p>
-<p>重点记住： parent()  children()  find()  siblings()  eq()</p>
-<h3 id="6-jQuery-里面的排他思想"><a href="#6-jQuery-里面的排他思想" class="headerlink" title="6. jQuery 里面的排他思想"></a>6. jQuery 里面的排他思想</h3><p>1.想要多选一的效果，排他思想：当前元素设置样式，其余的兄弟元素清除样式。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">this</span>).css(<span class="string">&quot;color&quot;</span>,<span class="string">&quot;red&quot;</span>);</span><br><span class="line">$(<span class="built_in">this</span>).siblings().css(<span class="string">&quot;color&quot;</span>,<span class="string">&quot;&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-<h1 id="x-视频看到"><a href="#x-视频看到" class="headerlink" title="x. 视频看到"></a>x. 视频看到</h1><p>1.<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1a4411w7Gx?p=7&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1a4411w7Gx?p=7&amp;spm_id_from=pageDriver</a></p>
-<ul>
-<li>相互转化</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/1-(0~50)/34-jquery/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -837,7 +728,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-24 00:11:24" itemprop="dateModified" datetime="2021-05-24T00:11:24+08:00">2021-05-24</time>
+                <time title="修改时间：2021-05-24 00:21:29" itemprop="dateModified" datetime="2021-05-24T00:21:29+08:00">2021-05-24</time>
               </span>
 
           
@@ -890,56 +781,15 @@
 <ul>
 <li>资料：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1HE411e7vY?p=2&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1HE411e7vY?p=2&amp;spm_id_from=pageDriver</a></li>
 </ul>
-<h2 id="1-VUE基础"><a href="#1-VUE基础" class="headerlink" title="1. VUE基础"></a>1. VUE基础</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><ol>
-<li><p>JavaScript框架</p>
-</li>
-<li><p>简化Dom操作</p>
-</li>
-<li><p>响应式数据驱动</p>
-</li>
-</ol>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1HE411e7vY?p=2&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1HE411e7vY?p=2&amp;spm_id_from=pageDriver</a></p>
-</blockquote>
-<h3 id="1-2-第一个Vue程序"><a href="#1-2-第一个Vue程序" class="headerlink" title="1.2 第一个Vue程序"></a>1.2 第一个Vue程序</h3><ol>
-<li><p>文档传送门</p>
-<p><a target="_blank" rel="noopener" href="https://cn.vuejs.org">https://cn.vuejs.org</a></p>
-</li>
-<li><p>进入文档，点击起步，查看第一个vue程序的信息；</p>
-</li>
-<li><p>代码：</p>
-</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;script&gt;</span></span><br><span class="line"><span class="comment">    var app = new Vue(&#123;</span></span><br><span class="line"><span class="comment">        el: &#x27;#app&#x27;,</span></span><br><span class="line"><span class="comment">        data: &#123;</span></span><br><span class="line"><span class="comment">            message: &#x27;Hello Vue!&#x27;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">    &#125;)</span></span><br><span class="line"><span class="comment">&lt;/script&gt; --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        &#123;&#123; message &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line">            data: &#123;</span><br><span class="line"><span class="javascript">                message: <span class="string">&#x27;Hello Vue!&#x27;</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><pre><code class="js">&lt;script&gt;
-        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;
-            el: <span class="string">'#app'</span>,
-            data: &#123;
-                message: <span class="string">'Hello Vue!'</span>
-            &#125;
-        &#125;)
-    &lt;<span class="regexp">/script&gt;</span></code></pre>
-</li>
-<li><p>写在上面是没用的；2021-3-28 17:51:19</p>
-</li>
-</ul>
-<p>4.过程：</p>
-<ul>
-<li><p>导入==开发版本==的vue.js</p>
-</li>
-<li><p>创建Vue实例对象，设置==el==属性和==data==属性</p>
-</li>
-<li><p>使用简洁的==模板语法==把数据渲染到页面上</p>
-<p>模板语法就是：<code>&#123;&#123; &#125;&#125;</code>；</p>
-</li>
-</ul>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1HE411e7vY?p=3&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1HE411e7vY?p=3&amp;spm_id_from=pageDriver</a></p>
-</blockquote>
-<hr>
-
+<h2 id="1-VUE基础"><a href="#1-VUE基础" class="headerlink" title="1. VUE基础"></a>1. VUE基础</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/1-(0~50)/35-vue_%E5%9F%BA%E7%A1%80/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -989,7 +839,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-02 14:19:26" itemprop="dateModified" datetime="2021-04-02T14:19:26+08:00">2021-04-02</time>
+                <time title="修改时间：2021-05-24 00:21:31" itemprop="dateModified" datetime="2021-05-24T00:21:31+08:00">2021-05-24</time>
               </span>
 
           
@@ -1041,116 +891,15 @@
           <blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1LJ41137b5?p=2&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1LJ41137b5?p=2&amp;spm_id_from=pageDriver</a></p>
 </blockquote>
-<h2 id="1-接口的定义"><a href="#1-接口的定义" class="headerlink" title="1. 接口的定义"></a>1. 接口的定义</h2><h3 id="1-1-现实中的接口"><a href="#1-1-现实中的接口" class="headerlink" title="1.1 现实中的接口"></a>1.1 现实中的接口</h3><p>1.定义：程序之间协作索要遵循的一套规范、标准</p>
-<h3 id="1-2-优点"><a href="#1-2-优点" class="headerlink" title="1.2 优点"></a>1.2 优点</h3><p>1.责任划分清晰</p>
-<p>2.缩短研发周期</p>
-<p>3.可拓展性强</p>
-<h3 id="1-3-API接口"><a href="#1-3-API接口" class="headerlink" title="1.3 API接口"></a>1.3 API接口</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1LJ41137b5?p=4&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1LJ41137b5?p=4&amp;spm_id_from=pageDriver</a></p>
-</blockquote>
-<p>1.应用程序编程接口(API: Application Programming Interface,应用程序编程接口) :以HTTP协议形式提供,定义了输入、输出、功能描述的服务。</p>
-<p><img src="../../img/36/1.png" alt="1"></p>
-<p>2.接口文档是规则（自）</p>
-<h2 id="2-接口测试流程"><a href="#2-接口测试流程" class="headerlink" title="2. 接口测试流程"></a>2. 接口测试流程</h2><p>1.接口的功能测试（先要保证接口是正确的）</p>
-<p>2.测试接口的数据，传递一些特殊的数据，保证接口没问题</p>
-<p>3.自动化测试脚本的编辑</p>
-<p>4.接口的性能，压力测试</p>
-<p>（我只是想学怎么用接口，怎么就测试了呢？）</p>
-<h2 id="3-网络编程基本概念"><a href="#3-网络编程基本概念" class="headerlink" title="3. 网络编程基本概念"></a>3. 网络编程基本概念</h2><p>1.客户端(Client) :移动应用(IOS,Android,Web等应用)</p>
-<p>2.服务器(Server) :为客户端提供服务、提供数据、提供资源等机器</p>
-<p>3.请求(Request) :客户端向服务器索取数据的一种行为</p>
-<p>4.响应(Response) :服务器对客户端对请求做出的反应,一般指返回数据给客户端</p>
-<p><img src="../../img/36/2.png" alt="2"></p>
-<h3 id="3-2-HTTP协议"><a href="#3-2-HTTP协议" class="headerlink" title="3.2  HTTP协议"></a>3.2  HTTP协议</h3><h4 id="1-HTTP协议概念"><a href="#1-HTTP协议概念" class="headerlink" title="1. HTTP协议概念"></a>1. HTTP协议概念</h4><p>协议:计算机通信网络中两台计算机之前进行通信所必须共同遵守的规则或规定。</p>
-<p>HTTP协议:超文本传输协议,是一种规定了浏览器和服务器之间通信的规则</p>
-<h4 id="2-URL"><a href="#2-URL" class="headerlink" title="2. URL"></a>2. URL</h4><p>统一资源定位符</p>
-<p>概念:互联网上资源的地址、位置。每一个资源都有一个唯一的URL</p>
-<p>格式:协议://主机地址/路径</p>
-<h4 id="3-GET、POST请求"><a href="#3-GET、POST请求" class="headerlink" title="3. GET、POST请求"></a>3. GET、POST请求</h4><p>1.get：</p>
-<p>提交的数据显示在地址栏,不安全;提交的数据量有限制;不重要的数据使用GET</p>
-<ul>
-<li>浏览器不同，数量的限制也不同</li>
-</ul>
-<p><img src="../../img/36/3.png" alt="3"></p>
-<p>2.post：</p>
-<p>隐式提交数据,更安全;没有数据量大小的限制;重要数据使用POST</p>
-<p><img src="../../img/36/4.png" alt="4"></p>
-<h2 id="4-数据传递格式"><a href="#4-数据传递格式" class="headerlink" title="4. 数据传递格式"></a>4. 数据传递格式</h2><p>1.键值对：?xx=11&amp;xx=22</p>
-<ul>
-<li><p>视频里面说，问号后面是 传递的数据，前面是网络地址；</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1LJ41137b5?p=9&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1LJ41137b5?p=9&amp;spm_id_from=pageDriver</a></p>
-<p>01:17</p>
-</blockquote>
-</li>
-<li><p>&amp;，是 and</p>
-</li>
-</ul>
-<p>2.JSON数据：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="attr">&quot;属性名1&quot;</span>:<span class="string">&quot;属性值&quot;</span>,</span><br><span class="line"><span class="attr">&quot;属性名2&quot;</span>:<span class="string">&quot;属性值&quot;</span>,</span><br><span class="line"><span class="attr">&quot;属性名3&quot;</span>:<span class="string">&quot;属性值&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="5-状态码"><a href="#5-状态码" class="headerlink" title="5. 状态码"></a>5. 状态码</h2><p>1.HTTP协议之常见响应状态码</p>
-<ul>
-<li>状态码由三分数字组成，第一位数字定义了响应类型，有5中可能取值</li>
-</ul>
-<p>1xx:指示信息一表示请求已接收,继续处理。</p>
-<p>2xx:成功一表示请求已被成功接收、理解、接受。</p>
-<p>3xx:重定向-要完成请求必须进行更进一步的操作。</p>
-<p>4xx:客户端错误-请求有语法错误或请求无法实现。</p>
-<p>5xx:服务器端错误一服务器未能实现合法的请求。</p>
-<p>2.</p>
-<h2 id="6-restful风格"><a href="#6-restful风格" class="headerlink" title="6. restful风格"></a>6. restful风格</h2><p>1.按照一定的规则写出的易读、易懂的api文档；目的是让前端、后端、测试三方在工作的时候有据可循，提升开发和测试的效率(非强制要求,软要求)。</p>
-<ul>
-<li>不是必须这么风格；</li>
-</ul>
-<p>2.增删改查四大功能的语法风格：</p>
-<ul>
-<li><p>查</p>
-<ul>
-<li><p>方法：get</p>
-</li>
-<li><p>响应码：200 + 查询的数据</p>
-<blockquote>
-<p>响应码不止给个码，还把查询的数据也给出来，所以需要get，因为能看到</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>增</p>
-<ul>
-<li>方法：post</li>
-<li>响应码：201 + 新增的数据</li>
-</ul>
-</li>
-<li><p>改</p>
-<ul>
-<li>方法：put[^2]</li>
-<li>响应码：200或201 + 修改后的数据</li>
-</ul>
-</li>
-<li><p>删</p>
-<ul>
-<li>方法：delete[^1]</li>
-<li>响应码：204 + 无；</li>
-</ul>
-</li>
-</ul>
-<h2 id="X-题注"><a href="#X-题注" class="headerlink" title="X. 题注"></a>X. 题注</h2><p>[^1]:delete  英 [dɪˈliːt]   美 [dɪˈliːt]<br>v.删去;删除<br>[^2]:put  英 [pʊt]   美 [pʊt]<br>v.放;安置;猛推;用力插入;将…送往;使…前往</p>
-<p>本周工作汇报</p>
-<p>1.完成宁夏会计手机端专题</p>
-<ul>
-<li>PC端；</li>
-</ul>
-<p>2.完成宁夏酒店管理PC端专题</p>
-<ul>
-<li>和手机端；</li>
-</ul>
-<p>3.编写宁夏电气运行与控制专题PC与手机端</p>
-<p>下周工作<br>1.完成宁夏电气运行与控制专题PC与手机端</p>
-<p>2.学习</p>
-
+<h2 id="1-接口的定义"><a href="#1-接口的定义" class="headerlink" title="1. 接口的定义"></a>1. 接口的定义</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/1-(0~50)/36-%E5%B0%8F%E7%99%BD%E6%8E%A5%E5%8F%A3/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1200,7 +949,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-23 23:17:26" itemprop="dateModified" datetime="2021-05-23T23:17:26+08:00">2021-05-23</time>
+                <time title="修改时间：2021-05-24 00:21:35" itemprop="dateModified" datetime="2021-05-24T00:21:35+08:00">2021-05-24</time>
               </span>
 
           
@@ -1252,13 +1001,14 @@
           <p>1.</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/T_I_A_N_/article/details/86016324">https://blog.csdn.net/T_I_A_N_/article/details/86016324</a></p>
 <p>2021-4-5 15:18:24</p>
-<p>2.顶层数据流图</p>
-<p><a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/537269670.html">https://zhidao.baidu.com/question/537269670.html</a></p>
-<ul>
-<li>2021-4-5 15:20:49</li>
-</ul>
-<p>3.</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/1-(0~50)/37-%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1308,7 +1058,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-23 23:17:20" itemprop="dateModified" datetime="2021-05-23T23:17:20+08:00">2021-05-23</time>
+                <time title="修改时间：2021-05-24 00:21:37" itemprop="dateModified" datetime="2021-05-24T00:21:37+08:00">2021-05-24</time>
               </span>
 
           
@@ -1358,218 +1108,14 @@
 
       
           <h1 id="1-数据传递"><a href="#1-数据传递" class="headerlink" title="1. 数据传递"></a>1. 数据传递</h1><p>1.后台官网：<a target="_blank" rel="noopener" href="http://base.hope55.com/Home/Index#">http://base.hope55.com/Home/Index#</a></p>
-<h2 id="1-1-先配置企业部门的id；"><a href="#1-1-先配置企业部门的id；" class="headerlink" title="1.1 先配置企业部门的id；"></a>1.1 先配置企业部门的id；</h2><p>0.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> api = &#123;</span><br><span class="line">    Host: <span class="string">&quot;http://base.hope55.com/&quot;</span>,</span><br><span class="line">    API: <span class="string">&quot;http://base.hope55.com/&quot;</span> + <span class="string">&quot;API/WebAPI/&quot;</span>,</span><br><span class="line">    BasePageSize: <span class="number">9</span>, <span class="comment">//默认分页数</span></span><br><span class="line">    DefualtDepartmentID: <span class="number">185</span>, <span class="comment">//默认部门ID</span></span><br><span class="line">    DefualtOrganID: <span class="number">9</span>, <span class="comment">//默认企业ID </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>1.找学校；</p>
-<ul>
-<li><p>1.在最上面的部门管理找</p>
-<p><img src="../../img/38/1.png" alt="1"></p>
-</li>
-<li><p>2.然后在下面找到对应的学校；</p>
-<p><img src="../../img/38/2.png" alt="1"></p>
-</li>
-<li><p>2.1 鼠标放在企业信息上面，可以在左下角看到企业id</p>
-</li>
-</ul>
-<p>1.2 同理，找到部门的id；</p>
-<ul>
-<li>1.比如我这里写的是这个学校的院团委；</li>
-</ul>
-<p><img src="../../img/38/3.png" alt="1"></p>
-<ul>
-<li>2.鼠标放在栏目信息，这些地方，部门id也不会变；</li>
-</ul>
-<h2 id="1-2-应该就是上传数据了吧"><a href="#1-2-应该就是上传数据了吧" class="headerlink" title="1.2 应该就是上传数据了吧"></a>1.2 应该就是上传数据了吧</h2><h3 id="1-导航栏"><a href="#1-导航栏" class="headerlink" title="1. 导航栏"></a>1. 导航栏</h3><p>1.首页导航栏，模板：</p>
-<p>1.1 位置：js\public.js</p>
-<p>1.2 代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导航栏遍历渲染</span></span><br><span class="line"><span class="keyword">var</span> _html = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">_html += <span class="string">&#x27;&lt;li class=&quot;house&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;&#x27;</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr1) &#123;</span><br><span class="line">    _html += <span class="string">&#x27;&lt;li name=&quot;&#x27;</span> + arr1[i].ID + <span class="string">&#x27;&quot;&gt;&lt;a href=&quot;&#x27;</span> + arr1[i].Url + <span class="string">&#x27;&quot;&gt;&#x27;</span> + arr1[i].Name + <span class="string">&#x27;&lt;/a&gt;&#x27;</span>;</span><br><span class="line">    <span class="keyword">if</span> (arr1[i].Clist.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        _html += <span class="string">&#x27;&lt;ul class=&quot;er&quot;&gt;&#x27;</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> j <span class="keyword">in</span> arr1[i].Clist) &#123;</span><br><span class="line">            _html += <span class="string">&#x27;&lt;li&gt;&lt;a href=&quot;&#x27;</span> + arr1[i].Clist[j].Url + <span class="string">&#x27;&quot;&gt;&#x27;</span> + arr1[i].Clist[j].Name + <span class="string">&#x27;&lt;/a&gt;&lt;/li&gt;&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        _html += <span class="string">&#x27;&lt;/ul&gt;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    _html += <span class="string">&#x27;&lt;/li&gt;&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">_html += <span class="string">&#x27;&lt;li&gt;&lt;a href=&quot;http://gzucst.com/&quot;&gt;学院首页&lt;/a&gt;&lt;/li&gt;&#x27;</span>;</span><br><span class="line">$(<span class="string">&quot;#navBox&quot;</span>).html(_html);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>1.<code>$(&quot;#navBox&quot;).html(_html);</code>这个是链接id的；</p>
-</li>
-<li><p>1.1 ul那边；</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;navBox&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<p>1.3 数据哪来的？</p>
-<p>在栏目信息里面；</p>
-<p><img src="../../img/38/4.png" alt="1"></p>
-<ul>
-<li>1.下面的部门简介，团情快讯这些，就是导航栏的数据；</li>
-<li>2.首页的话，自己手动加；</li>
-</ul>
-<h4 id="1-1-跳转页面"><a href="#1-1-跳转页面" class="headerlink" title="1.1 跳转页面"></a>1.1 跳转页面</h4><p>1.导航栏渲染出来了，但页面能跳转过去吗？不能；</p>
-<ul>
-<li>1.是空白的；</li>
-<li>2.怎么设置这个跳转呢？</li>
-</ul>
-<p>2.看路径：<a target="_blank" rel="noopener" href="http://127.0.0.1:5500/list.html?HType=2&amp;CId=3219">http://127.0.0.1:5500/list.html?HType=2&amp;CId=3219</a></p>
-<p>2.1 list.html；</p>
-<ul>
-<li><p>1.需要创建list.html文件，这个路径写死的，在前端用的字符串，不是后端路由；2021-5-19 11:46:28</p>
-</li>
-<li><p>2.然后在郭老师那边，没怎么找到list；</p>
-</li>
-<li><p>3.老李这：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">### 2. 页面盒子传入数据</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1.例如：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">![1](../../img/38/5.png)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">2.怎样能传入进去？</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">2.1 首先找到拼接的地方。但先不问什么能拼；别人的代码，我看了半天没看懂，本来自己也还是小白；</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">+ 1.在base.js:537的地方；//获取文件信息集合</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br><span class="line">  GetNewsInfoByCid: <span class="function"><span class="keyword">function</span> (<span class="params">strHtml, Cid, IDname, needPhoto, CssClass, PageIndex, SearchWord, PageSize, DefaultImg, descNum</span>) </span>&#123;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>1.1 html字符串，Cid信息源id，装html的盒子的id，</p>
-</li>
-<li><p>1.2 needPhoto，</p>
-</li>
-</ul>
-<p>2.2 可以先打印一下，应该要打印一下，看一下里面的数据；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a1 = Base.GetFilesInfoByCid(<span class="string">&#x27;&#x27;</span>, <span class="number">3222</span>, <span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="number">1</span>, <span class="string">&#x27;&#x27;</span>, <span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a1);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>1.但栏目id(Cid)一定要有，不然看不到啥数据；</li>
-</ul>
-<p>2.3 例如：这里院团委的部门新闻，因为没有专门的 部门新闻；我用的 团情快讯</p>
-<p><img src="../../img/38/6.png" alt="1"></p>
-<ul>
-<li><p>1.代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a1 = Base.GetNewsInfoByCid(<span class="string">&#x27;&#x27;</span>, <span class="number">3218</span>, <span class="string">&quot;&quot;</span>, <span class="string">&quot;&quot;</span>, <span class="string">&quot;&quot;</span>, <span class="number">1</span>, <span class="string">&quot;&quot;</span>, <span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a1);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2.打印结果：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">3</span>) [&#123;…&#125;, &#123;…&#125;, &#123;…&#125;]</span><br><span class="line"><span class="number">0</span>:</span><br><span class="line">Author: <span class="string">&quot;院团委供稿&quot;</span></span><br><span class="line">Cover: <span class="string">&quot;http://base.hope55.com/gzcjxy/UploadFile/UploadFile_Img/20201106154743e90097b1b6a24ed79fc84c4b37c6b349.jpg&quot;</span></span><br><span class="line">Describe: <span class="string">&quot;“感恩之路，希望力量”2020年感恩季协调会议为引导学生厚植爱国主义情怀，把坚定理想信念，勇担责任，砥砺前行的精神内涵自觉融入和发展到中国特色社会主义事业、建设社会主义现代化强国、实现中华民族伟大复兴的奋斗之中，推动学院发展。2020年11月2日，贵州财经大学商务学院在博学楼112召开感恩季协调会。...&quot;</span></span><br><span class="line">FID: <span class="number">3218</span></span><br><span class="line">HasPhoto: <span class="literal">true</span></span><br><span class="line">Hot: <span class="literal">false</span></span><br><span class="line">ID: <span class="number">47621</span></span><br><span class="line">KeyWords: <span class="string">&quot;&quot;</span></span><br><span class="line">Press: <span class="number">199</span></span><br><span class="line">ShowTime: <span class="string">&quot;2020-11-06T00:00:00&quot;</span></span><br><span class="line">Source: <span class="string">&quot;新媒体中心&quot;</span></span><br><span class="line">Title: <span class="string">&quot;感恩季｜贵州财经大学商务学院“感恩之路，希望力量”2020年感恩季协调会议&quot;</span></span><br><span class="line">Top: <span class="literal">false</span></span><br><span class="line">Url: <span class="literal">null</span></span><br><span class="line">__proto__: <span class="built_in">Object</span></span><br><span class="line"><span class="number">1</span>: &#123;<span class="attr">ID</span>: <span class="number">47620</span>, <span class="attr">FID</span>: <span class="number">3218</span>, <span class="attr">Title</span>: <span class="string">&quot;凝聚青春力量·畅聊人生展望——我与院长面对面交流会&quot;</span>, <span class="attr">Author</span>: <span class="string">&quot;院团委供稿&quot;</span>, <span class="attr">Source</span>: <span class="string">&quot;新媒体中心&quot;</span>, …&#125;</span><br><span class="line"><span class="number">2</span>: &#123;<span class="attr">ID</span>: <span class="number">47619</span>, <span class="attr">FID</span>: <span class="number">3218</span>, <span class="attr">Title</span>: <span class="string">&quot;为新时代中国特色社会主义新疆建设贡献青春力量&quot;</span>, <span class="attr">Author</span>: <span class="string">&quot;共青团中央&quot;</span>, <span class="attr">Source</span>: <span class="string">&quot;共青团中央&quot;</span>, …&#125;</span><br><span class="line">length: <span class="number">3</span></span><br><span class="line">__proto__: <span class="built_in">Array</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>3.这样就知道<code>Model.NewsInfos.Cover</code>那些玩意了；</p>
-</li>
-<li><p>4.但是，这不是马上的，而是先传到函数的形参里面。</p>
-</li>
-</ul>
-<p>3.要知道model后面到底什么？是NewInfos？还是Model.FilesInfo；这个要在Base.js里面看注释；</p>
-<p>3.1 banner是</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取文件信息集合</span></span><br><span class="line">GetFilesInfoByCid: <span class="function"><span class="keyword">function</span> (<span class="params">strHtml, Cid, IDname, CssClass, PageIndex, SearchWord, PageSize, DefaultImg</span>) </span>&#123;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>为什么？</li>
-</ul>
-<p>3.2 是后天那边吗？但只知道后台与前端这里的js联系，只靠Cid；</p>
-<ul>
-<li>1.郭老师说：这是后台那边有路由处理；</li>
-</ul>
-<hr>
-<h2 id="1-3-我已经懵了"><a href="#1-3-我已经懵了" class="headerlink" title="1.3 我已经懵了"></a>1.3 我已经懵了</h2><p>1.懵了，真的懵了。累，我好想自己写链接接口。</p>
-<p>2.但我不会。唉</p>
-<p>3.看来，还是应该继续学习，但是学到前端使用接口读取后端数据的操作，总觉得还有很久。2021-5-19 15:47:49</p>
-<p>4.现在只有难受着先用着？？</p>
-<p>5.我应该边做，边学啊；怎么一直在弄代码啊；</p>
-<p>6.计划，计划吧；2021-5-19 15:49:27</p>
-<p>7.要改修模板，定位去掉，要用浮动？定位好像不能自己撑开盒子；</p>
-<ul>
-<li>1.但浮动好像也不行；看郭老师怎么写的；</li>
-</ul>
-<p>8.哦豁，忘记写笔记了，清楚浮动，可以撑开盒子；</p>
-<p>9.导航栏飞在上面了，要拿下来；</p>
-<p>9.1 查代码：<code>$(&quot;.NAA_content&quot;).append</code></p>
-<ul>
-<li>1.语法：$(selector).append(content)</li>
-<li>2.效果：append() 方法在被选元素的结尾（仍然在内部）插入指定内容。</li>
-</ul>
-<p>9.2 同时找到的在前面插入；</p>
-<ul>
-<li>1.<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jquery/manipulation_prepend.asp">https://www.w3school.com.cn/jquery/manipulation_prepend.asp</a></li>
-<li>2.<code>$(selector).prepend(content)</code></li>
-</ul>
-<p>10.没找到数据</p>
-<p><img src="../../img/38/8.png" alt="1"></p>
-<p>10.1 同时页面那边也没有，看看后台有没有数据；</p>
-<p>10.2 好家伙，后台那边没有数据；</p>
-<h2 id="1-4-部门概况"><a href="#1-4-部门概况" class="headerlink" title="1.4 部门概况"></a>1.4 部门概况</h2><h3 id="1-找方法"><a href="#1-找方法" class="headerlink" title="1. 找方法"></a>1. 找方法</h3><p>1.传入特有的内容；</p>
-<p>2.查看老李的，用的方法是：<code>Base.GetSinglePageInfoByCid()</code></p>
-<p>3.看看郭老师的：<code>Base.GetSinglePageInfoByCid(Model.SinglePage.Describe, CId, &quot;news&quot;);</code></p>
-<p>4.一样的；</p>
-<p>5.解析这个方法</p>
-<p>5.1 去Base.js看看；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取单页信息</span></span><br><span class="line">GetSinglePageInfoByCid: <span class="function"><span class="keyword">function</span> (<span class="params">strHtml, Cid, IDname</span>) </span>&#123;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>1.看下面的也没看出啥名堂；</li>
-<li>2.直接用，看能不能实现效果；</li>
-</ul>
-<p>5.2 没有数据；</p>
-<h3 id="3-选择base里的方法"><a href="#3-选择base里的方法" class="headerlink" title="3. 选择base里的方法"></a>3. 选择base里的方法</h3><p>1.里面很多方法，怎么选？</p>
-<p>2.根据：</p>
-<p><img src="../../img/38/7.png" alt="1"></p>
-<p>根据这里选；</p>
-<h2 id="1-5-搜索框"><a href="#1-5-搜索框" class="headerlink" title="1.5 搜索框"></a>1.5 搜索框</h2><p>1.搜索框咋个弄？</p>
-<p>2.第一步：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.searth a&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> str = $(<span class="string">&quot;.searth input&quot;</span>).val();</span><br><span class="line">    <span class="comment">// console.log(str)</span></span><br><span class="line">    <span class="keyword">if</span> (!str) &#123;</span><br><span class="line">        alert(<span class="string">&quot;请输入查询关键词&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        location.href = <span class="string">&quot;search.html?selText=&quot;</span> + str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3.第二补，渲染search.html</p>
-<p>3.1 没有渲染，直接建立了一个新的html；</p>
-<ul>
-<li>1.然后在下面加</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> temp;</span><br><span class="line">    <span class="keyword">var</span> search_value = Curren.getQueryString(<span class="string">&quot;selText&quot;</span>);</span><br><span class="line">    <span class="comment">// $(&quot;#search-text&quot;).val(search_value);</span></span><br><span class="line">    temp = Base.GetInfoBySearch(search_value, <span class="string">&quot;news_muban&quot;</span>, <span class="string">&#x27;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;&#x27;</span> + Model.NewsInfos.Url + <span class="string">&#x27;&quot;&gt;&lt;div class=&quot;date&quot;&gt;&lt;b&gt;&#x27;</span> + Model.NewsInfos.ShowTime2 + <span class="string">&#x27;&lt;/b&gt;&lt;span&gt;&#x27;</span> + Model.NewsInfos.ShowTime6 + <span class="string">&#x27;&lt;/span&gt;&lt;/div&gt;&lt;p&gt;&#x27;</span> + Model.NewsInfos.Title + <span class="string">&#x27;&lt;/p&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="number">7</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;郭老师&#x27;</span>, search_value);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;temp：&#x27;</span>, temp)</span><br><span class="line">    <span class="keyword">if</span> (!temp.length) &#123;</span><br><span class="line">        $(<span class="string">&quot;.NAA_content&quot;</span>).html(<span class="string">&#x27;&lt;p style=&quot;text-align: center;color: #999999;font-size: 14px;line-height: 2;margin-top: 30px;&quot;&gt;未搜索到任何信息&lt;/p&gt;&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="1-6-下面的二维码"><a href="#1-6-下面的二维码" class="headerlink" title="1.6 下面的二维码"></a>1.6 下面的二维码</h2><p>1.怎么弄这个二维码？</p>
-<p>1.1 先看老李的；打印不出信息，去后台找找在哪；</p>
-<p>2.后台在：对应学习——官网——二维码；</p>
-<h1 id="2-笔记"><a href="#2-笔记" class="headerlink" title="2. 笔记"></a>2. 笔记</h1><h2 id="2-1-selector-html"><a href="#2-1-selector-html" class="headerlink" title="2.1 $(selector).html()"></a>2.1 $(selector).html()</h2><p>1.<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jquery/manipulation_html.asp">https://www.w3school.com.cn/jquery/manipulation_html.asp</a></p>
-<p>2.html() 方法返回或设置被选元素的内容 (inner HTML)。</p>
-<p>如果该方法未设置参数，则返回被选元素的当前内容。</p>
-<p>2021-5-19 09:59:14</p>
-<h2 id="2-2-分页不变"><a href="#2-2-分页不变" class="headerlink" title="2.2 分页不变"></a>2.2 分页不变</h2><p>1.</p>
-<p><img src="../../img/38/9.png" alt="1"></p>
-<p>2.是参数没有设置对；</p>
-<ul>
-<li>1.之前一直写的1；</li>
-<li>2.现在写为PageIndex</li>
-</ul>
-<p>2.1 </p>
-<p><img src="../../img/38/10.png" alt="1"></p>
-<p>2.2 为啥</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GetNewsInfoByCid: <span class="function"><span class="keyword">function</span> (<span class="params">strHtml, Cid, IDname, needPhoto, CssClass, PageIndex, SearchWord, PageSize, DefaultImg, descNum</span>) </span>&#123;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>1.从结论做出假设：PageIndex是每页的页码，PageSize每页多少个数据；2021-5-20 13:59:17</li>
-</ul>
-<h2 id="2-3-url为null但跳转"><a href="#2-3-url为null但跳转" class="headerlink" title="2.3 url为null但跳转"></a>2.3 url为null但跳转</h2><p>1.明明url为空：片段</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Source: <span class="string">&quot;新媒体中心&quot;</span></span><br><span class="line">Title: <span class="string">&quot;感恩季｜贵州财经大学商务学院“感恩之路，希望力量”2020年感恩季协调会议&quot;</span></span><br><span class="line">Top: <span class="literal">false</span></span><br><span class="line">Url: <span class="literal">null</span></span><br></pre></td></tr></table></figure>
-
-<p>2.但仔细想想，这个地方，没办法拿到Url；额，不是。我也不知道为啥拿不到；</p>
-<p>3.看代码是怎么给的：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.myReplace(Model.NewsInfos.Url, (Curren.isEmpty(GetData[i].Url) ? <span class="string">&quot;list.html?HType=2&amp;CId=&quot;</span> + GetData[i].FID + <span class="string">&quot;&amp;NId=&quot;</span> + GetData[i].ID : GetData[i].Url))</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>1.<code>GetData[i].Url</code>是否为空，是的话，不是的话。从Base.js得出，这里是同步，返回值<code>GetData</code>在末尾，这里会一直为空；</li>
-<li>2.然后就是拼接出来的<code>&quot;list.html?HType=2&amp;CId=&quot; + GetData[i].FID + &quot;&amp;NId=&quot; + GetData[i].ID</code></li>
-</ul>
-<p>4.很好，这个是</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取列表信息集合</span></span><br><span class="line">GetNewsInfoByCid: <span class="function"><span class="keyword">function</span> (<span class="params">strHtml, Cid, IDname, needPhoto, CssClass, PageIndex, SearchWord, PageSize, DefaultImg, descNum</span>) </span>&#123;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>5.看看其他，是不是这样；</p>
-<p>5.1 只有两个地方是；一个是上面的列表信息集合。一个是：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GetInfoBySearch: <span class="function"><span class="keyword">function</span> (<span class="params">selText, IDname, strHtml, did, pageSize</span>) </span>&#123;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>1.通过查找获取信息吗？2021-5-20 14:40:04</li>
-</ul>
-<h2 id="2-4-index-js怎么联系的index-html"><a href="#2-4-index-js怎么联系的index-html" class="headerlink" title="2.4 index.js怎么联系的index.html"></a>2.4 index.js怎么联系的index.html</h2><p>1.忽然想起这个问题；</p>
-<h2 id="2-5-pagesize"><a href="#2-5-pagesize" class="headerlink" title="2.5 pagesize"></a>2.5 pagesize</h2><p>1.好像不是一页数据有多少，而是一页遍历了几次；</p>
-<h2 id="2-6-被选中-分页"><a href="#2-6-被选中-分页" class="headerlink" title="2.6 被选中-分页"></a>2.6 被选中-分页</h2><p>1.郭老师，在JS里面写了相应代码；</p>
-<p><img src="../../img/38/11.png" alt="11"></p>
-<h2 id="2-7-理解导航"><a href="#2-7-理解导航" class="headerlink" title="2.7 理解导航"></a>2.7 理解导航</h2><p>1.代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//导航栏遍历</span></span><br><span class="line"><span class="comment">// 导航栏数据重构</span></span><br><span class="line"><span class="keyword">var</span> arr = Base.GetNavColumnsByDid(<span class="string">&quot;&quot;</span>, api.DefualtDepartmentID, <span class="string">&quot;&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> arr1 = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (arr[i].FID == <span class="number">0</span>) &#123;</span><br><span class="line">        arr1.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr1.length; i++) &#123;</span><br><span class="line">    arr1[i].Clist = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[j].FID == arr1[i].ID) &#123;</span><br><span class="line">            arr1[i].Clist.push(arr[j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>1.1 先去找<code>Base.GetNavColumnsByDid()</code>;</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/1-(0~50)/38-%E5%B7%A5%E4%BD%9C/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1619,7 +1165,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-23 23:17:15" itemprop="dateModified" datetime="2021-05-23T23:17:15+08:00">2021-05-23</time>
+                <time title="修改时间：2021-05-24 00:21:44" itemprop="dateModified" datetime="2021-05-24T00:21:44+08:00">2021-05-24</time>
               </span>
 
           
@@ -1670,25 +1216,14 @@
       
           <h2 id="1-价格"><a href="#1-价格" class="headerlink" title="1. 价格"></a>1. 价格</h2><p>1·.价格构成: 1100房租+170物业费-水电补助50-宽带助50=1170</p>
 <p>1.1.水电为商业价格。水:  ;电:</p>
-<p>1.2 如果是一个人住。-50/月</p>
-<p>1.3 如果是对面大学的女侠；-50/月</p>
-<p>1.4 如果是二次元兄弟；-50/月</p>
-<h2 id="2-联系"><a href="#2-联系" class="headerlink" title="2. 联系"></a>2. 联系</h2><p>2.微信: a17380114645</p>
-<h2 id="3-我的情况"><a href="#3-我的情况" class="headerlink" title="3. 我的情况"></a>3. 我的情况</h2><p>3.平常下班18点。房子情况如图所示。虽然单间出租,我个人少有而来,一个月可能一次。</p>
-<ul>
-<li><p>来也是放取东西，一般不会过夜。不对，我说这个干嘛？</p>
-<ul>
-<li>表明你可能会有整租的体验；</li>
-</ul>
-</li>
-<li><p>如果我长期而来，会通知。水电气也将改为平摊等。</p>
-</li>
-</ul>
-<p>3.1 若要看房,我得赶车来。需要时间。房屋如58同城图所示。</p>
-<h2 id="4-特殊情况"><a href="#4-特殊情况" class="headerlink" title="4. 特殊情况"></a>4. 特殊情况</h2><p>4.有事半路退租，根据情况退还多少押金。封顶一半租金。</p>
-<h2 id="5-你可能需要"><a href="#5-你可能需要" class="headerlink" title="5. 你可能需要"></a>5. 你可能需要</h2><p>1.可能需要长一点的插板。5m？emm</p>
-<p>2021-5-23 18:20:03</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/1-(0~50)/39-%E5%87%BA%E7%A7%9F%E4%BF%A1%E6%81%AF/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

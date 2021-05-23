@@ -18052,6 +18052,8 @@ http://localhost:3000/public/hello.html
 <li>1.<code>$&#123;&#125;</code>是ES6模板字符串的语法，<code>&#123;&#123;好像是模板引擎的&#125;&#125;</code></li>
 </ul>
 <p>2021-5-2 10:52:50</p>
+<!--more-->
+
 <p>2.但具体下一步，搜索：模板字符串 里的 美元符号 是什么意思；</p>
 <ul>
 <li>1.百度不到；</li>
@@ -18091,7 +18093,7 @@ http://localhost:3000/public/hello.html
     <title>16-Python-collect</title>
     <url>/1-(0~50)/16-Python-collect_%E6%94%B6%E8%97%8F/</url>
     <content><![CDATA[<h2 id="1-10-行-Python-代码自动清理电脑重复文件"><a href="#1-10-行-Python-代码自动清理电脑重复文件" class="headerlink" title="1.  10 行 Python 代码自动清理电脑重复文件"></a>1.  10 行 Python 代码自动清理电脑重复文件</h2><p><a href="https://mp.weixin.qq.com/s/CBinFZO8iSUIdjy71bIhCw">https://mp.weixin.qq.com/s/CBinFZO8iSUIdjy71bIhCw</a></p>
-]]></content>
+<a id="more"></a>]]></content>
       <categories>
         <category>Python</category>
       </categories>
@@ -21773,6 +21775,8 @@ var average = 0; // 平均成绩</code></li>
 <ol>
 <li>目标</li>
 </ol>
+<a id="more"></a>
+
 <ul>
 <li>能够说出Web APIs 阶段与 JavaScript 语法阶段的关联性</li>
 <li>什么是API</li>
@@ -22119,6 +22123,8 @@ var average = 0; // 平均成绩</code></li>
 <p><a href="https://www.w3school.com.cn/js/js_function_call.asp">https://www.w3school.com.cn/js/js_function_call.asp</a></p>
 </blockquote>
 <p>call() 方法是预定义的 JavaScript 方法。</p>
+<a id="more"></a>
+
 <p>它可以用来调用所有者对象作为参数的方法。</p>
 <p>通过 call()，您能够使用属于另一个对象的方法。</p>
 <p>本例调用 person 的 fullName 方法，并用于 person1：</p>
@@ -22281,6 +22287,8 @@ var average = 0; // 平均成绩</code></li>
     <url>/1-(0~50)/25.4-js%E8%BF%9B%E9%98%B6_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1ES6/</url>
     <content><![CDATA[<h2 id="1-JavaScript-面向对象"><a href="#1-JavaScript-面向对象" class="headerlink" title="1. JavaScript 面向对象"></a>1. JavaScript 面向对象</h2><p>目标：</p>
 <p> 能够说出什么是面向对象<br> 能够说出类和对象的关系<br> 能够使用 class 创建自定义类型<br> 能够说出什么是继承</p>
+<a id="more"></a>
+
 <p>面向对象编程介绍<br>ES6 中的类和对象<br>类的继承<br>面向对象案例</p>
 <h3 id="1-1-面向对象编程介绍"><a href="#1-1-面向对象编程介绍" class="headerlink" title="1.1 面向对象编程介绍"></a>1.1 面向对象编程介绍</h3><h4 id="1-两大编程思想"><a href="#1-两大编程思想" class="headerlink" title="1. 两大编程思想"></a>1. 两大编程思想</h4><ul>
 <li>面向过程</li>
@@ -22797,6 +22805,8 @@ var average = 0; // 平均成绩</code></li>
     <title>25.5-JS插件</title>
     <url>/1-(0~50)/25.5-JS%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<h2 id="1-swiper"><a href="#1-swiper" class="headerlink" title="1. swiper"></a>1. swiper</h2><p>1.官网：<a href="https://www.swiper.com.cn">https://www.swiper.com.cn</a></p>
+<a id="more"></a>
+
 <h3 id="1-1-使用"><a href="#1-1-使用" class="headerlink" title="1.1 使用"></a>1.1 使用</h3><p>1.~<a href="https://www.swiper.com.cn/usage/index.html">https://www.swiper.com.cn/usage/index.html</a></p>
 <p>2.</p>
 <h3 id="1-2-分页器"><a href="#1-2-分页器" class="headerlink" title="1.2 分页器"></a>1.2 分页器</h3><h4 id="1-clickable"><a href="#1-clickable" class="headerlink" title="1. clickable"></a>1. clickable</h4><p>1.此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换。</p>
@@ -23398,6 +23408,8 @@ var average = 0; // 平均成绩</code></li>
     <url>/1-(0~50)/34-jquery/</url>
     <content><![CDATA[<h1 id="1-jQuery-入门"><a href="#1-jQuery-入门" class="headerlink" title="1. jQuery 入门"></a>1. jQuery 入门</h1><p>能够说出什么是 jQuery<br>能够说出 jQuery 的优点<br>能够简单使用 jQuery</p>
 <p>能够说出 DOM 对象和 jQuery 对象的区别</p>
+<a id="more"></a>
+
 <p>jQuery 概述</p>
 <p>jQuery 的基本使用</p>
 <h2 id="1-1-jQuery-概述"><a href="#1-1-jQuery-概述" class="headerlink" title="1.1  jQuery 概述"></a>1.1  jQuery 概述</h2><p>1.仓库：   可以把很多东西放到这个仓库里面。找东西只需要到仓库里面查找到就可以了。</p>
@@ -23523,7 +23535,9 @@ var average = 0; // 平均成绩</code></li>
 <ul>
 <li>资料：<a href="https://www.bilibili.com/video/BV1HE411e7vY?p=2&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1HE411e7vY?p=2&amp;spm_id_from=pageDriver</a></li>
 </ul>
-<h2 id="1-VUE基础"><a href="#1-VUE基础" class="headerlink" title="1. VUE基础"></a>1. VUE基础</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><ol>
+<h2 id="1-VUE基础"><a href="#1-VUE基础" class="headerlink" title="1. VUE基础"></a>1. VUE基础</h2><a id="more"></a>
+
+<h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><ol>
 <li><p>JavaScript框架</p>
 </li>
 <li><p>简化Dom操作</p>
@@ -23580,7 +23594,9 @@ var average = 0; // 平均成绩</code></li>
     <content><![CDATA[<blockquote>
 <p><a href="https://www.bilibili.com/video/BV1LJ41137b5?p=2&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1LJ41137b5?p=2&amp;spm_id_from=pageDriver</a></p>
 </blockquote>
-<h2 id="1-接口的定义"><a href="#1-接口的定义" class="headerlink" title="1. 接口的定义"></a>1. 接口的定义</h2><h3 id="1-1-现实中的接口"><a href="#1-1-现实中的接口" class="headerlink" title="1.1 现实中的接口"></a>1.1 现实中的接口</h3><p>1.定义：程序之间协作索要遵循的一套规范、标准</p>
+<h2 id="1-接口的定义"><a href="#1-接口的定义" class="headerlink" title="1. 接口的定义"></a>1. 接口的定义</h2><a id="more"></a>
+
+<h3 id="1-1-现实中的接口"><a href="#1-1-现实中的接口" class="headerlink" title="1.1 现实中的接口"></a>1.1 现实中的接口</h3><p>1.定义：程序之间协作索要遵循的一套规范、标准</p>
 <h3 id="1-2-优点"><a href="#1-2-优点" class="headerlink" title="1.2 优点"></a>1.2 优点</h3><p>1.责任划分清晰</p>
 <p>2.缩短研发周期</p>
 <p>3.可拓展性强</p>
@@ -23697,6 +23713,8 @@ var average = 0; // 平均成绩</code></li>
     <content><![CDATA[<p>1.</p>
 <p><a href="https://blog.csdn.net/T_I_A_N_/article/details/86016324">https://blog.csdn.net/T_I_A_N_/article/details/86016324</a></p>
 <p>2021-4-5 15:18:24</p>
+<a id="more"></a>
+
 <p>2.顶层数据流图</p>
 <p><a href="https://zhidao.baidu.com/question/537269670.html">https://zhidao.baidu.com/question/537269670.html</a></p>
 <ul>
@@ -23709,6 +23727,8 @@ var average = 0; // 平均成绩</code></li>
     <title>38-工作</title>
     <url>/1-(0~50)/38-%E5%B7%A5%E4%BD%9C/</url>
     <content><![CDATA[<h1 id="1-数据传递"><a href="#1-数据传递" class="headerlink" title="1. 数据传递"></a>1. 数据传递</h1><p>1.后台官网：<a href="http://base.hope55.com/Home/Index#">http://base.hope55.com/Home/Index#</a></p>
+<a id="more"></a>
+
 <h2 id="1-1-先配置企业部门的id；"><a href="#1-1-先配置企业部门的id；" class="headerlink" title="1.1 先配置企业部门的id；"></a>1.1 先配置企业部门的id；</h2><p>0.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> api = &#123;</span><br><span class="line">    Host: <span class="string">&quot;http://base.hope55.com/&quot;</span>,</span><br><span class="line">    API: <span class="string">&quot;http://base.hope55.com/&quot;</span> + <span class="string">&quot;API/WebAPI/&quot;</span>,</span><br><span class="line">    BasePageSize: <span class="number">9</span>, <span class="comment">//默认分页数</span></span><br><span class="line">    DefualtDepartmentID: <span class="number">185</span>, <span class="comment">//默认部门ID</span></span><br><span class="line">    DefualtOrganID: <span class="number">9</span>, <span class="comment">//默认企业ID </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -23927,6 +23947,8 @@ var average = 0; // 平均成绩</code></li>
     <url>/1-(0~50)/39-%E5%87%BA%E7%A7%9F%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<h2 id="1-价格"><a href="#1-价格" class="headerlink" title="1. 价格"></a>1. 价格</h2><p>1·.价格构成: 1100房租+170物业费-水电补助50-宽带助50=1170</p>
 <p>1.1.水电为商业价格。水:  ;电:</p>
+<a id="more"></a>
+
 <p>1.2 如果是一个人住。-50/月</p>
 <p>1.3 如果是对面大学的女侠；-50/月</p>
 <p>1.4 如果是二次元兄弟；-50/月</p>
